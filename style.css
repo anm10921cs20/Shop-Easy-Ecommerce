@@ -272,8 +272,6 @@
         display: flex;
         overflow-x: hidden;
         overflow-x: scroll;
-        scrollbar-width: 12px;
-        gap: 5px;
     }
     .grocery-title
     {
@@ -366,6 +364,97 @@
         background-color:#ffda33;
         padding: 6px;
     }
+
+    /* mobile scrol container */
+    .mobile
+    {
+         height: 290px;
+        width: 95%;
+        margin: 0 auto;
+        border-radius: 20px;
+        display: flex;
+        overflow-x: hidden;
+        overflow-x: scroll;
+    }
+    .mobile::-webkit-scrollbar
+    {
+        display: none;
+    }
+    .mobile-products-items
+    {
+         height: 280px;
+        display: flex;
+        border-radius: 6px;
+        justify-content: center;
+        flex-direction: column;
+        padding: 20px 30px;
+        margin-top: 10px;
+        margin-left: 10px;
+        margin-right: 10px;
+        background:#13ebff0c;
+        line-height: 16px;
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        position: relative;
+    }
+    .mobile-details-container
+    {
+        line-height: 10px;
+        font-size: 11px;
+    }
+    .mobile-brand-name
+    {
+        color: #666;
+    }
+    .mobile-name
+    {
+        color: #000;
+        font-weight: 600;
+    }
+    .rate
+    {
+        color: #000;
+    }
+    .rate-del
+    {
+        color: #666;
+    }
+    .review-container
+    {
+        display: flex;
+        justify-content: space-between;
+    }
+    .percentage
+    {
+        color: #008c00;
+    }
+    .logo-img
+    {
+        position: absolute;
+        right: 0;
+    }
+    .star-icon
+    {
+        color: #008c00;
+    }
+    .star-review
+    {
+        display: flex;
+        column-gap: 2px;
+    }
+    .logo-text
+    {
+        color: #6B7FD7;
+    }
+    
+
+
+
+
+
+
+
+
+
 
    
 
