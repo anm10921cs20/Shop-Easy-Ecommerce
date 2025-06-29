@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="theme-color" content="#ff4343">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop Easy -Search </title>
+    <!--Bootstrap css added-->
+    <link rel="stylesheet" href="../bootstrap-5.3.5-dist/css/bootstrap.min.css">
+
+    <!-- logo added -->
+    <link rel="icon" href="../images/logo/logo.png" type="image/png">
+
+    <!--Google Fonts added-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
+
+    <!--Font awesome added-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!--External style sheet-->
+    <link rel="stylesheet" href="./style.css">
+
+    <!--internal style sheet-->
+
+</head>
+<!--nav bar container -->
+
+<body class="container-fluid">
+    <div class="screen-module">
+
+        <!-- left side main contianer -->
+        <div class="main-content">
+            <br>
+
+                <i class="fas fa-arrow-left arrow-icon" id="arrow-icon"></i><input type="text" id="searchInput" class="search-bar" placeholder="Search for Products,Brand and More..."><i id="value-close" class="fa fa-times search-close" aria-hidden="true"></i><br>
+                <ul id="results"></ul>
+            <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+            <!--left side top first container-->
+            <script async>
+                const searchinput = document.getElementById('searchInput');
+                const arrowEarase = document.getElementById('value-close');
+               
+                arrowEarase.addEventListener('click',() =>
+                {
+                 searchinput.value = "";
+                })
+
+                const backward = document.getElementById('arrow-icon');
+                backward.addEventListener('click',()=>{
+                    window.history.back();
+                })
+            </script>
+
+            <script>
+                // 2024 Tamil movies (sample of 200+ names)
+                //webseries files
+
+
+
+
+                //a series files
+                //2024 files
+                //2025 files
+                const movieFiles = [
+                    //main contents files all categories
+                    { title: "Grocery", file: "../movies collection/tamil web/series/rana naidu.html" },
+                    { title: "Mobiles", file: "../movies collection/tamil web/series/devika and danny.html" },
+                    { title: "Gadgets", file: "../movies collection/tamil web/series/vaanil thedinen.html" },
+                    { title: "Beauty", file: "../movies collection/tamil web/series/kankajura.html" },
+                    { title: "Appliances", file: "../movies collection/tamil web/series/the royals.html" },
+                    { title: "Electronics", file: "../movies collection/tamil web/series/aayan manne.html" },
+                    { title: "Furnitures", file: "../movies collection/tamil web/series/khauf.html" },
+                    { title: "Toys,Baby", file: "../movies collection/tamil web/series/maduri paiyanum chennai.html" },
+                   
+
+
+                    //webseries files 2024
+
+                   
+
+
+
+
+                    //2025 files collection
+
+                   
+
+                    // ... (repeat similar entries up to 200+ movies)
+                ];
+
+
+                // For demonstration, let's auto-generate 200+ dummy movie entries
+
+
+                const searchInput = document.getElementById('searchInput');
+                const results = document.getElementById('results');
+
+                searchInput.addEventListener('input', function () {
+                    const query = this.value.toLowerCase();
+                    results.innerHTML = '';
+                    if (query.length === 0) return;
+
+                    const filtered = movieFiles.filter(m =>
+                        m.title.toLowerCase().includes(query)
+                    );
+
+                    filtered.forEach(m => {
+                        const li = document.createElement('li');
+                        li.classList.add('link');
+                        const a = document.createElement('a');
+                        a.href = m.file;
+                        a.textContent = m.title;
+                        li.appendChild(a);
+                        results.appendChild(li);
+                    });
+
+                    if (filtered.length === 0) {
+                        results.style.color = 'red';
+                        results.style.textDecoration="none";
+                        results.innerHTML = '<li>No results found.</li>';
+                    }
+                });
+            </script>
+
+
+        </div><br><br><br><br><br>
+        <!--footer-->
+
+        <p class=" text-conect ">Contact Us </p>
+        <div class="nav-social">
+            <ul class="nav-social-menu d-flex justify-content-start unlist">
+                <li><a href="https://ig.me/m/mahanmovies2025?text=please%20tell%20your%20querry" target="_blank"><i
+                            class="fa-brands fa-instagram"></i></a></li>
+                <li><a href="#"><i class="fa-brands fa-facebook"></i></a></li>
+                <li><a href="http://www.youtube.com/@mahan_prince_official" target="_blank"><i
+                            class="fa-brands fa-youtube"></i></a></li>
+                <li><a href="https://t.me/Mahanprince12" target="_blank"><i class="fa-brands fa-telegram"></i></a></li>
+                <li><a href="https://wa.link/uymfd9" target="_blank"><i class="fa-brands fa-whatsapp"></i></a></li>
+            </ul>
+        </div>
+    </div>
+
+
+
+
+
+
+    <!--footer container--><br><br><br><br><br><br><br><br>
+    <div class="footer-main">
+
+    </div>
+    <br><br><br><br><br><br><br><br><br><br><br><br>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+</body>
+
+<script>
+    // Map movie titles to poster URLs (200+ Tamil movies, using IMDb or TMDb posters where possible)
+    const posterMap = {
+        //webseries files 2025
+        "Grocery": "../images/products collection/image1.webp",
+        "Mobiles": "../images/products collection/image2.webp",
+        "Gadgets": "../images/products collection/image3.webp",
+        "Beauty": "../images/products collection/image4.webp",
+        "Appliances": "../images/products collection/image5.webp",
+        "Electronics": "../images/products collection/image6.webp",
+        "Furnitures": "../images/products collection/image7.webp",
+        "Toys,Baby": "../images/products collection/image8.webp",
+       
+    };
+
+    // For 200+ movies, use a generic fallback for those not in posterMap
+    function getPosterPath(title, file) {
+        if (posterMap[title]) {
+            return posterMap[title];
+        }
+        // fallback: use a generic poster or a placeholder image
+     
+    }
+
+    // Add more dummy movies to reach 300+ for demonstration
+    for (let i = 0; i <= 300; i++) {
+        posterMap[`Tamil Movie ${i} 2024`] = "https://via.placeholder.com/48x72?text=No+Image";
+    }
+
+    // Patch the search event to show images
+    searchInput.addEventListener('input', function () {
+        const query = this.value.toLowerCase();
+        results.innerHTML = '';
+        if (query.length === 0) return;
+
+        const filtered = movieFiles.filter(m =>
+            m.title.toLowerCase().includes(query)
+        );
+
+        filtered.forEach(m => {
+            const li = document.createElement('li');
+            const a = document.createElement('a');
+            a.href = m.file;
+            a.className = "movie-link";
+
+            const img = document.createElement('img');
+            img.src = getPosterPath(m.title, m.file);
+            img.alt = m.title;
+            img.className = "movie-img";
+            img.onerror = function () {
+                this.onerror = null;
+                this.src = "https://via.placeholder.com/48x72?text=No+Image";
+            };
+
+            a.appendChild(img);
+            a.appendChild(document.createTextNode(m.title));
+            li.appendChild(a);
+            results.appendChild(li);
+        });
+
+        if (filtered.length === 0) {
+            results.innerHTML = '<li>No results found.</li>';
+        }
+    });
+
+    let recentSearches = JSON.parse(localStorage.getItem('recentSearches') || '[]');
+
+    function updateRecentSearches(query) {
+        if (!query || !query.trim()) return;
+        // Remove if already exists
+        recentSearches = recentSearches.filter(q => q.toLowerCase() !== query.toLowerCase());
+        // Add to front
+        recentSearches.unshift(query);
+        // Limit to 5
+        recentSearches = recentSearches.slice(0, 5);
+        localStorage.setItem('recentSearches', JSON.stringify(recentSearches));
+        renderRecentSearches();
+    }
+
+    function renderRecentSearches() {
+        let recentDiv = document.getElementById('recent-searches');
+        if (!recentDiv) {
+            recentDiv = document.createElement('div');
+            recentDiv.id = 'recent-searches';
+            recentDiv.style.marginTop = '10px';
+            results.parentNode.insertBefore(recentDiv, results);
+        }
+        if (recentSearches.length === 0) {
+            recentDiv.innerHTML = '';
+            return;
+        }
+        recentDiv.style.color = '#000';
+        recentDiv.style.paddingLeft = '20px';
+        recentDiv.innerHTML = '<strong>Recent Searches:</strong> ' + recentSearches.map(q =>
+            `<a href="#" class="recent-search-link" style="margin-right:8px">${q}</a>`
+        ).join('');
+        // Add click event to recent search links
+        recentDiv.querySelectorAll('.recent-search-link').forEach(link => {
+            link.onclick = function (e) {
+                e.preventDefault();
+                searchInput.value = this.textContent;
+                searchInput.dispatchEvent(new Event('input'));
+            };
+        });
+    }
+
+    // Save search on Enter key
+    searchInput.addEventListener('keydown', function (e) {
+        if (e.key === 'Enter') {
+            updateRecentSearches(this.value);
+        }
+    });
+
+    // Also save when user clicks a result
+    results.addEventListener('click', function (e) {
+        if (e.target.tagName === 'A' && e.target.classList.contains('movie-link')) {
+            updateRecentSearches(searchInput.value);
+        }
+    });
+
+    renderRecentSearches();
+</script>
+
+</html>

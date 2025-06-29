@@ -154,7 +154,6 @@
         margin-right: -100%;
         box-shadow: 0 1px 5px rgba(0, 0, 0, 0.4);
         transition: 0.7s;
-        border-top-left-radius: 10px;
      }
      .cart-active
      {
@@ -186,29 +185,6 @@
         font-weight: 900;
      }
     
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     /* main containers */
 
     /* search bar page creating */
@@ -330,7 +306,7 @@
     {
         height: 280px;
         display: flex;
-        border-radius: 20px;
+        border-radius: 6px;
         justify-content: center;
         flex-direction: column;
         padding: 20px 30px;
@@ -339,6 +315,7 @@
         margin-right: 10px;
         background:#13ebff0c;
         line-height: 16px;
+        border: 1px solid rgba(0, 0, 0, 0.1);
 
     }
     
