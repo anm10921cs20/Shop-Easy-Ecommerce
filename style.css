@@ -61,6 +61,7 @@
 
     .app-order {
         padding: 21px;
+        position: relative;
     }
 
     .app-order-icon {
@@ -72,7 +73,7 @@
     }
 
     .app-nav-bars {
-        height: 1000px;
+        height: 100vh;
         width: 320px;
         background-color: #fff;
         box-shadow: 4px 4px 10px #b3b3b3;
@@ -130,7 +131,83 @@
         font-size: 17px;
         color: #353535;
     }
+     /* cart items added */
+     .cart-count
+     {
+        position: absolute;
+        top: 3px;
+        right:3px;
+        background-color: var(--bs-danger);
+        border-radius: 50%;
+        padding: 0 7px;
+        color: #fff;
+     }
+     .cart
+     {
+        position: fixed;
+        height: 100vh;
+        width: 320px;
+        background-color:#ffffff;
+        z-index: 2000;
+        top: 0;
+        right: 0;
+        margin-right: -100%;
+        box-shadow: 0 1px 5px rgba(0, 0, 0, 0.4);
+        transition: 0.7s;
+     }
+     .cart-active
+     {
+        margin-right: 0px;
+        transition: 0.7s;
+     }
+     .cart-header
+     {
+        background-color: var(--bs-primary);
+        color: var(--bs-light);
+        display: flex;
+        justify-content: space-between;
+        height: 60px;
+        width: 100%;
+        align-items: center;
+         box-shadow: 5px -5px 10px var(--bs-primary);
+     }
+     .cart-icon
+     {
+        font-size: 1.2rem;
+        padding: 0 5px;
+     }
+     #cart-close
+     {
+        padding: 10px;
+        color: var(--bs-light);
+        font-size: 1.4rem;
+        margin-bottom: 4px;
+        font-weight: 900;
+     }
     
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     /* main containers */
 
     /* search bar page creating */
@@ -176,7 +253,7 @@
     .carousel-indicators.crouser-btn
     {
         position: absolute;
-        top: 180px;
+        top: 200px;
     }
 
     /* products collection */
@@ -311,6 +388,9 @@
         background-color:#ffda33;
         padding: 6px;
     }
+
+   
+
 
 
 
