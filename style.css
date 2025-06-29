@@ -14,7 +14,7 @@
 
     body
     {
-        height: 2000px;
+        height: 5000px;
     }
 
     /* nav container nav-bar */
@@ -445,8 +445,24 @@
     {
         color: #6B7FD7;
     }
-    
+    /* gadgets container */
 
+    .gadgets-products-items
+    {
+         height: 280px;
+        display: flex;
+        border-radius: 6px;
+        justify-content: center;
+        flex-direction: column;
+        padding: 20px 30px;
+        margin-top: 10px;
+        margin-left: 10px;
+        margin-right: 10px;
+        background:#13ebff0c;
+        line-height: 16px;
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        position: relative;
+    }
 
 
 
