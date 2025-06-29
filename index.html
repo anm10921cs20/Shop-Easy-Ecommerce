@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="theme-color" content="#357DED">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--app title-->
+    <title>ShopEasy</title>
+    <!--logo image added-->
+    <link rel="icon" href="./images/logo/logo.png" type="text/png">
+
+    <!--bootstap css files insert-->
+    <link rel="stylesheet" href="./bootstrap-5.3.5-dist/css/bootstrap.min.css">
+
+    <!--external stylesheet insert-->
+    <link rel="stylesheet" href="style.css" type="text/css">
+
+    <!--fontawsesome cdn insert-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+
+    <!--external font added and insert-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <!--nav container-->
+    <div class="nav-container" id="nav-container">
+        <!--left bar-->
+        <div class="app-left-bar">
+            <i id="app-bars" class="fas fa-bars app-bars"></i>
+        </div>
+        <!--app title head and foot-->
+        <div class="app-title">
+            <h4 class="app-title_head">Shop Easy</h4>
+            <p class="app-title_foot">Online Shop</p>
+        </div>
+        <!--app login-->
+        <div class="app-login">
+            <a class="app-login-link" href="#"><i class="fa-regular fa-circle-user app-login-icon"></i> <span
+                    class="app-login-name">Login</span></a>
+        </div>
+        <div class="app-order">
+            <a href="#" class="app-order-name"><i class="fas fa-cart-shopping app-order-icon"></i></a>
+        </div>
+
+        <!--app bars connect nav-menus-->
+
+        <div class="app-nav-bars" id="app-nav-bars" data-bs-backdrop="static">
+            <!--nav bar header content inside-->
+            <div class="nav-bar-head">
+                <div class="nav-bar-head_sub">
+                    <a href="#">
+                        <h5 class="h6 text-light"><i class="fas fa-user nav-head_sub-icon"></i>Login & Signup</h5>
+                    </a>
+
+                </div>
+                <div class="nav-bar-foot_sub">
+                    <i id="nav-close" class="fas fa-close nav-foot_sub-icon"></i>
+                </div>
+            </div><br>
+            <!--nav bar body content inside-->
+            <div class="nav-bar-body">
+                <ul class="nav-bar-body_nav-menu">
+                    <li class="nav-menu_items"><a href="#"><i class="fas fa-home nav-menu-icons"></i> Home</a></li>
+                    <li class="nav-menu_items"><a href="#"><i class="fa-solid fa-table-cells-large"></i> All
+                            Categories</a></li>
+                    <li class="nav-menu_items"><a href="#"><i class="fa-solid fa-cart-flatbed"></i> My Orders</a></li>
+                    <li class="nav-menu_items"><a href="#"><i class="fa-regular fa-address-book"></i> Contact</a></li>
+                    <li class="nav-menu_items"><a href="#"><i class="fa-solid fa-eject"></i> About</a></li>
+                    <hr>
+                    <li class="nav-menu_items"><a href="#"><i class="fas fa-download nav-menu-icons"></i> App</a></li>
+                    <li class="nav-menu_items"><a href="#"><i class="fa-solid fa-basket-shopping"></i> Grocery</a></li>
+                    <li class="nav-menu_items"><a href="#"><i class="fa-solid fa-file-contract"></i> Legal</a></li>
+                    <hr>
+                    <li class="nav-menu_items"><a href="#"><i class="fa-solid fa-user-tie"></i> Customer Care</a></li>
+                    <li class="nav-menu_items"><a href="#"><i class="fa-solid fa-user"></i> Login</a></li>
+                    <hr>
+                </ul>
+
+            </div>
+        </div>
+    </div>
+    <br>
+
+    <!--main container-->
+    <div class="main-container">
+        <!--search page-->
+        <div class="search">
+            <div class="search-bar">
+                <a href="./search/search.html">
+                    <i class="fa-solid fa-magnifying-glass search-bar-image_icon"></i> <span
+                        class="search-bar-image_name">Search For Products</span>
+                </a>
+            </div>
+        </div><br>
+        <!--crousel bar-->
+        <div class="crousel-bar">
+            <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+                <div class="carousel-indicators crouser-btn">
+                    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active"
+                        aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1"
+                        aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2"
+                        aria-label="Slide 3"></button>
+                    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="3"
+                        aria-label="Slide 4"></button>
+                    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="4"
+                        aria-label="Slide 5"></button>
+                    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="5"
+                        aria-label="Slide 6"></button>
+                    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="6"
+                        aria-label="Slide 7"></button>
+                    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="7"
+                        aria-label="Slide 8"></button>
+                    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="8"
+                        aria-label="Slide 9"></button>
+
+
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active" data-bs-interval="2000">
+                        <img src="./images/crousel bar/image1.webp" class="d-block w-100" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>First slide label</h5>
+                            <p>Some representative placeholder content for the first slide.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item" data-bs-interval="2000">
+                        <img src="./images/crousel bar/image2.webp" class="d-block w-100" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Second slide label</h5>
+                            <p>Some representative placeholder content for the second slide.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item" data-bs-interval="2000">
+                        <img src="./images/crousel bar/image3.webp" class="d-block w-100" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Third slide label</h5>
+                            <p>Some representative placeholder content for the third slide.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item" data-bs-interval="2000">
+                        <img src="./images/crousel bar/image4.webp" class="d-block w-100" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Second slide label</h5>
+                            <p>Some representative placeholder content for the second slide.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item" data-bs-interval="2000">
+                        <img src="./images/crousel bar/image5.webp" class="d-block w-100" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Second slide label</h5>
+                            <p>Some representative placeholder content for the second slide.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item" data-bs-interval="2000">
+                        <img src="./images/crousel bar/image6.webp" class="d-block w-100" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Second slide label</h5>
+                            <p>Some representative placeholder content for the second slide.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item" data-bs-interval="2000">
+                        <img src="./images/crousel bar/image7.webp" class="d-block w-100" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Second slide label</h5>
+                            <p>Some representative placeholder content for the second slide.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item" data-bs-interval="2000">
+                        <img src="./images/crousel bar/image8.webp" class="d-block w-100" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Second slide label</h5>
+                            <p>Some representative placeholder content for the second slide.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item" data-bs-interval="2000">
+                        <img src="./images/crousel bar/image9.webp" class="d-block w-100" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Second slide label</h5>
+                            <p>Some representative placeholder content for the second slide.</p>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div><br><br><br>
+
+
+        <!--products collection-->
+        <div class="products-collection">
+            <!--products list-->
+            <a href="#" class="products-link">
+                <div class="products">
+                    <img src="./images/products collection/image1.webp" width="70px" height="70px" alt="groceery">
+                    <p class="text-center products-name">Grocery</p>
+                </div>
+            </a>
+            <a href="#" class="products-link">
+                <div class="products">
+                    <img src="./images/products collection/image2.webp" width="70px" height="70px" alt="mobiles">
+                    <p class="text-center products-name">Mobiles</p>
+                </div>
+            </a>
+            <a href="#" class="products-link">
+                <div class="products">
+                    <img src="./images/products collection/image3.webp" width="70px" height="70px" alt="Gadgets">
+                    <p class="text-center products-name">Gadgets</p>
+                </div>
+            </a>
+            <a href="#" class="products-link">
+                <div class="products">
+                    <img src="./images/products collection/image4.webp" width="70px" height="70px" alt="Beauty">
+                    <p class="text-center products-name">Beauty</p>
+                </div>
+            </a>
+            <a href="#" class="products-link">
+                <div class="products">
+                    <img src="./images/products collection/image5.webp" width="70px" height="70px" alt="Appliances">
+                    <p class="text-center products-name">Appliances</p>
+                </div>
+            </a>
+            <a href="#" class="products-link">
+                <div class="products">
+                    <img src="./images/products collection/image6.webp" width="70px" height="70px" alt="Electronics">
+                    <p class="text-center products-name">Electronics</p>
+                </div>
+            </a>
+            <a href="#" class="products-link">
+                <div class="products">
+                    <img src="./images/products collection/image7.webp" width="70px" height="70px" alt="Furnitures">
+                    <p class="text-center products-name">Furnitures</p>
+                </div>
+            </a>
+            <a href="#" class="products-link">
+                <div class="products">
+                    <img src="./images/products collection/image8.webp" width="70px" height="70px" alt="Toys,Baby">
+                    <p class="text-center products-name">Toys,Baby</p>
+                </div>
+            </a>
+        </div><br><br>
+
+        <!--products details grocery-->
+        <div class="grocery-container">
+            <div class="grocery-tit">
+                <h3 class="grocery-title">Grocery</h3>
+                <a href="#"><i class="fa-solid fa-arrow-right color-icon"></i></a>
+            </div>
+
+            <div class="grocery">
+                <div class="grocery-products-items">
+                     <a href="#"><img class="product-img" src="https://rukminim2.flixcart.com/image/320/320/jl41nrk0/soap/g/z/x/3-450-soap-mysore-sandal-original-imaf8bedwb4vumfb.jpeg?q=60" width="150px" alt="sandoor"></a><br>
+                     <div class="product-count">
+                        <p class="product-quantity">3X150g</p>
+                        <p class="product-review">4.4 <i class="fas fa-star checked"></i></p>
+                     </div>
+                     <p class="groceryitems-name">Mysore Sandal Soap<br>3X150g</p>
+                     <p class="products-discount">9% OFF</p>
+                     <div class="product-rate">
+                        <p class="product-orginal">Rs.220</p>
+                        <p class="product-mrp"><del>Rs.249</del></p>
+                     </div>
+                      <button class="product-buy" type="button">Buy Now</button>
+                </div>
+               <div class="grocery-products-items">
+                     <a href="#"><img class="product-img" src="https://rukminim2.flixcart.com/image/320/320/jl41nrk0/soap/g/z/x/3-450-soap-mysore-sandal-original-imaf8bedwb4vumfb.jpeg?q=60" width="150px" alt="sandoor"></a><br>
+                     <div class="product-count">
+                        <p class="product-quantity">3X150g</p>
+                        <p class="product-review">4.4 <i class="fas fa-star checked"></i></p>
+                     </div>
+                     <p class="groceryitems-name">Mysore Sandal Soap<br>3X150g</p>
+                     <p class="products-discount">9% OFF</p>
+                     <div class="product-rate">
+                        <p class="product-orginal">Rs.220</p>
+                        <p class="product-mrp"><del>Rs.249</del></p>
+                     </div>
+                      <button class="product-buy" type="button">Buy Now</button>
+                </div>
+                <div class="grocery-products-items">
+                     <a href="#"><img class="product-img" src="https://rukminim2.flixcart.com/image/320/320/jl41nrk0/soap/g/z/x/3-450-soap-mysore-sandal-original-imaf8bedwb4vumfb.jpeg?q=60" width="150px" alt="sandoor"></a><br>
+                     <div class="product-count">
+                        <p class="product-quantity">3X150g</p>
+                        <p class="product-review">4.4 <i class="fas fa-star checked"></i></p>
+                     </div>
+                     <p class="groceryitems-name">Mysore Sandal Soap<br>3X150g</p>
+                     <p class="products-discount">9% OFF</p>
+                     <div class="product-rate">
+                        <p class="product-orginal">Rs.220</p>
+                        <p class="product-mrp"><del>Rs.249</del></p>
+                     </div>
+                      <button class="product-buy" type="button">Buy Now</button>
+                </div>
+                <div class="grocery-products-items">
+                     <a href="#"><img class="product-img" src="https://rukminim2.flixcart.com/image/320/320/jl41nrk0/soap/g/z/x/3-450-soap-mysore-sandal-original-imaf8bedwb4vumfb.jpeg?q=60" width="150px" alt="sandoor"></a><br>
+                     <div class="product-count">
+                        <p class="product-quantity">3X150g</p>
+                        <p class="product-review">4.4 <i class="fas fa-star checked"></i></p>
+                     </div>
+                     <p class="groceryitems-name">Mysore Sandal Soap<br>3X150g</p>
+                     <p class="products-discount">9% OFF</p>
+                     <div class="product-rate">
+                        <p class="product-orginal">Rs.220</p>
+                        <p class="product-mrp"><del>Rs.249</del></p>
+                     </div>
+                      <button class="product-buy" type="button">Buy Now</button>
+                </div>
+                <div class="grocery-products-items">
+                     <a href="#"><img class="product-img" src="https://rukminim2.flixcart.com/image/320/320/jl41nrk0/soap/g/z/x/3-450-soap-mysore-sandal-original-imaf8bedwb4vumfb.jpeg?q=60" width="150px" alt="sandoor"></a><br>
+                     <div class="product-count">
+                        <p class="product-quantity">3X150g</p>
+                        <p class="product-review">4.4 <i class="fas fa-star checked"></i></p>
+                     </div>
+                     <p class="groceryitems-name">Mysore Sandal Soap<br>3X150g</p>
+                     <p class="products-discount">9% OFF</p>
+                     <div class="product-rate">
+                        <p class="product-orginal">Rs.220</p>
+                        <p class="product-mrp"><del>Rs.249</del></p>
+                     </div>
+                      <button class="product-buy" type="button">Buy Now</button>
+                </div>
+                <div class="grocery-products-items">
+                     <a href="#"><img class="product-img" src="https://rukminim2.flixcart.com/image/320/320/jl41nrk0/soap/g/z/x/3-450-soap-mysore-sandal-original-imaf8bedwb4vumfb.jpeg?q=60" width="150px" alt="sandoor"></a><br>
+                     <div class="product-count">
+                        <p class="product-quantity">3X150g</p>
+                        <p class="product-review">4.4 <i class="fas fa-star checked"></i></p>
+                     </div>
+                     <p class="groceryitems-name">Mysore Sandal Soap<br>3X150g</p>
+                     <p class="products-discount">9% OFF</p>
+                     <div class="product-rate">
+                        <p class="product-orginal">Rs.220</p>
+                        <p class="product-mrp"><del>Rs.249</del></p>
+                     </div>
+                      <button class="product-buy" type="button">Buy Now</button>
+                </div>
+                <div class="grocery-products-items">
+                     <a href="#"><img class="product-img" src="https://rukminim2.flixcart.com/image/320/320/jl41nrk0/soap/g/z/x/3-450-soap-mysore-sandal-original-imaf8bedwb4vumfb.jpeg?q=60" width="150px" alt="sandoor"></a><br>
+                     <div class="product-count">
+                        <p class="product-quantity">3X150g</p>
+                        <p class="product-review">4.4 <i class="fas fa-star checked"></i></p>
+                     </div>
+                     <p class="groceryitems-name">Mysore Sandal Soap<br>3X150g</p>
+                     <p class="products-discount">9% OFF</p>
+                     <div class="product-rate">
+                        <p class="product-orginal">Rs.220</p>
+                        <p class="product-mrp"><del>Rs.249</del></p>
+                     </div>
+                      <button class="product-buy" type="button">Buy Now</button>
+                </div>
+                <div class="grocery-products-items">
+                     <a href="#"><img class="product-img" src="https://rukminim2.flixcart.com/image/320/320/jl41nrk0/soap/g/z/x/3-450-soap-mysore-sandal-original-imaf8bedwb4vumfb.jpeg?q=60" width="150px" alt="sandoor"></a><br>
+                     <div class="product-count">
+                        <p class="product-quantity">3X150g</p>
+                        <p class="product-review">4.4 <i class="fas fa-star checked"></i></p>
+                     </div>
+                     <p class="groceryitems-name">Mysore Sandal Soap<br>3X150g</p>
+                     <p class="products-discount">9% OFF</p>
+                     <div class="product-rate">
+                        <p class="product-orginal">Rs.220</p>
+                        <p class="product-mrp"><del>Rs.249</del></p>
+                     </div>
+                      <button class="product-buy" type="button">Buy Now</button>
+                </div>
+                <div class="grocery-products-items">
+                     <a href="#"><img class="product-img" src="https://rukminim2.flixcart.com/image/320/320/jl41nrk0/soap/g/z/x/3-450-soap-mysore-sandal-original-imaf8bedwb4vumfb.jpeg?q=60" width="150px" alt="sandoor"></a><br>
+                     <div class="product-count">
+                        <p class="product-quantity">3X150g</p>
+                        <p class="product-review">4.4 <i class="fas fa-star checked"></i></p>
+                     </div>
+                     <p class="groceryitems-name">Mysore Sandal Soap<br>3X150g</p>
+                     <p class="products-discount">9% OFF</p>
+                     <div class="product-rate">
+                        <p class="product-orginal">Rs.220</p>
+                        <p class="product-mrp"><del>Rs.249</del></p>
+                     </div>
+                      <button class="product-buy" type="button">Buy Now</button>
+                </div>
+                <div class="grocery-products-items">
+                     <a href="#"><img class="product-img" src="https://rukminim2.flixcart.com/image/320/320/jl41nrk0/soap/g/z/x/3-450-soap-mysore-sandal-original-imaf8bedwb4vumfb.jpeg?q=60" width="150px" alt="sandoor"></a><br>
+                     <div class="product-count">
+                        <p class="product-quantity">3X150g</p>
+                        <p class="product-review">4.4 <i class="fas fa-star checked"></i></p>
+                     </div>
+                     <p class="groceryitems-name">Mysore Sandal Soap<br>3X150g</p>
+                     <p class="products-discount">9% OFF</p>
+                     <div class="product-rate">
+                        <p class="product-orginal">Rs.220</p>
+                        <p class="product-mrp"><del>Rs.249</del></p>
+                     </div>
+                      <button class="product-buy" type="button">Buy Now</button>
+                </div>
+               
+                
+            </div>
+
+        </div><br><br>
+         <!--products details mobile-->
+        <div class="mobile-container">
+            <div class="grocery-tit">
+                <h3 class="grocery-title">Grocery</h3>
+                <a href="#"><i class="fa-solid fa-arrow-right color-icon"></i></a>
+            </div>
+
+            <div class="grocery">
+                <div class="grocery-products-items">
+                     <a href="#"><img class="product-img" src="https://rukminim2.flixcart.com/image/320/320/jl41nrk0/soap/g/z/x/3-450-soap-mysore-sandal-original-imaf8bedwb4vumfb.jpeg?q=60" width="150px" alt="sandoor"></a><br>
+                     <div class="product-count">
+                        <p class="product-quantity">3X150g</p>
+                        <p class="product-review">4.4 <i class="fas fa-star checked"></i></p>
+                     </div>
+                     <p class="groceryitems-name">Mysore Sandal Soap<br>3X150g</p>
+                     <p class="products-discount">9% OFF</p>
+                     <div class="product-rate">
+                        <p class="product-orginal">Rs.220</p>
+                        <p class="product-mrp"><del>Rs.249</del></p>
+                     </div>
+                      <button class="product-buy" type="button">Buy Now</button>
+                </div>
+               <div class="grocery-products-items">
+                     <a href="#"><img class="product-img" src="https://rukminim2.flixcart.com/image/320/320/jl41nrk0/soap/g/z/x/3-450-soap-mysore-sandal-original-imaf8bedwb4vumfb.jpeg?q=60" width="150px" alt="sandoor"></a><br>
+                     <div class="product-count">
+                        <p class="product-quantity">3X150g</p>
+                        <p class="product-review">4.4 <i class="fas fa-star checked"></i></p>
+                     </div>
+                     <p class="groceryitems-name">Mysore Sandal Soap<br>3X150g</p>
+                     <p class="products-discount">9% OFF</p>
+                     <div class="product-rate">
+                        <p class="product-orginal">Rs.220</p>
+                        <p class="product-mrp"><del>Rs.249</del></p>
+                     </div>
+                      <button class="product-buy" type="button">Buy Now</button>
+                </div>
+                <div class="grocery-products-items">
+                     <a href="#"><img class="product-img" src="https://rukminim2.flixcart.com/image/320/320/jl41nrk0/soap/g/z/x/3-450-soap-mysore-sandal-original-imaf8bedwb4vumfb.jpeg?q=60" width="150px" alt="sandoor"></a><br>
+                     <div class="product-count">
+                        <p class="product-quantity">3X150g</p>
+                        <p class="product-review">4.4 <i class="fas fa-star checked"></i></p>
+                     </div>
+                     <p class="groceryitems-name">Mysore Sandal Soap<br>3X150g</p>
+                     <p class="products-discount">9% OFF</p>
+                     <div class="product-rate">
+                        <p class="product-orginal">Rs.220</p>
+                        <p class="product-mrp"><del>Rs.249</del></p>
+                     </div>
+                      <button class="product-buy" type="button">Buy Now</button>
+                </div>
+                <div class="grocery-products-items">
+                     <a href="#"><img class="product-img" src="https://rukminim2.flixcart.com/image/320/320/jl41nrk0/soap/g/z/x/3-450-soap-mysore-sandal-original-imaf8bedwb4vumfb.jpeg?q=60" width="150px" alt="sandoor"></a><br>
+                     <div class="product-count">
+                        <p class="product-quantity">3X150g</p>
+                        <p class="product-review">4.4 <i class="fas fa-star checked"></i></p>
+                     </div>
+                     <p class="groceryitems-name">Mysore Sandal Soap<br>3X150g</p>
+                     <p class="products-discount">9% OFF</p>
+                     <div class="product-rate">
+                        <p class="product-orginal">Rs.220</p>
+                        <p class="product-mrp"><del>Rs.249</del></p>
+                     </div>
+                      <button class="product-buy" type="button">Buy Now</button>
+                </div>
+                <div class="grocery-products-items">
+                     <a href="#"><img class="product-img" src="https://rukminim2.flixcart.com/image/320/320/jl41nrk0/soap/g/z/x/3-450-soap-mysore-sandal-original-imaf8bedwb4vumfb.jpeg?q=60" width="150px" alt="sandoor"></a><br>
+                     <div class="product-count">
+                        <p class="product-quantity">3X150g</p>
+                        <p class="product-review">4.4 <i class="fas fa-star checked"></i></p>
+                     </div>
+                     <p class="groceryitems-name">Mysore Sandal Soap<br>3X150g</p>
+                     <p class="products-discount">9% OFF</p>
+                     <div class="product-rate">
+                        <p class="product-orginal">Rs.220</p>
+                        <p class="product-mrp"><del>Rs.249</del></p>
+                     </div>
+                      <button class="product-buy" type="button">Buy Now</button>
+                </div>
+                <div class="grocery-products-items">
+                     <a href="#"><img class="product-img" src="https://rukminim2.flixcart.com/image/320/320/jl41nrk0/soap/g/z/x/3-450-soap-mysore-sandal-original-imaf8bedwb4vumfb.jpeg?q=60" width="150px" alt="sandoor"></a><br>
+                     <div class="product-count">
+                        <p class="product-quantity">3X150g</p>
+                        <p class="product-review">4.4 <i class="fas fa-star checked"></i></p>
+                     </div>
+                     <p class="groceryitems-name">Mysore Sandal Soap<br>3X150g</p>
+                     <p class="products-discount">9% OFF</p>
+                     <div class="product-rate">
+                        <p class="product-orginal">Rs.220</p>
+                        <p class="product-mrp"><del>Rs.249</del></p>
+                     </div>
+                      <button class="product-buy" type="button">Buy Now</button>
+                </div>
+                <div class="grocery-products-items">
+                     <a href="#"><img class="product-img" src="https://rukminim2.flixcart.com/image/320/320/jl41nrk0/soap/g/z/x/3-450-soap-mysore-sandal-original-imaf8bedwb4vumfb.jpeg?q=60" width="150px" alt="sandoor"></a><br>
+                     <div class="product-count">
+                        <p class="product-quantity">3X150g</p>
+                        <p class="product-review">4.4 <i class="fas fa-star checked"></i></p>
+                     </div>
+                     <p class="groceryitems-name">Mysore Sandal Soap<br>3X150g</p>
+                     <p class="products-discount">9% OFF</p>
+                     <div class="product-rate">
+                        <p class="product-orginal">Rs.220</p>
+                        <p class="product-mrp"><del>Rs.249</del></p>
+                     </div>
+                      <button class="product-buy" type="button">Buy Now</button>
+                </div>
+                <div class="grocery-products-items">
+                     <a href="#"><img class="product-img" src="https://rukminim2.flixcart.com/image/320/320/jl41nrk0/soap/g/z/x/3-450-soap-mysore-sandal-original-imaf8bedwb4vumfb.jpeg?q=60" width="150px" alt="sandoor"></a><br>
+                     <div class="product-count">
+                        <p class="product-quantity">3X150g</p>
+                        <p class="product-review">4.4 <i class="fas fa-star checked"></i></p>
+                     </div>
+                     <p class="groceryitems-name">Mysore Sandal Soap<br>3X150g</p>
+                     <p class="products-discount">9% OFF</p>
+                     <div class="product-rate">
+                        <p class="product-orginal">Rs.220</p>
+                        <p class="product-mrp"><del>Rs.249</del></p>
+                     </div>
+                      <button class="product-buy" type="button">Buy Now</button>
+                </div>
+                <div class="grocery-products-items">
+                     <a href="#"><img class="product-img" src="https://rukminim2.flixcart.com/image/320/320/jl41nrk0/soap/g/z/x/3-450-soap-mysore-sandal-original-imaf8bedwb4vumfb.jpeg?q=60" width="150px" alt="sandoor"></a><br>
+                     <div class="product-count">
+                        <p class="product-quantity">3X150g</p>
+                        <p class="product-review">4.4 <i class="fas fa-star checked"></i></p>
+                     </div>
+                     <p class="groceryitems-name">Mysore Sandal Soap<br>3X150g</p>
+                     <p class="products-discount">9% OFF</p>
+                     <div class="product-rate">
+                        <p class="product-orginal">Rs.220</p>
+                        <p class="product-mrp"><del>Rs.249</del></p>
+                     </div>
+                      <button class="product-buy" type="button">Buy Now</button>
+                </div>
+                <div class="grocery-products-items">
+                     <a href="#"><img class="product-img" src="https://rukminim2.flixcart.com/image/320/320/jl41nrk0/soap/g/z/x/3-450-soap-mysore-sandal-original-imaf8bedwb4vumfb.jpeg?q=60" width="150px" alt="sandoor"></a><br>
+                     <div class="product-count">
+                        <p class="product-quantity">3X150g</p>
+                        <p class="product-review">4.4 <i class="fas fa-star checked"></i></p>
+                     </div>
+                     <p class="groceryitems-name">Mysore Sandal Soap<br>3X150g</p>
+                     <p class="products-discount">9% OFF</p>
+                     <div class="product-rate">
+                        <p class="product-orginal">Rs.220</p>
+                        <p class="product-mrp"><del>Rs.249</del></p>
+                     </div>
+                      <button class="product-buy" type="button">Buy Now</button>
+                </div>
+               
+                
+            </div>
+
+        </div>
+
+
+
+
+
+
+
+
+
+
+    </div>
+
+
+
+
+
+</body>
+<!--script external files insert-->
+<script src="app.js"></script>
+<!--bootstrap js files insert-->
+<script src="./bootstrap-5.3.5-dist/js/bootstrap.min.js">
+</script>
+
+</html>
