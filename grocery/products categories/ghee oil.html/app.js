@@ -35,15 +35,20 @@ items1.addEventListener('click',()=>
 })
 items2.addEventListener('click',() =>
 {
+    //remove items
     all.style.display ="none";
     gheeItems.style.display="none"
+    //add items
     blendedItems.style.display="grid"
 })
 items3.addEventListener('click',()=>
 {
+    //remove items
     all.style.display ="none";
+     blendedItems.style.display="none"
+     //add items
     gheeItems.style.display="grid"
-    blendedItems.style.display="none"
+   
 })
 
 
