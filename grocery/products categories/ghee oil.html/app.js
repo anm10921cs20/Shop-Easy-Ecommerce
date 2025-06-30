@@ -10,13 +10,16 @@ openBtn.addEventListener('click', () => {
    window.history.back();
 })
 
-//event listener nav close
 
+//products items
 
 const blendedItems = document.querySelector('.blended-items');
 const gheeItems = document.querySelector('.ghee-items')
+
+//first product items
+
 const all =document.querySelector('.all');
-console.log(all)
+
 const items1 = document.getElementById('items-1');
 const items2 = document.getElementById('items-2');
 const items3 = document.getElementById('items-3');
@@ -26,6 +29,9 @@ const items6 = document.getElementById('items-6');
 const items7 = document.getElementById('items-7');
 const items8 = document.getElementById('items-8');
 const items9 = document.getElementById('items-9');
+
+//add event listener 
+//products open
 
 items1.addEventListener('click',()=>
 {
@@ -50,6 +56,7 @@ items3.addEventListener('click',()=>
     gheeItems.style.display="grid"
    
 })
+
 
 
 
