@@ -11,6 +11,27 @@ openBtn.addEventListener('click', () => {
 })
 
 
+
+//product alert
+
+const productsAlert = document.getElementById('product-alert')
+const productscount = document.getElementById('alert-para');
+
+
+
+//image details id
+
+const imgItems1 = document.getElementById('items-img1');
+const imgItems2 = document.getElementById('items-img2')
+const imgItems3 = document.getElementById('items-img3')
+const imgItems4 = document.getElementById('items-img4')
+const imgItems5 = document.getElementById('items-img5')
+const imgItems6 = document.getElementById('items-img6')
+const imgItems7 = document.getElementById('items-img7')
+const imgItems8 = document.getElementById('items-img8')
+const imgItems9 = document.getElementById('items-img9')
+
+
 //products items
 
 const blendedItems = document.querySelector('.blended-items');
@@ -32,20 +53,76 @@ const items9 = document.getElementById('items-9');
 
 //add event listener 
 //products open
-
+var counter =1;
 items1.addEventListener('click',()=>
 {
+  
+    
+    
+    
+    //remove items
+
+     blendedItems.style.display="none";
+      gheeItems.style.display="none";
     
     all.style.display="grid";
+
+    //alert products value
+    productsAlert.style.display="block";
+    productscount.innerText='79 Products';
+
+    var interval = setInterval(function(){
+        counter--;
+        if(counter<0)
+        {
+            clearInterval(interval);
+            productsAlert.style.display="none";
+        }
+    },1000)
+
+    //border off
+    imgItems1.style.border="1px #000 solid";
+    imgItems2.style.border="none";
+    imgItems3.style.border="none";
+    imgItems4.style.border="none";
+    imgItems5.style.border="none";
+    imgItems6.style.border="none";
+    imgItems7.style.border="none";
+    imgItems8.style.border="none";
+    imgItems9.style.border="none";
     
 })
 items2.addEventListener('click',() =>
 {
     //remove items
     all.style.display ="none";
-    gheeItems.style.display="none"
+    gheeItems.style.display="none";
     //add items
-    blendedItems.style.display="grid"
+    blendedItems.style.display="grid";
+
+    //alert products value
+    productsAlert.style.display="block";
+    productscount.innerText='13 Products';
+
+    var interval = setInterval(function(){
+        counter--;
+        if(counter<0)
+        {
+            clearInterval(interval);
+            productsAlert.style.display="none";
+        }
+    },1000)
+
+    //border off
+    imgItems1.style.border="none";
+    imgItems2.style.border="1px #000 solid";
+    imgItems3.style.border="none";
+    imgItems4.style.border="none";
+    imgItems5.style.border="none";
+    imgItems6.style.border="none";
+    imgItems7.style.border="none";
+    imgItems8.style.border="none";
+    imgItems9.style.border="none";
 })
 items3.addEventListener('click',()=>
 {
@@ -54,6 +131,17 @@ items3.addEventListener('click',()=>
      blendedItems.style.display="none"
      //add items
     gheeItems.style.display="grid"
+
+    //border off
+    imgItems1.style.border="none";
+    imgItems2.style.border="none";
+    imgItems3.style.border="1px #000 solid";
+    imgItems4.style.border="none";
+    imgItems5.style.border="none";
+    imgItems6.style.border="none";
+    imgItems7.style.border="none";
+    imgItems8.style.border="none";
+    imgItems9.style.border="none";
    
 })
 
@@ -74,3 +162,6 @@ function itemsremove()
 {
     allItems.style.display="none";
 }
+
+
+

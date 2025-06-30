@@ -16,18 +16,7 @@
     {
         height: 1000px;
     }
-    body::-webkit-scrollbar
-    {
-        display: none;
-    }
-    body::-webkit-scrollbar-thumb
-    {
-        display: none;
-    }
-    body::-webkit-scrollbar-track
-    {
-        display: none;
-    }
+    
 
     /* nav container nav-bar */
     .nav-container {
@@ -196,16 +185,16 @@
     {
         background-color: #fff;
         height: 1000px;
-        overflow:scroll;
+        overflow-y: hidden;
+        overflow-y: scroll;
         width: 20%;
         display: grid;
         grid-template-columns: 2fr;
         row-gap: 30px;
         margin: 20px 15px;
         padding: 10px 0;
-        scroll-behavior: smooth;
-       
     }
+    
     .left-side::-webkit-scrollbar
     {
         display: none;
@@ -223,9 +212,10 @@
     }
     .items>img
     {
-         border: 1px solid rgba(0, 0, 0, 0.2);
+       
         border-radius: 5px;
-        padding: 4px;
+        padding: 5px;
+        background-color: #f5f2e8;
     }
     .items>img:hover
     {
@@ -269,6 +259,8 @@
         position: absolute;
         display: none;
     }
+
+    /* products div */
     .products-items
     {
         width: 155px;
@@ -281,6 +273,55 @@
         background:#c9d3d40c;
         line-height: 16px;
         border: 1px solid rgba(0, 0, 0, 0.1);
+    }
+     .mobile-details-container
+    {
+        line-height: 10px;
+        font-size: 11px;
+    }
+    .mobile-brand-name
+    {
+        color: #666;
+    }
+    .mobile-name
+    {
+        color: #000;
+        font-weight: 600;
+    }
+    .rate
+    {
+        color: #000;
+    }
+    .rate-del
+    {
+        color: #666;
+    }
+    .review-container
+    {
+        display: flex;
+        justify-content: space-between;
+    }
+    .percentage
+    {
+        color: #008c00;
+    }
+    .logo-img
+    {
+        position: absolute;
+        right: 0;
+    }
+    .star-icon
+    {
+        color: #008c00;
+    }
+    .star-review
+    {
+        display: flex;
+        column-gap: 2px;
+    }
+    .logo-text
+    {
+        color: #6B7FD7;
     }
     .button
     {
@@ -299,7 +340,25 @@
 
     .product-alert
     {
-
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        height: 56px;
+        background-color: #000000e3;
+        color: #fff;
+        display: none;
+    }
+    .h5-alert-product
+    {
+        height: 50px;
+        font-size: 0.9rem;
+        font-weight: 200;
+        color: #fff;
+        display:flex;
+        justify-content: start;
+        align-items: center;
+        padding: 0 30px;
+        
     }
     
     
