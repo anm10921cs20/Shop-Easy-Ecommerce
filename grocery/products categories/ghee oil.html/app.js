@@ -3,6 +3,8 @@
 
 //display function event
 
+
+
 var openBtn = document.getElementById('app-arrow');
 
 //event listener nav open
@@ -16,6 +18,20 @@ openBtn.addEventListener('click', () => {
 
 const productsAlert = document.getElementById('product-alert')
 const productscount = document.getElementById('alert-para');
+
+//start this product details
+
+productsAlert.style.display="block";
+    productscount.innerText='79 Products';
+
+    var interval = setInterval(function(){
+        counter--;
+        if(counter<0)
+        {
+            clearInterval(interval);
+            productsAlert.style.display="none";
+        }
+    },1000)
 
 
 
@@ -138,7 +154,7 @@ items3.addEventListener('click',()=>
      blendedItems.style.display="none"
      //add items
     gheeItems.style.display="grid"
-    
+
 
     //border off
     imgItems1.style.border="none";
