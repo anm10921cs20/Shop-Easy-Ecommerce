@@ -35,7 +35,7 @@
     }
 
     .app-login {
-        padding: 20px 0px 20px 100px;
+        padding: 20px 0px 20px 140px;
     }
 
     .app-login-icon {
@@ -180,7 +180,7 @@
     .products-collection
     {
         width: 98%;
-        margin: 0 auto;
+        margin: 0 auto 0 12px;
         display: grid;
         align-content: center;
         grid-template-columns: 2fr 2fr 2fr 2fr;

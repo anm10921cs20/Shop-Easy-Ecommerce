@@ -238,12 +238,12 @@
     .products-collection
     {
         width: 90%;
-        margin: 0 auto;
+        margin:auto auto 0 30px;
         display: grid;
         align-content: center;
         grid-template-columns: 2fr 2fr 2fr 2fr;
         row-gap: 18px;
-        padding: 10px;
+        padding: 10px 15px;
         
     }
     .products

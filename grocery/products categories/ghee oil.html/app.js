@@ -92,14 +92,21 @@ items1.addEventListener('click',()=>
     imgItems9.style.border="none";
     
 })
+
 items2.addEventListener('click',() =>
 {
+    // Scroll the absolutely positioned container to top
+   
+
     //remove items
     all.style.display ="none";
     gheeItems.style.display="none";
     //add items
     blendedItems.style.display="grid";
-
+    // Ensure the container is scrollable and scroll to top
+    blendedItems.style.overflowY = "scroll";
+    blendedItems.style.height = "900px"; // Set a fixed height (adjust as needed)
+    blendedItems.scrollTop = 0;
     //alert products value
     productsAlert.style.display="block";
     productscount.innerText='13 Products';
@@ -131,6 +138,7 @@ items3.addEventListener('click',()=>
      blendedItems.style.display="none"
      //add items
     gheeItems.style.display="grid"
+    
 
     //border off
     imgItems1.style.border="none";
@@ -162,6 +170,16 @@ function itemsremove()
 {
     allItems.style.display="none";
 }
+
+
+
+
+
+
+
+//cart
+
+
 
 
 
