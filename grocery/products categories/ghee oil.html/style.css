@@ -255,6 +255,10 @@
     {
         display: none;
     }
+    .ghee-items::-webkit-scrollbar
+    {
+        display: none;
+    }
     .blended-items
     {
         display: grid;
@@ -266,6 +270,14 @@
     .ghee-items
     {
          display: grid;
+        grid-template-columns: 2fr 2fr;
+        gap: 6px;
+        position: absolute;
+        display: none;
+    }
+    .sunflower-items
+    {
+        display: grid;
         grid-template-columns: 2fr 2fr;
         gap: 6px;
         position: absolute;
@@ -285,6 +297,10 @@
         background:#c9d3d40c;
         line-height: 16px;
         border: 1px solid rgba(0, 0, 0, 0.1);
+    }
+    .product-img
+    {
+        margin: 0 10px;
     }
      .mobile-details-container
     {

@@ -47,15 +47,22 @@ const imgItems7 = document.getElementById('items-img7')
 const imgItems8 = document.getElementById('items-img8')
 const imgItems9 = document.getElementById('items-img9')
 
+//default boreder
+
+imgItems1.style.border="1px #000 solid";
+
 
 //products items
 
+const all =document.querySelector('.all');
 const blendedItems = document.querySelector('.blended-items');
-const gheeItems = document.querySelector('.ghee-items')
+const gheeItems = document.querySelector('.ghee-items');
+const sunflowerItems = document.querySelector('.sunflower-items');
+
 
 //first product items
 
-const all =document.querySelector('.all');
+
 
 const items1 = document.getElementById('items-1');
 const items2 = document.getElementById('items-2');
@@ -72,14 +79,11 @@ const items9 = document.getElementById('items-9');
 var counter =1;
 items1.addEventListener('click',()=>
 {
-  
-    
-    
-    
     //remove items
 
      blendedItems.style.display="none";
       gheeItems.style.display="none";
+      sunflowerItems.style.display="none";
     
     all.style.display="grid";
 
@@ -117,15 +121,18 @@ items2.addEventListener('click',() =>
     //remove items
     all.style.display ="none";
     gheeItems.style.display="none";
+    sunflowerItems.style.display="none";
     //add items
     blendedItems.style.display="grid";
+
     // Ensure the container is scrollable and scroll to top
     blendedItems.style.overflowY = "scroll";
-    blendedItems.style.height = "900px"; // Set a fixed height (adjust as needed)
+    blendedItems.style.height = "810px"; // Set a fixed height (adjust as needed)
     blendedItems.scrollTop = 0;
+
     //alert products value
     productsAlert.style.display="block";
-    productscount.innerText='13 Products';
+    productscount.innerText='14 Products';
 
     var interval = setInterval(function(){
         counter--;
@@ -151,9 +158,28 @@ items3.addEventListener('click',()=>
 {
     //remove items
     all.style.display ="none";
-     blendedItems.style.display="none"
+     blendedItems.style.display="none";
+     sunflowerItems.style.display="none";
      //add items
     gheeItems.style.display="grid"
+
+     // Ensure the container is scrollable and scroll to top
+    gheeItems.style.overflowY = "scroll";
+    gheeItems.style.height = "810px"; // Set a fixed height (adjust as needed)
+    gheeItems.scrollTop = 0;
+
+     //alert products value
+    productsAlert.style.display="block";
+    productscount.innerText='23 Products';
+
+    var interval = setInterval(function(){
+        counter--;
+        if(counter<0)
+        {
+            clearInterval(interval);
+            productsAlert.style.display="none";
+        }
+    },1000)
 
 
     //border off
@@ -167,6 +193,48 @@ items3.addEventListener('click',()=>
     imgItems8.style.border="none";
     imgItems9.style.border="none";
    
+})
+items4.addEventListener('click',() =>
+{
+    // Scroll the absolutely positioned container to top
+   
+
+    //remove items
+    all.style.display ="none";
+    gheeItems.style.display="none";
+    //add items
+    blendedItems.style.display="none";
+    sunflowerItems.style.display="grid";
+
+
+    // Ensure the container is scrollable and scroll to top
+    blendedItems.style.overflowY = "scroll";
+    blendedItems.style.height = "810px"; // Set a fixed height (adjust as needed)
+    blendedItems.scrollTop = 0;
+
+    //alert products value
+    productsAlert.style.display="block";
+    productscount.innerText='10 Products';
+
+    var interval = setInterval(function(){
+        counter--;
+        if(counter<0)
+        {
+            clearInterval(interval);
+            productsAlert.style.display="none";
+        }
+    },1000)
+
+    //border off
+    imgItems1.style.border="none";
+    imgItems2.style.border="none";
+    imgItems3.style.border="none";
+    imgItems4.style.border="1px #000 solid";
+    imgItems5.style.border="none";
+    imgItems6.style.border="none";
+    imgItems7.style.border="none";
+    imgItems8.style.border="none";
+    imgItems9.style.border="none";
 })
 
 
