@@ -22,7 +22,7 @@ const productscount = document.getElementById('alert-para');
 //start this product details
 
 productsAlert.style.display="block";
-    productscount.innerText='43 Products';
+    productscount.innerText='79 Products';
 
     var interval = setInterval(function(){
         counter--;
@@ -89,7 +89,7 @@ items1.addEventListener('click',()=>
 
     //alert products value
     productsAlert.style.display="block";
-    productscount.innerText='43 Products';
+    productscount.innerText='79 Products';
 
     var interval = setInterval(function(){
         counter--;
