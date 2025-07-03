@@ -507,7 +507,7 @@ items9.addEventListener('click',() =>
 
     //alert products value
     productsAlert.style.display="block";
-    productscount.innerText='3 Products';
+    productscount.innerText='7 Products';
 
     var interval = setInterval(function(){
         counter--;
