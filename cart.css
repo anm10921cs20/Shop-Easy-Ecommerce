@@ -36,7 +36,9 @@
     {
         width: 80px;
         height: 80px;
-        padding: 10px 10px;
+        object-fit: contain;
+        padding: 5px;
+
     }
     .detail-box
     {
@@ -46,7 +48,7 @@
     {
         font-weight: 600;
         color:#214eb691;
-        text-transform: capitalize;
+        text-transform: uppercase;
         font-size: 0.9rem;
     }
     .price-box
@@ -86,6 +88,7 @@
         justify-content: flex-end;
         font-size: 1.2rem;
         column-gap: 5px;
+        border-top: 3px solid #66666621;
     }
     .cart-btn
     {
@@ -96,5 +99,10 @@
         padding: 10px;
         background-color: var(--bs-primary);
         color: var(--bs-light);
+    }
+    .product-brand
+    {
+        color: #777;
+        font-size: 12px;
     }
 }

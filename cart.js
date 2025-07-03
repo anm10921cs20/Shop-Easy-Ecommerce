@@ -115,3 +115,72 @@ function totalvalueupdate()
     document.getElementsByClassName('cart-total')[0].innerText ="Rs." + total;
 }
 totalvalueupdate()
+
+
+//add items in cart
+
+var cartadd = document.getElementsByClassName('button');
+for(let i = 0; i < cartadd.length; i++)
+{
+    var button = cartadd[i];
+    button.addEventListener('click',additemsclicked)
+   
+
+
+//add items cart infucntion
+
+function additemsclicked(event)
+{
+    var button = event.target;
+    shopitemsvalue = button.parentElement;
+    var price = shopitemsvalue.getElementsByClassName('rate')[0].innerText;
+    var productname = shopitemsvalue.getElementsByClassName('mobile-name')[0].innerText;
+    var productbrand = shopitemsvalue.getElementsByClassName('mobile-brand-name')[0].innerText;
+    var productimg = shopitemsvalue.getElementsByClassName('product-img')[0].src;
+    addcartproduct(price,productname,productbrand,productimg);
+     totalvalueupdate()
+}
+    
+}
+
+ //add products function
+function addcartproduct(price,productname,productbrand,productimg)
+{
+    var cartdiv = document.createElement('div');
+    cartdiv.classList.add('cart-item');
+    var cartitems = document.getElementsByClassName('cart-content')[0];
+    var cartproductname = cartitems.getElementsByClassName('cart-name');
+    console.log(cartproductname.innerText);
+    
+    for(var i = 0; i < cartproductname.length; i++)
+    {
+        if(cartproductname[i].innerText == productname.toUpperCase())
+        {
+            alert('aleready cliked');
+            return;
+        }
+    }
+
+    var cartboxcotnet = `
+         <img src="${productimg}" alt="" class="cart-img">
+                    <div class="detail-box">
+                        <div class="cart-name">${productname}</div>
+                        <div class="price-box">
+                            <div class="cart-price">${price}</div>
+                            <div class="cart-amt">Rs.00</div>
+                        </div>
+                        <span class="cart-qtyname">Oty</span><input type="number" value="1" class="cart-quantity">
+                        <div class="product-brand">${productbrand}</div>
+                    </div>
+                    <ion-icon name="trash" class="cart-remove"></ion-icon>
+    `;
+
+
+    cartdiv.innerHTML = cartboxcotnet;
+    cartitems.append(cartdiv);
+    cartdiv.getElementsByClassName('cart-remove')[0].addEventListener('click',cartitemsDelete)
+    cartdiv.getElementsByClassName('cart-quantity')[0].addEventListener('change',qtyvalue)
+    proudctcount()
+
+    
+}
