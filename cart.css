@@ -42,7 +42,7 @@
     {
         line-height: 30px;
     }
-    .cart-food-title
+    .cart-name
     {
         font-weight: 600;
         color:#214eb691;
@@ -56,7 +56,7 @@
     }
     .cart-quantity
     {
-        width: 30px;
+        width: 50px;
         height: 20px;
         text-align: center;
         padding: 4px 10px;
@@ -79,5 +79,22 @@
         display: block;
         margin: auto auto;
     }
-
+    .cart-foot
+    {
+        display: flex;
+        padding: 14px 10px;
+        justify-content: flex-end;
+        font-size: 1.2rem;
+        column-gap: 5px;
+    }
+    .cart-btn
+    {
+        width: 90%;
+        display: block;
+        margin: auto;
+        border: none;
+        padding: 10px;
+        background-color: var(--bs-primary);
+        color: var(--bs-light);
+    }
 }
