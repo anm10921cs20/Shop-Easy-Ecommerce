@@ -146,7 +146,7 @@
      {
         position: fixed;
         height: 100vh;
-        width: 320px;
+        width: 370px;
         background-color:#ffffff;
         z-index: 2000;
         top: 0;
@@ -380,7 +380,7 @@
     {
         display: none;
     }
-    .mobile-products-items
+    .products-items
     {
          height: 280px;
         display: flex;
@@ -447,7 +447,7 @@
     }
     /* gadgets container */
 
-    .gadgets-products-items
+    .products-items
     {
          height: 280px;
         display: flex;
