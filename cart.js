@@ -53,6 +53,7 @@ function cartitemsDelete()
 {
     this.parentElement.remove();
     proudctcount()
+    totalvalueupdate()
 }
 
 //funciton qty vallue
@@ -63,6 +64,7 @@ function qtyvalue()
     {
         this.value = 1;
     }
+    totalvalueupdate()
 }
 
 
@@ -82,3 +84,34 @@ proudctcount()
 
 
 
+//total update
+
+
+function totalvalueupdate()
+{
+    var cart = document.getElementsByClassName('cart-content')[0];
+    var cartboxes = cart.getElementsByClassName('cart-item');
+    var total  =0;
+    var pricecart = 0;
+    for(var i = 0; i < cartboxes.length; i++)
+    {
+        var cartbox = cartboxes[i];
+        var priceElement = cartbox.getElementsByClassName('cart-price')[0];
+        var pricecartElement = cartbox.getElementsByClassName('cart-amt')[0];
+        var quantityElement = cartbox.getElementsByClassName('cart-quantity')[0];
+
+        var price = parseFloat(priceElement.innerText.replace("Rs.", ""));
+        var quantity = quantityElement.value;
+        console.log(quantity);
+        
+        var pricecart = price * quantity;
+        pricecartElement.innerText ="Rs."+ pricecart;
+
+        total = total + price * quantity;
+
+        total = Math.round(total*100)/100;
+        
+    }
+    document.getElementsByClassName('cart-total')[0].innerText ="Rs." + total;
+}
+totalvalueupdate()
