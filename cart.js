@@ -4,42 +4,38 @@ const btnCartOpen = document.querySelector('.app-order-icon');
 const cart = document.querySelector('.cart');
 const btnCartClose = document.querySelector('#cart-close');
 
-console.log(btnCartOpen)
 
-btnCartOpen.addEventListener('click',()=>
-{
+
+btnCartOpen.addEventListener('click', () => {
     cart.classList.add('cart-active');
 })
-btnCartClose.addEventListener('click',()=>
-{
+btnCartClose.addEventListener('click', () => {
     cart.classList.remove('cart-active');
 })
 
 
 
-window.addEventListener('DOMContentLoaded',loaditems)
+window.addEventListener('DOMContentLoaded', loaditems)
 
-function loaditems()
-{
+function loaditems() {
     loadcontent()
 }
 
 
 //delete cart items
 
-function loadcontent()
-{
+function loadcontent() {
     //remove cart items
 
     var deleteBtn = document.querySelectorAll('.cart-remove');
     deleteBtn.forEach((btn) => {
-        btn.addEventListener('click',cartitemsDelete);
-        
+        btn.addEventListener('click', cartitemsDelete);
+
     });
 
     var quantityitems = document.querySelectorAll('.cart-quantity');
-    quantityitems.forEach((input)=>{
-    input.addEventListener('change',qtyvalue)
+    quantityitems.forEach((input) => {
+        input.addEventListener('change', qtyvalue)
     })
 }
 
@@ -49,8 +45,7 @@ function loadcontent()
 
 //fucntion of cart delete
 
-function cartitemsDelete()
-{
+function cartitemsDelete() {
     this.parentElement.remove();
     proudctcount()
     totalvalueupdate()
@@ -58,10 +53,8 @@ function cartitemsDelete()
 
 //funciton qty vallue
 
-function qtyvalue()
-{
-    if(isNaN(this.value)|| this.value<1)
-    {
+function qtyvalue() {
+    if (isNaN(this.value) || this.value < 1) {
         this.value = 1;
     }
     totalvalueupdate()
@@ -71,14 +64,13 @@ function qtyvalue()
 
 //function proudct count
 
-function proudctcount()
-{
+function proudctcount() {
     var cartcount = document.getElementById('cart-count');
-    var cartvalue =  document.querySelector('.cart-content');
+    var cartvalue = document.querySelector('.cart-content');
     var cartvalues = cartvalue.children.length;
     cartcount.innerText = cartvalues;
-    
-    
+
+
 }
 proudctcount()
 
@@ -87,14 +79,12 @@ proudctcount()
 //total update
 
 
-function totalvalueupdate()
-{
+function totalvalueupdate() {
     var cart = document.getElementsByClassName('cart-content')[0];
     var cartboxes = cart.getElementsByClassName('cart-item');
-    var total  =0;
+    var total = 0;
     var pricecart = 0;
-    for(var i = 0; i < cartboxes.length; i++)
-    {
+    for (var i = 0; i < cartboxes.length; i++) {
         var cartbox = cartboxes[i];
         var priceElement = cartbox.getElementsByClassName('cart-price')[0];
         var pricecartElement = cartbox.getElementsByClassName('cart-amt')[0];
@@ -102,17 +92,17 @@ function totalvalueupdate()
 
         var price = parseFloat(priceElement.innerText.replace("Rs.", ""));
         var quantity = quantityElement.value;
-        console.log(quantity);
-        
+
+
         var pricecart = price * quantity;
-        pricecartElement.innerText ="Rs."+ pricecart;
+        pricecartElement.innerText = "Rs." + pricecart;
 
         total = total + price * quantity;
 
-        total = Math.round(total*100)/100;
-        
+        total = Math.round(total * 100) / 100;
+
     }
-    document.getElementsByClassName('cart-total')[0].innerText ="Rs." + total;
+    document.getElementsByClassName('cart-total')[0].innerText = "Rs." + total;
 }
 totalvalueupdate()
 
@@ -120,43 +110,64 @@ totalvalueupdate()
 //add items in cart
 
 var cartadd = document.getElementsByClassName('button');
-for(let i = 0; i < cartadd.length; i++)
-{
+for (let i = 0; i < cartadd.length; i++) {
     var button = cartadd[i];
-    button.addEventListener('click',additemsclicked)
-   
+    button.addEventListener('click', additemsclicked)
 
 
-//add items cart infucntion
 
-function additemsclicked(event)
-{
-    var button = event.target;
-    shopitemsvalue = button.parentElement;
-    var price = shopitemsvalue.getElementsByClassName('rate')[0].innerText;
-    var productname = shopitemsvalue.getElementsByClassName('mobile-name')[0].innerText;
-    var productbrand = shopitemsvalue.getElementsByClassName('mobile-brand-name')[0].innerText;
-    var productimg = shopitemsvalue.getElementsByClassName('product-img')[0].src;
-    addcartproduct(price,productname,productbrand,productimg);
-     totalvalueupdate()
+    //add items cart infucntion
+
+    function additemsclicked(event) {
+        var button = event.target;
+        shopitemsvalue = button.parentElement;
+        var price = shopitemsvalue.getElementsByClassName('rate')[0].innerText;
+        var productname = shopitemsvalue.getElementsByClassName('mobile-name')[0].innerText;
+        var productbrand = shopitemsvalue.getElementsByClassName('mobile-brand-name')[0].innerText;
+        var productimg = shopitemsvalue.getElementsByClassName('product-img')[0].src;
+        addcartproduct(price, productname, productbrand, productimg);
+        var alertvalue = document.getElementById('alertcontainer');
+        alertvalue.style.display = "flex"
+        var counter = 3;
+        var interval = setInterval(() => {
+            counter--;
+            if (counter > 0) {
+                clearInterval(interval);
+                alertvalue.style.display = "none";
+            }
+        }, 1000)
+        totalvalueupdate()
+    }
+
 }
-    
-}
 
- //add products function
-function addcartproduct(price,productname,productbrand,productimg)
-{
+//add products function
+function addcartproduct(price, productname, productbrand, productimg) {
     var cartdiv = document.createElement('div');
     cartdiv.classList.add('cart-item');
     var cartitems = document.getElementsByClassName('cart-content')[0];
     var cartproductname = cartitems.getElementsByClassName('cart-name');
-    console.log(cartproductname.innerText);
-    
-    for(var i = 0; i < cartproductname.length; i++)
-    {
-        if(cartproductname[i].innerText == productname.toUpperCase())
-        {
-            alert('aleready cliked');
+    var alertvalue = document.getElementById('alertcontainer');
+    var alertpara = document.getElementById('para-alert');
+
+
+    for (var i = 0; i < cartproductname.length; i++) {
+        if (cartproductname[i].innerText == productname.toUpperCase()) {
+            alertvalue.style.display = "flex";
+            alertvalue.style.backgroundColor = "var(--bs-danger)";
+            alertpara.innerText =   "Already Added To Cart";
+            var counter = 3;
+         
+            var interval = setInterval(() => {
+                counter--;
+                if (counter > 0) {
+                    clearInterval(interval);
+                    
+                    alertpara.innerText =  " Successful added to cart";
+                    alertvalue.style.backgroundColor =  "#26A96C";
+                    alertvalue.style.display = "none";
+                }
+            }, 1000)
             return;
         }
     }
@@ -178,9 +189,13 @@ function addcartproduct(price,productname,productbrand,productimg)
 
     cartdiv.innerHTML = cartboxcotnet;
     cartitems.append(cartdiv);
-    cartdiv.getElementsByClassName('cart-remove')[0].addEventListener('click',cartitemsDelete)
-    cartdiv.getElementsByClassName('cart-quantity')[0].addEventListener('change',qtyvalue)
+    cartdiv.getElementsByClassName('cart-remove')[0].addEventListener('click', cartitemsDelete)
+    cartdiv.getElementsByClassName('cart-quantity')[0].addEventListener('change', qtyvalue)
     proudctcount()
 
-    
+
 }
+
+
+//cart
+

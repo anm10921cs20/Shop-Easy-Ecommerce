@@ -17,6 +17,9 @@
     <link rel="stylesheet" href="../style.css" type="text/css">
     <link rel="stylesheet" href="./style.css" type="text/css">
 
+    <!--cart external style-->
+    <link rel="stylesheet" href="../cart.css" type="text/css">
+
     
 
     <!--fontawsesome cdn insert-->
@@ -47,12 +50,11 @@
         </div>
         <!--app login-->
         <div class="app-login">
-            <a class="app-login-link" href="#"><i class="fa-regular fa-circle-user app-login-icon"></i> <span
-                    class="app-login-name">Login</span></a>
+            
         </div>
         <div class="app-order">
             <a href="#" class="app-order-name"><i class="fas fa-shopping-bag app-order-icon"></i></a>
-            <div class="cart-count">0</div>
+            <div class="cart-count" id="cart-count">0</div>
         </div>
     </div>
     <br>
@@ -66,7 +68,26 @@
             <h5 class="h6 text-light"><i class="fas fa-shopping-cart nav-head_sub-icon"></i> My Carts</h5>
             <ion-icon name="close-sharp" id="cart-close"></ion-icon>
         </div>
+         <br>
+        <div class="cart-body">
+            <div class="cart-content">
 
+            </div>
+        </div>
+
+        <div class="cart-foot">
+            <div class="cart-total-title">Total</div>
+            <div class="cart-total">Rs.00</div>
+
+        </div><br>
+        <button class="cart-btn">Checkout</button><br>
+
+    </div>
+
+    <!--alert container-->
+
+    <div id="alertcontainer" class="alertcontainer">
+      <i class="fas fa-shopping-cart"></i><p class="para-alert" id="para-alert">Successful added to cart</p> 
     </div>
 
     <!--main container-->
@@ -360,7 +381,7 @@
                     <div class="mobile-details-container">
                         <p class="mobile-brand-name">200 ML PlasticBottle</p>
                         <p class="mobile-name">Milk Misty Cow Ghee</p>
-                        <p class="rate">Rs.144 <del class="rate-del">Rs.185</del></p>
+                        <p><span  class="rate">Rs.144 </span><del class="rate-del">Rs.185</del></p>
                         <div class="review-container">
                             <p class="percentage">22%OFF</p>
                         </div>
@@ -372,8 +393,8 @@
                                 class="star-icon"></ion-icon>
                             <p>4.4</p>
                         </div>
-                        <button class="button">Add</button>
                     </div>
+                     <button class="button">Add</button>
                 </div>
                 <div class="products-items">
                     <a href="#"><img class="product-img"
@@ -382,7 +403,7 @@
                     <div class="mobile-details-container">
                         <p class="mobile-brand-name">1000 ML Pouch</p>
                         <p class="mobile-name">Milky Mitst Cow Ghee</p>
-                        <p class="rate">Rs.597 <del class="rate-del">Rs.799</del></p>
+                        <p><span  class="rate">Rs.597 </span><del class="rate-del">Rs.799</del></p>
                         <div class="review-container">
                             <p class="percentage">25%OFF</p>
                         </div>
@@ -394,8 +415,8 @@
                                 class="star-icon"></ion-icon>
                             <p>4.1</p>
                         </div>
-                        <button class="button">Add</button>
                     </div>
+                     <button class="button">Add</button>
                 </div>
                 <!--motroala edge 55fusion-->
                 <div class="products-items">
@@ -405,7 +426,7 @@
                     <div class="mobile-details-container">
                         <p class="mobile-brand-name">1 L</p>
                         <p class="mobile-name">Fortune Xpert Pro Oil</p>
-                        <p class="rate">Rs.145 <del class="rate-del">Rs.190</del></p>
+                        <p><span  class="rate">Rs.145 </span><del class="rate-del">Rs.190</del></p>
                         <div class="review-container">
                             <p class="percentage">23%OFF</p>
                         </div>
@@ -417,8 +438,8 @@
                                 class="star-icon"></ion-icon>
                             <p>4.2</p>
                         </div>
-                        <button class="button">Add</button>
                     </div>
+                     <button class="button">Add</button>
                 </div>
                 <!--one plus ce nord-->
                 <div class="products-items">
@@ -427,8 +448,8 @@
                             width="100px" height="160px" alt="sandoor"></a><br>
                     <div class="mobile-details-container">
                         <p class="mobile-brand-name">3 L</p>
-                        <p class="mobile-name">Saffola Refind Oil</p>
-                        <p class="rate">Rs.545 <del class="rate-del">Rs.661</del></p>
+                        <p class="mobile-name">Saffola Refind Oil 3L</p>
+                        <p><span  class="rate">Rs.545 </span><del class="rate-del">Rs.661</del></p>
                         <div class="review-container">
                             <p class="percentage">16%OFF</p>
                         </div>
@@ -440,8 +461,8 @@
                                 class="star-icon"></ion-icon>
                             <p>4.4</p>
                         </div>
-                        <button class="button">Add</button>
                     </div>
+                     <button class="button">Add</button>
                 </div>
                 <!--iphone -->
                 <div class="products-items">
@@ -450,8 +471,8 @@
                             width="100px" height="160px" alt="sandoor"></a><br>
                     <div class="mobile-details-container">
                         <p class="mobile-brand-name">2 L</p>
-                        <p class="mobile-name">Saffola Refind Oil</p>
-                        <p class="rate">Rs.365 <del class="rate-del">Rs.429</del></p>
+                        <p class="mobile-name">Saffola Refind Oil 2L</p>
+                        <p><span  class="rate">Rs.365 </span><del class="rate-del">Rs.429</del></p>
                         <div class="review-container">
                             <p class="percentage">14%OFF</p>
                         </div>
@@ -463,8 +484,8 @@
                                 class="star-icon"></ion-icon>
                             <p>4.4</p>
                         </div>
-                        <button class="button">Add</button>
                     </div>
+                     <button class="button">Add</button>
                 </div>
                 <!--realme-->
                 <div class="products-items">
@@ -474,7 +495,7 @@
                     <div class="mobile-details-container">
                         <p class="mobile-brand-name">1 L</p>
                         <p class="mobile-name">Energy Max Oil</p>
-                        <p class="rate">Rs.146 <del class="rate-del">Rs.179</del></p>
+                        <p><span  class="rate">Rs.146 </span><del class="rate-del">Rs.179</del></p>
                         <div class="review-container">
                             <p class="percentage">18%OFF</p>
                         </div>
@@ -486,8 +507,8 @@
                                 class="star-icon"></ion-icon>
                             <p>4.1</p>
                         </div>
-                        <button class="button">Add</button>
                     </div>
+                     <button class="button">Add</button>
                 </div>
                 <!--vivo-->
                 <div class="products-items">
@@ -497,7 +518,7 @@
                     <div class="mobile-details-container">
                         <p class="mobile-brand-name">1 L</p>
                         <p class="mobile-name">Oleev Smart Oil</p>
-                        <p class="rate">Rs.175 <del class="rate-del">Rs.185</del></p>
+                        <p><span  class="rate">Rs.175 </span><del class="rate-del">Rs.185</del></p>
                         <div class="review-container">
                             <p class="percentage">5%OFF</p>
                         </div>
@@ -509,8 +530,8 @@
                                 class="star-icon"></ion-icon>
                             <p>4.3</p>
                         </div>
-                        <button class="button">Add</button>
                     </div>
+                     <button class="button">Add</button>
                 </div>
                 <!--oppo reno-->
                 <div class="products-items">
@@ -520,7 +541,7 @@
                     <div class="mobile-details-container">
                         <p class="mobile-brand-name">2 L</p>
                         <p class="mobile-name">Olive Oil</p>
-                        <p class="rate">Rs.2808 <del class="rate-del">Rs.4200</del></p>
+                        <p><span  class="rate">Rs.2808</span> <del class="rate-del">Rs.4200</del></p>
                         <div class="review-container">
                             <p class="percentage">33%OFF</p>
                         </div>
@@ -532,8 +553,8 @@
                                 class="star-icon"></ion-icon>
                             <p>4.4</p>
                         </div>
-                        <button class="button">Add</button>
                     </div>
+                     <button class="button">Add</button>
                 </div>
                 <!--poco-->
                 <div class="products-items">
@@ -543,7 +564,7 @@
                     <div class="mobile-details-container">
                         <p class="mobile-brand-name">500 ML</p>
                         <p class="mobile-name">Porna Sesame</p>
-                        <p class="rate">Rs.150 <del class="rate-del">Rs.193</del></p>
+                        <p><span  class="rate">Rs.150 </span><del class="rate-del">Rs.193</del></p>
                         <div class="review-container">
                             <p class="percentage">22%OFF</p>
                         </div>
@@ -555,8 +576,8 @@
                                 class="star-icon"></ion-icon>
                             <p>4.1</p>
                         </div>
-                        <button class="button">Add</button>
                     </div>
+                     <button class="button">Add</button>
                 </div>
                 <!--readmi-->
                 <div class="products-items">
@@ -566,7 +587,7 @@
                     <div class="mobile-details-container">
                         <p class="mobile-brand-name">750 ML Pouch</p>
                         <p class="mobile-name">Gowardhan Ghee</p>
-                        <p class="rate">Rs.509 <del class="rate-del">Rs.589</del></p>
+                        <p><span  class="rate">Rs.509 </span><del class="rate-del">Rs.589</del></p>
                         <div class="review-container">
                             <p class="percentage">13%OFF</p>
                         </div>
@@ -578,8 +599,8 @@
                                 class="star-icon"></ion-icon>
                             <p>4.4</p>
                         </div>
-                        <button class="button">Add</button>
                     </div>
+                     <button class="button">Add</button>
                 </div>
 
 

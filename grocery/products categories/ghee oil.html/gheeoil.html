@@ -15,7 +15,7 @@
 
     <!--external stylesheet insert-->
     <link rel="stylesheet" href="./style.css" type="text/css">
-    <link rel="stylesheet" href="" type="text/css">
+    <link rel="stylesheet" href="../../../cart.css" type="text/css">
 
     <!--fontawsesome cdn insert-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
@@ -33,7 +33,7 @@
 </head>
 
 <body>
-   <!--nav container-->
+    <!--nav container-->
     <div class="nav-container" id="nav-container">
         <!--left bar-->
         <div class="app-left-bar">
@@ -45,11 +45,11 @@
         </div>
         <!--app login-->
         <div class="app-login">
-           <a href="../../../search/search.html" class="app-order-name"><i class="fas fa-search app-search"></i></a>
+            <a href="../../../search/search.html" class="app-order-name"><i class="fas fa-search app-search"></i></a>
         </div>
         <div class="app-order">
             <a href="#" class="app-order-name"><i class="fas fa-shopping-bag app-order-icon"></i></a>
-            <div class="cart-count">0</div>
+            <div class="cart-count" id="cart-count">0</div>
         </div>
     </div>
     <br>
@@ -63,7 +63,27 @@
         <div class="cart-header">
             <h5 class="h6 text-light"><i class="fas fa-shopping-cart cart-icon nav-head_sub-icon"></i> My Carts</h5>
             <ion-icon name="close-sharp" id="cart-close"></ion-icon>
+
+        </div> <br>
+        <div class="cart-body">
+            <div class="cart-content">
+
+            </div>
         </div>
+
+        <div class="cart-foot">
+            <div class="cart-total-title">Total</div>
+            <div class="cart-total">Rs.00</div>
+
+        </div><br>
+        <button class="cart-btn">Checkout</button><br>
+    </div>
+
+    <!--alert container-->
+
+    <div id="alertcontainer" class="alertcontainer">
+        <i class="fas fa-shopping-cart"></i>
+        <p class="para-alert" id="para-alert">Successful added to cart</p>
     </div>
 
 
@@ -73,7 +93,7 @@
         <div class="product-container">
             <div class="left-side">
                 <div id="items-1" class="items">
-                   <img id="items-img1"
+                    <img id="items-img1"
                         src="https://rukminim2.flixcart.com/www/116/116/promos/06/11/2023/bab3c31e-0be6-4f67-b9a6-cb341fa1f034.png?q=60"
                         width="58px" height="65px" alt="">
                     <p class="text-center para-name">All</p>
@@ -140,7 +160,7 @@
                         <div class="mobile-details-container">
                             <p class="mobile-brand-name">200 ML PlasticBottle</p>
                             <p class="mobile-name">Milk Misty Cow Ghee</p>
-                            <p class="rate">Rs.144 <del class="rate-del">Rs.185</del></p>
+                            <p><span class="rate">Rs.144</span> <del class="rate-del">Rs.185</del></p>
                             <div class="review-container">
                                 <p class="percentage">22%OFF</p>
                             </div>
@@ -152,8 +172,8 @@
                                     class="star-icon"></ion-icon>
                                 <p>4.4</p>
                             </div>
-                            <button class="button">Add</button>
                         </div>
+                        <button class="button">Add</button>
                     </div>
                     <div class="products-items">
                         <a href="#"><img class="product-img"
@@ -162,7 +182,7 @@
                         <div class="mobile-details-container">
                             <p class="mobile-brand-name">1000 ML Pouch</p>
                             <p class="mobile-name">Milky Mitst Cow Ghee</p>
-                            <p class="rate">Rs.597 <del class="rate-del">Rs.799</del></p>
+                            <p><span class="rate">Rs.597</span> <del class="rate-del">Rs.799</del></p>
                             <div class="review-container">
                                 <p class="percentage">25%OFF</p>
                             </div>
@@ -174,8 +194,8 @@
                                     class="star-icon"></ion-icon>
                                 <p>4.1</p>
                             </div>
-                            <button class="button">Add</button>
                         </div>
+                        <button class="button">Add</button>
                     </div>
                     <div class="products-items">
                         <a href="#"><img class="product-img"
@@ -184,7 +204,7 @@
                         <div class="mobile-details-container">
                             <p class="mobile-brand-name">1 L</p>
                             <p class="mobile-name">Fortune Xpert Pro Oil</p>
-                            <p class="rate">Rs.145 <del class="rate-del">Rs.190</del></p>
+                            <p><span class="rate">Rs.145</span> <del class="rate-del">Rs.190</del></p>
                             <div class="review-container">
                                 <p class="percentage">23%OFF</p>
                             </div>
@@ -196,8 +216,8 @@
                                     class="star-icon"></ion-icon>
                                 <p>4.2</p>
                             </div>
-                            <button class="button">Add</button>
                         </div>
+                        <button class="button">Add</button>
                     </div>
                     <div class="products-items">
                         <a href="#"><img class="product-img"
@@ -206,7 +226,7 @@
                         <div class="mobile-details-container">
                             <p class="mobile-brand-name">3 L</p>
                             <p class="mobile-name">Saffola Refind Oil</p>
-                            <p class="rate">Rs.545 <del class="rate-del">Rs.661</del></p>
+                            <p><span class="rate">Rs.545</span> <del class="rate-del">Rs.661</del></p>
                             <div class="review-container">
                                 <p class="percentage">16%OFF</p>
                             </div>
@@ -218,8 +238,8 @@
                                     class="star-icon"></ion-icon>
                                 <p>4.4</p>
                             </div>
-                            <button class="button">Add</button>
                         </div>
+                        <button class="button">Add</button>
                     </div>
                     <div class="products-items">
                         <a href="#"><img class="product-img"
@@ -228,7 +248,7 @@
                         <div class="mobile-details-container">
                             <p class="mobile-brand-name">2 L</p>
                             <p class="mobile-name">Saffola Refind Oil</p>
-                            <p class="rate">Rs.365 <del class="rate-del">Rs.429</del></p>
+                            <p><span class="rate">Rs.365</span> <del class="rate-del">Rs.429</del></p>
                             <div class="review-container">
                                 <p class="percentage">14%OFF</p>
                             </div>
@@ -240,8 +260,8 @@
                                     class="star-icon"></ion-icon>
                                 <p>4.4</p>
                             </div>
-                            <button class="button">Add</button>
                         </div>
+                        <button class="button">Add</button>
                     </div>
                     <div class="products-items">
                         <a href="#"><img class="product-img"
@@ -250,7 +270,7 @@
                         <div class="mobile-details-container">
                             <p class="mobile-brand-name">1 L</p>
                             <p class="mobile-name">Energy Max Oil</p>
-                            <p class="rate">Rs.146 <del class="rate-del">Rs.179</del></p>
+                            <p><span class="rate">Rs.146</span> <del class="rate-del">Rs.179</del></p>
                             <div class="review-container">
                                 <p class="percentage">18%OFF</p>
                             </div>
@@ -262,8 +282,8 @@
                                     class="star-icon"></ion-icon>
                                 <p>4.1</p>
                             </div>
-                            <button class="button">Add</button>
                         </div>
+                        <button class="button">Add</button>
                     </div>
                     <div class="products-items">
                         <a href="#"><img class="product-img"
@@ -272,7 +292,7 @@
                         <div class="mobile-details-container">
                             <p class="mobile-brand-name">1 L</p>
                             <p class="mobile-name">Oleev Smart Oil</p>
-                            <p class="rate">Rs.175 <del class="rate-del">Rs.185</del></p>
+                            <p><span class="rate">Rs.175</span> <del class="rate-del">Rs.185</del></p>
                             <div class="review-container">
                                 <p class="percentage">5%OFF</p>
                             </div>
@@ -284,8 +304,8 @@
                                     class="star-icon"></ion-icon>
                                 <p>4.3</p>
                             </div>
-                            <button class="button">Add</button>
                         </div>
+                        <button class="button">Add</button>
                     </div>
                     <div class="products-items">
                         <a href="#"><img class="product-img"
@@ -294,7 +314,7 @@
                         <div class="mobile-details-container">
                             <p class="mobile-brand-name">2 L</p>
                             <p class="mobile-name">Olive Oil</p>
-                            <p class="rate">Rs.2808 <del class="rate-del">Rs.4200</del></p>
+                            <p><span class="rate">Rs.280</span>8 <del class="rate-del">Rs.4200</del></p>
                             <div class="review-container">
                                 <p class="percentage">33%OFF</p>
                             </div>
@@ -306,17 +326,17 @@
                                     class="star-icon"></ion-icon>
                                 <p>4.4</p>
                             </div>
-                            <button class="button">Add</button>
                         </div>
+                        <button class="button">Add</button>
                     </div>
                     <div class="products-items">
-                         <a href="#"><img class="product-img"
+                        <a href="#"><img class="product-img"
                                 src="https://rukminim1.flixcart.com/image/296/296/kyj0vbk0/edible-oil/d/d/u/500-na-1-pouch-sesame-oil-porna-original-imagaqj2qgftzyty.jpeg?q=60"
                                 width="100px" height="160px" alt="sandoor"></a><br>
                         <div class="mobile-details-container">
                             <p class="mobile-brand-name">500 ML</p>
                             <p class="mobile-name">Porna Sesame</p>
-                            <p class="rate">Rs.150 <del class="rate-del">Rs.193</del></p>
+                            <p><span class="rate">Rs.150</span> <del class="rate-del">Rs.193</del></p>
                             <div class="review-container">
                                 <p class="percentage">22%OFF</p>
                             </div>
@@ -328,17 +348,17 @@
                                     class="star-icon"></ion-icon>
                                 <p>4.1</p>
                             </div>
-                            <button class="button">Add</button>
                         </div>
+                        <button class="button">Add</button>
                     </div>
                     <div class="products-items">
-                         <a href="#"><img class="product-img"
+                        <a href="#"><img class="product-img"
                                 src="https://rukminim1.flixcart.com/image/296/296/xif0q/ghee/x/9/q/750-cow-1-pouch-gowardhan-original-imagvp7fntadfgrx.jpeg?q=60"
                                 width="100px" height="160px" alt="sandoor"></a><br>
                         <div class="mobile-details-container">
                             <p class="mobile-brand-name">750 ML Pouch</p>
                             <p class="mobile-name">Gowardhan Ghee</p>
-                            <p class="rate">Rs.509 <del class="rate-del">Rs.589</del></p>
+                            <p><span class="rate">Rs.509</span> <del class="rate-del">Rs.589</del></p>
                             <div class="review-container">
                                 <p class="percentage">13%OFF</p>
                             </div>
@@ -350,17 +370,17 @@
                                     class="star-icon"></ion-icon>
                                 <p>4.4</p>
                             </div>
-                            <button class="button">Add</button>
                         </div>
+                        <button class="button">Add</button>
                     </div>
                     <div class="products-items">
-                         <a href="#"><img class="product-img"
+                        <a href="#"><img class="product-img"
                                 src="https://rukminim1.flixcart.com/image/296/296/xif0q/edible-oil/a/2/c/-original-imahb3gggjmw9gfk.jpeg?q=60"
                                 width="100px" height="160px" alt="sandoor"></a><br>
                         <div class="mobile-details-container">
                             <p class="mobile-brand-name">870 G</p>
                             <p class="mobile-name">Fortune Refined Oil</p>
-                            <p class="rate">Rs.176 <del class="rate-del">Rs.199</del></p>
+                            <p><span class="rate">Rs.176</span> <del class="rate-del">Rs.199</del></p>
                             <div class="review-container">
                                 <p class="percentage">11%OFF</p>
                             </div>
@@ -372,17 +392,17 @@
                                     class="star-icon"></ion-icon>
                                 <p>4.4</p>
                             </div>
-                            <button class="button">Add</button>
                         </div>
+                        <button class="button">Add</button>
                     </div>
                     <div class="products-items">
-                         <a href="#"><img class="product-img"
+                        <a href="#"><img class="product-img"
                                 src="https://rukminim1.flixcart.com/image/296/296/kylvr0w0/edible-oil/d/6/b/-original-imagaszhuy2hhseb.jpeg?q=60"
                                 width="100px" height="160px" alt="sandoor"></a><br>
                         <div class="mobile-details-container">
                             <p class="mobile-brand-name">1 L</p>
                             <p class="mobile-name">Porna Sesame Oil el</p>
-                            <p class="rate">Rs.338 <del class="rate-del">Rs.383</del></p>
+                            <p><span class="rate">Rs.338</span> <del class="rate-del">Rs.383</del></p>
                             <div class="review-container">
                                 <p class="percentage">11%OFF</p>
                             </div>
@@ -394,17 +414,17 @@
                                     class="star-icon"></ion-icon>
                                 <p>4.4</p>
                             </div>
-                            <button class="button">Add</button>
                         </div>
+                        <button class="button">Add</button>
                     </div>
                     <div class="products-items">
-                         <a href="#"><img class="product-img"
+                        <a href="#"><img class="product-img"
                                 src="https://rukminim1.flixcart.com/image/296/296/xif0q/edible-oil/z/0/h/-original-imah7mywdmzhkybz.jpeg?q=60"
                                 width="100px" height="160px" alt="sandoor"></a><br>
                         <div class="mobile-details-container">
                             <p class="mobile-brand-name">1 L</p>
                             <p class="mobile-name">Gold Winner Oil</p>
-                            <p class="rate">Rs.147 <del class="rate-del">Rs.176</del></p>
+                            <p><span class="rate">Rs.147</span> <del class="rate-del">Rs.176</del></p>
                             <div class="review-container">
                                 <p class="percentage">16%OFF</p>
                             </div>
@@ -416,17 +436,17 @@
                                     class="star-icon"></ion-icon>
                                 <p>4.4</p>
                             </div>
-                            <button class="button">Add</button>
                         </div>
+                        <button class="button">Add</button>
                     </div>
                     <div class="products-items">
-                          <a href="#"><img class="product-img"
+                        <a href="#"><img class="product-img"
                                 src="https://rukminim1.flixcart.com/image/296/296/knni7ww0/edible-oil/q/k/u/1-na-pouch-rice-bran-oil-mr-gold-original-imag2ac52dbz6wgw.jpeg?q=60"
                                 width="100px" height="160px" alt="sandoor"></a><br>
                         <div class="mobile-details-container">
                             <p class="mobile-brand-name">1 L</p>
                             <p class="mobile-name">Mr. Gold Rice Oil</p>
-                            <p class="rate">Rs.140 <del class="rate-del">Rs.180</del></p>
+                            <p><span class="rate">Rs.140</span> <del class="rate-del">Rs.180</del></p>
                             <div class="review-container">
                                 <p class="percentage">22%OFF</p>
                             </div>
@@ -438,17 +458,17 @@
                                     class="star-icon"></ion-icon>
                                 <p>4.4</p>
                             </div>
-                            <button class="button">Add</button>
                         </div>
+                        <button class="button">Add</button>
                     </div>
                     <div class="products-items">
-                          <a href="#"><img class="product-img"
+                        <a href="#"><img class="product-img"
                                 src="https://rukminim1.flixcart.com/image/296/296/knoxnrk0/edible-oil/u/u/w/refined-sunflower-oil-pouch-sunflower-oil-mr-gold-original-imag2bbvf9ycbqms.jpeg?q=60"
                                 width="100px" height="160px" alt="sandoor"></a><br>
                         <div class="mobile-details-container">
                             <p class="mobile-brand-name">1 L</p>
                             <p class="mobile-name">Mr Gold Sun Oil</p>
-                            <p class="rate">Rs.145 <del class="rate-del">Rs.170</del></p>
+                            <p><span class="rate">Rs.145</span> <del class="rate-del">Rs.170</del></p>
                             <div class="review-container">
                                 <p class="percentage">14%OFF</p>
                             </div>
@@ -460,17 +480,17 @@
                                     class="star-icon"></ion-icon>
                                 <p>4.4</p>
                             </div>
-                            <button class="button">Add</button>
                         </div>
+                        <button class="button">Add</button>
                     </div>
                     <div class="products-items">
-                          <a href="#"><img class="product-img"
+                        <a href="#"><img class="product-img"
                                 src="https://rukminim1.flixcart.com/image/296/296/xif0q/edible-oil/x/e/e/-original-imagh3mgvh6gqp5n.jpeg?q=60"
                                 width="100px" height="160px" alt="sandoor"></a><br>
                         <div class="mobile-details-container">
                             <p class="mobile-brand-name">1 L</p>
                             <p class="mobile-name">Fortune Xpert Sugar</p>
-                            <p class="rate">Rs.193 <del class="rate-del">Rs.220</del></p>
+                            <p><span class="rate">Rs.193</span> <del class="rate-del">Rs.220</del></p>
                             <div class="review-container">
                                 <p class="percentage">12%OFF</p>
                             </div>
@@ -482,17 +502,17 @@
                                     class="star-icon"></ion-icon>
                                 <p>4.4</p>
                             </div>
-                            <button class="button">Add</button>
                         </div>
+                        <button class="button">Add</button>
                     </div>
                     <div class="products-items">
-                          <a href="#"><img class="product-img"
+                        <a href="#"><img class="product-img"
                                 src="https://rukminim1.flixcart.com/image/296/296/xif0q/edible-oil/u/z/f/-original-imahbxj3sugvkjsn.jpeg?q=60"
                                 width="100px" height="160px" alt="sandoor"></a><br>
                         <div class="mobile-details-container">
                             <p class="mobile-brand-name">2000 G</p>
                             <p class="mobile-name">Sunpure Sun Oil</p>
-                            <p class="rate">Rs.292 <del class="rate-del">Rs.370</del></p>
+                            <p><span class="rate">Rs.292</span> <del class="rate-del">Rs.370</del></p>
                             <div class="review-container">
                                 <p class="percentage">21%OFF</p>
                             </div>
@@ -504,17 +524,17 @@
                                     class="star-icon"></ion-icon>
                                 <p>4.0</p>
                             </div>
-                            <button class="button">Add</button>
                         </div>
+                        <button class="button">Add</button>
                     </div>
                     <div class="products-items">
-                          <a href="#"><img class="product-img"
+                        <a href="#"><img class="product-img"
                                 src="https://rukminim1.flixcart.com/image/296/296/knni7ww0/edible-oil/p/h/q/1-na-pouch-groundnut-oil-mr-gold-original-imag2abxkjry6urw.jpeg?q=60"
                                 width="100px" height="160px" alt="sandoor"></a><br>
                         <div class="mobile-details-container">
                             <p class="mobile-brand-name">1 L</p>
                             <p class="mobile-name">Mr Gold Ground Oil</p>
-                            <p class="rate">Rs.179 <del class="rate-del">Rs.205</del></p>
+                            <p><span class="rate">Rs.179</span> <del class="rate-del">Rs.205</del></p>
                             <div class="review-container">
                                 <p class="percentage">12%OFF</p>
                             </div>
@@ -526,17 +546,17 @@
                                     class="star-icon"></ion-icon>
                                 <p>4.1</p>
                             </div>
-                            <button class="button">Add</button>
                         </div>
+                        <button class="button">Add</button>
                     </div>
                     <div class="products-items">
-                          <a href="#"><img style="margin: 0 30px;" class="product-img"
+                        <a href="#"><img style="margin: 0 30px;" class="product-img"
                                 src="https://rukminim1.flixcart.com/image/296/296/l5h2xe80/edible-oil/y/p/0/1-extra-virgin-plastic-bottle-1-olive-oil-borges-original-imagg576x3najhtv.jpeg?q=60"
                                 width="50px" height="160px" alt="sandoor"></a><br>
                         <div class="mobile-details-container">
                             <p class="mobile-brand-name">1 L</p>
                             <p class="mobile-name">Borgres Olive Oil</p>
-                            <p class="rate">Rs.1794 <del class="rate-del">Rs.2000</del></p>
+                            <p><span class="rate">Rs.179</span>4 <del class="rate-del">Rs.2000</del></p>
                             <div class="review-container">
                                 <p class="percentage">10%OFF</p>
                             </div>
@@ -548,17 +568,17 @@
                                     class="star-icon"></ion-icon>
                                 <p>4.9</p>
                             </div>
-                            <button class="button">Add</button>
                         </div>
+                        <button class="button">Add</button>
                     </div>
                     <div class="products-items">
-                          <a href="#"><img style="margin: 0 36px;" class="product-img"
+                        <a href="#"><img style="margin: 0 36px;" class="product-img"
                                 src="https://rukminim1.flixcart.com/image/296/296/j5lchow0/edible-oil/w/n/f/500-pure-glass-bottle-olive-oil-borges-original-imaew87ffaskm5gc.jpeg?q=60"
                                 width="50px" height="160px" alt="sandoor"></a><br>
                         <div class="mobile-details-container">
                             <p class="mobile-brand-name">500 ML</p>
                             <p class="mobile-name">Borges Classic Oil</p>
-                            <p class="rate">Rs.805 <del class="rate-del">Rs.950</del></p>
+                            <p><span class="rate">Rs.805</span> <del class="rate-del">Rs.950</del></p>
                             <div class="review-container">
                                 <p class="percentage">15%OFF</p>
                             </div>
@@ -570,17 +590,17 @@
                                     class="star-icon"></ion-icon>
                                 <p>4.9</p>
                             </div>
-                            <button class="button">Add</button>
                         </div>
+                        <button class="button">Add</button>
                     </div>
                     <div class="products-items">
-                          <a href="#"><img class="product-img"
+                        <a href="#"><img class="product-img"
                                 src="https://rukminim1.flixcart.com/image/296/296/jjylw280/edible-oil/g/5/m/500-na-pouch-sesame-oil-777-original-imaf7e3ej2jzwd2t.jpeg?q=60"
                                 width="100px" height="160px" alt="sandoor"></a><br>
                         <div class="mobile-details-container">
                             <p class="mobile-brand-name">500 ML</p>
                             <p class="mobile-name">777 Oil(el ennai)</p>
-                            <p class="rate">Rs.149 <del class="rate-del">Rs.189</del></p>
+                            <p><span class="rate">Rs.149</span> <del class="rate-del">Rs.189</del></p>
                             <div class="review-container">
                                 <p class="percentage">21%OFF</p>
                             </div>
@@ -592,17 +612,17 @@
                                     class="star-icon"></ion-icon>
                                 <p>4.4</p>
                             </div>
-                            <button class="button">Add</button>
                         </div>
+                        <button class="button">Add</button>
                     </div>
                     <div class="products-items">
-                          <a href="#"><img class="product-img"
+                        <a href="#"><img class="product-img"
                                 src="https://rukminim1.flixcart.com/image/296/296/xif0q/edible-oil/m/u/5/-original-imahbxgpufzqygzk.jpeg?q=60"
                                 width="100px" height="160px" alt="sandoor"></a><br>
                         <div class="mobile-details-container">
                             <p class="mobile-brand-name">1 L</p>
                             <p class="mobile-name">Fortune Mustard Oil</p>
-                            <p class="rate">Rs.209 <del class="rate-del">Rs.220</del></p>
+                            <p><span class="rate">Rs.209</span> <del class="rate-del">Rs.220</del></p>
                             <div class="review-container">
                                 <p class="percentage">5%OFF</p>
                             </div>
@@ -614,17 +634,17 @@
                                     class="star-icon"></ion-icon>
                                 <p>4.4</p>
                             </div>
-                            <button class="button">Add</button>
                         </div>
+                        <button class="button">Add</button>
                     </div>
                     <div class="products-items">
-                          <a href="#"><img class="product-img"
+                        <a href="#"><img class="product-img"
                                 src="https://rukminim1.flixcart.com/image/296/296/xif0q/edible-oil/d/v/z/-original-imah6zvvv7gjevhz.jpeg?q=60"
                                 width="100px" height="160px" alt="sandoor"></a><br>
                         <div class="mobile-details-container">
                             <p class="mobile-brand-name">1.74 KG</p>
                             <p class="mobile-name">Fortune Sun Oil</p>
-                            <p class="rate">Rs.321 <del class="rate-del">Rs.450</del></p>
+                            <p><span class="rate">Rs.321</span> <del class="rate-del">Rs.450</del></p>
                             <div class="review-container">
                                 <p class="percentage">28%OFF</p>
                             </div>
@@ -636,17 +656,17 @@
                                     class="star-icon"></ion-icon>
                                 <p>4.2</p>
                             </div>
-                            <button class="button">Add</button>
                         </div>
+                        <button class="button">Add</button>
                     </div>
                     <div class="products-items">
-                          <a href="#"><img class="product-img"
+                        <a href="#"><img class="product-img"
                                 src="https://rukminim1.flixcart.com/image/296/296/xif0q/edible-oil/w/i/z/-original-imah393py2mau79a.jpeg?q=60"
                                 width="100px" height="160px" alt="sandoor"></a><br>
                         <div class="mobile-details-container">
                             <p class="mobile-brand-name">850 G</p>
                             <p class="mobile-name">Saffola</p>
-                            <p class="rate">Rs.175 <del class="rate-del">Rs.197</del></p>
+                            <p><span class="rate">Rs.175</span> <del class="rate-del">Rs.197</del></p>
                             <div class="review-container">
                                 <p class="percentage">11%OFF</p>
                             </div>
@@ -658,17 +678,17 @@
                                     class="star-icon"></ion-icon>
                                 <p>4.4</p>
                             </div>
-                            <button class="button">Add</button>
                         </div>
+                        <button class="button">Add</button>
                     </div>
                     <div class="products-items">
-                          <a href="#"><img class="product-img"
+                        <a href="#"><img class="product-img"
                                 src="https://rukminim1.flixcart.com/image/296/296/xif0q/edible-oil/y/l/4/-original-imagqf54kzhzyzxj.jpeg?q=60"
                                 width="100px" height="160px" alt="sandoor"></a><br>
                         <div class="mobile-details-container">
                             <p class="mobile-brand-name">1 L</p>
                             <p class="mobile-name">Freedom Ground Oil</p>
-                            <p class="rate">Rs.189 <del class="rate-del">Rs.215</del></p>
+                            <p><span class="rate">Rs.189</span> <del class="rate-del">Rs.215</del></p>
                             <div class="review-container">
                                 <p class="percentage">12%OFF</p>
                             </div>
@@ -680,17 +700,17 @@
                                     class="star-icon"></ion-icon>
                                 <p>4.2</p>
                             </div>
-                            <button class="button">Add</button>
                         </div>
+                        <button class="button">Add</button>
                     </div>
                     <div class="products-items">
-                          <a href="#"><img class="product-img"
+                        <a href="#"><img class="product-img"
                                 src="https://rukminim1.flixcart.com/image/296/296/ktlu9ow0/ghee/i/b/h/na-pouch-heritage-original-imag6wzc5wwyhudh.jpeg?q=60"
                                 width="100px" height="160px" alt="sandoor"></a><br>
                         <div class="mobile-details-container">
                             <p class="mobile-brand-name">1 L Pouch</p>
                             <p class="mobile-name">Golden Cow Ghee</p>
-                            <p class="rate">Rs.666 <del class="rate-del">Rs.795</del></p>
+                            <p><span class="rate">Rs.666</span> <del class="rate-del">Rs.795</del></p>
                             <div class="review-container">
                                 <p class="percentage">9%OFF</p>
                             </div>
@@ -702,17 +722,17 @@
                                     class="star-icon"></ion-icon>
                                 <p>4.4</p>
                             </div>
-                            <button class="button">Add</button>
                         </div>
+                        <button class="button">Add</button>
                     </div>
                     <div class="products-items">
-                          <a href="#"><img class="product-img"
+                        <a href="#"><img class="product-img"
                                 src="https://rukminim1.flixcart.com/image/296/296/xif0q/edible-oil/x/4/4/-original-imagqf53dhjfr2fg.jpeg?q=60"
                                 width="100px" height="160px" alt="sandoor"></a><br>
                         <div class="mobile-details-container">
                             <p class="mobile-brand-name">1 L</p>
                             <p class="mobile-name">Freedom Rice Oil</p>
-                            <p class="rate">Rs.176 <del class="rate-del">Rs.194</del></p>
+                            <p><span class="rate">Rs.176</span> <del class="rate-del">Rs.194</del></p>
                             <div class="review-container">
                                 <p class="percentage">9%OFF</p>
                             </div>
@@ -724,17 +744,17 @@
                                     class="star-icon"></ion-icon>
                                 <p>4.4</p>
                             </div>
-                            <button class="button">Add</button>
                         </div>
+                        <button class="button">Add</button>
                     </div>
                     <div class="products-items">
-                          <a href="#"><img class="product-img"
+                        <a href="#"><img class="product-img"
                                 src="https://rukminim1.flixcart.com/image/296/296/xif0q/ghee/7/4/v/-original-imagwv5vgs934yqw.jpeg?q=60"
                                 width="100px" height="160px" alt="sandoor"></a><br>
                         <div class="mobile-details-container">
                             <p class="mobile-brand-name">1 L Tetrapack</p>
                             <p class="mobile-name">Amul Pure Ghee</p>
-                            <p class="rate">Rs.615 <del class="rate-del">Rs.650</del></p>
+                            <p><span class="rate">Rs.615</span> <del class="rate-del">Rs.650</del></p>
                             <div class="review-container">
                                 <p class="percentage">5%OFF</p>
                             </div>
@@ -746,17 +766,17 @@
                                     class="star-icon"></ion-icon>
                                 <p>4.4</p>
                             </div>
-                            <button class="button">Add</button>
                         </div>
+                        <button class="button">Add</button>
                     </div>
                     <div class="products-items">
-                          <a href="#"><img class="product-img"
+                        <a href="#"><img class="product-img"
                                 src="https://rukminim1.flixcart.com/image/296/296/xif0q/edible-oil/m/t/p/-original-imahbhvaqkhgphfv.jpeg?q=60"
                                 width="100px" height="160px" alt="sandoor"></a><br>
                         <div class="mobile-details-container">
                             <p class="mobile-brand-name">870 G</p>
                             <p class="mobile-name">Fortune Ground Oil</p>
-                            <p class="rate">Rs.159 <del class="rate-del">Rs.240</del></p>
+                            <p><span class="rate">Rs.159</span> <del class="rate-del">Rs.240</del></p>
                             <div class="review-container">
                                 <p class="percentage">33%OFF</p>
                             </div>
@@ -768,17 +788,17 @@
                                     class="star-icon"></ion-icon>
                                 <p>4.4</p>
                             </div>
-                            <button class="button">Add</button>
                         </div>
+                        <button class="button">Add</button>
                     </div>
                     <div class="products-items">
-                          <a href="#"><img class="product-img"
+                        <a href="#"><img class="product-img"
                                 src="https://rukminim1.flixcart.com/image/296/296/knqd3m80/ghee/o/u/6/pure-cow-pouch-godrej-jersey-original-imag2cemregcevww.jpeg?q=60"
                                 width="100px" height="160px" alt="sandoor"></a><br>
                         <div class="mobile-details-container">
                             <p class="mobile-brand-name">1 L Pouch</p>
                             <p class="mobile-name">Gordrej Ghee</p>
-                            <p class="rate">Rs.569 <del class="rate-del">Rs.779</del></p>
+                            <p><span class="rate">Rs.569</span> <del class="rate-del">Rs.779</del></p>
                             <div class="review-container">
                                 <p class="percentage">26%OFF</p>
                             </div>
@@ -790,17 +810,17 @@
                                     class="star-icon"></ion-icon>
                                 <p>4.4</p>
                             </div>
-                            <button class="button">Add</button>
                         </div>
+                        <button class="button">Add</button>
                     </div>
                     <div class="products-items">
-                          <a href="#"><img class="product-img"
+                        <a href="#"><img class="product-img"
                                 src="https://rukminim1.flixcart.com/image/296/296/jjylw280/ghee/e/f/g/1-pure-tin-amul-original-imaf7e3fehszrsxm.jpeg?q=60"
                                 width="100px" height="160px" alt="sandoor"></a><br>
                         <div class="mobile-details-container">
                             <p class="mobile-brand-name">1 L Tin</p>
                             <p class="mobile-name">Amul Pure Ghee Tin</p>
-                            <p class="rate">Rs.639 <del class="rate-del">Rs.660</del></p>
+                            <p><span class="rate">Rs.639</span> <del class="rate-del">Rs.660</del></p>
                             <div class="review-container">
                                 <p class="percentage">9%OFF</p>
                             </div>
@@ -812,17 +832,17 @@
                                     class="star-icon"></ion-icon>
                                 <p>4.9</p>
                             </div>
-                            <button class="button">Add</button>
                         </div>
+                        <button class="button">Add</button>
                     </div>
                     <div class="products-items">
-                          <a href="#"><img class="product-img"
+                        <a href="#"><img class="product-img"
                                 src="https://rukminim1.flixcart.com/image/296/296/kpinwy80/ghee/g/w/e/cow-plastic-bottle-jersey-original-imag3qbu4kr4gxj5.jpeg?q=60"
                                 width="100px" height="160px" alt="sandoor"></a><br>
                         <div class="mobile-details-container">
                             <p class="mobile-brand-name">500 ML Plastic Bottle</p>
                             <p class="mobile-name">Godrej Pure Ghee</p>
-                            <p class="rate">Rs.338 <del class="rate-del">Rs.410</del></p>
+                            <p><span class="rate">Rs.338</span> <del class="rate-del">Rs.410</del></p>
                             <div class="review-container">
                                 <p class="percentage">17%OFF</p>
                             </div>
@@ -834,17 +854,17 @@
                                     class="star-icon"></ion-icon>
                                 <p>4.4</p>
                             </div>
-                            <button class="button">Add</button>
                         </div>
+                        <button class="button">Add</button>
                     </div>
                     <div class="products-items">
-                          <a href="#"><img class="product-img"
+                        <a href="#"><img class="product-img"
                                 src="https://rukminim1.flixcart.com/image/296/296/xif0q/ghee/n/z/p/-original-imahcjh48qqjzvha.jpeg?q=60"
                                 width="100px" height="160px" alt="sandoor"></a><br>
                         <div class="mobile-details-container">
                             <p class="mobile-brand-name">1 L Pouch</p>
                             <p class="mobile-name">Ashirvad Ghee</p>
-                            <p class="rate">Rs.615 <del class="rate-del">Rs.700</del></p>
+                            <p><span class="rate">Rs.615</span> <del class="rate-del">Rs.700</del></p>
                             <div class="review-container">
                                 <p class="percentage">21%OFF</p>
                             </div>
@@ -856,17 +876,17 @@
                                     class="star-icon"></ion-icon>
                                 <p>4.4</p>
                             </div>
-                            <button class="button">Add</button>
                         </div>
+                        <button class="button">Add</button>
                     </div>
                     <div class="products-items">
-                          <a href="#"><img class="product-img"
+                        <a href="#"><img class="product-img"
                                 src="https://rukminim1.flixcart.com/image/296/296/xif0q/ghee/q/y/h/-original-imahfuczcnshzqj3.jpeg?q=60"
                                 width="100px" height="160px" alt="sandoor"></a><br>
                         <div class="mobile-details-container">
                             <p class="mobile-brand-name">1 L Pouch</p>
                             <p class="mobile-name">Nandini Ghee</p>
-                            <p class="rate">Rs.609 <del class="rate-del">Rs.670</del></p>
+                            <p><span class="rate">Rs.609</span> <del class="rate-del">Rs.670</del></p>
                             <div class="review-container">
                                 <p class="percentage">9%OFF</p>
                             </div>
@@ -878,17 +898,17 @@
                                     class="star-icon"></ion-icon>
                                 <p>4.1</p>
                             </div>
-                            <button class="button">Add</button>
                         </div>
+                        <button class="button">Add</button>
                     </div>
                     <div class="products-items">
-                          <a href="#"><img class="product-img"
+                        <a href="#"><img class="product-img"
                                 src="https://rukminim1.flixcart.com/image/296/296/xif0q/edible-oil/e/h/2/2-refined-sunflower-oil-pet-bottle-6-sunflower-oil-freedom-original-imagtch4wzvjgy5z.jpeg?q=60"
                                 width="60px" height="160px" alt="sandoor"></a><br>
                         <div class="mobile-details-container">
                             <p class="mobile-brand-name">2 L</p>
                             <p class="mobile-name">Freedom Sun Oil</p>
-                            <p class="rate">Rs.305 <del class="rate-del">Rs.420</del></p>
+                            <p><span class="rate">Rs.305</span> <del class="rate-del">Rs.420</del></p>
                             <div class="review-container">
                                 <p class="percentage">27%OFF</p>
                             </div>
@@ -900,17 +920,17 @@
                                     class="star-icon"></ion-icon>
                                 <p>4.4</p>
                             </div>
-                            <button class="button">Add</button>
                         </div>
+                        <button class="button">Add</button>
                     </div>
                     <div class="products-items">
-                          <a href="#"><img class="product-img"
+                        <a href="#"><img class="product-img"
                                 src="https://rukminim1.flixcart.com/image/296/296/jmthle80-1/ghee/j/a/x/500-ghee-plastic-bottle-aavin-original-imaf9n5s8hxgmtyc.jpeg?q=60"
                                 width="100px" height="160px" alt="sandoor"></a><br>
                         <div class="mobile-details-container">
                             <p class="mobile-brand-name">500 ML Bottle</p>
                             <p class="mobile-name">Aavin Ghee</p>
-                            <p class="rate">Rs.335 <del class="rate-del">Rs.365</del></p>
+                            <p><span class="rate">Rs.335</span> <del class="rate-del">Rs.365</del></p>
                             <div class="review-container">
                                 <p class="percentage">9%OFF</p>
                             </div>
@@ -922,17 +942,17 @@
                                     class="star-icon"></ion-icon>
                                 <p>4.4</p>
                             </div>
-                            <button class="button">Add</button>
                         </div>
+                        <button class="button">Add</button>
                     </div>
                     <div class="products-items">
-                          <a href="#"><img class="product-img"
+                        <a href="#"><img class="product-img"
                                 src="https://rukminim1.flixcart.com/image/296/296/jmqmpow0/ghee/5/v/h/1-ghee-plastic-bottle-aavin-original-imaf9k7kwnkwadrd.jpeg?q=60"
                                 width="100px" height="160px" alt="sandoor"></a><br>
                         <div class="mobile-details-container">
                             <p class="mobile-brand-name">1 L Bottle</p>
                             <p class="mobile-name">Aavin Ghee(nei)</p>
-                            <p class="rate">Rs.655 <del class="rate-del">Rs.700</del></p>
+                            <p><span class="rate">Rs.655</span> <del class="rate-del">Rs.700</del></p>
                             <div class="review-container">
                                 <p class="percentage">9%OFF</p>
                             </div>
@@ -944,17 +964,17 @@
                                     class="star-icon"></ion-icon>
                                 <p>4.4</p>
                             </div>
-                            <button class="button">Add</button>
                         </div>
+                        <button class="button">Add</button>
                     </div>
                     <div class="products-items">
-                          <a href="#"><img class="product-img"
+                        <a href="#"><img class="product-img"
                                 src="https://rukminim1.flixcart.com/image/296/296/xif0q/edible-oil/x/5/l/-original-imahcm55b5xah6wh.jpeg?q=60"
                                 width="100px" height="160px" alt="sandoor"></a><br>
                         <div class="mobile-details-container">
                             <p class="mobile-brand-name">840 G </p>
                             <p class="mobile-name">Adhar Sun Oil</p>
-                            <p class="rate">Rs.166 <del class="rate-del">Rs.175</del></p>
+                            <p><span class="rate">Rs.166</span> <del class="rate-del">Rs.175</del></p>
                             <div class="review-container">
                                 <p class="percentage">5%OFF</p>
                             </div>
@@ -966,17 +986,17 @@
                                     class="star-icon"></ion-icon>
                                 <p>4.1</p>
                             </div>
-                            <button class="button">Add</button>
                         </div>
+                        <button class="button">Add</button>
                     </div>
                     <div class="products-items">
-                          <a href="#"><img class="product-img"
+                        <a href="#"><img class="product-img"
                                 src="https://rukminim1.flixcart.com/image/296/296/kyxb9u80/edible-oil/d/f/p/1-na-1-pouch-sesame-oil-mr-gold-original-imagbfxyqqg8gmcs.jpeg?q=60"
                                 width="100px" height="160px" alt="sandoor"></a><br>
                         <div class="mobile-details-container">
                             <p class="mobile-brand-name">1 L</p>
                             <p class="mobile-name">Mr.Gold(Elennai)</p>
-                            <p class="rate">Rs.319 <del class="rate-del">Rs.375</del></p>
+                            <p><span class="rate">Rs.319</span> <del class="rate-del">Rs.375</del></p>
                             <div class="review-container">
                                 <p class="percentage">14%OFF</p>
                             </div>
@@ -988,17 +1008,17 @@
                                     class="star-icon"></ion-icon>
                                 <p>4.4</p>
                             </div>
-                            <button class="button">Add</button>
                         </div>
+                        <button class="button">Add</button>
                     </div>
                     <div class="products-items">
-                          <a href="#"><img class="product-img"
+                        <a href="#"><img class="product-img"
                                 src="https://rukminim1.flixcart.com/image/296/296/knni7ww0/edible-oil/i/y/b/1-na-pouch-coconut-oil-mr-gold-original-imag2absj4pnf3zv.jpeg?q=60"
                                 width="100px" height="160px" alt="sandoor"></a><br>
                         <div class="mobile-details-container">
                             <p class="mobile-brand-name">1 L</p>
                             <p class="mobile-name">mr.Gold(Thengai)</p>
-                            <p class="rate">Rs.451<del class="rate-del">Rs.000</del></p>
+                            <p><span class="rate">Rs.451</span><del class="rate-del">Rs.000</del></p>
                             <div class="review-container">
                                 <p class="percentage">9%OFF</p>
                             </div>
@@ -1010,19 +1030,19 @@
                                     class="star-icon"></ion-icon>
                                 <p>4.4</p>
                             </div>
-                            <button class="button">Add</button>
                         </div>
+                        <button class="button">Add</button>
                     </div>
                     <div class="products-items">
-                          <a href="#"><img class="product-img"
+                        <a href="#"><img class="product-img"
                                 src="https://rukminim1.flixcart.com/image/296/296/j4hc5u80/edible-oil/d/k/v/1-gingili-pouch-sesame-oil-idhayam-original-imaevdnbdumt7nca.jpeg?q=60"
                                 width="100px" height="160px" alt="sandoor"></a><br>
                         <div class="mobile-details-container">
-                            <p class="mobile-brand-name">Samsung</p>
-                            <p class="mobile-name">Galaxy Edge S25 5G</p>
-                            <p class="rate">Rs.000 <del class="rate-del">Rs.000</del></p>
+                            <p class="mobile-brand-name">1 L Pouch</p>
+                            <p class="mobile-name">Thangam(NalEnnai)</p>
+                            <p><span class="rate">Rs.420</span> <del class="rate-del">Rs.470</del></p>
                             <div class="review-container">
-                                <p class="percentage">9%OFF</p>
+                                <p class="percentage">11%OFF</p>
                             </div>
                             <div class="star-review">
                                 <ion-icon name="star-sharp" class="star-icon"></ion-icon><ion-icon name="star-sharp"
@@ -1032,19 +1052,19 @@
                                     class="star-icon"></ion-icon>
                                 <p>4.4</p>
                             </div>
-                            <button class="button">Add</button>
                         </div>
+                        <button class="button">Add</button>
                     </div>
                     <div class="products-items">
                         <a href="#"><img class="product-img"
                                 src="https://rukminim2.flixcart.com/image/296/296/kyj0vbk0/edible-oil/n/u/l/1-refined-1-pouch-groundnut-oil-svs-original-imagaqj2fy9e4myg.jpeg?q=60"
                                 width="100px" height="160px" alt="sandoor"></a><br>
                         <div class="mobile-details-container">
-                            <p class="mobile-brand-name">Samsung</p>
-                            <p class="mobile-name">Galaxy Edge S25 5G</p>
-                            <p class="rate">Rs.000 <del class="rate-del">Rs.000</del></p>
+                            <p class="mobile-brand-name">1 L Pouch</p>
+                            <p class="mobile-name">SVS Oil GroundOil</p>
+                            <p><span class="rate">Rs.176</span> <del class="rate-del">Rs.189</del></p>
                             <div class="review-container">
-                                <p class="percentage">9%OFF</p>
+                                <p class="percentage">19%OFF</p>
                             </div>
                             <div class="star-review">
                                 <ion-icon name="star-sharp" class="star-icon"></ion-icon><ion-icon name="star-sharp"
@@ -1054,36 +1074,358 @@
                                     class="star-icon"></ion-icon>
                                 <p>4.4</p>
                             </div>
-                            <button class="button">Add</button>
                         </div>
+                        <button class="button">Add</button>
                     </div>
                     <div class="products-items">
                         <a href="#"><img class="product-img"
                                 src="https://rukminim2.flixcart.com/image/296/296/xif0q/ghee/k/h/c/1-high-aroma-ghee-1-ltr-pouch-1-pouch-amul-original-imah8fy2hgmypzcm.jpeg?q=60"
                                 width="100px" height="160px" alt="sandoor"></a><br>
                         <div class="mobile-details-container">
-                            <p class="mobile-brand-name">Samsung</p>
-                            <p class="mobile-name">Galaxy Edge S25 5G</p>
-                            <p class="rate">Rs.000 <del class="rate-del">Rs.000</del></p>
+                            <p class="mobile-brand-name">1 L Pouch</p>
+                            <p class="mobile-name">Amul Cow Ghee</p>
+                            <p><span class="rate">Rs.566</span> <del class="rate-del">Rs.600</del></p>
+                            <div class="review-container">
+                                <p class="percentage">19%OFF</p>
+                            </div>
+                            <div class="star-review">
+                                <ion-icon name="star-sharp" class="star-icon"></ion-icon><ion-icon name="star-sharp"
+                                    class="star-icon"></ion-icon><ion-icon name="star-sharp"
+                                    class="star-icon"></ion-icon><ion-icon name="star-sharp"
+                                    class="star-icon"></ion-icon><ion-icon name="star-half-sharp"
+                                    class="star-icon"></ion-icon>
+                                <p>4.4</p>
+                            </div>
+                        </div>
+                        <button class="button">Add</button>
+
+                    </div>
+
+
+                </div>
+
+                <!--blended oil-->
+                <div class="blended-items ">
+                    <h6 class="h6">7 Proudcts</h6><br>
+                    <div class="products-items">
+                        <a href="#"><img class="product-img"
+                                src="https://rukminim1.flixcart.com/image/296/296/xif0q/edible-oil/x/t/r/-original-imagh3mezaztdyvn.jpeg?q=60"
+                                width="100px" height="160px" alt="sandoor"></a><br>
+                        <div class="mobile-details-container">
+                            <p class="mobile-brand-name">1 L</p>
+                            <p class="mobile-name">Fortune Xpert Pro Oil</p>
+                            <p><span class="rate">Rs.145</span> <del class="rate-del">Rs.190</del></p>
+                            <div class="review-container">
+                                <p class="percentage">23%OFF</p>
+                            </div>
+                            <div class="star-review">
+                                <ion-icon name="star-sharp" class="star-icon"></ion-icon><ion-icon name="star-sharp"
+                                    class="star-icon"></ion-icon><ion-icon name="star-sharp"
+                                    class="star-icon"></ion-icon><ion-icon name="star-sharp"
+                                    class="star-icon"></ion-icon><ion-icon name="star-half-sharp"
+                                    class="star-icon"></ion-icon>
+                                <p>4.2</p>
+                            </div>
+                        </div>
+                        <button class="button">Add</button>
+                    </div>
+                    <div class="products-items">
+                        <a href="#"><img class="product-img"
+                                src="https://rukminim2.flixcart.com/image/282/282/xif0q/edible-oil/p/j/b/-original-imah8zq2svda6nng.jpeg?q=60"
+                                width="100px" height="160px" alt="sandoor"></a><br>
+                        <div class="mobile-details-container">
+                            <p class="mobile-brand-name">1 L</p>
+                            <p class="mobile-name"> Oleev Oil Blend</p>
+                            <p><span class="rate">Rs.179</span><del class="rate-del">Rs.200</del></p>
+                            <div class="review-container">
+                                <p class="percentage">10%OFF</p>
+                            </div>
+                            <div class="star-review">
+                                <ion-icon name="star-sharp" class="star-icon"></ion-icon><ion-icon name="star-sharp"
+                                    class="star-icon"></ion-icon><ion-icon name="star-sharp"
+                                    class="star-icon"></ion-icon><ion-icon name="star-sharp"
+                                    class="star-icon"></ion-icon><ion-icon name="star-half-sharp"
+                                    class="star-icon"></ion-icon>
+                                <p>4.9</p>
+                            </div>
+                        </div>
+                        <button class="button">Add</button>
+                    </div>
+                    <div class="products-items">
+                        <a href="#"><img class="product-img"
+                                src="https://rukminim1.flixcart.com/image/296/296/xif0q/edible-oil/w/i/z/-original-imah393py2mau79a.jpeg?q=60"
+                                width="100px" height="160px" alt="sandoor"></a><br>
+                        <div class="mobile-details-container">
+                            <p class="mobile-brand-name">850 G</p>
+                            <p class="mobile-name">Saffola</p>
+                            <p><span class="rate">Rs.175</span> <del class="rate-del">Rs.197</del></p>
+                            <div class="review-container">
+                                <p class="percentage">11%OFF</p>
+                            </div>
+                            <div class="star-review">
+                                <ion-icon name="star-sharp" class="star-icon"></ion-icon><ion-icon name="star-sharp"
+                                    class="star-icon"></ion-icon><ion-icon name="star-sharp"
+                                    class="star-icon"></ion-icon><ion-icon name="star-sharp"
+                                    class="star-icon"></ion-icon><ion-icon name="star-half-sharp"
+                                    class="star-icon"></ion-icon>
+                                <p>4.4</p>
+                            </div>
+                        </div>
+                        <button class="button">Add</button>
+                    </div>
+                    <div class="products-items">
+                        <a href="#"><img class="product-img"
+                                src="https://rukminim2.flixcart.com/image/282/282/xif0q/edible-oil/a/c/l/-original-imah2hg8vdqqahjn.jpeg?q=60"
+                                width="100px" height="160px" alt="sandoor"></a><br>
+                        <div class="mobile-details-container">
+                            <p class="mobile-brand-name">1 L</p>
+                            <p class="mobile-name">Saffola Refind Oil</p>
+                            <p><span class="rate">Rs.175</span> <del class="rate-del">Rs.191</del></p>
+                            <div class="review-container">
+                                <p class="percentage">16%OFF</p>
+                            </div>
+                            <div class="star-review">
+                                <ion-icon name="star-sharp" class="star-icon"></ion-icon><ion-icon name="star-sharp"
+                                    class="star-icon"></ion-icon><ion-icon name="star-sharp"
+                                    class="star-icon"></ion-icon><ion-icon name="star-sharp"
+                                    class="star-icon"></ion-icon><ion-icon name="star-half-sharp"
+                                    class="star-icon"></ion-icon>
+                                <p>4.4</p>
+                            </div>
+                        </div>
+                        <button class="button">Add</button>
+                    </div>
+                    <div class="products-items">
+                        <a href="#"><img class="product-img"
+                                src="https://rukminim1.flixcart.com/image/296/296/ky3b0y80/edible-oil/j/p/k/-original-imagaefdhsxzvasa.jpeg?q=60"
+                                width="100px" height="160px" alt="sandoor"></a><br>
+                        <div class="mobile-details-container">
+                            <p class="mobile-brand-name">2 L</p>
+                            <p class="mobile-name">Saffola Refind Oil</p>
+                            <p><span class="rate">Rs.365</span> <del class="rate-del">Rs.429</del></p>
+                            <div class="review-container">
+                                <p class="percentage">14%OFF</p>
+                            </div>
+                            <div class="star-review">
+                                <ion-icon name="star-sharp" class="star-icon"></ion-icon><ion-icon name="star-sharp"
+                                    class="star-icon"></ion-icon><ion-icon name="star-sharp"
+                                    class="star-icon"></ion-icon><ion-icon name="star-sharp"
+                                    class="star-icon"></ion-icon><ion-icon name="star-half-sharp"
+                                    class="star-icon"></ion-icon>
+                                <p>4.4</p>
+                            </div>
+                        </div>
+                        <button class="button">Add</button>
+                    </div>
+                    <div class="products-items">
+                        <a href="#"><img class="product-img"
+                                src="https://rukminim1.flixcart.com/image/296/296/xif0q/edible-oil/x/e/e/-original-imagh3mgvh6gqp5n.jpeg?q=60"
+                                width="100px" height="160px" alt="sandoor"></a><br>
+                        <div class="mobile-details-container">
+                            <p class="mobile-brand-name">1 L</p>
+                            <p class="mobile-name">Fortune Xpert Sugar</p>
+                            <p><span class="rate">Rs.193</span> <del class="rate-del">Rs.220</del></p>
+                            <div class="review-container">
+                                <p class="percentage">12%OFF</p>
+                            </div>
+                            <div class="star-review">
+                                <ion-icon name="star-sharp" class="star-icon"></ion-icon><ion-icon name="star-sharp"
+                                    class="star-icon"></ion-icon><ion-icon name="star-sharp"
+                                    class="star-icon"></ion-icon><ion-icon name="star-sharp"
+                                    class="star-icon"></ion-icon><ion-icon name="star-half-sharp"
+                                    class="star-icon"></ion-icon>
+                                <p>4.4</p>
+                            </div>
+                        </div>
+                        <button class="button">Add</button>
+                    </div>
+                    <div class="products-items">
+                        <a href="#"><img class="product-img"
+                                src="https://rukminim1.flixcart.com/image/296/296/xif0q/edible-oil/p/j/b/-original-imah8zq2svda6nng.jpeg?q=60"
+                                width="100px" height="160px" alt="sandoor"></a><br>
+                        <div class="mobile-details-container">
+                            <p class="mobile-brand-name">1 L</p>
+                            <p class="mobile-name">Oleev Smart Oil</p>
+                            <p><span class="rate">Rs.175</span> <del class="rate-del">Rs.185</del></p>
+                            <div class="review-container">
+                                <p class="percentage">5%OFF</p>
+                            </div>
+                            <div class="star-review">
+                                <ion-icon name="star-sharp" class="star-icon"></ion-icon><ion-icon name="star-sharp"
+                                    class="star-icon"></ion-icon><ion-icon name="star-sharp"
+                                    class="star-icon"></ion-icon><ion-icon name="star-sharp"
+                                    class="star-icon"></ion-icon><ion-icon name="star-half-sharp"
+                                    class="star-icon"></ion-icon>
+                                <p>4.3</p>
+                            </div>
+                        </div>
+                        <button class="button">Add</button>
+                    </div>
+
+                </div>
+                <!--ghee oil-->
+                <div class="ghee-items ">
+                    <h6 class="h6">12 Proudcts</h6><br>
+                    <div class="products-items">
+                        <a href="#"><img class="product-img"
+                                src="https://rukminim1.flixcart.com/image/296/296/xif0q/ghee/x/9/q/750-cow-1-pouch-gowardhan-original-imagvp7fntadfgrx.jpeg?q=60"
+                                width="100px" height="160px" alt="sandoor"></a><br>
+                        <div class="mobile-details-container">
+                            <p class="mobile-brand-name">750 ML Pouch</p>
+                            <p class="mobile-name">Gowardhan Ghee</p>
+                            <p><span class="rate">Rs.509</span> <del class="rate-del">Rs.589</del></p>
+                            <div class="review-container">
+                                <p class="percentage">13%OFF</p>
+                            </div>
+                            <div class="star-review">
+                                <ion-icon name="star-sharp" class="star-icon"></ion-icon><ion-icon name="star-sharp"
+                                    class="star-icon"></ion-icon><ion-icon name="star-sharp"
+                                    class="star-icon"></ion-icon><ion-icon name="star-sharp"
+                                    class="star-icon"></ion-icon><ion-icon name="star-half-sharp"
+                                    class="star-icon"></ion-icon>
+                                <p>4.4</p>
+                            </div>
+                        </div>
+                        <button class="button">Add</button>
+                    </div>
+                    <div class="products-items">
+                        <a href="#"><img class="product-img"
+                                src="https://rukminim1.flixcart.com/image/296/296/xif0q/ghee/n/z/p/-original-imahcjh48qqjzvha.jpeg?q=60"
+                                width="100px" height="160px" alt="sandoor"></a><br>
+                        <div class="mobile-details-container">
+                            <p class="mobile-brand-name">1 L Pouch</p>
+                            <p class="mobile-name">Ashirvad Ghee</p>
+                            <p><span class="rate">Rs.615</span> <del class="rate-del">Rs.700</del></p>
+                            <div class="review-container">
+                                <p class="percentage">21%OFF</p>
+                            </div>
+                            <div class="star-review">
+                                <ion-icon name="star-sharp" class="star-icon md hydrated"
+                                    role="img"></ion-icon><ion-icon name="star-sharp" class="star-icon md hydrated"
+                                    role="img"></ion-icon><ion-icon name="star-sharp" class="star-icon md hydrated"
+                                    role="img"></ion-icon><ion-icon name="star-sharp" class="star-icon md hydrated"
+                                    role="img"></ion-icon><ion-icon name="star-half-sharp" class="star-icon md hydrated"
+                                    role="img"></ion-icon>
+                                <p>4.4</p>
+                            </div>
+                        </div>
+                        <button class="button">Add</button>
+                    </div>
+                    <div class="products-items">
+                        <a href="#"><img class="product-img"
+                                src="https://rukminim1.flixcart.com/image/296/296/xif0q/ghee/7/4/v/-original-imagwv5vgs934yqw.jpeg?q=60"
+                                width="100px" height="160px" alt="sandoor"></a><br>
+                        <div class="mobile-details-container">
+                            <p class="mobile-brand-name">1 L Tetrapack</p>
+                            <p class="mobile-name">Amul Pure Ghee</p>
+                            <p><span class="rate">Rs.615</span> <del class="rate-del">Rs.650</del></p>
+                            <div class="review-container">
+                                <p class="percentage">5%OFF</p>
+                            </div>
+                            <div class="star-review">
+                                <ion-icon name="star-sharp" class="star-icon md hydrated"
+                                    role="img"></ion-icon><ion-icon name="star-sharp" class="star-icon md hydrated"
+                                    role="img"></ion-icon><ion-icon name="star-sharp" class="star-icon md hydrated"
+                                    role="img"></ion-icon><ion-icon name="star-sharp" class="star-icon md hydrated"
+                                    role="img"></ion-icon><ion-icon name="star-half-sharp" class="star-icon md hydrated"
+                                    role="img"></ion-icon>
+                                <p>4.4</p>
+                            </div>
+                        </div>
+                        <button class="button">Add</button>
+                    </div>
+                    <div class="products-items">
+                        <a href="#"><img class="product-img"
+                                src="https://rukminim1.flixcart.com/image/296/296/jjylw280/ghee/e/f/g/1-pure-tin-amul-original-imaf7e3fehszrsxm.jpeg?q=60"
+                                width="100px" height="160px" alt="sandoor"></a><br>
+                        <div class="mobile-details-container">
+                            <p class="mobile-brand-name">1 L Tin</p>
+                            <p class="mobile-name">Amul Pure Ghee Tin</p>
+                            <p><span class="rate">Rs.639</span> <del class="rate-del">Rs.660</del></p>
                             <div class="review-container">
                                 <p class="percentage">9%OFF</p>
                             </div>
                             <div class="star-review">
-                                <ion-icon name="star-sharp" class="star-icon"></ion-icon><ion-icon name="star-sharp"
-                                    class="star-icon"></ion-icon><ion-icon name="star-sharp"
-                                    class="star-icon"></ion-icon><ion-icon name="star-sharp"
-                                    class="star-icon"></ion-icon><ion-icon name="star-half-sharp"
-                                    class="star-icon"></ion-icon>
+                                <ion-icon name="star-sharp" class="star-icon md hydrated"
+                                    role="img"></ion-icon><ion-icon name="star-sharp" class="star-icon md hydrated"
+                                    role="img"></ion-icon><ion-icon name="star-sharp" class="star-icon md hydrated"
+                                    role="img"></ion-icon><ion-icon name="star-sharp" class="star-icon md hydrated"
+                                    role="img"></ion-icon><ion-icon name="star-half-sharp" class="star-icon md hydrated"
+                                    role="img"></ion-icon>
+                                <p>4.9</p>
+                            </div>
+                        </div>
+                        <button class="button">Add</button>
+                    </div>
+                    <div class="products-items">
+                        <a href="#"><img class="product-img"
+                                src="https://rukminim1.flixcart.com/image/296/296/xif0q/ghee/q/y/h/-original-imahfuczcnshzqj3.jpeg?q=60"
+                                width="100px" height="160px" alt="sandoor"></a><br>
+                        <div class="mobile-details-container">
+                            <p class="mobile-brand-name">1 L Pouch</p>
+                            <p class="mobile-name">Nandini Ghee</p>
+                            <p><span class="rate">Rs.609</span> <del class="rate-del">Rs.670</del></p>
+                            <div class="review-container">
+                                <p class="percentage">9%OFF</p>
+                            </div>
+                            <div class="star-review">
+                                <ion-icon name="star-sharp" class="star-icon md hydrated"
+                                    role="img"></ion-icon><ion-icon name="star-sharp" class="star-icon md hydrated"
+                                    role="img"></ion-icon><ion-icon name="star-sharp" class="star-icon md hydrated"
+                                    role="img"></ion-icon><ion-icon name="star-sharp" class="star-icon md hydrated"
+                                    role="img"></ion-icon><ion-icon name="star-half-sharp" class="star-icon md hydrated"
+                                    role="img"></ion-icon>
+                                <p>4.1</p>
+                            </div>
+                        </div>
+                        <button class="button">Add</button>
+                    </div>
+                    <div class="products-items">
+                        <a href="#"><img class="product-img"
+                                src="https://rukminim1.flixcart.com/image/296/296/knqd3m80/ghee/o/u/6/pure-cow-pouch-godrej-jersey-original-imag2cemregcevww.jpeg?q=60"
+                                width="100px" height="160px" alt="sandoor"></a><br>
+                        <div class="mobile-details-container">
+                            <p class="mobile-brand-name">1 L Pouch</p>
+                            <p class="mobile-name">Gordrej Ghee</p>
+                            <p><span class="rate">Rs.569</span> <del class="rate-del">Rs.779</del></p>
+                            <div class="review-container">
+                                <p class="percentage">26%OFF</p>
+                            </div>
+                            <div class="star-review">
+                                <ion-icon name="star-sharp" class="star-icon md hydrated"
+                                    role="img"></ion-icon><ion-icon name="star-sharp" class="star-icon md hydrated"
+                                    role="img"></ion-icon><ion-icon name="star-sharp" class="star-icon md hydrated"
+                                    role="img"></ion-icon><ion-icon name="star-sharp" class="star-icon md hydrated"
+                                    role="img"></ion-icon><ion-icon name="star-half-sharp" class="star-icon md hydrated"
+                                    role="img"></ion-icon>
                                 <p>4.4</p>
                             </div>
-                            <button class="button">Add</button>
                         </div>
+                        <button class="button">Add</button>
                     </div>
-                   
-                </div>
-                <!--blended oil-->
-                <div class="blended-items ">
-                    <h6 class="h6">14 Proudcts</h6><br>
+                    <div class="products-items">
+                        <a href="#"><img class="product-img"
+                                src="https://rukminim1.flixcart.com/image/296/296/kpinwy80/ghee/g/w/e/cow-plastic-bottle-jersey-original-imag3qbu4kr4gxj5.jpeg?q=60"
+                                width="100px" height="160px" alt="sandoor"></a><br>
+                        <div class="mobile-details-container">
+                            <p class="mobile-brand-name">500 ML Plastic Bottle</p>
+                            <p class="mobile-name">Godrej Pure Ghee</p>
+                            <p><span class="rate">Rs.338</span> <del class="rate-del">Rs.410</del></p>
+                            <div class="review-container">
+                                <p class="percentage">17%OFF</p>
+                            </div>
+                            <div class="star-review">
+                                <ion-icon name="star-sharp" class="star-icon md hydrated"
+                                    role="img"></ion-icon><ion-icon name="star-sharp" class="star-icon md hydrated"
+                                    role="img"></ion-icon><ion-icon name="star-sharp" class="star-icon md hydrated"
+                                    role="img"></ion-icon><ion-icon name="star-sharp" class="star-icon md hydrated"
+                                    role="img"></ion-icon><ion-icon name="star-half-sharp" class="star-icon md hydrated"
+                                    role="img"></ion-icon>
+                                <p>4.4</p>
+                            </div>
+                        </div>
+                        <button class="button">Add</button>
+                    </div>
                     <div class="products-items">
                         <a href="#"><img class="product-img"
                                 src="https://rukminim2.flixcart.com/image/282/282/xif0q/ghee/5/9/s/200-cow-ghee-1-plastic-bottle-milky-mist-original-imagvzpgzh5gj98y.jpeg?q=60"
@@ -1091,20 +1433,67 @@
                         <div class="mobile-details-container">
                             <p class="mobile-brand-name">200 ML PlasticBottle</p>
                             <p class="mobile-name">Milk Misty Cow Ghee</p>
-                            <p class="rate">Rs.144 <del class="rate-del">Rs.185</del></p>
+                            <p><span class="rate">Rs.144</span> <del class="rate-del">Rs.185</del></p>
                             <div class="review-container">
                                 <p class="percentage">22%OFF</p>
                             </div>
                             <div class="star-review">
-                                <ion-icon name="star-sharp" class="star-icon"></ion-icon><ion-icon name="star-sharp"
-                                    class="star-icon"></ion-icon><ion-icon name="star-sharp"
-                                    class="star-icon"></ion-icon><ion-icon name="star-sharp"
-                                    class="star-icon"></ion-icon><ion-icon name="star-half-sharp"
-                                    class="star-icon"></ion-icon>
+                                <ion-icon name="star-sharp" class="star-icon md hydrated"
+                                    role="img"></ion-icon><ion-icon name="star-sharp" class="star-icon md hydrated"
+                                    role="img"></ion-icon><ion-icon name="star-sharp" class="star-icon md hydrated"
+                                    role="img"></ion-icon><ion-icon name="star-sharp" class="star-icon md hydrated"
+                                    role="img"></ion-icon><ion-icon name="star-half-sharp" class="star-icon md hydrated"
+                                    role="img"></ion-icon>
                                 <p>4.4</p>
                             </div>
-                            <button class="button">Add</button>
                         </div>
+                        <button class="button">Add</button>
+                    </div>
+                    <div class="products-items">
+                        <a href="#"><img class="product-img"
+                                src="https://rukminim1.flixcart.com/image/296/296/jmthle80-1/ghee/j/a/x/500-ghee-plastic-bottle-aavin-original-imaf9n5s8hxgmtyc.jpeg?q=60"
+                                width="100px" height="160px" alt="sandoor"></a><br>
+                        <div class="mobile-details-container">
+                            <p class="mobile-brand-name">500 ML Bottle</p>
+                            <p class="mobile-name">Aavin Ghee</p>
+                            <p><span class="rate">Rs.335</span> <del class="rate-del">Rs.365</del></p>
+                            <div class="review-container">
+                                <p class="percentage">9%OFF</p>
+                            </div>
+                            <div class="star-review">
+                                <ion-icon name="star-sharp" class="star-icon md hydrated"
+                                    role="img"></ion-icon><ion-icon name="star-sharp" class="star-icon md hydrated"
+                                    role="img"></ion-icon><ion-icon name="star-sharp" class="star-icon md hydrated"
+                                    role="img"></ion-icon><ion-icon name="star-sharp" class="star-icon md hydrated"
+                                    role="img"></ion-icon><ion-icon name="star-half-sharp" class="star-icon md hydrated"
+                                    role="img"></ion-icon>
+                                <p>4.4</p>
+                            </div>
+                        </div>
+                        <button class="button">Add</button>
+                    </div>
+                    <div class="products-items">
+                        <a href="#"><img class="product-img"
+                                src="https://rukminim1.flixcart.com/image/296/296/jmqmpow0/ghee/5/v/h/1-ghee-plastic-bottle-aavin-original-imaf9k7kwnkwadrd.jpeg?q=60"
+                                width="100px" height="160px" alt="sandoor"></a><br>
+                        <div class="mobile-details-container">
+                            <p class="mobile-brand-name">1 L Bottle</p>
+                            <p class="mobile-name">Aavin Ghee(nei)</p>
+                            <p><span class="rate">Rs.655</span> <del class="rate-del">Rs.700</del></p>
+                            <div class="review-container">
+                                <p class="percentage">9%OFF</p>
+                            </div>
+                            <div class="star-review">
+                                <ion-icon name="star-sharp" class="star-icon md hydrated"
+                                    role="img"></ion-icon><ion-icon name="star-sharp" class="star-icon md hydrated"
+                                    role="img"></ion-icon><ion-icon name="star-sharp" class="star-icon md hydrated"
+                                    role="img"></ion-icon><ion-icon name="star-sharp" class="star-icon md hydrated"
+                                    role="img"></ion-icon><ion-icon name="star-half-sharp" class="star-icon md hydrated"
+                                    role="img"></ion-icon>
+                                <p>4.4</p>
+                            </div>
+                        </div>
+                        <button class="button">Add</button>
                     </div>
                     <div class="products-items">
                         <a href="#"><img class="product-img"
@@ -1113,699 +1502,174 @@
                         <div class="mobile-details-container">
                             <p class="mobile-brand-name">1000 ML Pouch</p>
                             <p class="mobile-name">Milky Mitst Cow Ghee</p>
-                            <p class="rate">Rs.597 <del class="rate-del">Rs.799</del></p>
+                            <p><span class="rate">Rs.597</span> <del class="rate-del">Rs.799</del></p>
                             <div class="review-container">
                                 <p class="percentage">25%OFF</p>
                             </div>
                             <div class="star-review">
-                                <ion-icon name="star-sharp" class="star-icon"></ion-icon><ion-icon name="star-sharp"
-                                    class="star-icon"></ion-icon><ion-icon name="star-sharp"
-                                    class="star-icon"></ion-icon><ion-icon name="star-sharp"
-                                    class="star-icon"></ion-icon><ion-icon name="star-half-sharp"
-                                    class="star-icon"></ion-icon>
+                                <ion-icon name="star-sharp" class="star-icon md hydrated"
+                                    role="img"></ion-icon><ion-icon name="star-sharp" class="star-icon md hydrated"
+                                    role="img"></ion-icon><ion-icon name="star-sharp" class="star-icon md hydrated"
+                                    role="img"></ion-icon><ion-icon name="star-sharp" class="star-icon md hydrated"
+                                    role="img"></ion-icon><ion-icon name="star-half-sharp" class="star-icon md hydrated"
+                                    role="img"></ion-icon>
                                 <p>4.1</p>
                             </div>
-                            <button class="button">Add</button>
                         </div>
+                        <button class="button">Add</button>
                     </div>
                     <div class="products-items">
                         <a href="#"><img class="product-img"
-                                src="https://rukminim1.flixcart.com/image/296/296/xif0q/edible-oil/x/t/r/-original-imagh3mezaztdyvn.jpeg?q=60"
+                                src="https://rukminim2.flixcart.com/image/296/296/xif0q/ghee/k/h/c/1-high-aroma-ghee-1-ltr-pouch-1-pouch-amul-original-imah8fy2hgmypzcm.jpeg?q=60"
                                 width="100px" height="160px" alt="sandoor"></a><br>
                         <div class="mobile-details-container">
-                            <p class="mobile-brand-name">1 L</p>
-                            <p class="mobile-name">Fortune Xpert Pro Oil</p>
-                            <p class="rate">Rs.145 <del class="rate-del">Rs.190</del></p>
+                            <p class="mobile-brand-name">1 L Pouch</p>
+                            <p class="mobile-name">Amul Cow Ghee</p>
+                            <p><span class="rate">Rs.566</span> <del class="rate-del">Rs.600</del></p>
                             <div class="review-container">
-                                <p class="percentage">23%OFF</p>
+                                <p class="percentage">19%OFF</p>
                             </div>
                             <div class="star-review">
-                                <ion-icon name="star-sharp" class="star-icon"></ion-icon><ion-icon name="star-sharp"
-                                    class="star-icon"></ion-icon><ion-icon name="star-sharp"
-                                    class="star-icon"></ion-icon><ion-icon name="star-sharp"
-                                    class="star-icon"></ion-icon><ion-icon name="star-half-sharp"
-                                    class="star-icon"></ion-icon>
-                                <p>4.2</p>
-                            </div>
-                            <button class="button">Add</button>
-                        </div>
-                    </div>
-                    <div class="products-items">
-                        <a href="#"><img class="product-img"
-                                src="https://rukminim1.flixcart.com/image/296/296/xif0q/edible-oil/m/z/p/-original-imah2hg9hakefpcw.jpeg?q=60"
-                                width="100px" height="160px" alt="sandoor"></a><br>
-                        <div class="mobile-details-container">
-                            <p class="mobile-brand-name">3 L</p>
-                            <p class="mobile-name">Saffola Refind Oil</p>
-                            <p class="rate">Rs.545 <del class="rate-del">Rs.661</del></p>
-                            <div class="review-container">
-                                <p class="percentage">16%OFF</p>
-                            </div>
-                            <div class="star-review">
-                                <ion-icon name="star-sharp" class="star-icon"></ion-icon><ion-icon name="star-sharp"
-                                    class="star-icon"></ion-icon><ion-icon name="star-sharp"
-                                    class="star-icon"></ion-icon><ion-icon name="star-sharp"
-                                    class="star-icon"></ion-icon><ion-icon name="star-half-sharp"
-                                    class="star-icon"></ion-icon>
+                                <ion-icon name="star-sharp" class="star-icon md hydrated"
+                                    role="img"></ion-icon><ion-icon name="star-sharp" class="star-icon md hydrated"
+                                    role="img"></ion-icon><ion-icon name="star-sharp" class="star-icon md hydrated"
+                                    role="img"></ion-icon><ion-icon name="star-sharp" class="star-icon md hydrated"
+                                    role="img"></ion-icon><ion-icon name="star-half-sharp" class="star-icon md hydrated"
+                                    role="img"></ion-icon>
                                 <p>4.4</p>
                             </div>
-                            <button class="button">Add</button>
                         </div>
-                    </div>
-                    <div class="products-items">
-                        <a href="#"><img class="product-img"
-                                src="https://rukminim1.flixcart.com/image/296/296/ky3b0y80/edible-oil/j/p/k/-original-imagaefdhsxzvasa.jpeg?q=60"
-                                width="100px" height="160px" alt="sandoor"></a><br>
-                        <div class="mobile-details-container">
-                            <p class="mobile-brand-name">2 L</p>
-                            <p class="mobile-name">Saffola Refind Oil</p>
-                            <p class="rate">Rs.365 <del class="rate-del">Rs.429</del></p>
-                            <div class="review-container">
-                                <p class="percentage">14%OFF</p>
-                            </div>
-                            <div class="star-review">
-                                <ion-icon name="star-sharp" class="star-icon"></ion-icon><ion-icon name="star-sharp"
-                                    class="star-icon"></ion-icon><ion-icon name="star-sharp"
-                                    class="star-icon"></ion-icon><ion-icon name="star-sharp"
-                                    class="star-icon"></ion-icon><ion-icon name="star-half-sharp"
-                                    class="star-icon"></ion-icon>
-                                <p>4.4</p>
-                            </div>
-                            <button class="button">Add</button>
-                        </div>
-                    </div>
-                    <div class="products-items">
-                        <a href="#"><img class="product-img"
-                                src="https://rukminim1.flixcart.com/image/296/296/xif0q/edible-oil/q/s/0/-original-imahd96jaqx5xbjj.jpeg?q=60"
-                                width="100px" height="160px" alt="sandoor"></a><br>
-                        <div class="mobile-details-container">
-                            <p class="mobile-brand-name">1 L</p>
-                            <p class="mobile-name">Energy Max Oil</p>
-                            <p class="rate">Rs.146 <del class="rate-del">Rs.179</del></p>
-                            <div class="review-container">
-                                <p class="percentage">18%OFF</p>
-                            </div>
-                            <div class="star-review">
-                                <ion-icon name="star-sharp" class="star-icon"></ion-icon><ion-icon name="star-sharp"
-                                    class="star-icon"></ion-icon><ion-icon name="star-sharp"
-                                    class="star-icon"></ion-icon><ion-icon name="star-sharp"
-                                    class="star-icon"></ion-icon><ion-icon name="star-half-sharp"
-                                    class="star-icon"></ion-icon>
-                                <p>4.1</p>
-                            </div>
-                            <button class="button">Add</button>
-                        </div>
-                    </div>
-                    <div class="products-items">
-                        <a href="#"><img class="product-img"
-                                src="https://rukminim1.flixcart.com/image/296/296/xif0q/edible-oil/p/j/b/-original-imah8zq2svda6nng.jpeg?q=60"
-                                width="100px" height="160px" alt="sandoor"></a><br>
-                        <div class="mobile-details-container">
-                            <p class="mobile-brand-name">1 L</p>
-                            <p class="mobile-name">Oleev Smart Oil</p>
-                            <p class="rate">Rs.175 <del class="rate-del">Rs.185</del></p>
-                            <div class="review-container">
-                                <p class="percentage">5%OFF</p>
-                            </div>
-                            <div class="star-review">
-                                <ion-icon name="star-sharp" class="star-icon"></ion-icon><ion-icon name="star-sharp"
-                                    class="star-icon"></ion-icon><ion-icon name="star-sharp"
-                                    class="star-icon"></ion-icon><ion-icon name="star-sharp"
-                                    class="star-icon"></ion-icon><ion-icon name="star-half-sharp"
-                                    class="star-icon"></ion-icon>
-                                <p>4.3</p>
-                            </div>
-                            <button class="button">Add</button>
-                        </div>
-                    </div>
-                    <div class="products-items">
-                        <a href="#"><img class="product-img"
-                                src="https://rukminim1.flixcart.com/image/296/296/xif0q/edible-oil/k/c/g/-original-imagn5dserhhxtff.jpeg?q=60"
-                                width="100px" height="160px" alt="sandoor"></a><br>
-                        <div class="mobile-details-container">
-                            <p class="mobile-brand-name">2 L</p>
-                            <p class="mobile-name">Olive Oil</p>
-                            <p class="rate">Rs.2808 <del class="rate-del">Rs.4200</del></p>
-                            <div class="review-container">
-                                <p class="percentage">33%OFF</p>
-                            </div>
-                            <div class="star-review">
-                                <ion-icon name="star-sharp" class="star-icon"></ion-icon><ion-icon name="star-sharp"
-                                    class="star-icon"></ion-icon><ion-icon name="star-sharp"
-                                    class="star-icon"></ion-icon><ion-icon name="star-sharp"
-                                    class="star-icon"></ion-icon><ion-icon name="star-half-sharp"
-                                    class="star-icon"></ion-icon>
-                                <p>4.4</p>
-                            </div>
-                            <button class="button">Add</button>
-                        </div>
-                    </div>
-                    <div class="products-items">
-                         <a href="#"><img class="product-img"
-                                src="https://rukminim1.flixcart.com/image/296/296/kyj0vbk0/edible-oil/d/d/u/500-na-1-pouch-sesame-oil-porna-original-imagaqj2qgftzyty.jpeg?q=60"
-                                width="100px" height="160px" alt="sandoor"></a><br>
-                        <div class="mobile-details-container">
-                            <p class="mobile-brand-name">500 ML</p>
-                            <p class="mobile-name">Porna Sesame</p>
-                            <p class="rate">Rs.150 <del class="rate-del">Rs.193</del></p>
-                            <div class="review-container">
-                                <p class="percentage">22%OFF</p>
-                            </div>
-                            <div class="star-review">
-                                <ion-icon name="star-sharp" class="star-icon"></ion-icon><ion-icon name="star-sharp"
-                                    class="star-icon"></ion-icon><ion-icon name="star-sharp"
-                                    class="star-icon"></ion-icon><ion-icon name="star-sharp"
-                                    class="star-icon"></ion-icon><ion-icon name="star-half-sharp"
-                                    class="star-icon"></ion-icon>
-                                <p>4.1</p>
-                            </div>
-                            <button class="button">Add</button>
-                        </div>
-                    </div>
-                    <div class="products-items">
-                         <a href="#"><img class="product-img"
-                                src="https://rukminim1.flixcart.com/image/296/296/xif0q/ghee/x/9/q/750-cow-1-pouch-gowardhan-original-imagvp7fntadfgrx.jpeg?q=60"
-                                width="100px" height="160px" alt="sandoor"></a><br>
-                        <div class="mobile-details-container">
-                            <p class="mobile-brand-name">750 ML Pouch</p>
-                            <p class="mobile-name">Gowardhan Ghee</p>
-                            <p class="rate">Rs.509 <del class="rate-del">Rs.589</del></p>
-                            <div class="review-container">
-                                <p class="percentage">13%OFF</p>
-                            </div>
-                            <div class="star-review">
-                                <ion-icon name="star-sharp" class="star-icon"></ion-icon><ion-icon name="star-sharp"
-                                    class="star-icon"></ion-icon><ion-icon name="star-sharp"
-                                    class="star-icon"></ion-icon><ion-icon name="star-sharp"
-                                    class="star-icon"></ion-icon><ion-icon name="star-half-sharp"
-                                    class="star-icon"></ion-icon>
-                                <p>4.4</p>
-                            </div>
-                            <button class="button">Add</button>
-                        </div>
-                    </div>
-                    <div class="products-items">
-                         <a href="#"><img class="product-img"
-                                src="https://rukminim1.flixcart.com/image/296/296/xif0q/edible-oil/a/2/c/-original-imahb3gggjmw9gfk.jpeg?q=60"
-                                width="100px" height="160px" alt="sandoor"></a><br>
-                        <div class="mobile-details-container">
-                            <p class="mobile-brand-name">870 G</p>
-                            <p class="mobile-name">Fortune Refined Oil</p>
-                            <p class="rate">Rs.176 <del class="rate-del">Rs.199</del></p>
-                            <div class="review-container">
-                                <p class="percentage">11%OFF</p>
-                            </div>
-                            <div class="star-review">
-                                <ion-icon name="star-sharp" class="star-icon"></ion-icon><ion-icon name="star-sharp"
-                                    class="star-icon"></ion-icon><ion-icon name="star-sharp"
-                                    class="star-icon"></ion-icon><ion-icon name="star-sharp"
-                                    class="star-icon"></ion-icon><ion-icon name="star-half-sharp"
-                                    class="star-icon"></ion-icon>
-                                <p>4.4</p>
-                            </div>
-                            <button class="button">Add</button>
-                        </div>
-                    </div>
-                    <div class="products-items">
-                         <a href="#"><img class="product-img"
-                                src="https://rukminim1.flixcart.com/image/296/296/kylvr0w0/edible-oil/d/6/b/-original-imagaszhuy2hhseb.jpeg?q=60"
-                                width="100px" height="160px" alt="sandoor"></a><br>
-                        <div class="mobile-details-container">
-                            <p class="mobile-brand-name">1 L</p>
-                            <p class="mobile-name">Porna Sesame Oil el</p>
-                            <p class="rate">Rs.338 <del class="rate-del">Rs.383</del></p>
-                            <div class="review-container">
-                                <p class="percentage">11%OFF</p>
-                            </div>
-                            <div class="star-review">
-                                <ion-icon name="star-sharp" class="star-icon"></ion-icon><ion-icon name="star-sharp"
-                                    class="star-icon"></ion-icon><ion-icon name="star-sharp"
-                                    class="star-icon"></ion-icon><ion-icon name="star-sharp"
-                                    class="star-icon"></ion-icon><ion-icon name="star-half-sharp"
-                                    class="star-icon"></ion-icon>
-                                <p>4.4</p>
-                            </div>
-                            <button class="button">Add</button>
-                        </div>
+                        <button class="button">Add</button>
                     </div>
                 </div>
-                <!--ghee oil-->
-                <div class="ghee-items ">
-                    <h6 class="h6">23 Proudcts</h6><br>
-                    <div class="products-items">
-                        <a href="#"><img class="product-img"
-                                src="https://rukminim2.flixcart.com/image/282/282/xif0q/ghee/5/9/s/200-cow-ghee-1-plastic-bottle-milky-mist-original-imagvzpgzh5gj98y.jpeg?q=60"
-                                width="100px" height="160px" alt="sandoor"></a><br>
-                        <div class="mobile-details-container">
-                            <p class="mobile-brand-name">200 ML PlasticBottle</p>
-                            <p class="mobile-name">Milk Misty Cow Ghee</p>
-                            <p class="rate">Rs.144 <del class="rate-del">Rs.185</del></p>
-                            <div class="review-container">
-                                <p class="percentage">22%OFF</p>
-                            </div>
-                            <div class="star-review">
-                                <ion-icon name="star-sharp" class="star-icon"></ion-icon><ion-icon name="star-sharp"
-                                    class="star-icon"></ion-icon><ion-icon name="star-sharp"
-                                    class="star-icon"></ion-icon><ion-icon name="star-sharp"
-                                    class="star-icon"></ion-icon><ion-icon name="star-half-sharp"
-                                    class="star-icon"></ion-icon>
-                                <p>4.4</p>
-                            </div>
-                            <button class="button">Add</button>
-                        </div>
-                    </div>
-                    <div class="products-items">
-                        <a href="#"><img class="product-img"
-                                src="https://rukminim2.flixcart.com/image/282/282/xif0q/ghee/d/t/f/-original-imagtcrkjk2dsvgf.jpeg?q=60"
-                                width="100px" height="160px" alt="sandoor"></a><br>
-                        <div class="mobile-details-container">
-                            <p class="mobile-brand-name">1000 ML Pouch</p>
-                            <p class="mobile-name">Milky Mitst Cow Ghee</p>
-                            <p class="rate">Rs.597 <del class="rate-del">Rs.799</del></p>
-                            <div class="review-container">
-                                <p class="percentage">25%OFF</p>
-                            </div>
-                            <div class="star-review">
-                                <ion-icon name="star-sharp" class="star-icon"></ion-icon><ion-icon name="star-sharp"
-                                    class="star-icon"></ion-icon><ion-icon name="star-sharp"
-                                    class="star-icon"></ion-icon><ion-icon name="star-sharp"
-                                    class="star-icon"></ion-icon><ion-icon name="star-half-sharp"
-                                    class="star-icon"></ion-icon>
-                                <p>4.1</p>
-                            </div>
-                            <button class="button">Add</button>
-                        </div>
-                    </div>
-                    <div class="products-items">
-                        <a href="#"><img class="product-img"
-                                src="https://rukminim1.flixcart.com/image/296/296/xif0q/edible-oil/x/t/r/-original-imagh3mezaztdyvn.jpeg?q=60"
-                                width="100px" height="160px" alt="sandoor"></a><br>
-                        <div class="mobile-details-container">
-                            <p class="mobile-brand-name">1 L</p>
-                            <p class="mobile-name">Fortune Xpert Pro Oil</p>
-                            <p class="rate">Rs.145 <del class="rate-del">Rs.190</del></p>
-                            <div class="review-container">
-                                <p class="percentage">23%OFF</p>
-                            </div>
-                            <div class="star-review">
-                                <ion-icon name="star-sharp" class="star-icon"></ion-icon><ion-icon name="star-sharp"
-                                    class="star-icon"></ion-icon><ion-icon name="star-sharp"
-                                    class="star-icon"></ion-icon><ion-icon name="star-sharp"
-                                    class="star-icon"></ion-icon><ion-icon name="star-half-sharp"
-                                    class="star-icon"></ion-icon>
-                                <p>4.2</p>
-                            </div>
-                            <button class="button">Add</button>
-                        </div>
-                    </div>
-                    <div class="products-items">
-                        <a href="#"><img class="product-img"
-                                src="https://rukminim1.flixcart.com/image/296/296/xif0q/edible-oil/m/z/p/-original-imah2hg9hakefpcw.jpeg?q=60"
-                                width="100px" height="160px" alt="sandoor"></a><br>
-                        <div class="mobile-details-container">
-                            <p class="mobile-brand-name">3 L</p>
-                            <p class="mobile-name">Saffola Refind Oil</p>
-                            <p class="rate">Rs.545 <del class="rate-del">Rs.661</del></p>
-                            <div class="review-container">
-                                <p class="percentage">16%OFF</p>
-                            </div>
-                            <div class="star-review">
-                                <ion-icon name="star-sharp" class="star-icon"></ion-icon><ion-icon name="star-sharp"
-                                    class="star-icon"></ion-icon><ion-icon name="star-sharp"
-                                    class="star-icon"></ion-icon><ion-icon name="star-sharp"
-                                    class="star-icon"></ion-icon><ion-icon name="star-half-sharp"
-                                    class="star-icon"></ion-icon>
-                                <p>4.4</p>
-                            </div>
-                            <button class="button">Add</button>
-                        </div>
-                    </div>
-                    <div class="products-items">
-                        <a href="#"><img class="product-img"
-                                src="https://rukminim1.flixcart.com/image/296/296/ky3b0y80/edible-oil/j/p/k/-original-imagaefdhsxzvasa.jpeg?q=60"
-                                width="100px" height="160px" alt="sandoor"></a><br>
-                        <div class="mobile-details-container">
-                            <p class="mobile-brand-name">2 L</p>
-                            <p class="mobile-name">Saffola Refind Oil</p>
-                            <p class="rate">Rs.365 <del class="rate-del">Rs.429</del></p>
-                            <div class="review-container">
-                                <p class="percentage">14%OFF</p>
-                            </div>
-                            <div class="star-review">
-                                <ion-icon name="star-sharp" class="star-icon"></ion-icon><ion-icon name="star-sharp"
-                                    class="star-icon"></ion-icon><ion-icon name="star-sharp"
-                                    class="star-icon"></ion-icon><ion-icon name="star-sharp"
-                                    class="star-icon"></ion-icon><ion-icon name="star-half-sharp"
-                                    class="star-icon"></ion-icon>
-                                <p>4.4</p>
-                            </div>
-                            <button class="button">Add</button>
-                        </div>
-                    </div>
-                    <div class="products-items">
-                        <a href="#"><img class="product-img"
-                                src="https://rukminim1.flixcart.com/image/296/296/xif0q/edible-oil/q/s/0/-original-imahd96jaqx5xbjj.jpeg?q=60"
-                                width="100px" height="160px" alt="sandoor"></a><br>
-                        <div class="mobile-details-container">
-                            <p class="mobile-brand-name">1 L</p>
-                            <p class="mobile-name">Energy Max Oil</p>
-                            <p class="rate">Rs.146 <del class="rate-del">Rs.179</del></p>
-                            <div class="review-container">
-                                <p class="percentage">18%OFF</p>
-                            </div>
-                            <div class="star-review">
-                                <ion-icon name="star-sharp" class="star-icon"></ion-icon><ion-icon name="star-sharp"
-                                    class="star-icon"></ion-icon><ion-icon name="star-sharp"
-                                    class="star-icon"></ion-icon><ion-icon name="star-sharp"
-                                    class="star-icon"></ion-icon><ion-icon name="star-half-sharp"
-                                    class="star-icon"></ion-icon>
-                                <p>4.1</p>
-                            </div>
-                            <button class="button">Add</button>
-                        </div>
-                    </div>
-                    <div class="products-items">
-                        <a href="#"><img class="product-img"
-                                src="https://rukminim1.flixcart.com/image/296/296/xif0q/edible-oil/p/j/b/-original-imah8zq2svda6nng.jpeg?q=60"
-                                width="100px" height="160px" alt="sandoor"></a><br>
-                        <div class="mobile-details-container">
-                            <p class="mobile-brand-name">1 L</p>
-                            <p class="mobile-name">Oleev Smart Oil</p>
-                            <p class="rate">Rs.175 <del class="rate-del">Rs.185</del></p>
-                            <div class="review-container">
-                                <p class="percentage">5%OFF</p>
-                            </div>
-                            <div class="star-review">
-                                <ion-icon name="star-sharp" class="star-icon"></ion-icon><ion-icon name="star-sharp"
-                                    class="star-icon"></ion-icon><ion-icon name="star-sharp"
-                                    class="star-icon"></ion-icon><ion-icon name="star-sharp"
-                                    class="star-icon"></ion-icon><ion-icon name="star-half-sharp"
-                                    class="star-icon"></ion-icon>
-                                <p>4.3</p>
-                            </div>
-                            <button class="button">Add</button>
-                        </div>
-                    </div>
-                    <div class="products-items">
-                        <a href="#"><img class="product-img"
-                                src="https://rukminim1.flixcart.com/image/296/296/xif0q/edible-oil/k/c/g/-original-imagn5dserhhxtff.jpeg?q=60"
-                                width="100px" height="160px" alt="sandoor"></a><br>
-                        <div class="mobile-details-container">
-                            <p class="mobile-brand-name">2 L</p>
-                            <p class="mobile-name">Olive Oil</p>
-                            <p class="rate">Rs.2808 <del class="rate-del">Rs.4200</del></p>
-                            <div class="review-container">
-                                <p class="percentage">33%OFF</p>
-                            </div>
-                            <div class="star-review">
-                                <ion-icon name="star-sharp" class="star-icon"></ion-icon><ion-icon name="star-sharp"
-                                    class="star-icon"></ion-icon><ion-icon name="star-sharp"
-                                    class="star-icon"></ion-icon><ion-icon name="star-sharp"
-                                    class="star-icon"></ion-icon><ion-icon name="star-half-sharp"
-                                    class="star-icon"></ion-icon>
-                                <p>4.4</p>
-                            </div>
-                            <button class="button">Add</button>
-                        </div>
-                    </div>
-                    <div class="products-items">
-                         <a href="#"><img class="product-img"
-                                src="https://rukminim1.flixcart.com/image/296/296/kyj0vbk0/edible-oil/d/d/u/500-na-1-pouch-sesame-oil-porna-original-imagaqj2qgftzyty.jpeg?q=60"
-                                width="100px" height="160px" alt="sandoor"></a><br>
-                        <div class="mobile-details-container">
-                            <p class="mobile-brand-name">500 ML</p>
-                            <p class="mobile-name">Porna Sesame</p>
-                            <p class="rate">Rs.150 <del class="rate-del">Rs.193</del></p>
-                            <div class="review-container">
-                                <p class="percentage">22%OFF</p>
-                            </div>
-                            <div class="star-review">
-                                <ion-icon name="star-sharp" class="star-icon"></ion-icon><ion-icon name="star-sharp"
-                                    class="star-icon"></ion-icon><ion-icon name="star-sharp"
-                                    class="star-icon"></ion-icon><ion-icon name="star-sharp"
-                                    class="star-icon"></ion-icon><ion-icon name="star-half-sharp"
-                                    class="star-icon"></ion-icon>
-                                <p>4.1</p>
-                            </div>
-                            <button class="button">Add</button>
-                        </div>
-                    </div>
-                    <div class="products-items">
-                         <a href="#"><img class="product-img"
-                                src="https://rukminim1.flixcart.com/image/296/296/xif0q/ghee/x/9/q/750-cow-1-pouch-gowardhan-original-imagvp7fntadfgrx.jpeg?q=60"
-                                width="100px" height="160px" alt="sandoor"></a><br>
-                        <div class="mobile-details-container">
-                            <p class="mobile-brand-name">750 ML Pouch</p>
-                            <p class="mobile-name">Gowardhan Ghee</p>
-                            <p class="rate">Rs.509 <del class="rate-del">Rs.589</del></p>
-                            <div class="review-container">
-                                <p class="percentage">13%OFF</p>
-                            </div>
-                            <div class="star-review">
-                                <ion-icon name="star-sharp" class="star-icon"></ion-icon><ion-icon name="star-sharp"
-                                    class="star-icon"></ion-icon><ion-icon name="star-sharp"
-                                    class="star-icon"></ion-icon><ion-icon name="star-sharp"
-                                    class="star-icon"></ion-icon><ion-icon name="star-half-sharp"
-                                    class="star-icon"></ion-icon>
-                                <p>4.4</p>
-                            </div>
-                            <button class="button">Add</button>
-                        </div>
-                    </div>
-                    <div class="products-items">
-                         <a href="#"><img class="product-img"
-                                src="https://rukminim1.flixcart.com/image/296/296/xif0q/edible-oil/a/2/c/-original-imahb3gggjmw9gfk.jpeg?q=60"
-                                width="100px" height="160px" alt="sandoor"></a><br>
-                        <div class="mobile-details-container">
-                            <p class="mobile-brand-name">870 G</p>
-                            <p class="mobile-name">Fortune Refined Oil</p>
-                            <p class="rate">Rs.176 <del class="rate-del">Rs.199</del></p>
-                            <div class="review-container">
-                                <p class="percentage">11%OFF</p>
-                            </div>
-                            <div class="star-review">
-                                <ion-icon name="star-sharp" class="star-icon"></ion-icon><ion-icon name="star-sharp"
-                                    class="star-icon"></ion-icon><ion-icon name="star-sharp"
-                                    class="star-icon"></ion-icon><ion-icon name="star-sharp"
-                                    class="star-icon"></ion-icon><ion-icon name="star-half-sharp"
-                                    class="star-icon"></ion-icon>
-                                <p>4.4</p>
-                            </div>
-                            <button class="button">Add</button>
-                        </div>
-                    </div>
-                    <div class="products-items">
-                         <a href="#"><img class="product-img"
-                                src="https://rukminim1.flixcart.com/image/296/296/kylvr0w0/edible-oil/d/6/b/-original-imagaszhuy2hhseb.jpeg?q=60"
-                                width="100px" height="160px" alt="sandoor"></a><br>
-                        <div class="mobile-details-container">
-                            <p class="mobile-brand-name">1 L</p>
-                            <p class="mobile-name">Porna Sesame Oil el</p>
-                            <p class="rate">Rs.338 <del class="rate-del">Rs.383</del></p>
-                            <div class="review-container">
-                                <p class="percentage">11%OFF</p>
-                            </div>
-                            <div class="star-review">
-                                <ion-icon name="star-sharp" class="star-icon"></ion-icon><ion-icon name="star-sharp"
-                                    class="star-icon"></ion-icon><ion-icon name="star-sharp"
-                                    class="star-icon"></ion-icon><ion-icon name="star-sharp"
-                                    class="star-icon"></ion-icon><ion-icon name="star-half-sharp"
-                                    class="star-icon"></ion-icon>
-                                <p>4.4</p>
-                            </div>
-                            <button class="button">Add</button>
-                        </div>
-                    </div>
-                </div>
-                 <!--Sunflower oil-->
+                <!--Sunflower oil-->
                 <div class="sunflower-items">
-                    <h6 class="h6">10 Proudcts</h6><br>
+                    <h6 class="h6">6 Proudcts</h6><br>
                     <div class="products-items">
                         <a href="#"><img class="product-img"
-                                src="https://rukminim2.flixcart.com/image/282/282/xif0q/ghee/5/9/s/200-cow-ghee-1-plastic-bottle-milky-mist-original-imagvzpgzh5gj98y.jpeg?q=60"
-                                width="100px" height="160px" alt="sandoor"></a><br>
-                        <div class="mobile-details-container">
-                            <p class="mobile-brand-name">200 ML PlasticBottle</p>
-                            <p class="mobile-name">Milk Misty Cow Ghee</p>
-                            <p class="rate">Rs.144 <del class="rate-del">Rs.185</del></p>
-                            <div class="review-container">
-                                <p class="percentage">22%OFF</p>
-                            </div>
-                            <div class="star-review">
-                                <ion-icon name="star-sharp" class="star-icon"></ion-icon><ion-icon name="star-sharp"
-                                    class="star-icon"></ion-icon><ion-icon name="star-sharp"
-                                    class="star-icon"></ion-icon><ion-icon name="star-sharp"
-                                    class="star-icon"></ion-icon><ion-icon name="star-half-sharp"
-                                    class="star-icon"></ion-icon>
-                                <p>4.4</p>
-                            </div>
-                            <button class="button">Add</button>
-                        </div>
-                    </div>
-                    <div class="products-items">
-                        <a href="#"><img class="product-img"
-                                src="https://rukminim2.flixcart.com/image/282/282/xif0q/ghee/d/t/f/-original-imagtcrkjk2dsvgf.jpeg?q=60"
-                                width="100px" height="160px" alt="sandoor"></a><br>
-                        <div class="mobile-details-container">
-                            <p class="mobile-brand-name">1000 ML Pouch</p>
-                            <p class="mobile-name">Milky Mitst Cow Ghee</p>
-                            <p class="rate">Rs.597 <del class="rate-del">Rs.799</del></p>
-                            <div class="review-container">
-                                <p class="percentage">25%OFF</p>
-                            </div>
-                            <div class="star-review">
-                                <ion-icon name="star-sharp" class="star-icon"></ion-icon><ion-icon name="star-sharp"
-                                    class="star-icon"></ion-icon><ion-icon name="star-sharp"
-                                    class="star-icon"></ion-icon><ion-icon name="star-sharp"
-                                    class="star-icon"></ion-icon><ion-icon name="star-half-sharp"
-                                    class="star-icon"></ion-icon>
-                                <p>4.1</p>
-                            </div>
-                            <button class="button">Add</button>
-                        </div>
-                    </div>
-                    <div class="products-items">
-                        <a href="#"><img class="product-img"
-                                src="https://rukminim1.flixcart.com/image/296/296/xif0q/edible-oil/x/t/r/-original-imagh3mezaztdyvn.jpeg?q=60"
+                                src="https://rukminim1.flixcart.com/image/296/296/knoxnrk0/edible-oil/u/u/w/refined-sunflower-oil-pouch-sunflower-oil-mr-gold-original-imag2bbvf9ycbqms.jpeg?q=60"
                                 width="100px" height="160px" alt="sandoor"></a><br>
                         <div class="mobile-details-container">
                             <p class="mobile-brand-name">1 L</p>
-                            <p class="mobile-name">Fortune Xpert Pro Oil</p>
-                            <p class="rate">Rs.145 <del class="rate-del">Rs.190</del></p>
-                            <div class="review-container">
-                                <p class="percentage">23%OFF</p>
-                            </div>
-                            <div class="star-review">
-                                <ion-icon name="star-sharp" class="star-icon"></ion-icon><ion-icon name="star-sharp"
-                                    class="star-icon"></ion-icon><ion-icon name="star-sharp"
-                                    class="star-icon"></ion-icon><ion-icon name="star-sharp"
-                                    class="star-icon"></ion-icon><ion-icon name="star-half-sharp"
-                                    class="star-icon"></ion-icon>
-                                <p>4.2</p>
-                            </div>
-                            <button class="button">Add</button>
-                        </div>
-                    </div>
-                    <div class="products-items">
-                        <a href="#"><img class="product-img"
-                                src="https://rukminim1.flixcart.com/image/296/296/xif0q/edible-oil/m/z/p/-original-imah2hg9hakefpcw.jpeg?q=60"
-                                width="100px" height="160px" alt="sandoor"></a><br>
-                        <div class="mobile-details-container">
-                            <p class="mobile-brand-name">3 L</p>
-                            <p class="mobile-name">Saffola Refind Oil</p>
-                            <p class="rate">Rs.545 <del class="rate-del">Rs.661</del></p>
-                            <div class="review-container">
-                                <p class="percentage">16%OFF</p>
-                            </div>
-                            <div class="star-review">
-                                <ion-icon name="star-sharp" class="star-icon"></ion-icon><ion-icon name="star-sharp"
-                                    class="star-icon"></ion-icon><ion-icon name="star-sharp"
-                                    class="star-icon"></ion-icon><ion-icon name="star-sharp"
-                                    class="star-icon"></ion-icon><ion-icon name="star-half-sharp"
-                                    class="star-icon"></ion-icon>
-                                <p>4.4</p>
-                            </div>
-                            <button class="button">Add</button>
-                        </div>
-                    </div>
-                    <div class="products-items">
-                        <a href="#"><img class="product-img"
-                                src="https://rukminim1.flixcart.com/image/296/296/ky3b0y80/edible-oil/j/p/k/-original-imagaefdhsxzvasa.jpeg?q=60"
-                                width="100px" height="160px" alt="sandoor"></a><br>
-                        <div class="mobile-details-container">
-                            <p class="mobile-brand-name">2 L</p>
-                            <p class="mobile-name">Saffola Refind Oil</p>
-                            <p class="rate">Rs.365 <del class="rate-del">Rs.429</del></p>
+                            <p class="mobile-name">Mr Gold Sun Oil</p>
+                            <p><span class="rate">Rs.145</span> <del class="rate-del">Rs.170</del></p>
                             <div class="review-container">
                                 <p class="percentage">14%OFF</p>
                             </div>
                             <div class="star-review">
-                                <ion-icon name="star-sharp" class="star-icon"></ion-icon><ion-icon name="star-sharp"
-                                    class="star-icon"></ion-icon><ion-icon name="star-sharp"
-                                    class="star-icon"></ion-icon><ion-icon name="star-sharp"
-                                    class="star-icon"></ion-icon><ion-icon name="star-half-sharp"
-                                    class="star-icon"></ion-icon>
+                                <ion-icon name="star-sharp" class="star-icon md hydrated"
+                                    role="img"></ion-icon><ion-icon name="star-sharp" class="star-icon md hydrated"
+                                    role="img"></ion-icon><ion-icon name="star-sharp" class="star-icon md hydrated"
+                                    role="img"></ion-icon><ion-icon name="star-sharp" class="star-icon md hydrated"
+                                    role="img"></ion-icon><ion-icon name="star-half-sharp" class="star-icon md hydrated"
+                                    role="img"></ion-icon>
                                 <p>4.4</p>
                             </div>
-                            <button class="button">Add</button>
                         </div>
+                        <button class="button">Add</button>
                     </div>
                     <div class="products-items">
                         <a href="#"><img class="product-img"
-                                src="https://rukminim1.flixcart.com/image/296/296/xif0q/edible-oil/q/s/0/-original-imahd96jaqx5xbjj.jpeg?q=60"
+                                src="https://rukminim1.flixcart.com/image/296/296/xif0q/edible-oil/z/0/h/-original-imah7mywdmzhkybz.jpeg?q=60"
                                 width="100px" height="160px" alt="sandoor"></a><br>
                         <div class="mobile-details-container">
                             <p class="mobile-brand-name">1 L</p>
-                            <p class="mobile-name">Energy Max Oil</p>
-                            <p class="rate">Rs.146 <del class="rate-del">Rs.179</del></p>
+                            <p class="mobile-name">Gold Winner Oil</p>
+                            <p><span class="rate">Rs.147</span> <del class="rate-del">Rs.176</del></p>
                             <div class="review-container">
-                                <p class="percentage">18%OFF</p>
+                                <p class="percentage">16%OFF</p>
                             </div>
                             <div class="star-review">
-                                <ion-icon name="star-sharp" class="star-icon"></ion-icon><ion-icon name="star-sharp"
-                                    class="star-icon"></ion-icon><ion-icon name="star-sharp"
-                                    class="star-icon"></ion-icon><ion-icon name="star-sharp"
-                                    class="star-icon"></ion-icon><ion-icon name="star-half-sharp"
-                                    class="star-icon"></ion-icon>
-                                <p>4.1</p>
+                                <ion-icon name="star-sharp" class="star-icon md hydrated"
+                                    role="img"></ion-icon><ion-icon name="star-sharp" class="star-icon md hydrated"
+                                    role="img"></ion-icon><ion-icon name="star-sharp" class="star-icon md hydrated"
+                                    role="img"></ion-icon><ion-icon name="star-sharp" class="star-icon md hydrated"
+                                    role="img"></ion-icon><ion-icon name="star-half-sharp" class="star-icon md hydrated"
+                                    role="img"></ion-icon>
+                                <p>4.4</p>
                             </div>
-                            <button class="button">Add</button>
                         </div>
+                        <button class="button">Add</button>
                     </div>
                     <div class="products-items">
                         <a href="#"><img class="product-img"
-                                src="https://rukminim1.flixcart.com/image/296/296/xif0q/edible-oil/p/j/b/-original-imah8zq2svda6nng.jpeg?q=60"
+                                src="https://rukminim1.flixcart.com/image/296/296/xif0q/edible-oil/u/z/f/-original-imahbxj3sugvkjsn.jpeg?q=60"
                                 width="100px" height="160px" alt="sandoor"></a><br>
                         <div class="mobile-details-container">
-                            <p class="mobile-brand-name">1 L</p>
-                            <p class="mobile-name">Oleev Smart Oil</p>
-                            <p class="rate">Rs.175 <del class="rate-del">Rs.185</del></p>
+                            <p class="mobile-brand-name">2000 G</p>
+                            <p class="mobile-name">Sunpure Sun Oil</p>
+                            <p><span class="rate">Rs.292</span> <del class="rate-del">Rs.370</del></p>
+                            <div class="review-container">
+                                <p class="percentage">21%OFF</p>
+                            </div>
+                            <div class="star-review">
+                                <ion-icon name="star-sharp" class="star-icon md hydrated"
+                                    role="img"></ion-icon><ion-icon name="star-sharp" class="star-icon md hydrated"
+                                    role="img"></ion-icon><ion-icon name="star-sharp" class="star-icon md hydrated"
+                                    role="img"></ion-icon><ion-icon name="star-sharp" class="star-icon md hydrated"
+                                    role="img"></ion-icon><ion-icon name="star-half-sharp" class="star-icon md hydrated"
+                                    role="img"></ion-icon>
+                                <p>4.0</p>
+                            </div>
+                        </div>
+                        <button class="button">Add</button>
+                    </div>
+                    <div class="products-items">
+                        <a href="#"><img class="product-img"
+                                src="https://rukminim1.flixcart.com/image/296/296/xif0q/edible-oil/e/h/2/2-refined-sunflower-oil-pet-bottle-6-sunflower-oil-freedom-original-imagtch4wzvjgy5z.jpeg?q=60"
+                                width="60px" height="160px" alt="sandoor"></a><br>
+                        <div class="mobile-details-container">
+                            <p class="mobile-brand-name">2 L</p>
+                            <p class="mobile-name">Freedom Sun Oil</p>
+                            <p><span class="rate">Rs.305</span> <del class="rate-del">Rs.420</del></p>
+                            <div class="review-container">
+                                <p class="percentage">27%OFF</p>
+                            </div>
+                            <div class="star-review">
+                                <ion-icon name="star-sharp" class="star-icon md hydrated"
+                                    role="img"></ion-icon><ion-icon name="star-sharp" class="star-icon md hydrated"
+                                    role="img"></ion-icon><ion-icon name="star-sharp" class="star-icon md hydrated"
+                                    role="img"></ion-icon><ion-icon name="star-sharp" class="star-icon md hydrated"
+                                    role="img"></ion-icon><ion-icon name="star-half-sharp" class="star-icon md hydrated"
+                                    role="img"></ion-icon>
+                                <p>4.4</p>
+                            </div>
+                        </div>
+                        <button class="button">Add</button>
+                    </div>
+                    <div class="products-items">
+                        <a href="#"><img class="product-img"
+                                src="https://rukminim1.flixcart.com/image/296/296/xif0q/edible-oil/x/5/l/-original-imahcm55b5xah6wh.jpeg?q=60"
+                                width="100px" height="160px" alt="sandoor"></a><br>
+                        <div class="mobile-details-container">
+                            <p class="mobile-brand-name">840 G </p>
+                            <p class="mobile-name">Adhar Sun Oil</p>
+                            <p><span class="rate">Rs.166</span> <del class="rate-del">Rs.175</del></p>
                             <div class="review-container">
                                 <p class="percentage">5%OFF</p>
                             </div>
                             <div class="star-review">
-                                <ion-icon name="star-sharp" class="star-icon"></ion-icon><ion-icon name="star-sharp"
-                                    class="star-icon"></ion-icon><ion-icon name="star-sharp"
-                                    class="star-icon"></ion-icon><ion-icon name="star-sharp"
-                                    class="star-icon"></ion-icon><ion-icon name="star-half-sharp"
-                                    class="star-icon"></ion-icon>
-                                <p>4.3</p>
+                                <ion-icon name="star-sharp" class="star-icon md hydrated"
+                                    role="img"></ion-icon><ion-icon name="star-sharp" class="star-icon md hydrated"
+                                    role="img"></ion-icon><ion-icon name="star-sharp" class="star-icon md hydrated"
+                                    role="img"></ion-icon><ion-icon name="star-sharp" class="star-icon md hydrated"
+                                    role="img"></ion-icon><ion-icon name="star-half-sharp" class="star-icon md hydrated"
+                                    role="img"></ion-icon>
+                                <p>4.1</p>
                             </div>
-                            <button class="button">Add</button>
                         </div>
+                        <button class="button">Add</button>
                     </div>
                     <div class="products-items">
                         <a href="#"><img class="product-img"
-                                src="https://rukminim1.flixcart.com/image/296/296/xif0q/edible-oil/k/c/g/-original-imagn5dserhhxtff.jpeg?q=60"
+                                src="https://rukminim2.flixcart.com/image/282/282/kyj0vbk0/edible-oil/j/i/e/1-refined-1-pouch-sunflower-oil-svs-original-imagaqj6mf4qxgcs.jpeg?q=60"
                                 width="100px" height="160px" alt="sandoor"></a><br>
                         <div class="mobile-details-container">
-                            <p class="mobile-brand-name">2 L</p>
-                            <p class="mobile-name">Olive Oil</p>
-                            <p class="rate">Rs.2808 <del class="rate-del">Rs.4200</del></p>
+                            <p class="mobile-brand-name">1 L</p>
+                            <p class="mobile-name">SVS Sun Oil</p>
+                            <p><span class="rate">Rs.176</span> <del class="rate-del">Rs.189</del></p>
                             <div class="review-container">
-                                <p class="percentage">33%OFF</p>
-                            </div>
-                            <div class="star-review">
-                                <ion-icon name="star-sharp" class="star-icon"></ion-icon><ion-icon name="star-sharp"
-                                    class="star-icon"></ion-icon><ion-icon name="star-sharp"
-                                    class="star-icon"></ion-icon><ion-icon name="star-sharp"
-                                    class="star-icon"></ion-icon><ion-icon name="star-half-sharp"
-                                    class="star-icon"></ion-icon>
-                                <p>4.4</p>
-                            </div>
-                            <button class="button">Add</button>
-                        </div>
-                    </div>
-                    <div class="products-items">
-                         <a href="#"><img class="product-img"
-                                src="https://rukminim2.flixcart.com/image/296/296/kyj0vbk0/edible-oil/n/u/l/1-refined-1-pouch-groundnut-oil-svs-original-imagaqj2fy9e4myg.jpeg?q=60"
-                                width="100px" height="160px" alt="sandoor"></a><br>
-                        <div class="mobile-details-container">
-                            <p class="mobile-brand-name">500 ML</p>
-                            <p class="mobile-name">Porna Sesame</p>
-                            <p class="rate">Rs.150 <del class="rate-del">Rs.193</del></p>
-                            <div class="review-container">
-                                <p class="percentage">22%OFF</p>
+                                <p class="percentage">8%OFF</p>
                             </div>
                             <div class="star-review">
                                 <ion-icon name="star-sharp" class="star-icon"></ion-icon><ion-icon name="star-sharp"
@@ -1815,80 +1679,388 @@
                                     class="star-icon"></ion-icon>
                                 <p>4.1</p>
                             </div>
-                            <button class="button">Add</button>
                         </div>
+                        <button class="button">Add</button>
                     </div>
-                    <div class="products-items">
-                         <a href="#"><img class="product-img"
-                                src="https://rukminim2.flixcart.com/image/296/296/kyj0vbk0/edible-oil/n/u/l/1-refined-1-pouch-groundnut-oil-svs-original-imagaqj2fy9e4myg.jpeg?q=60"
-                                width="100px" height="160px" alt="sandoor"></a><br>
-                        <div class="mobile-details-container">
-                            <p class="mobile-brand-name">750 ML Pouch</p>
-                            <p class="mobile-name">Gowardhan Ghee</p>
-                            <p class="rate">Rs.509 <del class="rate-del">Rs.589</del></p>
-                            <div class="review-container">
-                                <p class="percentage">13%OFF</p>
-                            </div>
-                            <div class="star-review">
-                                <ion-icon name="star-sharp" class="star-icon"></ion-icon><ion-icon name="star-sharp"
-                                    class="star-icon"></ion-icon><ion-icon name="star-sharp"
-                                    class="star-icon"></ion-icon><ion-icon name="star-sharp"
-                                    class="star-icon"></ion-icon><ion-icon name="star-half-sharp"
-                                    class="star-icon"></ion-icon>
-                                <p>4.4</p>
-                            </div>
-                            <button class="button">Add</button>
-                        </div>
-                    </div>
-                    <div class="products-items">
-                         <a href="#"><img class="product-img"
-                                src="https://rukminim1.flixcart.com/image/296/296/xif0q/edible-oil/a/2/c/-original-imahb3gggjmw9gfk.jpeg?q=60"
-                                width="100px" height="160px" alt="sandoor"></a><br>
-                        <div class="mobile-details-container">
-                            <p class="mobile-brand-name">870 G</p>
-                            <p class="mobile-name">Fortune Refined Oil</p>
-                            <p class="rate">Rs.176 <del class="rate-del">Rs.199</del></p>
-                            <div class="review-container">
-                                <p class="percentage">11%OFF</p>
-                            </div>
-                            <div class="star-review">
-                                <ion-icon name="star-sharp" class="star-icon"></ion-icon><ion-icon name="star-sharp"
-                                    class="star-icon"></ion-icon><ion-icon name="star-sharp"
-                                    class="star-icon"></ion-icon><ion-icon name="star-sharp"
-                                    class="star-icon"></ion-icon><ion-icon name="star-half-sharp"
-                                    class="star-icon"></ion-icon>
-                                <p>4.4</p>
-                            </div>
-                            <button class="button">Add</button>
-                        </div>
-                    </div>
-                    <div class="products-items">
-                         <a href="#"><img class="product-img"
-                                src="https://rukminim1.flixcart.com/image/296/296/kylvr0w0/edible-oil/d/6/b/-original-imagaszhuy2hhseb.jpeg?q=60"
-                                width="100px" height="160px" alt="sandoor"></a><br>
-                        <div class="mobile-details-container">
-                            <p class="mobile-brand-name">1 L</p>
-                            <p class="mobile-name">Porna Sesame Oil el</p>
-                            <p class="rate">Rs.338 <del class="rate-del">Rs.383</del></p>
-                            <div class="review-container">
-                                <p class="percentage">11%OFF</p>
-                            </div>
-                            <div class="star-review">
-                                <ion-icon name="star-sharp" class="star-icon"></ion-icon><ion-icon name="star-sharp"
-                                    class="star-icon"></ion-icon><ion-icon name="star-sharp"
-                                    class="star-icon"></ion-icon><ion-icon name="star-sharp"
-                                    class="star-icon"></ion-icon><ion-icon name="star-half-sharp"
-                                    class="star-icon"></ion-icon>
-                                <p>4.4</p>
-                            </div>
-                            <button class="button">Add</button>
-                        </div>
-                    </div>
+
+
                 </div>
 
-                <br><br><br><br>
+
+                
+
+
+
+
+
+                <!--ricebran oil-->
+                <div class="ricebran-items">
+                    <h6 class="h6">4 Proudcts</h6><br>
+                    <div class="products-items">
+                        <a href="#"><img class="product-img"
+                                src="https://rukminim1.flixcart.com/image/296/296/xif0q/edible-oil/a/2/c/-original-imahb3gggjmw9gfk.jpeg?q=60"
+                                width="100px" height="160px" alt="sandoor"></a><br>
+                        <div class="mobile-details-container">
+                            <p class="mobile-brand-name">870 G</p>
+                            <p class="mobile-name">Fortune Refined Oil</p>
+                            <p><span class="rate">Rs.176</span> <del class="rate-del">Rs.199</del></p>
+                            <div class="review-container">
+                                <p class="percentage">11%OFF</p>
+                            </div>
+                            <div class="star-review">
+                                <ion-icon name="star-sharp" class="star-icon md hydrated"
+                                    role="img"></ion-icon><ion-icon name="star-sharp" class="star-icon md hydrated"
+                                    role="img"></ion-icon><ion-icon name="star-sharp" class="star-icon md hydrated"
+                                    role="img"></ion-icon><ion-icon name="star-sharp" class="star-icon md hydrated"
+                                    role="img"></ion-icon><ion-icon name="star-half-sharp" class="star-icon md hydrated"
+                                    role="img"></ion-icon>
+                                <p>4.4</p>
+                            </div>
+                        </div>
+                        <button class="button">Add</button>
+                    </div>
+                    <div class="products-items">
+                        <a href="#"><img class="product-img"
+                                src="https://rukminim1.flixcart.com/image/296/296/knni7ww0/edible-oil/q/k/u/1-na-pouch-rice-bran-oil-mr-gold-original-imag2ac52dbz6wgw.jpeg?q=60"
+                                width="100px" height="160px" alt="sandoor"></a><br>
+                        <div class="mobile-details-container">
+                            <p class="mobile-brand-name">1 L</p>
+                            <p class="mobile-name">Mr. Gold Rice Oil</p>
+                            <p><span class="rate">Rs.140</span> <del class="rate-del">Rs.180</del></p>
+                            <div class="review-container">
+                                <p class="percentage">22%OFF</p>
+                            </div>
+                            <div class="star-review">
+                                <ion-icon name="star-sharp" class="star-icon md hydrated"
+                                    role="img"></ion-icon><ion-icon name="star-sharp" class="star-icon md hydrated"
+                                    role="img"></ion-icon><ion-icon name="star-sharp" class="star-icon md hydrated"
+                                    role="img"></ion-icon><ion-icon name="star-sharp" class="star-icon md hydrated"
+                                    role="img"></ion-icon><ion-icon name="star-half-sharp" class="star-icon md hydrated"
+                                    role="img"></ion-icon>
+                                <p>4.4</p>
+                            </div>
+                        </div>
+                        <button class="button">Add</button>
+                    </div>
+                    <div class="products-items">
+                        <a href="#"><img class="product-img"
+                                src="https://rukminim1.flixcart.com/image/296/296/xif0q/edible-oil/q/s/0/-original-imahd96jaqx5xbjj.jpeg?q=60"
+                                width="100px" height="160px" alt="sandoor"></a><br>
+                        <div class="mobile-details-container">
+                            <p class="mobile-brand-name">1 L</p>
+                            <p class="mobile-name">Energy Max Oil</p>
+                            <p><span class="rate">Rs.146</span> <del class="rate-del">Rs.179</del></p>
+                            <div class="review-container">
+                                <p class="percentage">18%OFF</p>
+                            </div>
+                            <div class="star-review">
+                                <ion-icon name="star-sharp" class="star-icon md hydrated"
+                                    role="img"></ion-icon><ion-icon name="star-sharp" class="star-icon md hydrated"
+                                    role="img"></ion-icon><ion-icon name="star-sharp" class="star-icon md hydrated"
+                                    role="img"></ion-icon><ion-icon name="star-sharp" class="star-icon md hydrated"
+                                    role="img"></ion-icon><ion-icon name="star-half-sharp" class="star-icon md hydrated"
+                                    role="img"></ion-icon>
+                                <p>4.1</p>
+                            </div>
+                        </div>
+                        <button class="button">Add</button>
+                    </div>
+                    <div class="products-items">
+                        <a href="#"><img class="product-img"
+                                src="https://rukminim1.flixcart.com/image/296/296/xif0q/edible-oil/x/4/4/-original-imagqf53dhjfr2fg.jpeg?q=60"
+                                width="100px" height="160px" alt="sandoor"></a><br>
+                        <div class="mobile-details-container">
+                            <p class="mobile-brand-name">1 L</p>
+                            <p class="mobile-name">Freedom Rice Oil</p>
+                            <p><span class="rate">Rs.176</span> <del class="rate-del">Rs.194</del></p>
+                            <div class="review-container">
+                                <p class="percentage">9%OFF</p>
+                            </div>
+                            <div class="star-review">
+                                <ion-icon name="star-sharp" class="star-icon md hydrated"
+                                    role="img"></ion-icon><ion-icon name="star-sharp" class="star-icon md hydrated"
+                                    role="img"></ion-icon><ion-icon name="star-sharp" class="star-icon md hydrated"
+                                    role="img"></ion-icon><ion-icon name="star-sharp" class="star-icon md hydrated"
+                                    role="img"></ion-icon><ion-icon name="star-half-sharp" class="star-icon md hydrated"
+                                    role="img"></ion-icon>
+                                <p>4.4</p>
+                            </div>
+                        </div>
+                        <button class="button">Add</button>
+                    </div>
+
+
+
+                </div>
+                 <!--olivail oil-->
+                <div class="oliveoil-items">
+                    <h6 class="h6">3 Proudcts</h6><br>
+                    <div class="products-items">
+                      <a href="#"><img class="product-img" src="https://rukminim1.flixcart.com/image/296/296/xif0q/edible-oil/k/c/g/-original-imagn5dserhhxtff.jpeg?q=60" width="100px" height="160px" alt="sandoor"></a><br>
+                        <div class="mobile-details-container">
+                            <p class="mobile-brand-name">2 L</p>
+                            <p class="mobile-name">Olive Oil</p>
+                            <p><span class="rate">Rs.280</span>8 <del class="rate-del">Rs.4200</del></p>
+                            <div class="review-container">
+                                <p class="percentage">33%OFF</p>
+                            </div>
+                            <div class="star-review">
+                                <ion-icon name="star-sharp" class="star-icon md hydrated" role="img"></ion-icon><ion-icon name="star-sharp" class="star-icon md hydrated" role="img"></ion-icon><ion-icon name="star-sharp" class="star-icon md hydrated" role="img"></ion-icon><ion-icon name="star-sharp" class="star-icon md hydrated" role="img"></ion-icon><ion-icon name="star-half-sharp" class="star-icon md hydrated" role="img"></ion-icon>
+                                <p>4.4</p>
+                            </div>
+                        </div>
+                        <button class="button">Add</button>
+                    </div>
+                    <div class="products-items">
+                            <a href="#"><img style="margin: 0 30px;" class="product-img" src="https://rukminim1.flixcart.com/image/296/296/l5h2xe80/edible-oil/y/p/0/1-extra-virgin-plastic-bottle-1-olive-oil-borges-original-imagg576x3najhtv.jpeg?q=60" width="50px" height="160px" alt="sandoor"></a><br>
+                        <div class="mobile-details-container">
+                            <p class="mobile-brand-name">1 L</p>
+                            <p class="mobile-name">Borgres Olive Oil</p>
+                            <p><span class="rate">Rs.179</span>4 <del class="rate-del">Rs.2000</del></p>
+                            <div class="review-container">
+                                <p class="percentage">10%OFF</p>
+                            </div>
+                            <div class="star-review">
+                                <ion-icon name="star-sharp" class="star-icon md hydrated" role="img"></ion-icon><ion-icon name="star-sharp" class="star-icon md hydrated" role="img"></ion-icon><ion-icon name="star-sharp" class="star-icon md hydrated" role="img"></ion-icon><ion-icon name="star-sharp" class="star-icon md hydrated" role="img"></ion-icon><ion-icon name="star-half-sharp" class="star-icon md hydrated" role="img"></ion-icon>
+                                <p>4.9</p>
+                            </div>
+                        </div>
+                        <button class="button">Add</button>
+                    </div>
+                    <div class="products-items">
+                        <a href="#"><img style="margin: 0 36px;" class="product-img" src="https://rukminim1.flixcart.com/image/296/296/j5lchow0/edible-oil/w/n/f/500-pure-glass-bottle-olive-oil-borges-original-imaew87ffaskm5gc.jpeg?q=60" width="50px" height="160px" alt="sandoor"></a><br>
+                        <div class="mobile-details-container">
+                            <p class="mobile-brand-name">500 ML</p>
+                            <p class="mobile-name">Borges Classic Oil</p>
+                            <p><span class="rate">Rs.805</span> <del class="rate-del">Rs.950</del></p>
+                            <div class="review-container">
+                                <p class="percentage">15%OFF</p>
+                            </div>
+                            <div class="star-review">
+                                <ion-icon name="star-sharp" class="star-icon md hydrated" role="img"></ion-icon><ion-icon name="star-sharp" class="star-icon md hydrated" role="img"></ion-icon><ion-icon name="star-sharp" class="star-icon md hydrated" role="img"></ion-icon><ion-icon name="star-sharp" class="star-icon md hydrated" role="img"></ion-icon><ion-icon name="star-half-sharp" class="star-icon md hydrated" role="img"></ion-icon>
+                                <p>4.9</p>
+                            </div>
+                        </div>
+                        <button class="button">Add</button>
+                    </div>
+                    
+
+
+
+                </div>
+
+
+
+
+
+                <!--groundnut bran-->
+                <div class="groundnut-items">
+                    <h6 class="h6">4 Proudcts</h6><br>
+                    <div class="products-items">
+                             <a href="#"><img class="product-img" src="https://rukminim1.flixcart.com/image/296/296/knni7ww0/edible-oil/p/h/q/1-na-pouch-groundnut-oil-mr-gold-original-imag2abxkjry6urw.jpeg?q=60" width="100px" height="160px" alt="sandoor"></a><br>
+                        <div class="mobile-details-container">
+                            <p class="mobile-brand-name">1 L</p>
+                            <p class="mobile-name">Mr Gold Ground Oil</p>
+                            <p><span class="rate">Rs.179</span> <del class="rate-del">Rs.205</del></p>
+                            <div class="review-container">
+                                <p class="percentage">12%OFF</p>
+                            </div>
+                            <div class="star-review">
+                                <ion-icon name="star-sharp" class="star-icon md hydrated" role="img"></ion-icon><ion-icon name="star-sharp" class="star-icon md hydrated" role="img"></ion-icon><ion-icon name="star-sharp" class="star-icon md hydrated" role="img"></ion-icon><ion-icon name="star-sharp" class="star-icon md hydrated" role="img"></ion-icon><ion-icon name="star-half-sharp" class="star-icon md hydrated" role="img"></ion-icon>
+                                <p>4.1</p>
+                            </div>
+                        </div>
+                        <button class="button">Add</button>
+                    </div>
+                    <div class="products-items">
+                         <a href="#"><img class="product-img" src="https://rukminim1.flixcart.com/image/296/296/xif0q/edible-oil/y/l/4/-original-imagqf54kzhzyzxj.jpeg?q=60" width="100px" height="160px" alt="sandoor"></a><br>
+                        <div class="mobile-details-container">
+                            <p class="mobile-brand-name">1 L</p>
+                            <p class="mobile-name">Freedom Ground Oil</p>
+                            <p><span class="rate">Rs.189</span> <del class="rate-del">Rs.215</del></p>
+                            <div class="review-container">
+                                <p class="percentage">12%OFF</p>
+                            </div>
+                            <div class="star-review">
+                                <ion-icon name="star-sharp" class="star-icon md hydrated" role="img"></ion-icon><ion-icon name="star-sharp" class="star-icon md hydrated" role="img"></ion-icon><ion-icon name="star-sharp" class="star-icon md hydrated" role="img"></ion-icon><ion-icon name="star-sharp" class="star-icon md hydrated" role="img"></ion-icon><ion-icon name="star-half-sharp" class="star-icon md hydrated" role="img"></ion-icon>
+                                <p>4.2</p>
+                            </div>
+                        </div>
+                        <button class="button">Add</button>
+                    </div>
+                    <div class="products-items">
+                          <a href="#"><img class="product-img" src="https://rukminim1.flixcart.com/image/296/296/xif0q/edible-oil/m/t/p/-original-imahbhvaqkhgphfv.jpeg?q=60" width="100px" height="160px" alt="sandoor"></a><br>
+                        <div class="mobile-details-container">
+                            <p class="mobile-brand-name">870 G</p>
+                            <p class="mobile-name">Fortune Ground Oil</p>
+                            <p><span class="rate">Rs.159</span> <del class="rate-del">Rs.240</del></p>
+                            <div class="review-container">
+                                <p class="percentage">33%OFF</p>
+                            </div>
+                            <div class="star-review">
+                                <ion-icon name="star-sharp" class="star-icon md hydrated" role="img"></ion-icon><ion-icon name="star-sharp" class="star-icon md hydrated" role="img"></ion-icon><ion-icon name="star-sharp" class="star-icon md hydrated" role="img"></ion-icon><ion-icon name="star-sharp" class="star-icon md hydrated" role="img"></ion-icon><ion-icon name="star-half-sharp" class="star-icon md hydrated" role="img"></ion-icon>
+                                <p>4.4</p>
+                            </div>
+                        </div>
+                        <button class="button">Add</button>
+                    </div>
+                    <div class="products-items">
+                           <a href="#"><img class="product-img" src="https://rukminim2.flixcart.com/image/296/296/kyj0vbk0/edible-oil/n/u/l/1-refined-1-pouch-groundnut-oil-svs-original-imagaqj2fy9e4myg.jpeg?q=60" width="100px" height="160px" alt="sandoor"></a><br>
+                        <div class="mobile-details-container">
+                            <p class="mobile-brand-name">1 L Pouch</p>
+                            <p class="mobile-name">SVS Oil GroundOil</p>
+                            <p><span class="rate">Rs.176</span> <del class="rate-del">Rs.189</del></p>
+                            <div class="review-container">
+                                <p class="percentage">19%OFF</p>
+                            </div>
+                            <div class="star-review">
+                                <ion-icon name="star-sharp" class="star-icon md hydrated" role="img"></ion-icon><ion-icon name="star-sharp" class="star-icon md hydrated" role="img"></ion-icon><ion-icon name="star-sharp" class="star-icon md hydrated" role="img"></ion-icon><ion-icon name="star-sharp" class="star-icon md hydrated" role="img"></ion-icon><ion-icon name="star-half-sharp" class="star-icon md hydrated" role="img"></ion-icon>
+                                <p>4.4</p>
+                            </div>
+                        </div>
+                        <button class="button">Add</button>
+                    </div>
+
+
+
+                </div>
+
+
+                <!-- mustard oil-->
+                <div class="mustard-items">
+                    <h6 class="h6">1 Proudcts</h6><br>
+                    <div class="products-items">
+                           <a href="#"><img class="product-img" src="https://rukminim1.flixcart.com/image/296/296/xif0q/edible-oil/m/u/5/-original-imahbxgpufzqygzk.jpeg?q=60" width="100px" height="160px" alt="sandoor"></a><br>
+                        <div class="mobile-details-container">
+                            <p class="mobile-brand-name">1 L</p>
+                            <p class="mobile-name">Fortune Mustard Oil</p>
+                            <p><span class="rate">Rs.209</span> <del class="rate-del">Rs.220</del></p>
+                            <div class="review-container">
+                                <p class="percentage">5%OFF</p>
+                            </div>
+                            <div class="star-review">
+                                <ion-icon name="star-sharp" class="star-icon md hydrated" role="img"></ion-icon><ion-icon name="star-sharp" class="star-icon md hydrated" role="img"></ion-icon><ion-icon name="star-sharp" class="star-icon md hydrated" role="img"></ion-icon><ion-icon name="star-sharp" class="star-icon md hydrated" role="img"></ion-icon><ion-icon name="star-half-sharp" class="star-icon md hydrated" role="img"></ion-icon>
+                                <p>4.4</p>
+                            </div>
+                        </div>
+                        <button class="button">Add</button>
+                    </div>
+                    
+
+
+
+
+                </div>
+
+
+
+
+
+
+                <!--oliveoil bran-->
+                <div class="others-items">
+                    <h6 class="h6">4 Proudcts</h6><br>
+                    <div class="products-items">
+                        <a href="#"><img class="product-img"
+                                src="https://rukminim1.flixcart.com/image/296/296/xif0q/edible-oil/a/2/c/-original-imahb3gggjmw9gfk.jpeg?q=60"
+                                width="100px" height="160px" alt="sandoor"></a><br>
+                        <div class="mobile-details-container">
+                            <p class="mobile-brand-name">870 G</p>
+                            <p class="mobile-name">Fortune Refined Oil</p>
+                            <p><span class="rate">Rs.176</span> <del class="rate-del">Rs.199</del></p>
+                            <div class="review-container">
+                                <p class="percentage">11%OFF</p>
+                            </div>
+                            <div class="star-review">
+                                <ion-icon name="star-sharp" class="star-icon md hydrated"
+                                    role="img"></ion-icon><ion-icon name="star-sharp" class="star-icon md hydrated"
+                                    role="img"></ion-icon><ion-icon name="star-sharp" class="star-icon md hydrated"
+                                    role="img"></ion-icon><ion-icon name="star-sharp" class="star-icon md hydrated"
+                                    role="img"></ion-icon><ion-icon name="star-half-sharp" class="star-icon md hydrated"
+                                    role="img"></ion-icon>
+                                <p>4.4</p>
+                            </div>
+                        </div>
+                        <button class="button">Add</button>
+                    </div>
+                    <div class="products-items">
+                        <a href="#"><img class="product-img"
+                                src="https://rukminim1.flixcart.com/image/296/296/knni7ww0/edible-oil/q/k/u/1-na-pouch-rice-bran-oil-mr-gold-original-imag2ac52dbz6wgw.jpeg?q=60"
+                                width="100px" height="160px" alt="sandoor"></a><br>
+                        <div class="mobile-details-container">
+                            <p class="mobile-brand-name">1 L</p>
+                            <p class="mobile-name">Mr. Gold Rice Oil</p>
+                            <p><span class="rate">Rs.140</span> <del class="rate-del">Rs.180</del></p>
+                            <div class="review-container">
+                                <p class="percentage">22%OFF</p>
+                            </div>
+                            <div class="star-review">
+                                <ion-icon name="star-sharp" class="star-icon md hydrated"
+                                    role="img"></ion-icon><ion-icon name="star-sharp" class="star-icon md hydrated"
+                                    role="img"></ion-icon><ion-icon name="star-sharp" class="star-icon md hydrated"
+                                    role="img"></ion-icon><ion-icon name="star-sharp" class="star-icon md hydrated"
+                                    role="img"></ion-icon><ion-icon name="star-half-sharp" class="star-icon md hydrated"
+                                    role="img"></ion-icon>
+                                <p>4.4</p>
+                            </div>
+                        </div>
+                        <button class="button">Add</button>
+                    </div>
+                    <div class="products-items">
+                        <a href="#"><img class="product-img"
+                                src="https://rukminim1.flixcart.com/image/296/296/xif0q/edible-oil/q/s/0/-original-imahd96jaqx5xbjj.jpeg?q=60"
+                                width="100px" height="160px" alt="sandoor"></a><br>
+                        <div class="mobile-details-container">
+                            <p class="mobile-brand-name">1 L</p>
+                            <p class="mobile-name">Energy Max Oil</p>
+                            <p><span class="rate">Rs.146</span> <del class="rate-del">Rs.179</del></p>
+                            <div class="review-container">
+                                <p class="percentage">18%OFF</p>
+                            </div>
+                            <div class="star-review">
+                                <ion-icon name="star-sharp" class="star-icon md hydrated"
+                                    role="img"></ion-icon><ion-icon name="star-sharp" class="star-icon md hydrated"
+                                    role="img"></ion-icon><ion-icon name="star-sharp" class="star-icon md hydrated"
+                                    role="img"></ion-icon><ion-icon name="star-sharp" class="star-icon md hydrated"
+                                    role="img"></ion-icon><ion-icon name="star-half-sharp" class="star-icon md hydrated"
+                                    role="img"></ion-icon>
+                                <p>4.1</p>
+                            </div>
+                        </div>
+                        <button class="button">Add</button>
+                    </div>
+                    <div class="products-items">
+                        <a href="#"><img class="product-img"
+                                src="https://rukminim1.flixcart.com/image/296/296/xif0q/edible-oil/x/4/4/-original-imagqf53dhjfr2fg.jpeg?q=60"
+                                width="100px" height="160px" alt="sandoor"></a><br>
+                        <div class="mobile-details-container">
+                            <p class="mobile-brand-name">1 L</p>
+                            <p class="mobile-name">Freedom Rice Oil</p>
+                            <p><span class="rate">Rs.176</span> <del class="rate-del">Rs.194</del></p>
+                            <div class="review-container">
+                                <p class="percentage">9%OFF</p>
+                            </div>
+                            <div class="star-review">
+                                <ion-icon name="star-sharp" class="star-icon md hydrated"
+                                    role="img"></ion-icon><ion-icon name="star-sharp" class="star-icon md hydrated"
+                                    role="img"></ion-icon><ion-icon name="star-sharp" class="star-icon md hydrated"
+                                    role="img"></ion-icon><ion-icon name="star-sharp" class="star-icon md hydrated"
+                                    role="img"></ion-icon><ion-icon name="star-half-sharp" class="star-icon md hydrated"
+                                    role="img"></ion-icon>
+                                <p>4.4</p>
+                            </div>
+                        </div>
+                        <button class="button">Add</button>
+                    </div>
+
+
+
+                </div>
+
+
             </div>
         </div>
+        
 
 
 
