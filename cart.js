@@ -70,9 +70,11 @@ function proudctcount() {
     var cartcount = document.getElementById('cart-count');
     var cartvalue = document.querySelector('.cart-content');
     var cartcounter = document.getElementById('cart-counter');
+    var tablecalc = document.getElementById('carttotalcount');
     var cartvalues = cartvalue.children.length;
     cartcount.innerText = cartvalues;
     cartcounter.innerText = cartvalues;
+    tablecalc.innerText = cartvalues;
 
 
 }
@@ -107,6 +109,8 @@ function totalvalueupdate() {
 
     }
     document.getElementsByClassName('cart-total')[0].innerText = "Rs." + total;
+    document.getElementById('total').innerText = "Rs." + total;
+
 }
 totalvalueupdate()
 
@@ -151,12 +155,13 @@ function addcartproduct(price, productname, productbrand, productimg) {
     cartdiv.classList.add('cart-item');
     var cartitems = document.getElementsByClassName('cart-content')[0];
     var cartproductname = cartitems.getElementsByClassName('cart-name');
+    var cartproductbrand = cartitems.getElementsByClassName('product-brand');
     var alertvalue = document.getElementById('alertcontainer');
     var alertpara = document.getElementById('para-alert');
 
 
     for (var i = 0; i < cartproductname.length; i++) {
-        if (cartproductname[i].innerText == productname.toUpperCase()) {
+        if (cartproductname[i].innerText == productname.toUpperCase() && cartproductbrand[i].innerText == productbrand) {
             alertvalue.style.display = "flex";
             alertvalue.style.backgroundColor = "var(--bs-danger)";
             alertpara.innerText = "Already Added To Cart";
@@ -233,10 +238,18 @@ function order() {
         
         <tr>
         <td>${dataname}</td>
-        <td>${dataprice}</td>
         <td>${dataqty}</td>
+        <td>${dataprice}</td>
         </tr>
         `;
+
+        function clearvalue()
+        {
+
+        }
+       
+
+       
     }
 
 
