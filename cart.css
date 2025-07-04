@@ -166,11 +166,11 @@
         border: transparent;
         background-color: var(--bs-primary);
         color: var(--bs-light);
-        padding: 5px 20px;
+        padding: 5px 10px;
         border-radius: 3px;
         position: absolute;
-        bottom: -230px;
-        left: 25%;
+        top: 70px;
+        left: 25px;
     }
     .btn-close
     {

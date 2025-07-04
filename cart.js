@@ -110,6 +110,7 @@ function totalvalueupdate() {
     }
     document.getElementsByClassName('cart-total')[0].innerText = "Rs." + total;
     document.getElementById('total').innerText = "Rs." + total;
+    
 
 }
 totalvalueupdate()
@@ -220,17 +221,19 @@ function order() {
         var productname = cartbronchure.getElementsByClassName('cart-name')[0].innerText;
         var productprice = cartbronchure.getElementsByClassName('cart-price')[0].innerText;
         var productquantity = cartbronchure.getElementsByClassName('cart-quantity')[0].value;
+        var productamt = cartbronchure.getElementsByClassName('cart-amt')[0].innerText;
+
 
         var cartorderobj = {
-            name: productname, price: productprice, qty: productquantity
+            name: productname, price: productprice, priceamt:productamt, qty: productquantity
         }
 
         var table = document.getElementById('table')
-        var file = document.createElement('td');
+        
         var dataname = cartorderobj.name;
         var dataprice = cartorderobj.price;
         var dataqty = cartorderobj.qty;
-
+        var dataamt = cartorderobj.priceamt;
 
         var table = document.getElementById('table');
         
@@ -239,12 +242,11 @@ function order() {
         <tr>
         <td>${dataname}</td>
         <td>${dataqty}</td>
-        <td>${dataprice}</td>
+        <td id="dataprice">${dataprice}</td>
+        <td id="dataprice">${dataamt}</td>
+
         </tr>
         `;
-
-       
-       
 
        
     }
