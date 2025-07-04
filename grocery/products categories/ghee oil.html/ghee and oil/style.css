@@ -192,14 +192,14 @@
     .left-side
     {
         background-color: #fff;
-        height: 700px;
+        height: 1000px;
         overflow-y: hidden;
         overflow-y: scroll;
         width: 20%;
         display: grid;
         grid-template-columns: 2fr;
-        row-gap: 20px;
-        margin: 10px 15px;
+        row-gap: 30px;
+        margin: 20px 15px;
         padding: 10px 0;
     }
     
@@ -257,18 +257,6 @@
         display: none;
     }
     .ghee-items::-webkit-scrollbar
-    {
-        display: none;
-    }
-     .sunflower-items::-webkit-scrollbar
-    {
-        display: none;
-    }
-    .ricebran-items::-webkit-scrollbar
-    {
-        display: none;
-    }
-     .oliveoil-items::-webkit-scrollbar
     {
         display: none;
     }
@@ -450,6 +438,25 @@
         align-items: center;
         padding: 0 30px;
         
+    }
+
+    /* container products values */
+
+    .product-img
+    {
+        display: block;
+        margin: auto;
+    }
+    .product-title
+    {
+        font-size: 14px;
+        font-weight: 300;
+        padding: 22px 13px 0 13px;
+    }
+    .product-percent
+    {
+        color: #008c00;
+        padding: 1px 10px;
     }
     
     

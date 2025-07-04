@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--app title-->
+    <title>ShopEasy-Grocery-Ghee&oils</title>
+    <!--logo image added-->
+    <link rel="icon" href="../../../../images/logo/logo.png" type="text/png">
+
+    <!--bootstap css files insert-->
+    <link rel="stylesheet" href="../../../../bootstrap-5.3.5-dist/css/bootstrap.min.css">
+
+    <!--external stylesheet insert-->
+    <link rel="stylesheet" href="./style.css" type="text/css">
+    <link rel="stylesheet" href="../../../../cart.css" type="text/css">
+
+    <!--fontawsesome cdn insert-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+
+    <!--external font added and insert-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <!--nav container-->
+    <div class="nav-container" id="nav-container">
+        <!--left bar-->
+        <div class="app-left-bar">
+            <i id="app-arrow" class="fas fa-arrow-left app-bars"></i>
+        </div>
+        <!--app title head and foot-->
+        <div class="app-title">
+            <h4 class="app-title_head">Oil&Ghee</h4>
+        </div>
+        <!--app login-->
+        <div class="app-login">
+            <a href="../../../../search/search.html" class="app-order-name"><i class="fas fa-search app-search"></i></a>
+        </div>
+        <div class="app-order">
+            <a href="#" class="app-order-name"><i class="fas fa-shopping-bag app-order-icon"></i></a>
+            <div class="cart-count" id="cart-count">0</div>
+        </div>
+    </div>
+    <br>
+
+
+
+
+    <!--cart files-->
+    <div class="cart">
+        <!--cart header-->
+        <div class="cart-header">
+            <h5 class="h6 text-light"><i class="fas fa-shopping-cart cart-icon nav-head_sub-icon"></i> My Carts</h5>
+            <ion-icon name="close-sharp" id="cart-close"></ion-icon>
+
+        </div> <br>
+        <div class="cart-body">
+            <div class="cart-content">
+
+            </div>
+        </div>
+
+        <div class="cart-foot">
+            <div class="cart-total-title">Total</div>
+            <div class="cart-total">Rs.00</div>
+
+        </div>
+        <div class="cart-items-total">
+            <div class="items-total-title">Total Items:</div>
+            <div class="items-total" id="cart-counter">0</div>
+        </div>
+        <div class="table-details">
+            <div class="Short-detail">Order Details</div>
+            <div class="short-detail-list" id="opencart"> Click here</div>
+
+
+        </div><br>
+        <button class="cart-btn">Checkout</button><br>
+    </div>
+
+
+    <!--table container-->
+    <div class="tabledetails" id="tabledetails">
+        <h6 class="tabletitle">Broncher</h6>
+        <button class="btn-close" id="btn-close"></button><br><br>
+        <div class="table-container" id="table-container">
+
+            <table id="table">
+                <tr>
+                    <td>name</td>
+                    <td>price</td>
+                    <td>qty</td>
+                </tr>
+            </table>
+
+        </div>
+        <button class="btntable" onclick="downloadable()">download click</button><br>
+        <iframe name="print_frame" width="0" height="0" frameborder="0" src="about:blank"></iframe>
+    </div>
+
+
+    <!--alert container-->
+
+    <div id="alertcontainer" class="alertcontainer">
+        <i class="fas fa-shopping-cart"></i>
+        <p class="para-alert" id="para-alert">Successful added to cart</p>
+    </div>
+
+
+    <!--main container-->
+    <div class="main-container" id="main">
+        <!--details container-->
+        <div class="products-details">
+            <img src="https://rukminim2.flixcart.com/image/808/970/xif0q/ghee/m/k/n/200-cow-ghee-1-plastic-bottle-milky-mist-original-imagvzpggdfdwhh4.jpeg?q=60" height="400px" width="60%" class="product-img" alt="nei">
+            <h2 class="product-title">Milky Mist Cow Ghee Ghee Plastic Bottle (nei) (200 ml)</h2>
+            <p class="product-percent">22%OFF</p>
+            <div class="product-price-box">
+                <div class="price">
+                    <div class="price">Rs.144</div>
+                    <div class="price-mrp">Rs.165</div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+
+</body>
+<!--script external files insert-->
+<script src="../app.js"></script>
+<!--cart script-->
+<script src="../../../../cart.js"></script>
+<!--bootstrap js files insert-->
+<script src="../../../../bootstrap-5.3.5-dist/js/bootstrap.min.js">
+</script>
+<!--icons iconic websites script-->
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+
+</html>
