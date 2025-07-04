@@ -137,11 +137,21 @@
          <div class="table-container" id="table-container">
         
         <table id="table">
-            <tr>
+            <thead>
+                <tr>
                 <td>name</td>
-                <td>price</td>
                 <td>qty</td>
+                <td>price</td>
             </tr>
+            </thead>
+            
+            <tfoot>
+                <tr>
+                    <td>total</td>
+                    <td id="carttotalcount"></td>
+                    <td id="total">Rs.00</td>
+                </tr>
+            </tfoot>
         </table>
       
     </div>

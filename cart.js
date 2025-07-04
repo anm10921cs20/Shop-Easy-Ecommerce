@@ -243,10 +243,7 @@ function order() {
         </tr>
         `;
 
-        function clearvalue()
-        {
-
-        }
+       
        
 
        
