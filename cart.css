@@ -6,7 +6,200 @@
 }
 
 /* small mobile screen */
-@media only screen and (min-width:100px) and (max-width:399px) {}
+@media only screen and (min-width:100px) and (max-width:399px) {
+
+
+     .cart-content
+    {
+        overflow-y:scroll;
+        scroll-behavior: smooth;
+        height: 370px;
+    }
+    .cart-content::-webkit-scrollbar
+    {
+        display: none;
+    }
+    .cart-item
+    {
+        display: grid;
+        grid-template-columns: 32% 50% 18%;
+        justify-content: space-between;
+        border-bottom: 1px solid #79555544;
+        padding:0 20px;
+        column-gap: 3px;
+    }
+    .cart-img
+    {
+        width: 80px;
+        height: 80px;
+        object-fit: contain;
+        padding: 5px;
+
+    }
+    .detail-box
+    {
+        line-height: 30px;
+    }
+    .cart-name
+    {
+        font-weight: 600;
+        color:#214eb691;
+        text-transform: uppercase;
+        font-size: 0.9rem;
+    }
+    .price-box
+    {
+        display: flex;
+        justify-content: space-between;
+    }
+    .cart-quantity
+    {
+        width: 50px;
+        height: 20px;
+        text-align: center;
+        padding: 5px 10px;
+        border: 1px solid #214eb691;
+        border-radius: 7px;
+        margin-left: 6px;
+    }
+    .cart-quantity:focus
+    {
+        outline: none;
+    }
+    .cart-qtyname
+    {
+        font-size: 15px;
+        padding: 1px 3px;
+    }
+    .cart-remove
+    {
+        color: #ff43439f;
+        font-size: 20px;
+        padding: 10px;
+        display: block;
+        margin: auto auto;
+    }
+    .cart-foot
+    {
+        display: flex;
+        padding: 5px 20px;
+        justify-content: flex-end;
+        font-size: 1rem;
+        column-gap: 5px;
+        border-top: 3px solid #66666621;
+        color: var(--bs-primary)
+    }
+    .cart-items-total
+    {
+        display: flex;
+        font-size: 1rem;
+        color: var(--bs-primary);
+         padding: 4px 20px;
+        justify-content: flex-end;
+         column-gap: 5px;
+    }
+    .cart-btn
+    {
+        width: 90%;
+        display: block;
+        margin: auto;
+        border: none;
+        padding: 10px;
+        background-color: var(--bs-primary);
+        color: var(--bs-light);
+    }
+    .product-brand
+    {
+        color: #777;
+        font-size: 12px;
+    }
+    .alertcontainer
+    {
+        position: fixed;
+        background-color: #26A96C;
+        height: 50px;
+        bottom: 0;
+        width: 100%;
+        z-index: 2000;
+        color: #fff;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+       display: none;
+    }
+    .para-alert
+    {
+        margin-top: 14px;
+    }
+    .tabledetails
+    {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        width: 80%;
+        height: 500px;
+        background-color: #ffffff;
+        z-index: 2000;
+        color: #000;
+       border-radius: 12px;
+       box-shadow: -4px -5px 10px #d3d3d3,
+       4px 5px 10px #d3d3d3;
+       overflow-y: scroll;
+       padding: 20px 0;
+       display: none;
+    }
+    .tabletitle
+    {
+        color: #000;
+        text-align: center;
+        padding: 10px;
+    }
+    .btntable
+    {
+        border: transparent;
+        background-color: var(--bs-primary);
+        color: var(--bs-light);
+        padding: 5px 10px;
+        border-radius: 3px;
+        position: absolute;
+        top: 70px;
+        left: 25px;
+    }
+    .btn-close
+    {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+    }
+    table
+    {
+        width: 90%;
+        margin: auto;
+    }
+    
+    td
+    {
+        border: 1px solid #000;
+        padding: 4px 4px;
+        width: 90%;
+    }
+    .table-details
+    {
+        display: flex;
+        color: var(--bs-primary);
+        justify-content: end;
+        padding: 3px 20px;
+        gap: 4px;
+        font-size: 14px;
+    }
+    .short-detail-list
+    {
+        color: #777;
+    }
+}
 
 
 
