@@ -64,14 +64,7 @@ function login()
     var user = auth.currentUser;
     var uid = user.uid;
     
-    if(uid === "ePzJQJPm3dZ9F1kjrPx01F44UtX2" )
-    {
-      window.location.href = "https://shop-easy-ecommerce.vercel.app/"
-    }
-    else
-    {
-      window.alert('wrong')
-    }
+   window.location.replace('https://www.google.com')
   })
   .catch((error)=>
   {
