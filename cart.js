@@ -149,6 +149,29 @@ for (let i = 0; i < cartadd.length; i++) {
     }
 
 }
+//cart btn
+
+var cartCheckBtn = document.getElementsByClassName('cart-btn')[0];
+var alertvalue = document.getElementById('alertcontainer');
+    var alertpara = document.getElementById('para-alert');
+
+cartCheckBtn.addEventListener('click',() =>
+{
+    
+     alertvalue.style.display = "flex";
+     alertvalue.style.zIndex = "10000";
+            alertvalue.style.backgroundColor = "var(--bs-danger)";
+            alertpara.innerText = "Please Login To Checkout";
+    var openlogin = 3;
+    var openinterval  = setInterval(()=>{
+        if(openlogin>0)
+        {
+            clearInterval(openinterval);
+            window.location.href = "https://shop-easy-ecommerce.vercel.app/";
+        }
+    },1000)
+    
+})
 
 //add products function
 function addcartproduct(price, productname, productbrand, productimg) {
