@@ -22,7 +22,7 @@ const productscount = document.getElementById('alert-para');
 //start this product details
 
 productsAlert.style.display="block";
-    productscount.innerText='100 Products';
+    productscount.innerText='65 Products';
 
     var interval = setInterval(function(){
         counter--;
@@ -102,7 +102,7 @@ items1.addEventListener('click',()=>
 
     //alert products value
     productsAlert.style.display="block";
-    productscount.innerText='100 Products';
+    productscount.innerText='65 Products';
 
     var interval = setInterval(function(){
         counter--;
@@ -194,7 +194,7 @@ items3.addEventListener('click',()=>
 
      //alert products value
     productsAlert.style.display="block";
-    productscount.innerText='12 Products';
+    productscount.innerText='24 Products';
 
     var interval = setInterval(function(){
         counter--;
@@ -243,7 +243,7 @@ items4.addEventListener('click',() =>
 
     //alert products value
     productsAlert.style.display="block";
-    productscount.innerText='6 Products';
+    productscount.innerText='22 Products';
 
     var interval = setInterval(function(){
         counter--;
@@ -293,7 +293,7 @@ items5.addEventListener('click',() =>
 
     //alert products value
     productsAlert.style.display="block";
-    productscount.innerText='4 Products';
+    productscount.innerText='3 Products';
 
     var interval = setInterval(function(){
         counter--;
