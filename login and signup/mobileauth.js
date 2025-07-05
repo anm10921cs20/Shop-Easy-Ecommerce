@@ -1,10 +1,16 @@
 
 
-// Replace the below config with your Firebase project config
+// Your web app's Firebase configuration
+// Import the functions you need from the SDKs you need
+
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
+
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyCDiJJl_8641jMbS80q4B5jYzD0-TgDVWk",
+ apiKey: "AIzaSyCDiJJl_8641jMbS80q4B5jYzD0-TgDVWk",
   authDomain: "login-382ae.firebaseapp.com",
+  databaseURL: "https://login-382ae-default-rtdb.firebaseio.com",
   projectId: "login-382ae",
   storageBucket: "login-382ae.firebasestorage.app",
   messagingSenderId: "873909040901",
@@ -12,46 +18,95 @@ const firebaseConfig = {
 };
 
 // Initialize Firebase
+firebase.initializeApp(firebaseConfig);
 
-window.onload = function () {
-  // Ensure Firebase initialized
+const auth = firebase.auth();
+const database = firebase.database();
+
+
+
+function register()
+{
+    var email = document.getElementById('register-email').value;
+    var pwd = document.getElementById('register-password').value;
+    var username = document.getElementById('username').value;
+    console.log(email,pwd,username)
+
+
   
-    firebase.initializeApp(firebaseConfig);
-    const auth = firebase.auth();
-    const database = firebase.database();
+
+   firebase.auth().createUserWithEmailAndPassword(email, pwd)
+      .then((userCredential) => {
+        const uid = userCredential.user.uid;
+
+        // Save to Realtime Database
+        firebase.database().ref("users/" + uid).set({
+          username: username,
+          email: email
+        });
+
+        alert("User signed up and saved!");
+      })
+      .catch((error) => {
+        alert(error.message);
+      });
   
+}
 
-  // Setup reCAPTCHA verifier
-  window.recaptchaVerifier = new firebase.auth.RecaptchaVerifier('recaptcha-container', {
-    'size': 'visible',
-    'callback': function (response) {
-      console.log("reCAPTCHA solved: ", response);
-    }
-  });
-
-  recaptchaVerifier.render();
-};
 
 function login()
 {
-    var mobilenumber = document.getElementById('mobilenum').value;
+  var loginemail = document.getElementById('loginemail').value;
+  var loginpwd = document.getElementById('loginpassword').value;
 
-    var number = "+91"+mobilenumber
-        console.log(number);
-        if(mobilenumber.length<10)
-        {
-            window.alert('enter correct mobile number')
-        }
-        else
-        {
-            firebase.auth().signInWithPhoneNumber(number,window.recaptchaVerifier).then(function(confirmResult){
-                window.confirmResult=confirmResult;
-                coderesult=confirmResult;
-                console.log(coderesult);
-            })
-        }
-}
+  auth.signInWithEmailAndPassword(loginemail, loginpwd).then(()=>
+  {
+    var user = auth.currentUser;
+    var uid = user.uid;
+    
+    if(uid === "ePzJQJPm3dZ9F1kjrPx01F44UtX2" )
+    {
+      window.location.href = "https://shop-easy-ecommerce.vercel.app/"
+    }
+    else
+    {
+      window.alert('wrong')
+    }
+  })
+  .catch((error)=>
+  {
+    document.getElementById('login-message').innerHTML = error.message;
+  })
 
   
+}
+
+
+
+function admin()
+{
+  firebase.auth().onAuthStateChanged(function(user) {
+  if (user) {
+    getUserData(user.uid);
+  }
+});
+
+function getUserData(uid) {
+  firebase.database().ref('users/' + uid).once('value')
+    .then((snapshot) => {
+      if (snapshot.exists()) {
+        const data = snapshot.val();
+        console.log("👤 Username:", data.username);
+        console.log("📧 Email:", data.email);
+        alert(`Welcome ${data.username} (${data.email})`);
+      } else {
+        console.log("No data found.");
+      }
+    })
+    .catch((error) => {
+      console.error("Error getting data:", error);
+    });
+}
+}
 
 

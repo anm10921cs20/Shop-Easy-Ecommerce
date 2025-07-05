@@ -11,43 +11,59 @@
     <!--bootstrap external file-->
 
     <link rel="stylesheet" href="../bootstrap-5.3.5-dist/css/bootstrap.min.css">
+
+   
+
+<!-- fiere base -->
+
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-database.js"></script>
+
 </head>
 
 <body>
     <div class="maincontainer">
         <div class="login-container" id="login-container">
-            <form class="login-form" id="login-form">
+            <div class="login-form">
                 <h6 class="login-heading"> Shop Easy Login</h6><br>
                 <label>Email Address</label><br>
-                <input type="email"  name="email" id="loginemail" placeholder="Email Address" class="loginemail"
+                <input type="email" name="email" id="loginemail" placeholder="Email Address" class="loginemail"
                     required><br>
                 <label>Password</label><br>
-                <input type="password" placeholder="Password 8 digit" id="loginpassword" name="password" class="loginpassword" required
-                    pattern="[a-zA-Z0-9]{8}"><br><br>
-                <button class="login-btn" type="submit">Login</button><br><br>
+                <input type="password" placeholder="Password 8 digit" id="loginpassword" name="password"
+                    class="loginpassword" required pattern="[a-zA-Z0-9]{8}"><br><br>
+                    <p id="login-message"></p>
+                <button class="login-btn" type="submit" onclick="login()">Login</button><br><br>
                 <p class="forget">forget password</p>
-                <p class="text-center">You don't account ?<br> <span class="register" id="email">Email </span>or <span class="register" id="mobile">Phone</span></p>
-            </form>
+                <p class="text-center">You don't account ?<br> <span class="register" id="email">Email </span>or <span
+                        class="register" id="mobile">Phone</span></p>
+            </div>
+                
+       <button onclick="admin()"></button>
 
         </div>
         <div class="register-container" id="register-container">
-            <form class="register-form">
+            <div class="register-form">
                 <h6 class="login-heading"> Shop Easy Register</h6><br>
                 <label>User Name</label><br>
-                <input type="text" pattern="[a-zA-z]" placeholder="User Name"><br>
+                <input type="text" id="username" id="username" placeholder="User Name"><br>
                 <label class="login-label">Email Address</label><br>
-                <input type="email" placeholder="Email Address" name="email" id="loginemail" class="loginemail"
+                <input type="email" placeholder="Email Address" name="email" id="register-email" class="loginemail"
                     required><br>
                 <label>Password</label><br>
-                <input type="password" id="loginpassword" name="password" class="loginpassword"
+                <input type="password" id="register-password" name="password" class="register-password"
                     placeholder="Password 8digit" pattern="[a-zA-Z0-9]{8}" required><br>
                 <label>Confirm Password</label><br>
                 <input type="password" id="loginpassword" name="password" class="loginpassword"
                     placeholder="Password 8digit" pattern="[a-zA-Z0-9]{8}" required><br><br>
-                <button class="register-btn">Register</button><br><br>
+                    <p id="error" style="color: red;"></p>
+                <button class="register-btn" onclick="register()">Register</button><br><br>
                 <p class="forget">forget password</p>
                 <p>if You already account <span class="login" id="login">login</span></p>
-            </form>
+            </div>
+
+
 
 
         </div>
@@ -55,22 +71,23 @@
             <div class="phone-form">
                 <h6 class="login-heading"> Shop Easy Mobile</h6><br>
                 <label>Mobile Number</label><br>
-                <input name="mobilenumber" id="mobilenum" type="text" pattern="[0-9]{10}" placeholder="Mobile Number" required><br><br>
+                <input name="mobilenumber" id="mobilenum" type="text" pattern="[0-9]{10}" placeholder="Mobile Number"
+                    required><br><br>
                 <div id="recaptcha-container"></div><br><br>
                 <button onclick="login()" class="phone-btn" id="phone-btn">Send OTP</button><br><br>
                 <p>If You try Email <span class="login" id="logincontact">login</span></p>
             </div>
-                 
-            
+
+
 
         </div>
         <div class="otp-container">
             <form class="otp-form">
-                 <h6 class="login-heading"> Shop Easy Mobile</h6><br>
+                <h6 class="login-heading"> Shop Easy Mobile</h6><br>
                 <label>Enter Valid OTP</label><br>
                 <input type="text" pattern="[0-9]{6}" placeholder="6 Digit OTP"><br><br>
                 <button class="otp-btn" type="submit">Submit</button><br><br>
-                <p>MobileNumber Change <span class="login" id="otpbtn" >Phone</span></p>
+                <p>MobileNumber Change <span class="login" id="otpbtn">Phone</span></p>
             </form>
 
         </div>
@@ -85,13 +102,8 @@
 
 <script src="../index.js"></script>
 
-<script src="../mobileauth.js"></script>
+<script  src="../mobileauth.js"></script>
 
-<!-- fiere base -->
-
-<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
-<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
-<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-database.js"></script>
 
 
 </html>

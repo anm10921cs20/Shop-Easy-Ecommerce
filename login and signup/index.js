@@ -22,11 +22,11 @@ loginBtn.addEventListener('click',()=>
     registerForm.style.display ="none";
     loginForm.style.display = "block";
 })
-phoneBtn.addEventListener('click',()=>
-{
-    loginForm.style.display = "none";
-    phoneForm.style.display = "block";
-})
+// phoneBtn.addEventListener('click',()=>
+// {
+//     loginForm.style.display = "none";
+//     phoneForm.style.display = "block";
+// })
 
 
 //contact container
@@ -48,10 +48,10 @@ emaillogbtn.addEventListener('click',()=>
 
 // })
 
-const otpbtn = document.getElementById('otpbtn');
+// const otpbtn = document.getElementById('otpbtn');
 
-otpbtn.addEventListener('click',()=>
-{
-    otpForm.style.display = "none";
-    phoneForm.style.display = "block";
-})
+// otpbtn.addEventListener('click',()=>
+// {
+//     otpForm.style.display = "none";
+//     phoneForm.style.display = "block";
+// })
