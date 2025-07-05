@@ -40,13 +40,13 @@ emaillogbtn.addEventListener('click',()=>
 
 //otp container
 
-const phonebtn = document.getElementById('phone-btn');
-phonebtn.addEventListener('click',()=>
-{
-    phoneForm.style.display="none";
-    otpForm.style.display = "block";
+// const phonebtn = document.getElementById('phone-btn');
+// phonebtn.addEventListener('click',()=>
+// {
+//     phoneForm.style.display="none";
+//     otpForm.style.display = "block";
 
-})
+// })
 
 const otpbtn = document.getElementById('otpbtn');
 

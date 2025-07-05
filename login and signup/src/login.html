@@ -52,13 +52,16 @@
 
         </div>
         <div class="phone-container">
-            <form class="phone-form">
-                 <h6 class="login-heading"> Shop Easy Mobile</h6><br>
+            <div class="phone-form">
+                <h6 class="login-heading"> Shop Easy Mobile</h6><br>
                 <label>Mobile Number</label><br>
-                <input type="text" pattern="[0-9]{10}" placeholder="Mobile Number" required><br><br>
-                <button class="phone-btn" id="phone-btn" type="submit">Submit</button><br><br>
+                <input name="mobilenumber" id="mobilenum" type="text" pattern="[0-9]{10}" placeholder="Mobile Number" required><br><br>
+                <div id="recaptcha-container"></div><br><br>
+                <button onclick="login()" class="phone-btn" id="phone-btn">Send OTP</button><br><br>
                 <p>If You try Email <span class="login" id="logincontact">login</span></p>
-            </form>
+            </div>
+                 
+            
 
         </div>
         <div class="otp-container">
@@ -81,5 +84,14 @@
 <script src="../bootstrap-5.3.5-dist/js/bootstrap.min.js"></script>
 
 <script src="../index.js"></script>
+
+<script src="../mobileauth.js"></script>
+
+<!-- fiere base -->
+
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-database.js"></script>
+
 
 </html>
