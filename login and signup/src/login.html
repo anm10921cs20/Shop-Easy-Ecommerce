@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop Easy Login</title>
+    <!--external style sheet-->
+    <link rel="stylesheet" href="../css/style.css">
+
+    <!--bootstrap external file-->
+
+    <link rel="stylesheet" href="../bootstrap-5.3.5-dist/css/bootstrap.min.css">
+</head>
+
+<body>
+    <div class="maincontainer">
+        <div class="login-container" id="login-container">
+            <form class="login-form" id="login-form">
+                <h6 class="login-heading"> Shop Easy Login</h6><br>
+                <label>Email Address</label><br>
+                <input type="email"  name="email" id="loginemail" placeholder="Email Address" class="loginemail"
+                    required><br>
+                <label>Password</label><br>
+                <input type="password" placeholder="Password 8 digit" id="loginpassword" name="password" class="loginpassword" required
+                    pattern="[a-zA-Z0-9]{8}"><br><br>
+                <button class="login-btn" type="submit">Login</button><br><br>
+                <p class="forget">forget password</p>
+                <p class="text-center">You don't account ?<br> <span class="register" id="email">Email </span>or <span class="register" id="mobile">Phone</span></p>
+            </form>
+
+        </div>
+        <div class="register-container" id="register-container">
+            <form class="register-form">
+                <h6 class="login-heading"> Shop Easy Register</h6><br>
+                <label>User Name</label><br>
+                <input type="text" pattern="[a-zA-z]" placeholder="User Name"><br>
+                <label class="login-label">Email Address</label><br>
+                <input type="email" placeholder="Email Address" name="email" id="loginemail" class="loginemail"
+                    required><br>
+                <label>Password</label><br>
+                <input type="password" id="loginpassword" name="password" class="loginpassword"
+                    placeholder="Password 8digit" pattern="[a-zA-Z0-9]{8}" required><br>
+                <label>Confirm Password</label><br>
+                <input type="password" id="loginpassword" name="password" class="loginpassword"
+                    placeholder="Password 8digit" pattern="[a-zA-Z0-9]{8}" required><br><br>
+                <button class="register-btn">Register</button><br><br>
+                <p class="forget">forget password</p>
+                <p>if You already account <span class="login" id="login">login</span></p>
+            </form>
+
+
+        </div>
+        <div class="phone-container">
+            <form class="phone-form">
+                 <h6 class="login-heading"> Shop Easy Mobile</h6><br>
+                <label>Mobile Number</label><br>
+                <input type="text" pattern="[0-9]{10}" placeholder="Mobile Number" required><br><br>
+                <button class="phone-btn" id="phone-btn" type="submit">Submit</button><br><br>
+                <p>If You try Email <span class="login" id="logincontact">login</span></p>
+            </form>
+
+        </div>
+        <div class="otp-container">
+            <form class="otp-form">
+                 <h6 class="login-heading"> Shop Easy Mobile</h6><br>
+                <label>Enter Valid OTP</label><br>
+                <input type="text" pattern="[0-9]{6}" placeholder="6 Digit OTP"><br><br>
+                <button class="otp-btn" type="submit">Submit</button><br><br>
+                <p>MobileNumber Change <span class="login" id="otpbtn" >Phone</span></p>
+            </form>
+
+        </div>
+
+        <div class="alertcontainer" id="alertcontaienr">
+
+        </div>
+    </div>
+</body>
+<!-- script file in bootstrap -->
+<script src="../bootstrap-5.3.5-dist/js/bootstrap.min.js"></script>
+
+<script src="../index.js"></script>
+
+</html>

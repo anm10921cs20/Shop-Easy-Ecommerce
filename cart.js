@@ -119,9 +119,11 @@ totalvalueupdate()
 //add items in cart
 
 var cartadd = document.getElementsByClassName('button');
-for (let i = 0; i < cartadd.length; i++) {
-    var button = cartadd[i];
-    button.addEventListener('click', additemsclicked)
+
+ for (let i = 0; i < cartadd.length; i++) {
+     var button = cartadd[i];
+ button.addEventListener('click', additemsclicked)
+ }
 
 
 
@@ -129,7 +131,7 @@ for (let i = 0; i < cartadd.length; i++) {
 
     function additemsclicked(event) {
         var button = event.target;
-        shopitemsvalue = button.parentElement;
+        var shopitemsvalue = button.parentElement;
         var price = shopitemsvalue.getElementsByClassName('rate')[0].innerText;
         var productname = shopitemsvalue.getElementsByClassName('mobile-name')[0].innerText;
         var productbrand = shopitemsvalue.getElementsByClassName('mobile-brand-name')[0].innerText;
@@ -148,7 +150,7 @@ for (let i = 0; i < cartadd.length; i++) {
         totalvalueupdate()
     }
 
-}
+
 //cart btn
 
 var cartCheckBtn = document.getElementsByClassName('cart-btn')[0];
@@ -222,8 +224,7 @@ function addcartproduct(price, productname, productbrand, productimg) {
 
     cartdiv.innerHTML = cartboxcotnet;
     cartitems.append(cartdiv);
-    cartdiv.getElementsByClassName('cart-remove')[0].addEventListener('click', cartitemsDelete)
-    cartdiv.getElementsByClassName('cart-quantity')[0].addEventListener('change', qtyvalue)
+    loadcontent()
     proudctcount()
 
 order()

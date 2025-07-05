@@ -209,7 +209,7 @@
     {
         overflow-y:scroll;
         scroll-behavior: smooth;
-        height: 600px;
+        height: 650px;
     }
     .cart-content::-webkit-scrollbar
     {

@@ -1,0 +1,191 @@
+@media screen and (min-width: 400px) and (max-width: 767px) {
+  .maincontainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: rgba(190, 183, 183, 0.2745098039);
+  }
+  .login-container,
+  .register-container,
+  .otp-container,
+  .phone-container {
+    position: absolute;
+    display: none;
+  }
+  .login-container {
+    display: block;
+    background-image: linear-gradient(to right top, #d16ba5, #c777b9, #ba83ca, #aa8fd8, #9a9ae1, #8aa7ec, #79b3f4, #69bff8, #52cffe, #41dfff, #46eefa, #5ffbf1);
+    padding: 60px 60px;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+    border-radius: 12px;
+    color: #fff;
+  }
+  .login-heading {
+    color: #fff;
+    font-size: 1.3rem;
+    text-align: center;
+  }
+  input:focus {
+    outline: none;
+  }
+  .login-form > label {
+    font-size: 1.1rem;
+    padding: 3px 0;
+  }
+  .login-form > input {
+    padding: 10px;
+    border: none;
+    /* From https://css.glass */
+    background: rgba(255, 255, 255, 0.14);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+  }
+  .login-btn {
+    border: none;
+    padding: 5px 78px;
+    background-color: rgba(190, 183, 183, 0.2745098039);
+    /* From https://css.glass */
+    background: rgba(255, 255, 255, 0.14);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: #fff;
+  }
+  .forget {
+    text-align: center;
+    color: var(--bs-danger);
+    cursor: pointer;
+  }
+  .register, .login {
+    color: var(--bs-danger);
+    cursor: pointer;
+  }
+  .register-container {
+    background-image: linear-gradient(to right top, #d16ba5, #c777b9, #ba83ca, #aa8fd8, #9a9ae1, #8aa7ec, #79b3f4, #69bff8, #52cffe, #41dfff, #46eefa, #5ffbf1);
+    padding: 60px 60px;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+    border-radius: 12px;
+    color: #fff;
+  }
+  .register-form > label {
+    font-size: 1.1rem;
+    padding: 3px 0;
+  }
+  .register-form > input {
+    padding: 7px;
+    border: none;
+    /* From https://css.glass */
+    background: rgba(255, 255, 255, 0.14);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+  }
+  .register-btn {
+    border: none;
+    padding: 5px 70px;
+    background-color: rgba(190, 183, 183, 0.2745098039);
+    /* From https://css.glass */
+    background: rgba(255, 255, 255, 0.14);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: #fff;
+  }
+  .phone-container {
+    background-image: linear-gradient(to right top, #d16ba5, #c777b9, #ba83ca, #aa8fd8, #9a9ae1, #8aa7ec, #79b3f4, #69bff8, #52cffe, #41dfff, #46eefa, #5ffbf1);
+    padding: 60px 60px;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+    border-radius: 12px;
+    color: #fff;
+  }
+  .phone-form > label {
+    font-size: 1.1rem;
+    padding: 3px 0;
+  }
+  .phone-form > input {
+    padding: 7px;
+    border: none;
+    /* From https://css.glass */
+    background: rgba(255, 255, 255, 0.14);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+  }
+  .phone-btn {
+    border: none;
+    padding: 5px 70px;
+    background-color: rgba(190, 183, 183, 0.2745098039);
+    /* From https://css.glass */
+    background: rgba(255, 255, 255, 0.14);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: #fff;
+  }
+  .otp-container {
+    background-image: linear-gradient(to right top, #d16ba5, #c777b9, #ba83ca, #aa8fd8, #9a9ae1, #8aa7ec, #79b3f4, #69bff8, #52cffe, #41dfff, #46eefa, #5ffbf1);
+    padding: 60px 60px;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+    border-radius: 12px;
+    color: #fff;
+  }
+  .otp-form > label {
+    font-size: 1.1rem;
+    padding: 3px 0;
+  }
+  .otp-form > input {
+    padding: 7px;
+    border: none;
+    /* From https://css.glass */
+    background: rgba(255, 255, 255, 0.14);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+  }
+  .otp-btn {
+    border: none;
+    padding: 5px 70px;
+    background-color: rgba(190, 183, 183, 0.2745098039);
+    /* From https://css.glass */
+    background: rgba(255, 255, 255, 0.14);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: #fff;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  body {
+    display: none;
+  }
+}
+@media screen and (min-width: 1024px) and (max-width: 1439px) {
+  body {
+    display: none;
+  }
+}
+@media screen and (min-width: 1440px) and (max-width: 2159px) {
+  body {
+    display: none;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

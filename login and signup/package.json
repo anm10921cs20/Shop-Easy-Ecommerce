@@ -1,0 +1,20 @@
+{
+  "name": "login-and-signup",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "sass ./sass/index.scss ./css/style.css --watch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "saas": "^1.0.0",
+    "sass": "^1.89.2"
+  },
+  "dependencies": {
+    "tailwindcss": "^4.1.11"
+  }
+}
