@@ -8,7 +8,7 @@
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
- apiKey: "AIzaSyCDiJJl_8641jMbS80q4B5jYzD0-TgDVWk",
+  apiKey: "AIzaSyCDiJJl_8641jMbS80q4B5jYzD0-TgDVWk",
   authDomain: "login-382ae.firebaseapp.com",
   databaseURL: "https://login-382ae-default-rtdb.firebaseio.com",
   projectId: "login-382ae",
@@ -25,74 +25,90 @@ const database = firebase.database();
 
 
 
-function register()
+function register() {
+  var email = document.getElementById('register-email').value;
+  var pwd = document.getElementById('register-password').value;
+  var username = document.getElementById('username').value;
+  const loginForm = document.getElementsByClassName('login-container')[0];
+  const registerForm = document.getElementsByClassName('register-container')[0];
+  console.log(email, pwd, username)
+
+
+
+
+ auth.createUserWithEmailAndPassword(email, pwd).then((userCredential)=>
 {
-    var email = document.getElementById('register-email').value;
-    var pwd = document.getElementById('register-password').value;
-    var username = document.getElementById('username').value;
-    console.log(email,pwd,username)
+  var user = userCredential.user.uid;
+  database.ref('shopeasy login/' + username).set({
+  username: username,
+  email:email,
+});
+
+alert('success stored')
+})
+.catch((error)=>
+{
+  var errormessge = error.message;
+  alert(errormessge);
+});
 
 
-  
-
-   firebase.auth().createUserWithEmailAndPassword(email, pwd)
-      .then((userCredential) => {
-        const uid = userCredential.user.uid;
-
-        // Save to Realtime Database
-        firebase.database().ref("users/" + uid).set({
-          username: username,
-          email: email
-        });
-
-        alert("User signed up and saved!");
-      })
-      .catch((error) => {
-        alert(error.message);
-      });
-  
 }
 
 
-function login()
-{
+
+
+function login() {
   var loginemail = document.getElementById('loginemail').value;
   var loginpwd = document.getElementById('loginpassword').value;
 
-  auth.signInWithEmailAndPassword(loginemail, loginpwd).then(()=>
-  {
+  auth.signInWithEmailAndPassword(loginemail,loginpwd)
+  .then(() => {
     var user = auth.currentUser;
     var uid = user.uid;
-    
-    if(uid === "ePzJQJPm3dZ9F1kjrPx01F44UtX2" )
-    {
-      window.location.href = "https://shop-easy-ecommerce.vercel.app/"
-    }
-    else
-    {
-      window.alert('wrong')
-    }
-  })
-  .catch((error)=>
-  {
-    document.getElementById('login-message').innerHTML = error.message;
-  })
+    window.alert('success')
+    window.location.replace('https://shop-easy-ecommerce.vercel.app/');
 
-  
+
+  })
+    .catch((error) => {
+      var errorCode = error.code;
+      var errormessage = error.message;
+
+      console.log(errormessage)
+      console.log(errorCode)
+
+    if (errorCode === "auth/internal-error") {
+      alert("Your password is wrong.");
+    }
+    if (errorCode === "auth/wrong-password") {
+    alert('user not found')
+    }  else if (errorCode === "auth/user-not-found") {
+      alert("Email not registered.");
+    } else if (errorCode === "auth/invalid-email") {
+      alert("The email address is badly formatted.");
+    } else {
+      alert("Login failed: " + errorMessage);
+    }
+
+      
+      
+    })
+
+
+
 }
-
-
 
 function admin()
 {
-  firebase.auth().onAuthStateChanged(function(user) {
+  auth.onAuthStateChanged(function(user) {
   if (user) {
     getUserData(user.uid);
   }
 });
 
 function getUserData(uid) {
-  firebase.database().ref('users/' + uid).once('value')
+  firebase.database().ref('shopeasy login/' + uid).once('value')
     .then((snapshot) => {
       if (snapshot.exists()) {
         const data = snapshot.val();
@@ -108,5 +124,14 @@ function getUserData(uid) {
     });
 }
 }
+
+
+
+
+
+
+
+
+
 
 
