@@ -73,7 +73,7 @@ function login() {
   })
     .catch((error) => {
       var errorCode = error.code;
-      var errormessage = error.message;
+      var errorMessage = error.message;
 
       console.log(errormessage)
       console.log(errorCode)
