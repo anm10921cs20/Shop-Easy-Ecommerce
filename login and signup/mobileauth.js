@@ -30,25 +30,32 @@ const database = firebase.database();
 
 
 
-const userDetails = id => {
-    window.localStorage.setItem('currently_loggedIn',id)
+
+
+
+const userDetails = uid => {
+    window.localStorage.setItem('currently_loggedIn',uid)
+    
 }
 
-window.onload = () =>
-{
-    try{
-        const currentUser = window.localStorage.getItem('currently-loggedIn');
-        if(currentUser === null)
-        {
-            throw new Error('No Current User Found')
-        }else
-        {
-            userDetails(currentUser);
+
+window.onload = () => {
+   
+    try {
+        const currentUser = window.localStorage.getItem('currently_loggedIn')
+        if (currentUser === null) {
+            throw new Error('No Current User')
         }
+        else {
+          
+            userDetails()
+        }
+
     }catch(err){
         logincontainer.style.display = "block";
     }
 }
+
 
 
 
@@ -62,7 +69,7 @@ function register() {
   var counter = 2;
   console.log(email, pwd, username)
 
-  localStorage.setItem('usernames', username);
+ 
 
 
   auth.createUserWithEmailAndPassword(email, pwd).then((userCredential) => {
@@ -114,13 +121,15 @@ function register() {
 function login() {
   var loginemail = document.getElementById('loginemail').value;
   var loginpwd = document.getElementById('loginpassword').value;
+  var counter = 2;
 
 
   auth.signInWithEmailAndPassword(loginemail, loginpwd)
     .then(() => {
       var user = auth.currentUser;
       var uid = user.uid;
-      userDetails(uid)
+      userDetails(uid);
+      console.log(uid);
       var alertmessge = document.getElementById('alertcontainer');
       alertmessge.style.display = "block"
       alertmessge.style.backgroundColor = "var(--bs-success)";
@@ -132,7 +141,7 @@ function login() {
           alertmessge.style.display = "none";
         }
       }, 1000)
-      window.location.replace('https://shop-easy-ecommerce.vercel.app/home/home.html');
+      window.location.replace('../../home/home.html');
 
 
     })

@@ -13,3 +13,32 @@ firebase.initializeApp(firebaseConfig);
 const auth = firebase.auth();
 const database = firebase.database();
 
+
+function userdetails()
+{
+   const dbRef = ref(getDatabase());
+get(child(dbRef, `users/${userId}`)).then((snapshot) => {
+  if (snapshot.exists()) {
+    console.log(snapshot.val());
+  } else {
+    console.log("No data available");
+  }
+}).catch((error) => {
+  console.error(error);
+});
+}
+
+
+
+function signOut() 
+{
+    auth.signOut().then(()=>
+    {
+        window.localStorage.removeItem('currently_loggedIn');
+        window.location.replace('../../index.html')
+    })
+    .catch(()=>{
+        console.log('error while signout')
+    })
+}
+
