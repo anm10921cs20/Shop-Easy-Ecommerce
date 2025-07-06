@@ -11,14 +11,12 @@ const otpForm = document.getElementsByClassName('otp-container')[0];
 
 
 
-emailBtn.addEventListener('click',()=>
-{
-    registerForm.style.display ="block";
+emailBtn.addEventListener('click', () => {
+    registerForm.style.display = "block";
     loginForm.style.display = "none";
 })
-loginBtn.addEventListener('click',()=>
-{
-    registerForm.style.display ="none";
+loginBtn.addEventListener('click', () => {
+    registerForm.style.display = "none";
     loginForm.style.display = "block";
 })
 // phoneBtn.addEventListener('click',()=>
@@ -31,8 +29,7 @@ loginBtn.addEventListener('click',()=>
 //contact container
 
 const emaillogbtn = document.getElementById('logincontact');
-emaillogbtn.addEventListener('click',()=>
-{
+emaillogbtn.addEventListener('click', () => {
     loginForm.style.display = "block";
     phoneForm.style.display = "none";
 })
@@ -54,3 +51,18 @@ emaillogbtn.addEventListener('click',()=>
 //     otpForm.style.display = "none";
 //     phoneForm.style.display = "block";
 // })
+
+
+
+const forgetcontainer = document.getElementById('forget-container');
+const forgetBtn = document.getElementById('forget');
+
+forgetBtn.addEventListener('click', () => {
+    forgetcontainer.style.display = "block";
+    loginForm.style.display = "none";
+})
+
+
+
+
+

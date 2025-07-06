@@ -239,7 +239,62 @@
         padding: 5px;
         display: none;
     }
-   
+
+    // create forget
+
+    .forgot-container
+    {
+        position: fixed;
+        width: 90%;
+        height: 230px;
+         background-image: $primary-bg;
+        padding: 5px 30px;
+        box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+        border-radius: 12px;
+        color: #fff;
+        display: none;
+        
+    }
+       .forget-form>label 
+     {
+        font-size: 1.1rem;
+        padding: 3px 0;
+    }
+    .forget-form>input 
+    {
+        padding: 7px 10px;
+        width: 100%;
+        border: none;
+        /* From https://css.glass */
+        background: rgba(255, 255, 255, 0.14);
+        border-radius: 16px;
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(8px);
+        -webkit-backdrop-filter: blur(8px);
+        border: 1px solid rgba(255, 255, 255, 0.3);
+    }
+    input::placeholder
+    {
+        color: #fff;
+        text-align: start;
+    }
+    .forget-btn {
+        border: none;
+        padding: 5px 70px;
+        background-color: #beb7b746;
+        /* From https://css.glass */
+        background: rgba(255, 255, 255, 0.14);
+        border-radius: 16px;
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(8px);
+        -webkit-backdrop-filter: blur(8px);
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        color: #fff;
+         display: block;
+        margin: 0 auto;
+    }
+
+
     
 
 

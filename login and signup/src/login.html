@@ -38,9 +38,9 @@
                     class="loginpassword" required pattern="[a-zA-Z0-9]{8}"><br><br>
                     <p id="login-message"></p>
                 <button class="login-btn" type="submit" onclick="login()">Login</button><br><br>
-                <p class="forget">forget password</p>
+                <p class="forget" id="forget">forget password</p>
                 <p class="text-center">You don't account ?<br> <span class="register" id="email">Email </span>or <span
-                        class="register" id="mobile">Phone</span></p>
+                        class="register" id="mobile" onclick="googleLogin()">Phone</span></p>
             </div>
                 
 
@@ -55,13 +55,9 @@
                     required><br>
                 <label>Password</label><br>
                 <input type="password" id="register-password" name="password" class="register-password"
-                    placeholder="Password 8digit" pattern="[a-zA-Z0-9]{8}" required><br>
-                <label>Confirm Password</label><br>
-                <input type="password" id="confirm-password" name="password" class="loginpassword"
                     placeholder="Password 8digit" pattern="[a-zA-Z0-9]{8}" required><br><br>
-                    <p id="error" style="color: red;"></p>
+                
                 <button class="register-btn" id="submitregister" onclick="register()">Register</button><br><br>
-                <p class="forget">forget password</p>
                 <p>if You already account <span class="login" id="login">login</span></p>
             </div>
 
@@ -92,6 +88,16 @@
                 <p>MobileNumber Change <span class="login" id="otpbtn">Phone</span></p>
             </form>
 
+        </div>
+
+        <div class="forgot-container" id="forget-container">
+            <div class="forget-form">
+                <h6 class="login-heading"> Shop Easy Forget</h6><br>
+                <label>Enter Your Valid Email</label><br>
+                <input type="email" id="forgetinput"  placeholder="Enter Your Valid Email"><br><br>
+                <button onclick="forget()" class="forget-btn" type="submit">Submit</button><br><br>
+              
+            </div>
         </div>
 
         <div class="alertcontainer" id="alertcontainer">
