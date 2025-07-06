@@ -12,21 +12,28 @@ const firebaseConfig = {
 firebase.initializeApp(firebaseConfig);
 const auth = firebase.auth();
 const database = firebase.database();
+const db = firebase.firestore();
 
 
-function userdetails()
+function uservalue ()
 {
-   const dbRef = ref(getDatabase());
-get(child(dbRef, `users/${userId}`)).then((snapshot) => {
-  if (snapshot.exists()) {
-    console.log(snapshot.val());
-  } else {
-    console.log("No data available");
-  }
-}).catch((error) => {
-  console.error(error);
-});
+    const id = localStorage.getItem('currently_loggedIn');
+     const docRef = db.collection('users').doc(id)
+    docRef.get().then(doc => {
+        if(doc.exists){
+          var username = doc.data().userName;
+          localStorage.setItem('filename',username);
+          
+        } else {
+            console.log(`No such Document`)
+        }
+    }).catch(err => {
+        console.log(`Error getting document : ${err}`)
+    })
 }
+uservalue()
+
+
 
 
 
@@ -35,6 +42,7 @@ function signOut()
     auth.signOut().then(()=>
     {
         window.localStorage.removeItem('currently_loggedIn');
+        window.localStorage.removeItem('filename');
         window.location.replace('../../index.html')
     })
     .catch(()=>{

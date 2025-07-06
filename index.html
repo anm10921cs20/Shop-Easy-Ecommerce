@@ -20,6 +20,10 @@
 
     <link rel="stylesheet" href="./cart.css" type="text/css">
 
+    <!-- login page style -->
+
+    <link rel="stylesheet" href="./login and signup/css/style.css">
+
     <!--fontawsesome cdn insert-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
         integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
@@ -1161,22 +1165,168 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <!-- login format -->
+
+        <div class="login-container">
+            <div class="login-container" id="login-container">
+            <div class="login-form">
+                <h6 class="login-heading"> Shop Easy Login</h6><br>
+                <label>Email Address</label><br>
+                <input type="email" name="email" id="loginemail" placeholder="Email Address" class="loginemail"
+                    required><br>
+                <label>Password</label><br>
+                <input type="password" placeholder="Password 8 digit" id="loginpassword" name="password"
+                    class="loginpassword" required pattern="[a-zA-Z0-9]{8}"><br><br>
+                    <p id="login-message"></p>
+                <button class="login-btn" type="submit" onclick="login()">Login</button><br><br>
+                <p class="forget">forget password</p>
+                <p class="text-center">You don't account ?<br> <span class="register" id="email">Email </span>or <span
+                        class="register" id="mobile">Phone</span></p>
+            </div>
+                
+
+        </div>
+        <div class="register-container" id="register-container">
+            <div class="register-form">
+                <h6 class="login-heading"> Shop Easy Register</h6><br>
+                <label>User Name</label><br>
+                <input type="text" id="username" id="username" placeholder="User Name"><br>
+                <label class="login-label">Email Address</label><br>
+                <input type="email" placeholder="Email Address" name="email" id="register-email" class="loginemail"
+                    required><br>
+                <label>Password</label><br>
+                <input type="password" id="register-password" name="password" class="register-password"
+                    placeholder="Password 8digit" pattern="[a-zA-Z0-9]{8}" required><br>
+                <label>Confirm Password</label><br>
+                <input type="password" id="confirm-password" name="password" class="loginpassword"
+                    placeholder="Password 8digit" pattern="[a-zA-Z0-9]{8}" required><br><br>
+                    <p id="error" style="color: red;"></p>
+                <button class="register-btn" id="submitregister" onclick="register()">Register</button><br><br>
+                <p class="forget">forget password</p>
+                <p>if You already account <span class="login" id="login">login</span></p>
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     </div>
 
 
-
 <script>
-    function login()
-    {
-        firebase.auth().onAuthStateChanged(function(user) {
-    if (!user) {
-      // If no user is logged in, redirect to login page
-      window.location.replace("https://shop-easy-ecommerce.vercel.app/login%20and%20signup/src/login.html");
-    }
-  });
-    }
-  
+    //cart btn
+
+var cartCheckBtn = document.getElementsByClassName('cart-btn')[0];
+var alertvalue = document.getElementById('alertcontainer');
+    var alertpara = document.getElementById('para-alert');
+
+cartCheckBtn.addEventListener('click',() =>
+{
+    
+     alertvalue.style.display = "flex";
+     alertvalue.style.zIndex = "10000";
+            alertvalue.style.backgroundColor = "var(--bs-danger)";
+            alertpara.innerText = "Please Login To Checkout";
+    var openlogin = 3;
+    var openinterval  = setInterval(()=>{
+        if(openlogin>0)
+        {
+            clearInterval(openinterval);
+            window.location.href = "https://shop-easy-ecommerce.vercel.app/login%20and%20signup/src/login.html";
+        }
+    },1000)
+    
+})
 </script>
+
 
 </body>
 <!--script external files insert-->

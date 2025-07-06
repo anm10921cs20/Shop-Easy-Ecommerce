@@ -24,18 +24,19 @@ const firebaseConfig = {
 
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
+firebase.analytics();
 
 const auth = firebase.auth();
 const database = firebase.database();
+const db =firebase.firestore();
 
 
 
 
 
 
-const userDetails = uid => {
-    window.localStorage.setItem('currently_loggedIn',uid)
-    
+const userDetails = id => {
+    window.localStorage.setItem('currently_loggedIn',id)
     
 }
 
@@ -53,6 +54,7 @@ window.onload = () => {
         }
 
     }catch(err){
+      const logincontainer = document.getElementById('login-container');
         logincontainer.style.display = "block";
     }
 }
@@ -78,12 +80,15 @@ function register() {
 
     loginForm.style.display = "block";
     registerForm.style.display = "none";
+    document.getElementById('loginemail').value="";
+  
+document.getElementById('loginpassword').value="";
 
     document.getElementById('register-email').value = "";
     document.getElementById('register-password').value = "";
     document.getElementById('username').value = "";
-    database.ref('shopeasy login/' + username).set({
-      username: username,
+    db.collection('users').doc(userCredential.user.uid).set({
+      userName: username,
       email: email,
     });
 
