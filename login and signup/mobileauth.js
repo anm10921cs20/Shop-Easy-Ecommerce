@@ -36,6 +36,7 @@ const database = firebase.database();
 const userDetails = uid => {
     window.localStorage.setItem('currently_loggedIn',uid)
     
+    
 }
 
 
