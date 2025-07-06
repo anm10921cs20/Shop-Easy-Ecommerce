@@ -31,36 +31,43 @@ function register() {
   var username = document.getElementById('username').value;
   const loginForm = document.getElementsByClassName('login-container')[0];
   const registerForm = document.getElementsByClassName('register-container')[0];
-   var alertmessge =  document.getElementById('alertcontainer');
-      var counter = 2;
+  var alertmessge = document.getElementById('alertcontainer');
+  var counter = 2;
   console.log(email, pwd, username)
 
-localStorage.setItem('username',username);
+  localStorage.setItem('username', username);
 
 
- auth.createUserWithEmailAndPassword(email, pwd).then((userCredential)=>
-{
-  var user = userCredential.user.uid;
-   alertmessge.style.display = "block"
-     alertmessge.style.backgroundColor = "var(--bs-success)";
-      alertmessge.innerText = "Register Successfully";
-  loginForm.style.display = "block";
-  registerForm.style.display = "none";
-  document.getElementById('register-email').value = "";
-  document.getElementById('register-password').value = "";
-  document.getElementById('username').value = "";
-  database.ref('shopeasy login/' + username).set({
-  username: username,
-  email:email,
-});
+  auth.createUserWithEmailAndPassword(email, pwd).then((userCredential) => {
+    var user = userCredential.user.uid;
 
-alert('success stored')
-})
-.catch((error)=>
-{
-  var errormessge = error.message;
-  alert(errormessge);
-});
+    loginForm.style.display = "block";
+    registerForm.style.display = "none";
+
+    document.getElementById('register-email').value = "";
+    document.getElementById('register-password').value = "";
+    document.getElementById('username').value = "";
+    database.ref('shopeasy login/' + username).set({
+      username: username,
+      email: email,
+    });
+
+    alert('success stored')
+    alertmessge.style.display = "block"
+    alertmessge.style.backgroundColor = "var(--bs-success)";
+    alertmessge.innerText = "Register Successfully";
+    var interval = setInterval(() => {
+      counter--;
+      if (counter < 0) {
+        clearInterval(interval);
+        alertmessge.style.display = "none";
+      }
+    }, 1000)
+  })
+    .catch((error) => {
+      var errormessge = error.message;
+      alert(errormessge);
+    });
 
 
 }
@@ -73,88 +80,87 @@ function login() {
   var loginpwd = document.getElementById('loginpassword').value;
 
 
-  auth.signInWithEmailAndPassword(loginemail,loginpwd)
-  .then(() => {
-    var user = auth.currentUser;
-    var uid = user.uid;
-    var alertmessge =  document.getElementById('alertcontainer');
-     alertmessge.style.display = "block"
-     alertmessge.style.backgroundColor = "var(--bs-success)";
+  auth.signInWithEmailAndPassword(loginemail, loginpwd)
+    .then(() => {
+      var user = auth.currentUser;
+      var uid = user.uid;
+      var alertmessge = document.getElementById('alertcontainer');
+      alertmessge.style.display = "block"
+      alertmessge.style.backgroundColor = "var(--bs-success)";
       alertmessge.innerText = "Logging Successfully";
-    window.location.replace('../../home/home.html');
+      var interval = setInterval(() => {
+        counter--;
+        if (counter < 0) {
+          clearInterval(interval);
+          alertmessge.style.display = "none";
+        }
+      }, 1000)
+      window.location.replace('https://shop-easy-ecommerce.vercel.app/home/home.html');
 
 
-  })
+    })
     .catch((error) => {
       var errorCode = error.code;
       var errorMessage = error.message;
-      var alertmessge =  document.getElementById('alertcontainer');
+      var alertmessge = document.getElementById('alertcontainer');
       var counter = 2;
-     
-      
 
 
-    if (errorCode === "auth/internal-error") {
-     alertmessge.style.display = "block"
-     alertmessge.style.backgroundColor = "var(--bs-danger)";
-      alertmessge.innerText = "Your Password is Wrong";
-      var interval = setInterval(()=>
-      {
-        counter--;
-        if(counter<0)
-        {
-          clearInterval(interval);
-          alertmessge.style.display="none";
-        }
-      },1000)
 
 
-    }
-    if (errorCode === "auth/wrong-password") {
-      alertmessge.style.display = "block"
-     alertmessge.style.backgroundColor = "var(--bs-danger)";
-      alertmessge.innerText = "User Not Found";
-      var interval = setInterval(()=>
-      {
-        counter--;
-        if(counter<0)
-        {
-          clearInterval(interval);
-          alertmessge.style.display="none";
-        }
-      },1000)
+      if (errorCode === "auth/internal-error") {
+        alertmessge.style.display = "block"
+        alertmessge.style.backgroundColor = "var(--bs-danger)";
+        alertmessge.innerText = "Your Password is Wrong";
+        var interval = setInterval(() => {
+          counter--;
+          if (counter < 0) {
+            clearInterval(interval);
+            alertmessge.style.display = "none";
+          }
+        }, 1000)
 
-      
-    }  else if (errorCode === "auth/user-not-found") {
-      alertmessge.style.display = "block"
-     alertmessge.style.backgroundColor = "var(--bs-danger)";
-      alertmessge.innerText = "Email Not Registered";
-      var interval = setInterval(()=>
-      {
-        counter--;
-        if(counter<0)
-        {
-          clearInterval(interval);
-          alertmessge.style.display="none";
-        }
-      },1000)
-    } else if (errorCode === "auth/invalid-email") {
-      alertmessge.style.display = "block"
-     alertmessge.style.backgroundColor = "var(--bs-danger)";
-      alertmessge.innerText = "The email address is badly formatted.";
-      var interval = setInterval(()=>
-      {
-        counter--;
-        if(counter<0)
-        {
-          clearInterval(interval);
-          alertmessge.style.display="none";
-        }
-      },1000)
-    } 
 
-      
-      
+      }
+      if (errorCode === "auth/wrong-password") {
+        alertmessge.style.display = "block"
+        alertmessge.style.backgroundColor = "var(--bs-danger)";
+        alertmessge.innerText = "User Not Found";
+        var interval = setInterval(() => {
+          counter--;
+          if (counter < 0) {
+            clearInterval(interval);
+            alertmessge.style.display = "none";
+          }
+        }, 1000)
+
+
+      } else if (errorCode === "auth/user-not-found") {
+        alertmessge.style.display = "block"
+        alertmessge.style.backgroundColor = "var(--bs-danger)";
+        alertmessge.innerText = "Email Not Registered";
+        var interval = setInterval(() => {
+          counter--;
+          if (counter < 0) {
+            clearInterval(interval);
+            alertmessge.style.display = "none";
+          }
+        }, 1000)
+      } else if (errorCode === "auth/invalid-email") {
+        alertmessge.style.display = "block"
+        alertmessge.style.backgroundColor = "var(--bs-danger)";
+        alertmessge.innerText = "The email address is badly formatted.";
+        var interval = setInterval(() => {
+          counter--;
+          if (counter < 0) {
+            clearInterval(interval);
+            alertmessge.style.display = "none";
+          }
+        }, 1000)
+      }
+
+
+
     })
 
 
