@@ -29,6 +29,7 @@ firebase.analytics();
 const auth = firebase.auth();
 const database = firebase.database();
 const db = firebase.firestore();
+const google = new firebase.auth.GoogleAuthProvider();
 
 
 
@@ -62,7 +63,25 @@ window.onload = () => {
 
 
 
+// google login
 
+
+
+
+
+
+
+function googleLogin()
+{
+  auth.signInWithPopup(google).then((result)=>
+  {
+    const user = result.user;
+    alert('login Successfully: '+ user.displayName)
+    console.log(user);
+  }).catch((err)=>{
+    alert('error: '+ err.message );
+  })
+}
 
 
 
