@@ -14,6 +14,7 @@ const auth = firebase.auth();
 const database = firebase.database();
 const db = firebase.firestore();
 
+window.onload = () => {
 
 function uservalue ()
 {
@@ -22,7 +23,8 @@ function uservalue ()
     docRef.get().then(doc => {
         if(doc.exists){
           var username = doc.data().userName;
-          localStorage.setItem('filename',username);
+          document.getElementById('username').innerText = username;
+          
           
         } else {
             console.log(`No such Document`)
@@ -32,6 +34,10 @@ function uservalue ()
     })
 }
 uservalue()
+} 
+
+
+
 
 
 

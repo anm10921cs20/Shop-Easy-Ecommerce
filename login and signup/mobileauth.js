@@ -130,7 +130,10 @@ function login() {
   var counter = 2;
 
 
-  auth.signInWithEmailAndPassword(loginemail, loginpwd)
+
+  firebase.auth().setPersistence(firebase.auth.Auth.Persistence.LOCAL)
+.then(() => {
+  return  auth.signInWithEmailAndPassword(loginemail, loginpwd)
     .then(() => {
       var user = auth.currentUser;
       var uid = user.uid;
@@ -215,6 +218,13 @@ function login() {
 
     })
 
+})
+
+.catch((error) => {
+  console.error("Login Error: ", error.message);
+});
+
+  
 
 
 }
