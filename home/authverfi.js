@@ -37,6 +37,12 @@ uservalue()
 } 
 
 
+function useremail() {
+    const displayvalue = localStorage.getItem('displayname');
+    document.getElementById('username').innerHTML = displayvalue;
+}
+useremail()
+
 
 
 
@@ -49,6 +55,7 @@ function signOut()
     {
         window.localStorage.removeItem('currently_loggedIn');
         window.localStorage.removeItem('filename');
+        window.localStorage.removeItem('displayname');
         window.location.replace('../../index.html')
     })
     .catch(()=>{

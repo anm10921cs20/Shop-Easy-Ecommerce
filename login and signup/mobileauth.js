@@ -78,6 +78,8 @@ function googleLogin()
     const user = result.user;
     alert('login Successfully: '+ user.displayName)
     console.log(user);
+    localStorage.setItem('displayname',user.displayName);
+    window.location.replace('../../home/home.html');
   }).catch((err)=>{
     alert('error: '+ err.message );
   })
