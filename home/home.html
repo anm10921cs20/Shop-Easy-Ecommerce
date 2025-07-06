@@ -1,0 +1,1187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--app title-->
+    <title>ShopEasy</title>
+    <!--logo image added-->
+    <link rel="icon" href="../images/logo/logo.png" type="text/png">
+
+    <!--bootstap css files insert-->
+    <link rel="stylesheet" href="../bootstrap-5.3.5-dist/css/bootstrap.min.css">
+
+    <!--external stylesheet insert-->
+    <link rel="stylesheet" href="../style.css" type="text/css">
+
+    <!--cart external style sheet-->
+
+    <link rel="stylesheet" href="../cart.css" type="text/css">
+
+    <!--fontawsesome cdn insert-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+
+    <!--external font added and insert-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <!--nav container-->
+    <div class="nav-container" id="nav-container">
+        <!--left bar-->
+        <div class="app-left-bar">
+            <i id="app-bars" class="fas fa-bars app-bars"></i>
+        </div>
+        <!--app title head and foot-->
+        <div class="app-title">
+            <h4 class="app-title_head">Shop Easy</h4>
+            <p class="app-title_foot">Online Shop</p>
+        </div>
+        <!--app login-->
+        <div class="app-login">
+            <a class="app-login-link" href="#"><i class="fa-regular fa-circle-user app-login-icon"></i> <span
+                    class="app-login-name">You</span></a>
+        </div>
+        <div class="app-order">
+            <a href="#" class="app-order-name"><i class="fas fa-shopping-bag app-order-icon"></i></a>
+            <div class="cart-count" id="cart-count">0</div>
+        </div>
+
+        <!--app bars connect nav-menus-->
+
+        <div class="app-nav-bars" id="app-nav-bars" data-bs-backdrop="static">
+            <!--nav bar header content inside-->
+            <div class="nav-bar-head">
+                <div class="nav-bar-head_sub">
+                    <a href="#">
+                        <h5 id="username" class="h6 text-light"><i class="fas fa-user nav-head_sub-icon"></i>Login & Signup</h5>
+                    </a>
+
+                </div>
+                <div class="nav-bar-foot_sub">
+                    <i id="nav-close" class="fas fa-close nav-foot_sub-icon"></i>
+                </div>
+            </div><br>
+            <!--nav bar body content inside-->
+            <div class="nav-bar-body">
+                <ul class="nav-bar-body_nav-menu">
+                    <li class="nav-menu_items"><a href="#"><i class="fas fa-home nav-menu-icons"></i> Home</a></li>
+                    <li class="nav-menu_items"><a href="#"><i class="fa-solid fa-table-cells-large"></i> All
+                            Categories</a></li>
+                    <li class="nav-menu_items"><a href="#"><i class="fa-solid fa-cart-flatbed"></i> My Orders</a></li>
+                    <li class="nav-menu_items"><a href="#"><i class="fa-regular fa-address-book"></i> Contact</a></li>
+                    <li class="nav-menu_items"><a href="#"><i class="fa-solid fa-eject"></i> About</a></li>
+                    <hr>
+                    <li class="nav-menu_items"><a href="#"><i class="fas fa-download nav-menu-icons"></i> App</a></li>
+                    <li class="nav-menu_items"><a href="#"><i class="fa-solid fa-basket-shopping"></i> Grocery</a></li>
+                    <li class="nav-menu_items"><a href="#"><i class="fa-solid fa-file-contract"></i> Legal</a></li>
+                    <hr>
+                    <li class="nav-menu_items"><a href="#"><i class="fa-solid fa-user-tie"></i> Customer Care</a></li>
+                    <li class="nav-menu_items"><a href="#"><i class="fa-solid fa-user"></i> Logout</a></li>
+                    <hr>
+                </ul>
+
+            </div>
+        </div>
+    </div>
+    <br>
+
+    <!--cart files-->
+
+    <div class="cart">
+        <!--cart header-->
+        <div class="cart-header">
+
+            <h5 class="h6 text-light"><i class="fas fa-shopping-cart nav-head_sub-icon"></i> My Carts</h5>
+            <ion-icon name="close-sharp" id="cart-close"></ion-icon>
+        </div>
+        <br>
+        <div class="cart-body">
+            <div class="cart-content">
+
+            </div>
+        </div>
+
+        <div class="cart-foot">
+            <div class="cart-total-title">Total</div>
+            <div class="cart-total">Rs.00</div>
+        </div>
+        <div class="cart-items-total">
+            <div class="items-total-title">Total Items:</div>
+            <div class="items-total" id="cart-counter">0</div>
+        </div>
+        <div class="table-details">   <div class="Short-detail">Order Details</div>
+        <div class="short-detail-list" id="opencart"> Click here</div>
+
+        
+    </div><br>
+     
+        <button class="cart-btn">Checkout</button><br>
+    </div>
+
+
+    <!--table container-->
+    <div class="tabledetails" id="tabledetails">
+        <h6 class="tabletitle">Broncher</h6>
+        <button class="btn-close" id="btn-close"></button><br><br>
+         <div class="table-container" id="table-container">
+        
+        <table id="table">
+            <thead>
+                <tr>
+                <td>Name</td>
+                <td>QTY</td>
+                <td>Price</td>
+                <td>Amt</td>
+            </tr>
+            </thead>
+            
+            <tfoot>
+                <tr>
+                    <td>total</td>
+                    <td id="carttotalcount"></td>
+                    <td colspan="2" id="total">Rs.00</td>
+                </tr>
+            </tfoot>
+        </table>
+      
+    </div>
+      <button class="btntable" onclick="downloadable()">download click</button><br>
+      <iframe name="print_frame" width="0" height="0" frameborder="0" src="about:blank"></iframe>
+    </div>
+   
+  
+
+
+
+    <!--alert container-->
+
+    <div id="alertcontainer" class="alertcontainer">
+      <i class="fas fa-shopping-cart"></i><p class="para-alert" id="para-alert">Successful added to cart</p> 
+    </div>
+
+    <!--main container-->
+    <div class="main-container">
+        <!--search page-->
+        <div class="search">
+            <div class="search-bar">
+                <a href="../search/search.html">
+                    <i class="fa-solid fa-magnifying-glass search-bar-image_icon"></i> <span
+                        class="search-bar-image_name">Search For Products</span>
+                </a>
+            </div>
+        </div><br>
+        <!--crousel bar-->
+        <div class="crousel-bar">
+            <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+                <div class="carousel-indicators crouser-btn">
+                    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active"
+                        aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1"
+                        aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2"
+                        aria-label="Slide 3"></button>
+                    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="3"
+                        aria-label="Slide 4"></button>
+                    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="4"
+                        aria-label="Slide 5"></button>
+                    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="5"
+                        aria-label="Slide 6"></button>
+                    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="6"
+                        aria-label="Slide 7"></button>
+                    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="7"
+                        aria-label="Slide 8"></button>
+                    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="8"
+                        aria-label="Slide 9"></button>
+
+
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active" data-bs-interval="2000">
+                        <img src="../images/crousel bar/image1.webp" class="d-block w-100" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>First slide label</h5>
+                            <p>Some representative placeholder content for the first slide.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item" data-bs-interval="2000">
+                        <img src="../images/crousel bar/image2.webp" class="d-block w-100" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Second slide label</h5>
+                            <p>Some representative placeholder content for the second slide.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item" data-bs-interval="2000">
+                        <img src="../images/crousel bar/image3.webp" class="d-block w-100" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Third slide label</h5>
+                            <p>Some representative placeholder content for the third slide.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item" data-bs-interval="2000">
+                        <img src="../images/crousel bar/image4.webp" class="d-block w-100" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Second slide label</h5>
+                            <p>Some representative placeholder content for the second slide.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item" data-bs-interval="2000">
+                        <img src="../images/crousel bar/image5.webp" class="d-block w-100" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Second slide label</h5>
+                            <p>Some representative placeholder content for the second slide.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item" data-bs-interval="2000">
+                        <img src="../images/crousel bar/image6.webp" class="d-block w-100" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Second slide label</h5>
+                            <p>Some representative placeholder content for the second slide.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item" data-bs-interval="2000">
+                        <img src="../images/crousel bar/image7.webp" class="d-block w-100" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Second slide label</h5>
+                            <p>Some representative placeholder content for the second slide.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item" data-bs-interval="2000">
+                        <img src="../images/crousel bar/image8.webp" class="d-block w-100" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Second slide label</h5>
+                            <p>Some representative placeholder content for the second slide.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item" data-bs-interval="2000">
+                        <img src="../images/crousel bar/image9.webp" class="d-block w-100" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Second slide label</h5>
+                            <p>Some representative placeholder content for the second slide.</p>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div><br><br><br>
+
+
+        <!--products collection-->
+        <div class="products-collection">
+            <!--products list-->
+            <a href="../grocery/grocery.html" class="products-link">
+                <div class="products">
+                    <img src="../images/products collection/image1.webp" width="70px" height="70px" alt="groceery">
+                    <p class="text-center products-name">Grocery</p>
+                </div>
+            </a>
+            <a href="#" class="products-link">
+                <div class="products">
+                    <img src="../images/products collection/image2.webp" width="70px" height="70px" alt="mobiles">
+                    <p class="text-center products-name">Mobiles</p>
+                </div>
+            </a>
+            <a href="#" class="products-link">
+                <div class="products">
+                    <img src="../images/products collection/image3.webp" width="70px" height="70px" alt="Gadgets">
+                    <p class="text-center products-name">Gadgets</p>
+                </div>
+            </a>
+            <a href="#" class="products-link">
+                <div class="products">
+                    <img src="../images/products collection/image4.webp" width="70px" height="70px" alt="Beauty">
+                    <p class="text-center products-name">Beauty</p>
+                </div>
+            </a>
+            <a href="#" class="products-link">
+                <div class="products">
+                    <img src="../images/products collection/image5.webp" width="70px" height="70px" alt="Appliances">
+                    <p class="text-center products-name">Appliances</p>
+                </div>
+            </a>
+            <a href="#" class="products-link">
+                <div class="products">
+                    <img src="../images/products collection/image6.webp" width="70px" height="70px" alt="Electronics">
+                    <p class="text-center products-name">Electronics</p>
+                </div>
+            </a>
+            <a href="#" class="products-link">
+                <div class="products">
+                    <img src="../images/products collection/image7.webp" width="70px" height="70px" alt="Furnitures">
+                    <p class="text-center products-name">Furnitures</p>
+                </div>
+            </a>
+            <a href="#" class="products-link">
+                <div class="products">
+                    <img src="../images/products collection/image8.webp" width="70px" height="70px" alt="Toys,Baby">
+                    <p class="text-center products-name">Toys,Baby</p>
+                </div>
+            </a>
+        </div><br><br>
+
+        <!--products details grocery-->
+        <div class="grocery-container">
+            <div class="grocery-tit">
+                <h3 class="grocery-title">Grocery</h3>
+                <a href="../grocery/grocery.html"><i class="fa-solid fa-arrow-right color-icon"></i></a>
+            </div>
+
+            <div class="grocery">
+
+                <div class="products-items">
+                    <a href="#"><img class="product-img"
+                            src="https://rukminim2.flixcart.com/image/282/282/xif0q/ghee/5/9/s/200-cow-ghee-1-plastic-bottle-milky-mist-original-imagvzpgzh5gj98y.jpeg?q=60"
+                            width="100px" height="160px" alt="sandoor"></a><br>
+                    <div class="mobile-details-container">
+                        <p class="mobile-brand-name">200 ML PlasticBottle</p>
+                        <p class="mobile-name">Milk Misty Cow Ghee</p>
+                        <p><span class="rate">Rs.144</span> <del class="rate-del">Rs.185</del></p>
+                        <div class="review-container">
+                            <p class="percentage">22%OFF</p>
+                        </div>
+                        <div class="star-review">
+                            <ion-icon name="star-sharp" class="star-icon"></ion-icon><ion-icon name="star-sharp"
+                                class="star-icon"></ion-icon><ion-icon name="star-sharp"
+                                class="star-icon"></ion-icon><ion-icon name="star-sharp"
+                                class="star-icon"></ion-icon><ion-icon name="star-half-sharp"
+                                class="star-icon"></ion-icon>
+                            <p>4.4</p>
+                        </div>
+
+                    </div>
+                    <button class="button">Add</button>
+                </div>
+                <div class="products-items">
+                    <a href="#"><img class="product-img"
+                            src="https://rukminim2.flixcart.com/image/282/282/xif0q/ghee/d/t/f/-original-imagtcrkjk2dsvgf.jpeg?q=60"
+                            width="100px" height="160px" alt="sandoor"></a><br>
+                    <div class="mobile-details-container">
+                        <p class="mobile-brand-name">1000 ML Pouch</p>
+                        <p class="mobile-name">Milky Mitst Cow Ghee</p>
+                        <p><span class="rate">Rs.597</span> <del class="rate-del">Rs.799</del></p>
+                        <div class="review-container">
+                            <p class="percentage">25%OFF</p>
+                        </div>
+                        <div class="star-review">
+                            <ion-icon name="star-sharp" class="star-icon"></ion-icon><ion-icon name="star-sharp"
+                                class="star-icon"></ion-icon><ion-icon name="star-sharp"
+                                class="star-icon"></ion-icon><ion-icon name="star-sharp"
+                                class="star-icon"></ion-icon><ion-icon name="star-half-sharp"
+                                class="star-icon"></ion-icon>
+                            <p>4.1</p>
+                        </div>
+
+                    </div>
+                    <button class="button">Add</button>
+                </div>
+                <!--motroala edge 55fusion-->
+                <div class="products-items">
+                    <a href="#"><img class="product-img"
+                            src="https://rukminim1.flixcart.com/image/296/296/xif0q/edible-oil/x/t/r/-original-imagh3mezaztdyvn.jpeg?q=60"
+                            width="100px" height="160px" alt="sandoor"></a><br>
+                    <div class="mobile-details-container">
+                        <p class="mobile-brand-name">1 L</p>
+                        <p class="mobile-name">Fortune Xpert Pro Oil</p>
+                        <p><span class="rate">Rs.145</span> <del class="rate-del">Rs.190</del></p>
+                        <div class="review-container">
+                            <p class="percentage">23%OFF</p>
+                        </div>
+                        <div class="star-review">
+                            <ion-icon name="star-sharp" class="star-icon"></ion-icon><ion-icon name="star-sharp"
+                                class="star-icon"></ion-icon><ion-icon name="star-sharp"
+                                class="star-icon"></ion-icon><ion-icon name="star-sharp"
+                                class="star-icon"></ion-icon><ion-icon name="star-half-sharp"
+                                class="star-icon"></ion-icon>
+                            <p>4.2</p>
+                        </div>
+
+                    </div>
+                    <button class="button">Add</button>
+                </div>
+                <!--one plus ce nord-->
+                <div class="products-items">
+                    <a href="#"><img class="product-img"
+                            src="https://rukminim1.flixcart.com/image/296/296/xif0q/edible-oil/m/z/p/-original-imah2hg9hakefpcw.jpeg?q=60"
+                            width="100px" height="160px" alt="sandoor"></a><br>
+                    <div class="mobile-details-container">
+                        <p class="mobile-brand-name">3 L</p>
+                        <p class="mobile-name">Saffola Refind Oil 3l</p>
+                        <p><span class="rate">Rs.545</span> <del class="rate-del">Rs.661</del></p>
+                        <div class="review-container">
+                            <p class="percentage">16%OFF</p>
+                        </div>
+                        <div class="star-review">
+                            <ion-icon name="star-sharp" class="star-icon"></ion-icon><ion-icon name="star-sharp"
+                                class="star-icon"></ion-icon><ion-icon name="star-sharp"
+                                class="star-icon"></ion-icon><ion-icon name="star-sharp"
+                                class="star-icon"></ion-icon><ion-icon name="star-half-sharp"
+                                class="star-icon"></ion-icon>
+                            <p>4.4</p>
+                        </div>
+
+                    </div>
+                    <button class="button">Add</button>
+                </div>
+                <!--iphone -->
+                <div class="products-items">
+                    <a href="#"><img class="product-img"
+                            src="https://rukminim1.flixcart.com/image/296/296/ky3b0y80/edible-oil/j/p/k/-original-imagaefdhsxzvasa.jpeg?q=60"
+                            width="100px" height="160px" alt="sandoor"></a><br>
+                    <div class="mobile-details-container">
+                        <p class="mobile-brand-name">2 L</p>
+                        <p class="mobile-name">Saffola Refind Oil 2L</p>
+                        <p><span class="rate">Rs.365</span> <del class="rate-del">Rs.429</del></p>
+                        <div class="review-container">
+                            <p class="percentage">14%OFF</p>
+                        </div>
+                        <div class="star-review">
+                            <ion-icon name="star-sharp" class="star-icon"></ion-icon><ion-icon name="star-sharp"
+                                class="star-icon"></ion-icon><ion-icon name="star-sharp"
+                                class="star-icon"></ion-icon><ion-icon name="star-sharp"
+                                class="star-icon"></ion-icon><ion-icon name="star-half-sharp"
+                                class="star-icon"></ion-icon>
+                            <p>4.4</p>
+                        </div>
+
+                    </div>
+                    <button class="button">Add</button>
+                </div>
+                <!--realme-->
+                <div class="products-items">
+                    <a href="#"><img class="product-img"
+                            src="https://rukminim1.flixcart.com/image/296/296/xif0q/edible-oil/q/s/0/-original-imahd96jaqx5xbjj.jpeg?q=60"
+                            width="100px" height="160px" alt="sandoor"></a><br>
+                    <div class="mobile-details-container">
+                        <p class="mobile-brand-name">1 L</p>
+                        <p class="mobile-name">Energy Max Oil</p>
+                        <p><span class="rate">Rs.146</span> <del class="rate-del">Rs.179</del></p>
+                        <div class="review-container">
+                            <p class="percentage">18%OFF</p>
+                        </div>
+                        <div class="star-review">
+                            <ion-icon name="star-sharp" class="star-icon"></ion-icon><ion-icon name="star-sharp"
+                                class="star-icon"></ion-icon><ion-icon name="star-sharp"
+                                class="star-icon"></ion-icon><ion-icon name="star-sharp"
+                                class="star-icon"></ion-icon><ion-icon name="star-half-sharp"
+                                class="star-icon"></ion-icon>
+                            <p>4.1</p>
+                        </div>
+
+                    </div>
+                    <button class="button">Add</button>
+                </div>
+                <!--vivo-->
+                <div class="products-items">
+                    <a href="#"><img class="product-img"
+                            src="https://rukminim1.flixcart.com/image/296/296/xif0q/edible-oil/p/j/b/-original-imah8zq2svda6nng.jpeg?q=60"
+                            width="100px" height="160px" alt="sandoor"></a><br>
+                    <div class="mobile-details-container">
+                        <p class="mobile-brand-name">1 L</p>
+                        <p class="mobile-name">Oleev Smart Oil</p>
+                        <p><span class="rate">Rs.175</span> <del class="rate-del">Rs.185</del></p>
+                        <div class="review-container">
+                            <p class="percentage">5%OFF</p>
+                        </div>
+                        <div class="star-review">
+                            <ion-icon name="star-sharp" class="star-icon"></ion-icon><ion-icon name="star-sharp"
+                                class="star-icon"></ion-icon><ion-icon name="star-sharp"
+                                class="star-icon"></ion-icon><ion-icon name="star-sharp"
+                                class="star-icon"></ion-icon><ion-icon name="star-half-sharp"
+                                class="star-icon"></ion-icon>
+                            <p>4.3</p>
+                        </div>
+
+                    </div>
+                    <button class="button">Add</button>
+                </div>
+                <!--oppo reno-->
+                <div class="products-items">
+                    <a href="#"><img class="product-img"
+                            src="https://rukminim1.flixcart.com/image/296/296/xif0q/edible-oil/k/c/g/-original-imagn5dserhhxtff.jpeg?q=60"
+                            width="100px" height="160px" alt="sandoor"></a><br>
+                    <div class="mobile-details-container">
+                        <p class="mobile-brand-name">2 L</p>
+                        <p class="mobile-name">Olive Oil</p>
+                        <p><span class="rate">Rs.280</span>8 <del class="rate-del">Rs.4200</del></p>
+                        <div class="review-container">
+                            <p class="percentage">33%OFF</p>
+                        </div>
+                        <div class="star-review">
+                            <ion-icon name="star-sharp" class="star-icon"></ion-icon><ion-icon name="star-sharp"
+                                class="star-icon"></ion-icon><ion-icon name="star-sharp"
+                                class="star-icon"></ion-icon><ion-icon name="star-sharp"
+                                class="star-icon"></ion-icon><ion-icon name="star-half-sharp"
+                                class="star-icon"></ion-icon>
+                            <p>4.4</p>
+                        </div>
+
+                    </div>
+                    <button class="button">Add</button>
+                </div>
+                <!--poco-->
+                <div class="products-items">
+                    <a href="#"><img class="product-img"
+                            src="https://rukminim1.flixcart.com/image/296/296/kyj0vbk0/edible-oil/d/d/u/500-na-1-pouch-sesame-oil-porna-original-imagaqj2qgftzyty.jpeg?q=60"
+                            width="100px" height="160px" alt="sandoor"></a><br>
+                    <div class="mobile-details-container">
+                        <p class="mobile-brand-name">500 ML</p>
+                        <p class="mobile-name">Porna Sesame</p>
+                        <p><span class="rate">Rs.150</span> <del class="rate-del">Rs.193</del></p>
+                        <div class="review-container">
+                            <p class="percentage">22%OFF</p>
+                        </div>
+                        <div class="star-review">
+                            <ion-icon name="star-sharp" class="star-icon"></ion-icon><ion-icon name="star-sharp"
+                                class="star-icon"></ion-icon><ion-icon name="star-sharp"
+                                class="star-icon"></ion-icon><ion-icon name="star-sharp"
+                                class="star-icon"></ion-icon><ion-icon name="star-half-sharp"
+                                class="star-icon"></ion-icon>
+                            <p>4.1</p>
+                        </div>
+
+                    </div>
+                    <button class="button">Add</button>
+                </div>
+                <!--readmi-->
+                <div class="products-items">
+                    <a href="#"><img class="product-img"
+                            src="https://rukminim1.flixcart.com/image/296/296/xif0q/ghee/x/9/q/750-cow-1-pouch-gowardhan-original-imagvp7fntadfgrx.jpeg?q=60"
+                            width="100px" height="160px" alt="sandoor"></a><br>
+                    <div class="mobile-details-container">
+                        <p class="mobile-brand-name">750 ML Pouch</p>
+                        <p class="mobile-name">Gowardhan Ghee</p>
+                        <p><span class="rate">Rs.509</span> <del class="rate-del">Rs.589</del></p>
+                        <div class="review-container">
+                            <p class="percentage">13%OFF</p>
+                        </div>
+                        <div class="star-review">
+                            <ion-icon name="star-sharp" class="star-icon"></ion-icon><ion-icon name="star-sharp"
+                                class="star-icon"></ion-icon><ion-icon name="star-sharp"
+                                class="star-icon"></ion-icon><ion-icon name="star-sharp"
+                                class="star-icon"></ion-icon><ion-icon name="star-half-sharp"
+                                class="star-icon"></ion-icon>
+                            <p>4.4</p>
+                        </div>
+
+                    </div>
+                    <button class="button">Add</button>
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+
+
+
+        <!--products details mobile-->
+        <div class="mobile-container">
+            <div class="grocery-tit">
+                <h3 class="grocery-title">Mobile</h3>
+                <a href="#"><i class="fa-solid fa-arrow-right color-icon"></i></a>
+            </div>
+
+            <div class="mobile">
+                <!--samsung mobile-->
+                <div class="products-items">
+                    <a href="#"><img class="product-img"
+                            src="https://rukminim1.flixcart.com/image/292/360/xif0q/mobile/f/5/t/-original-imahcrdry2p7fyfp.jpeg?q=60&crop=false"
+                            width="120px" height="120px" alt="sandoor"></a><br>
+                    <div class="mobile-details-container">
+                        <p class="mobile-brand-name">Samsung</p>
+                        <p class="mobile-name">Galaxy Edge S25 5G</p>
+                        <p><span class="rate">Rs.125000</span> <del class="rate-del">Rs.1,30,000</del></p>
+                        <div class="review-container">
+                            <p class="percentage">9%OFF</p>
+                        </div>
+                        <div class="star-review">
+                            <ion-icon name="star-sharp" class="star-icon"></ion-icon><ion-icon name="star-sharp"
+                                class="star-icon"></ion-icon><ion-icon name="star-sharp"
+                                class="star-icon"></ion-icon><ion-icon name="star-sharp"
+                                class="star-icon"></ion-icon><ion-icon name="star-half-sharp"
+                                class="star-icon"></ion-icon>
+                            <p>4.4</p>
+                        </div>
+                    </div>
+                    <button class="button">Add</button>
+                </div>
+
+                <!---google pixel mobile-->
+                <div class="products-items">
+                    <a href="#"><img class="product-img"
+                            src="https://rukminim1.flixcart.com/image/292/360/xif0q/mobile/d/y/m/pixel-9-ga05843-in-google-original-imah3pfgd9zadkyx.jpeg?q=60&crop=false"
+                            width="120px" height="120px" alt="sandoor"></a><br>
+                    <div class="mobile-details-container">
+                        <p class="mobile-brand-name">Google</p>
+                        <p class="mobile-name">Pixel 9 5G</p>
+                        <p ><span class="rate">Rs.74999</span> <del class="rate-del">Rs.79,999</del></p>
+                        <div class="review-container">
+                            <p class="percentage">6%OFF</p>
+                        </div>
+                        <div class="star-review">
+                            <ion-icon name="star-sharp" class="star-icon"></ion-icon><ion-icon name="star-sharp"
+                                class="star-icon"></ion-icon><ion-icon name="star-sharp"
+                                class="star-icon"></ion-icon><ion-icon name="star-sharp"
+                                class="star-icon"></ion-icon><ion-icon name="star-half-sharp"
+                                class="star-icon"></ion-icon>
+                            <p>4.4</p>
+                        </div>
+                    </div>
+                    <button class="button">Add</button>
+                </div>
+                <!--motroala edge 55fusion-->
+                <div class="products-items">
+                    <a href="#"><img class="product-img"
+                            src="https://rukminim1.flixcart.com/image/398/478/xif0q/mobile/5/t/j/edge-50-fusion-pb300002in-motorola-original-imahywzrfagkuyxx.jpeg?q=60"
+                            width="120px" height="120px" alt="sandoor"></a><br>
+                    <div class="mobile-details-container">
+                        <p class="mobile-brand-name">Motroala</p>
+                        <p class="mobile-name">Edge 50 Fusion 5G</p>
+                        <p ><span class="rate">Rs.18999</span> <del class="rate-del">Rs.25,999</del></p>
+                        <div class="review-container">
+                            <p class="percentage">26%OFF</p>
+                        </div>
+                        <div class="star-review">
+                            <ion-icon name="star-sharp" class="star-icon"></ion-icon><ion-icon name="star-sharp"
+                                class="star-icon"></ion-icon><ion-icon name="star-sharp"
+                                class="star-icon"></ion-icon><ion-icon name="star-sharp"
+                                class="star-icon"></ion-icon><ion-icon name="star-half-sharp"
+                                class="star-icon"></ion-icon>
+                            <p>4.3</p>
+                        </div>
+                    </div>
+                    <button class="button">Add</button>
+                </div>
+                <!--one plus ce nord-->
+                <div class="products-items">
+                    <a href="#"><img class="product-img"
+                            src="https://rukminim1.flixcart.com/image/398/478/xif0q/mobile/r/u/9/-original-imah5wxnktvffhgq.jpeg?q=60"
+                            width="120px" height="120px" alt="sandoor"></a><br>
+                    <div class="mobile-details-container">
+                        <p class="mobile-brand-name">OnePlus</p>
+                        <p class="mobile-name">Nord CE4 Lite 5G</p>
+                        <p ><span class="rate">Rs.16889</span> <del class="rate-del">Rs.20,999</del></p>
+                        <div class="review-container">
+                            <p class="percentage">9%OFF</p>
+                        </div>
+                        <div class="star-review">
+                            <ion-icon name="star-sharp" class="star-icon"></ion-icon><ion-icon name="star-sharp"
+                                class="star-icon"></ion-icon><ion-icon name="star-sharp"
+                                class="star-icon"></ion-icon><ion-icon name="star-sharp"
+                                class="star-icon"></ion-icon><ion-icon name="star-half-sharp"
+                                class="star-icon"></ion-icon>
+                            <p>4.4</p>
+                        </div>
+                    </div>
+                    <button class="button">Add</button>
+                </div>
+                <!--iphone -->
+                <div class="products-items">
+                    <a href="#"><img class="product-img"
+                            src="https://rukminim1.flixcart.com/image/292/360/xif0q/mobile/y/m/i/-original-imah4jz66pzdzy4z.jpeg?q=60&crop=false"
+                            width="120px" height="120px" alt="sandoor"></a><br>
+                    <div class="mobile-details-container">
+                        <p class="mobile-brand-name">Apple</p>
+                        <p class="mobile-name">Iphone 16 Pro Max 5G</p>
+                        <p ><span class="rate">Rs.177900</span> <del class="rate-del">Rs.1,84,900</del></p>
+                        <div class="review-container">
+                            <p class="percentage">3%OFF</p>
+                        </div>
+                        <div class="star-review">
+                            <ion-icon name="star-sharp" class="star-icon"></ion-icon><ion-icon name="star-sharp"
+                                class="star-icon"></ion-icon><ion-icon name="star-sharp"
+                                class="star-icon"></ion-icon><ion-icon name="star-sharp"
+                                class="star-icon"></ion-icon><ion-icon name="star-half-sharp"
+                                class="star-icon"></ion-icon>
+                            <p>4.4</p>
+                        </div>
+                    </div>
+                    <button class="button">Add</button>
+                </div>
+                <!--realme-->
+                <div class="products-items">
+                    <a href="#"><img class="product-img"
+                            src="https://rukminim1.flixcart.com/image/192/240/xif0q/mobile/t/c/y/-original-imahaff2rbuykhcw.jpeg?q=60&crop=false"
+                            width="120px" height="120px" alt="sandoor"></a><br>
+                    <div class="mobile-details-container">
+                        <p class="mobile-brand-name">Realme</p>
+                        <p class="mobile-name">Realme P3 5G</p>
+                        <p ><span class="rate">Rs.18499</span> <del class="rate-del">Rs.22,999</del></p>
+                        <div class="review-container">
+                            <p class="percentage">19%OFF</p>
+                        </div>
+                        <div class="star-review">
+                            <ion-icon name="star-sharp" class="star-icon"></ion-icon><ion-icon name="star-sharp"
+                                class="star-icon"></ion-icon><ion-icon name="star-sharp"
+                                class="star-icon"></ion-icon><ion-icon name="star-sharp"
+                                class="star-icon"></ion-icon><ion-icon name="star-half-sharp"
+                                class="star-icon"></ion-icon>
+                            <p>4.1</p>
+                        </div>
+                    </div>
+                    <button class="button">Add</button>
+                </div>
+                <!--vivo-->
+                <div class="products-items">
+                    <a href="#"><img class="product-img"
+                            src="https://rukminim1.flixcart.com/image/292/360/xif0q/mobile/k/t/x/-original-imahbgpzbumfzkbh.jpeg?q=60&crop=false"
+                            width="120px" height="120px" alt="sandoor"></a><br>
+                    <div class="mobile-details-container">
+                        <p class="mobile-brand-name">Vivo</p>
+                        <p class="mobile-name"> T4 5G</p>
+                        <p ><span class="rate">Rs.21999</span> <del class="rate-del">Rs.25,999</del></p>
+                        <div class="review-container">
+                            <p class="percentage">15%OFF</p>
+                        </div>
+                        <div class="star-review">
+                            <ion-icon name="star-sharp" class="star-icon"></ion-icon><ion-icon name="star-sharp"
+                                class="star-icon"></ion-icon><ion-icon name="star-sharp"
+                                class="star-icon"></ion-icon><ion-icon name="star-sharp"
+                                class="star-icon"></ion-icon><ion-icon name="star-half-sharp"
+                                class="star-icon"></ion-icon>
+                            <p>4.3</p>
+                        </div>
+                    </div>
+                    <button class="button">Add</button>
+                </div>
+                <!--oppo reno-->
+                <div class="products-items">
+                    <a href="#"><img class="product-img"
+                            src="https://rukminim1.flixcart.com/image/292/360/xif0q/mobile/h/o/n/-original-imah3cmbywjrzud3.jpeg?q=60&crop=false"
+                            width="120px" height="120px" alt="sandoor"></a><br>
+                    <div class="mobile-details-container">
+                        <p class="mobile-brand-name">Oppo</p>
+                        <p class="mobile-name">Reno 12 5G</p>
+                        <p ><span class="rate">Rs.20999</span> <del class="rate-del">Rs.43,999</del></p>
+                        <div class="review-container">
+                            <p class="percentage">52%OFF</p>
+                        </div>
+                        <div class="star-review">
+                            <ion-icon name="star-sharp" class="star-icon"></ion-icon><ion-icon name="star-sharp"
+                                class="star-icon"></ion-icon><ion-icon name="star-sharp"
+                                class="star-icon"></ion-icon><ion-icon name="star-sharp"
+                                class="star-icon"></ion-icon><ion-icon name="star-half-sharp"
+                                class="star-icon"></ion-icon>
+                            <p>4.5</p>
+                        </div>
+                    </div>
+                    <button class="button">Add</button>
+                </div>
+                <!--poco-->
+                <div class="products-items">
+                    <a href="#"><img class="product-img"
+                            src="https://rukminim1.flixcart.com/image/398/478/xif0q/mobile/y/v/f/-original-imahbr2cmpwexghw.jpeg?q=60"
+                            width="120px" height="120px" alt="sandoor"></a><br>
+                    <div class="mobile-details-container">
+                        <p class="mobile-brand-name">Poco</p>
+                        <p class="mobile-name">Poco C75 5G</p>
+                        <p ><span class="rate">Rs.8499 </span><del class="rate-del">Rs.11,499</del></p>
+                        <div class="review-container">
+                            <p class="percentage">26%OFF</p>
+                        </div>
+                        <div class="star-review">
+                            <ion-icon name="star-sharp" class="star-icon"></ion-icon><ion-icon name="star-sharp"
+                                class="star-icon"></ion-icon><ion-icon name="star-sharp"
+                                class="star-icon"></ion-icon><ion-icon name="star-sharp"
+                                class="star-icon"></ion-icon><ion-icon name="star-half-sharp"
+                                class="star-icon"></ion-icon>
+                            <p>4.1</p>
+                        </div>
+                    </div>
+                    <button class="button">Add</button>
+                </div>
+                <!--readmi-->
+                <div class="products-items">
+                    <a href="#"><img class="product-img"
+                            src="https://rukminim1.flixcart.com/image/192/240/xif0q/mobile/a/p/v/-original-imah4smtqmxb2j2f.jpeg?q=60&crop=false"
+                            width="120px" height="120px" alt="sandoor"></a><br>
+                    <div class="mobile-details-container">
+                        <p class="mobile-brand-name">Redmi</p>
+                        <p class="mobile-name">Note 14Pro 5G</p>
+                        <p ><span class="rate">Rs.23999</span> <del class="rate-del">Rs.28,000</del></p>
+                        <div class="review-container">
+                            <p class="percentage">19%OFF</p>
+                        </div>
+                        <div class="star-review">
+                            <ion-icon name="star-sharp" class="star-icon"></ion-icon><ion-icon name="star-sharp"
+                                class="star-icon"></ion-icon><ion-icon name="star-sharp"
+                                class="star-icon"></ion-icon><ion-icon name="star-sharp"
+                                class="star-icon"></ion-icon><ion-icon name="star-half-sharp"
+                                class="star-icon"></ion-icon>
+                            <p>4.1</p>
+                        </div>
+                    </div>
+                    <button class="button">Add</button>
+                </div>
+                <!--nothing-->
+                <div class="products-items">
+                    <a href="#"><img class="product-img"
+                            src="https://rukminim1.flixcart.com/image/192/240/xif0q/mobile/c/u/k/-original-imahcfcfbwzmrecy.jpeg?q=60&crop=false"
+                            width="120px" height="120px" alt="sandoor"></a><br>
+                    <div class="mobile-details-container">
+                        <p class="mobile-brand-name">Nothing</p>
+                        <p class="mobile-name"> (3a) Pro 5G</p>
+                        <p ><span class="rate">Rs.33000</span> <del class="rate-del">Rs.36,000</del></p>
+                        <div class="review-container">
+                            <p class="percentage">8%OFF</p>
+                        </div>
+                        <div class="star-review">
+                            <ion-icon name="star-sharp" class="star-icon"></ion-icon><ion-icon name="star-sharp"
+                                class="star-icon"></ion-icon><ion-icon name="star-sharp"
+                                class="star-icon"></ion-icon><ion-icon name="star-sharp"
+                                class="star-icon"></ion-icon><ion-icon name="star-half-sharp"
+                                class="star-icon"></ion-icon>
+                            <p>4.4</p>
+                        </div>
+                    </div>
+                    <button class="button">Add</button>
+                </div>
+                <!--infinix-->
+                <div class="products-items">
+                    <a href="#"><img class="product-img"
+                            src="https://rukminim1.flixcart.com/image/192/240/xif0q/mobile/4/s/d/hot-50-5g-x6720-infinix-original-imah4dybfdernmyz.jpeg?q=60&crop=false"
+                            width="120px" height="120px" alt="sandoor"></a><br>
+                    <div class="mobile-details-container">
+                        <p class="mobile-brand-name">Infinix</p>
+                        <p class="mobile-name">Hot 50 5G</p>
+                        <p ><span class="rate">Rs.10499</span> <del class="rate-del">Rs.15,000</del></p>
+                        <div class="review-container">
+                            <p class="percentage">30%OFF</p>
+                        </div>
+                        <div class="star-review">
+                            <ion-icon name="star-sharp" class="star-icon"></ion-icon><ion-icon name="star-sharp"
+                                class="star-icon"></ion-icon><ion-icon name="star-sharp"
+                                class="star-icon"></ion-icon><ion-icon name="star-sharp"
+                                class="star-icon"></ion-icon><ion-icon name="star-half-sharp"
+                                class="star-icon"></ion-icon>
+                            <p>4.2</p>
+                        </div>
+                    </div>
+                    <button class="button">Add</button>
+                </div>
+                <!--Lava-->
+                <div class="products-items">
+                    <a href="#"><img class="product-img"
+                            src="https://rukminim1.flixcart.com/image/292/360/xif0q/mobile/t/w/h/amoled-amoled-lava-original-imahbkhhype7xgve.jpeg?q=60&crop=false"
+                            width="120px" height="120px" alt="sandoor"></a><br>
+                    <div class="mobile-details-container">
+                        <p class="mobile-brand-name">Lava</p>
+                        <p class="mobile-name">Blaze Amoled 5G</p>
+                        <p ><span class="rate">Rs.16000</span> <del class="rate-del">Rs.19,000</del></p>
+                        <div class="review-container">
+                            <p class="percentage">15%OFF</p>
+                        </div>
+                        <div class="star-review">
+                            <ion-icon name="star-sharp" class="star-icon"></ion-icon><ion-icon name="star-sharp"
+                                class="star-icon"></ion-icon><ion-icon name="star-sharp"
+                                class="star-icon"></ion-icon><ion-icon name="star-sharp"
+                                class="star-icon"></ion-icon><ion-icon name="star-half-sharp"
+                                class="star-icon"></ion-icon>
+                            <p>4.4</p>
+                        </div>
+                    </div>
+                    <button class="button">Add</button>
+                </div>
+
+
+
+
+            </div>
+        </div>
+        <!--products details Gadgets-->
+        <div class="gadgets-container">
+            <div class="grocery-tit">
+                <h3 class="grocery-title">Gadget</h3>
+                <a href="#"><i class="fa-solid fa-arrow-right color-icon"></i></a>
+            </div>
+
+            <div class="mobile">
+                <!--nosie watch-->
+                <div class="products-items">
+                    <a href="#"><img class="product-img"
+                            src="https://rukminim1.flixcart.com/image/430/516/xif0q/smartwatch/o/c/a/-original-imah76jszpjhp2yr.jpeg?q=60&crop=false"
+                            width="120px" height="120px" alt="sandoor"></a><br>
+                    <div class="mobile-details-container">
+                        <p class="mobile-brand-name">Noise</p>
+                        <p class="mobile-name">CMF By Watch Pro</p>
+                        <p ><span class="rate">Rs.5500 </span><del class="rate-del">Rs.6,000</del></p>
+                        <div class="review-container">
+                            <p class="percentage">8%OFF</p>
+                        </div>
+                        <div class="star-review">
+                            <ion-icon name="star-sharp" class="star-icon"></ion-icon><ion-icon name="star-sharp"
+                                class="star-icon"></ion-icon><ion-icon name="star-sharp"
+                                class="star-icon"></ion-icon><ion-icon name="star-sharp"
+                                class="star-icon"></ion-icon><ion-icon name="star-half-sharp"
+                                class="star-icon"></ion-icon>
+                            <p>4.1</p>
+                        </div>
+                    </div>
+                    <button class="button">Add</button>
+                </div>
+
+                <!---oneplus earbuds-->
+                <div class="products-items">
+                    <a href="#"><img class="product-img"
+                            src="https://rukminim1.flixcart.com/image/430/516/l4ei1e80/headphone/b/j/w/bullets-wireless-z2-oneplus-original-imagfaww7ga6nshz.jpeg?q=60&crop=false"
+                            width="120px" height="120px" alt="sandoor"></a><br>
+                    <div class="mobile-details-container">
+                        <p class="mobile-brand-name">OnePlus</p>
+                        <p class="mobile-name">Neckband Pro</p>
+                        <p ><span class="rate">Rs.1499 </span><del class="rate-del">Rs.1,999</del></p>
+                        <div class="review-container">
+                            <p class="percentage">16%OFF</p>
+                        </div>
+                        <div class="star-review">
+                            <ion-icon name="star-sharp" class="star-icon"></ion-icon><ion-icon name="star-sharp"
+                                class="star-icon"></ion-icon><ion-icon name="star-sharp"
+                                class="star-icon"></ion-icon><ion-icon name="star-sharp"
+                                class="star-icon"></ion-icon><ion-icon name="star-half-sharp"
+                                class="star-icon"></ion-icon>
+                            <p>4.4</p>
+                        </div>
+                    </div>
+                    <button class="button">Add</button>
+                </div>
+                <!--Airphones-->
+                <div class="products-items">
+                    <a href="#"><img class="product-img"
+                            src="https://rukminim1.flixcart.com/image/430/516/xif0q/headphone/1/5/b/-original-imah5heyzjcxnj4m.jpeg?q=60&crop=false"
+                            width="120px" height="120px" alt="sandoor"></a><br>
+                    <div class="mobile-details-container">
+                        <p class="mobile-brand-name">Boat</p>
+                        <p class="mobile-name">Air Headphone Neo</p>
+                        <p ><span class="rate">Rs.2999 </span><del class="rate-del">Rs.3,999</del></p>
+                        <div class="review-container">
+                            <p class="percentage">26%OFF</p>
+                        </div>
+                        <div class="star-review">
+                            <ion-icon name="star-sharp" class="star-icon"></ion-icon><ion-icon name="star-sharp"
+                                class="star-icon"></ion-icon><ion-icon name="star-sharp"
+                                class="star-icon"></ion-icon><ion-icon name="star-sharp"
+                                class="star-icon"></ion-icon><ion-icon name="star-half-sharp"
+                                class="star-icon"></ion-icon>
+                            <p>4.3</p>
+                        </div>
+                    </div>
+                    <button class="button">Add</button>
+                </div>
+                <!--airpods realme-->
+                <div class="products-items">
+                    <a href="#"><img class="product-img"
+                            src="https://rukminim1.flixcart.com/image/430/516/xif0q/headphone/d/f/2/-original-imaha6bsrvzhqf7m.jpeg?q=60&crop=false"
+                            width="120px" height="120px" alt="sandoor"></a><br>
+                    <div class="mobile-details-container">
+                        <p class="mobile-brand-name">Realme</p>
+                        <p class="mobile-name">Buds T200 Lite</p>
+                        <p ><span class="rate">Rs.1399 </span><del class="rate-del">Rs.1,999</del></p>
+                        <div class="review-container">
+                            <p class="percentage">30%OFF</p>
+                        </div>
+                        <div class="star-review">
+                            <ion-icon name="star-sharp" class="star-icon"></ion-icon><ion-icon name="star-sharp"
+                                class="star-icon"></ion-icon><ion-icon name="star-sharp"
+                                class="star-icon"></ion-icon><ion-icon name="star-sharp"
+                                class="star-icon"></ion-icon><ion-icon name="star-half-sharp"
+                                class="star-icon"></ion-icon>
+                            <p>4.1</p>
+                        </div>
+                    </div>
+                    <button class="button">Add</button>
+                </div>
+                <!--govo soundbar -->
+                <div class="products-items">
+                    <a href="#"><img class="product-img"
+                            src="https://rukminim1.flixcart.com/image/426/352/xif0q/speaker/t/g/g/-original-imahfg2n9cvzfjsz.jpeg?q=60&crop=false"
+                            width="120px" height="120px" alt="sandoor"></a><br>
+                    <div class="mobile-details-container">
+                        <p class="mobile-brand-name">Lg</p>
+                        <p class="mobile-name">S65T,Dolby Atoms</p>
+                        <p ><span class="rate">Rs.22900</span> <del class="rate-del">Rs.37,900</del></p>
+                        <div class="review-container">
+                            <p class="percentage">39%OFF</p>
+                        </div>
+                        <div class="star-review">
+                            <ion-icon name="star-sharp" class="star-icon"></ion-icon><ion-icon name="star-sharp"
+                                class="star-icon"></ion-icon><ion-icon name="star-sharp"
+                                class="star-icon"></ion-icon><ion-icon name="star-sharp"
+                                class="star-icon"></ion-icon><ion-icon name="star-half-sharp"
+                                class="star-icon"></ion-icon>
+                            <p>4.5</p>
+                        </div>
+                    </div>
+                    <button class="button">Add</button>
+                </div>
+                <!--mi powerbanks-->
+                <div class="products-items">
+                    <a href="#"><img class="product-img"
+                            src="https://rukminim1.flixcart.com/image/426/352/xif0q/power-bank/x/y/f/-original-imah2h6hvtzqjzaq.jpeg?q=60&crop=false"
+                            width="120px" height="120px" alt="sandoor"></a><br>
+                    <div class="mobile-details-container">
+                        <p class="mobile-brand-name">Mi</p>
+                        <p class="mobile-name">Mi 10000Mah</p>
+                        <p ><span class="rate">Rs.1499 </span><del class="rate-del">Rs.2,999</del></p>
+                        <div class="review-container">
+                            <p class="percentage">50%OFF</p>
+                        </div>
+                        <div class="star-review">
+                            <ion-icon name="star-sharp" class="star-icon"></ion-icon><ion-icon name="star-sharp"
+                                class="star-icon"></ion-icon><ion-icon name="star-sharp"
+                                class="star-icon"></ion-icon><ion-icon name="star-sharp"
+                                class="star-icon"></ion-icon><ion-icon name="star-half-sharp"
+                                class="star-icon"></ion-icon>
+                            <p>4.1</p>
+                        </div>
+                    </div>
+                    <button class="button">Add</button>
+                </div>
+                <!--alexa echo-->
+                <div class="products-items">
+                    <a href="#"><img class="product-img"
+                            src="https://rukminim1.flixcart.com/image/426/352/xif0q/speaker/smart-speaker/a/6/l/b09b917z8d-alexa-original-imah4wy9zzezh5pv.jpeg?q=60&crop=false"
+                            width="120px" height="120px" alt="sandoor"></a><br>
+                    <div class="mobile-details-container">
+                        <p class="mobile-brand-name">Alexa</p>
+                        <p class="mobile-name">Echo Dot(5Th Gen)</p>
+                        <p ><span class="rate">Rs.5999 </span><del class="rate-del">Rs.6,999</del></p>
+                        <div class="review-container">
+                            <p class="percentage">10%OFF</p>
+                        </div>
+                        <div class="star-review">
+                            <ion-icon name="star-sharp" class="star-icon"></ion-icon><ion-icon name="star-sharp"
+                                class="star-icon"></ion-icon><ion-icon name="star-sharp"
+                                class="star-icon"></ion-icon><ion-icon name="star-sharp"
+                                class="star-icon"></ion-icon><ion-icon name="star-half-sharp"
+                                class="star-icon"></ion-icon>
+                            <p>4.4</p>
+                        </div>
+                    </div>
+                    <button class="button">Add</button>
+                </div>
+                <!--mobile speakers-->
+                <div class="products-items">
+                    <a href="#"><img class="product-img"
+                            src="https://rukminim1.flixcart.com/image/426/352/xif0q/speaker/u/v/k/-original-imah2d55btvqbh4b.jpeg?q=60&crop=false"
+                            width="120px" height="120px" alt="sandoor"></a><br>
+                    <div class="mobile-details-container">
+                        <p class="mobile-brand-name">Boat</p>
+                        <p class="mobile-name">Stone 350 Pro</p>
+                        <p ><span class="rate">Rs.1999 </span><del class="rate-del">Rs.5,999</del></p>
+                        <div class="review-container">
+                            <p class="percentage">72%OFF</p>
+                        </div>
+                        <div class="star-review">
+                            <ion-icon name="star-sharp" class="star-icon"></ion-icon><ion-icon name="star-sharp"
+                                class="star-icon"></ion-icon><ion-icon name="star-sharp"
+                                class="star-icon"></ion-icon><ion-icon name="star-sharp"
+                                class="star-icon"></ion-icon><ion-icon name="star-half-sharp"
+                                class="star-icon"></ion-icon>
+                            <p>4.5</p>
+                        </div>
+                    </div>
+                    <button class="button">Add</button>
+                </div>
+                <!--playstation 5-->
+                <div class="products-items">
+                    <a href="#"><img class="product-img"
+                            src="https://rukminim1.flixcart.com/image/426/352/xif0q/gamingconsole/c/e/0/n-a-cfi-2008a01-sony-n-a-original-imah8xv8syzpnes8.jpeg?q=60&crop=false"
+                            width="120px" height="120px" alt="sandoor"></a><br>
+                    <div class="mobile-details-container">
+                        <p class="mobile-brand-name">Sony</p>
+                        <p class="mobile-name">Ps5 Console CFI</p>
+                        <p ><span class="rate">Rs.54499</span> <del class="rate-del">Rs.59,499</del></p>
+                        <div class="review-container">
+                            <p class="percentage">12%OFF</p>
+                        </div>
+                        <div class="star-review">
+                            <ion-icon name="star-sharp" class="star-icon"></ion-icon><ion-icon name="star-sharp"
+                                class="star-icon"></ion-icon><ion-icon name="star-sharp"
+                                class="star-icon"></ion-icon><ion-icon name="star-sharp"
+                                class="star-icon"></ion-icon><ion-icon name="star-half-sharp"
+                                class="star-icon"></ion-icon>
+                            <p>4.1</p>
+                        </div>
+                    </div>
+                    <button class="button">Add</button>
+                </div>
+                <!--Camera cctv-->
+                <div class="products-items">
+                    <a href="#"><img class="product-img"
+                            src="https://rukminim1.flixcart.com/image/426/352/xif0q/home-security-camera/t/2/v/16-cp-uvr-1601e1-ic2-svhdcvi-632h-cmb-516-indoor-outdoor-original-imahdkdxpkzhzgsh.jpeg?q=60&crop=false"
+                            width="120px" height="120px" alt="sandoor"></a><br>
+                    <div class="mobile-details-container">
+                        <p class="mobile-brand-name">Cp Plus</p>
+                        <p class="mobile-name">Cp 16 Channels</p>
+                        <p ><span class="rate">Rs.19000</span> <del class="rate-del">Rs.29,000</del></p>
+                        <div class="review-container">
+                            <p class="percentage">37%OFF</p>
+                        </div>
+                        <div class="star-review">
+                            <ion-icon name="star-sharp" class="star-icon"></ion-icon><ion-icon name="star-sharp"
+                                class="star-icon"></ion-icon><ion-icon name="star-sharp"
+                                class="star-icon"></ion-icon><ion-icon name="star-sharp"
+                                class="star-icon"></ion-icon><ion-icon name="star-half-sharp"
+                                class="star-icon"></ion-icon>
+                            <p>4.1</p>
+                        </div>
+                    </div>
+                    <button class="button">Add</button>
+                </div>
+
+
+
+
+            </div>
+        </div><br>
+      
+        <!--products details Electronics-->
+        
+        <!--products details Toys and Baby-->
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+
+
+
+
+
+</body>
+<!--script external files insert-->
+<script src="../app.js"></script>
+<!--cart ja external files-->
+<script src="../cart.js"></script>
+<!--bootstrap js files insert-->
+<script src="../bootstrap-5.3.5-dist/js/bootstrap.min.js">
+</script>
+<!--icons iconic websites script-->
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+
+
+<script>
+    const username = document.getElementById('username');
+    var value = localStorage.getItem('username');
+    username.innerText = value;
+</script>
+</html>

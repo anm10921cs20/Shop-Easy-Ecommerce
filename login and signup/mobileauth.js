@@ -31,14 +31,24 @@ function register() {
   var username = document.getElementById('username').value;
   const loginForm = document.getElementsByClassName('login-container')[0];
   const registerForm = document.getElementsByClassName('register-container')[0];
+   var alertmessge =  document.getElementById('alertcontainer');
+      var counter = 2;
   console.log(email, pwd, username)
 
-
+localStorage.setItem('username',username);
 
 
  auth.createUserWithEmailAndPassword(email, pwd).then((userCredential)=>
 {
   var user = userCredential.user.uid;
+   alertmessge.style.display = "block"
+     alertmessge.style.backgroundColor = "var(--bs-success)";
+      alertmessge.innerText = "Register Successfully";
+  loginForm.style.display = "block";
+  registerForm.style.display = "none";
+  document.getElementById('register-email').value = "";
+  document.getElementById('register-password').value = "";
+  document.getElementById('username').value = "";
   database.ref('shopeasy login/' + username).set({
   username: username,
   email:email,
@@ -62,34 +72,86 @@ function login() {
   var loginemail = document.getElementById('loginemail').value;
   var loginpwd = document.getElementById('loginpassword').value;
 
+
   auth.signInWithEmailAndPassword(loginemail,loginpwd)
   .then(() => {
     var user = auth.currentUser;
     var uid = user.uid;
-    window.alert('success')
-    window.location.replace('https://shop-easy-ecommerce.vercel.app/');
+    var alertmessge =  document.getElementById('alertcontainer');
+     alertmessge.style.display = "block"
+     alertmessge.style.backgroundColor = "var(--bs-success)";
+      alertmessge.innerText = "Logging Successfully";
+    window.location.replace('../../home/home.html');
 
 
   })
     .catch((error) => {
       var errorCode = error.code;
       var errorMessage = error.message;
+      var alertmessge =  document.getElementById('alertcontainer');
+      var counter = 2;
+     
+      
 
-      console.log(errormessage)
-      console.log(errorCode)
 
     if (errorCode === "auth/internal-error") {
-      alert("Your password is wrong.");
+     alertmessge.style.display = "block"
+     alertmessge.style.backgroundColor = "var(--bs-danger)";
+      alertmessge.innerText = "Your Password is Wrong";
+      var interval = setInterval(()=>
+      {
+        counter--;
+        if(counter<0)
+        {
+          clearInterval(interval);
+          alertmessge.style.display="none";
+        }
+      },1000)
+
+
     }
     if (errorCode === "auth/wrong-password") {
-    alert('user not found')
+      alertmessge.style.display = "block"
+     alertmessge.style.backgroundColor = "var(--bs-danger)";
+      alertmessge.innerText = "User Not Found";
+      var interval = setInterval(()=>
+      {
+        counter--;
+        if(counter<0)
+        {
+          clearInterval(interval);
+          alertmessge.style.display="none";
+        }
+      },1000)
+
+      
     }  else if (errorCode === "auth/user-not-found") {
-      alert("Email not registered.");
+      alertmessge.style.display = "block"
+     alertmessge.style.backgroundColor = "var(--bs-danger)";
+      alertmessge.innerText = "Email Not Registered";
+      var interval = setInterval(()=>
+      {
+        counter--;
+        if(counter<0)
+        {
+          clearInterval(interval);
+          alertmessge.style.display="none";
+        }
+      },1000)
     } else if (errorCode === "auth/invalid-email") {
-      alert("The email address is badly formatted.");
-    } else {
-      alert("Login failed: " + errorMessage);
-    }
+      alertmessge.style.display = "block"
+     alertmessge.style.backgroundColor = "var(--bs-danger)";
+      alertmessge.innerText = "The email address is badly formatted.";
+      var interval = setInterval(()=>
+      {
+        counter--;
+        if(counter<0)
+        {
+          clearInterval(interval);
+          alertmessge.style.display="none";
+        }
+      },1000)
+    } 
 
       
       
@@ -99,31 +161,7 @@ function login() {
 
 }
 
-function admin()
-{
-  auth.onAuthStateChanged(function(user) {
-  if (user) {
-    getUserData(user.uid);
-  }
-});
 
-function getUserData(uid) {
-  firebase.database().ref('shopeasy login/' + uid).once('value')
-    .then((snapshot) => {
-      if (snapshot.exists()) {
-        const data = snapshot.val();
-        console.log("👤 Username:", data.username);
-        console.log("📧 Email:", data.email);
-        alert(`Welcome ${data.username} (${data.email})`);
-      } else {
-        console.log("No data found.");
-      }
-    })
-    .catch((error) => {
-      console.error("Error getting data:", error);
-    });
-}
-}
 
 
 
