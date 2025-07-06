@@ -15,7 +15,6 @@ emailBtn.addEventListener('click',()=>
 {
     registerForm.style.display ="block";
     loginForm.style.display = "none";
-    
 })
 loginBtn.addEventListener('click',()=>
 {

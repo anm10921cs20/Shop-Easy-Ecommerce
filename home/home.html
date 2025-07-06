@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="theme-color" content="#ffffff">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Cache-Control" content="no-store" />
     <!--app title-->
     <title>ShopEasy</title>
     <!--logo image added-->
@@ -19,6 +20,13 @@
     <!--cart external style sheet-->
 
     <link rel="stylesheet" href="../cart.css" type="text/css">
+
+    <!-- fiere base -->
+
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
 
     <!--fontawsesome cdn insert-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
@@ -64,7 +72,8 @@
             <div class="nav-bar-head">
                 <div class="nav-bar-head_sub">
                     <a href="#">
-                        <h5 id="username" class="h6 text-light"><i class="fas fa-user nav-head_sub-icon"></i>Login & Signup</h5>
+                        <h5 id="username" class="h6 text-light"><i class="fas fa-user nav-head_sub-icon"></i>Login &
+                            Signup</h5>
                     </a>
 
                 </div>
@@ -120,12 +129,13 @@
             <div class="items-total-title">Total Items:</div>
             <div class="items-total" id="cart-counter">0</div>
         </div>
-        <div class="table-details">   <div class="Short-detail">Order Details</div>
-        <div class="short-detail-list" id="opencart"> Click here</div>
+        <div class="table-details">
+            <div class="Short-detail">Order Details</div>
+            <div class="short-detail-list" id="opencart"> Click here</div>
 
-        
-    </div><br>
-     
+
+        </div><br>
+
         <button class="cart-btn">Checkout</button><br>
     </div>
 
@@ -134,40 +144,41 @@
     <div class="tabledetails" id="tabledetails">
         <h6 class="tabletitle">Broncher</h6>
         <button class="btn-close" id="btn-close"></button><br><br>
-         <div class="table-container" id="table-container">
-        
-        <table id="table">
-            <thead>
-                <tr>
-                <td>Name</td>
-                <td>QTY</td>
-                <td>Price</td>
-                <td>Amt</td>
-            </tr>
-            </thead>
-            
-            <tfoot>
-                <tr>
-                    <td>total</td>
-                    <td id="carttotalcount"></td>
-                    <td colspan="2" id="total">Rs.00</td>
-                </tr>
-            </tfoot>
-        </table>
-      
+        <div class="table-container" id="table-container">
+
+            <table id="table">
+                <thead>
+                    <tr>
+                        <td>Name</td>
+                        <td>QTY</td>
+                        <td>Price</td>
+                        <td>Amt</td>
+                    </tr>
+                </thead>
+
+                <tfoot>
+                    <tr>
+                        <td>total</td>
+                        <td id="carttotalcount"></td>
+                        <td colspan="2" id="total">Rs.00</td>
+                    </tr>
+                </tfoot>
+            </table>
+
+        </div>
+        <button class="btntable" onclick="downloadable()">download click</button><br>
+        <iframe name="print_frame" width="0" height="0" frameborder="0" src="about:blank"></iframe>
     </div>
-      <button class="btntable" onclick="downloadable()">download click</button><br>
-      <iframe name="print_frame" width="0" height="0" frameborder="0" src="about:blank"></iframe>
-    </div>
-   
-  
+
+
 
 
 
     <!--alert container-->
 
     <div id="alertcontainer" class="alertcontainer">
-      <i class="fas fa-shopping-cart"></i><p class="para-alert" id="para-alert">Successful added to cart</p> 
+        <i class="fas fa-shopping-cart"></i>
+        <p class="para-alert" id="para-alert">Successful added to cart</p>
     </div>
 
     <!--main container-->
@@ -627,7 +638,7 @@
                     <div class="mobile-details-container">
                         <p class="mobile-brand-name">Google</p>
                         <p class="mobile-name">Pixel 9 5G</p>
-                        <p ><span class="rate">Rs.74999</span> <del class="rate-del">Rs.79,999</del></p>
+                        <p><span class="rate">Rs.74999</span> <del class="rate-del">Rs.79,999</del></p>
                         <div class="review-container">
                             <p class="percentage">6%OFF</p>
                         </div>
@@ -650,7 +661,7 @@
                     <div class="mobile-details-container">
                         <p class="mobile-brand-name">Motroala</p>
                         <p class="mobile-name">Edge 50 Fusion 5G</p>
-                        <p ><span class="rate">Rs.18999</span> <del class="rate-del">Rs.25,999</del></p>
+                        <p><span class="rate">Rs.18999</span> <del class="rate-del">Rs.25,999</del></p>
                         <div class="review-container">
                             <p class="percentage">26%OFF</p>
                         </div>
@@ -673,7 +684,7 @@
                     <div class="mobile-details-container">
                         <p class="mobile-brand-name">OnePlus</p>
                         <p class="mobile-name">Nord CE4 Lite 5G</p>
-                        <p ><span class="rate">Rs.16889</span> <del class="rate-del">Rs.20,999</del></p>
+                        <p><span class="rate">Rs.16889</span> <del class="rate-del">Rs.20,999</del></p>
                         <div class="review-container">
                             <p class="percentage">9%OFF</p>
                         </div>
@@ -696,7 +707,7 @@
                     <div class="mobile-details-container">
                         <p class="mobile-brand-name">Apple</p>
                         <p class="mobile-name">Iphone 16 Pro Max 5G</p>
-                        <p ><span class="rate">Rs.177900</span> <del class="rate-del">Rs.1,84,900</del></p>
+                        <p><span class="rate">Rs.177900</span> <del class="rate-del">Rs.1,84,900</del></p>
                         <div class="review-container">
                             <p class="percentage">3%OFF</p>
                         </div>
@@ -719,7 +730,7 @@
                     <div class="mobile-details-container">
                         <p class="mobile-brand-name">Realme</p>
                         <p class="mobile-name">Realme P3 5G</p>
-                        <p ><span class="rate">Rs.18499</span> <del class="rate-del">Rs.22,999</del></p>
+                        <p><span class="rate">Rs.18499</span> <del class="rate-del">Rs.22,999</del></p>
                         <div class="review-container">
                             <p class="percentage">19%OFF</p>
                         </div>
@@ -742,7 +753,7 @@
                     <div class="mobile-details-container">
                         <p class="mobile-brand-name">Vivo</p>
                         <p class="mobile-name"> T4 5G</p>
-                        <p ><span class="rate">Rs.21999</span> <del class="rate-del">Rs.25,999</del></p>
+                        <p><span class="rate">Rs.21999</span> <del class="rate-del">Rs.25,999</del></p>
                         <div class="review-container">
                             <p class="percentage">15%OFF</p>
                         </div>
@@ -765,7 +776,7 @@
                     <div class="mobile-details-container">
                         <p class="mobile-brand-name">Oppo</p>
                         <p class="mobile-name">Reno 12 5G</p>
-                        <p ><span class="rate">Rs.20999</span> <del class="rate-del">Rs.43,999</del></p>
+                        <p><span class="rate">Rs.20999</span> <del class="rate-del">Rs.43,999</del></p>
                         <div class="review-container">
                             <p class="percentage">52%OFF</p>
                         </div>
@@ -788,7 +799,7 @@
                     <div class="mobile-details-container">
                         <p class="mobile-brand-name">Poco</p>
                         <p class="mobile-name">Poco C75 5G</p>
-                        <p ><span class="rate">Rs.8499 </span><del class="rate-del">Rs.11,499</del></p>
+                        <p><span class="rate">Rs.8499 </span><del class="rate-del">Rs.11,499</del></p>
                         <div class="review-container">
                             <p class="percentage">26%OFF</p>
                         </div>
@@ -811,7 +822,7 @@
                     <div class="mobile-details-container">
                         <p class="mobile-brand-name">Redmi</p>
                         <p class="mobile-name">Note 14Pro 5G</p>
-                        <p ><span class="rate">Rs.23999</span> <del class="rate-del">Rs.28,000</del></p>
+                        <p><span class="rate">Rs.23999</span> <del class="rate-del">Rs.28,000</del></p>
                         <div class="review-container">
                             <p class="percentage">19%OFF</p>
                         </div>
@@ -834,7 +845,7 @@
                     <div class="mobile-details-container">
                         <p class="mobile-brand-name">Nothing</p>
                         <p class="mobile-name"> (3a) Pro 5G</p>
-                        <p ><span class="rate">Rs.33000</span> <del class="rate-del">Rs.36,000</del></p>
+                        <p><span class="rate">Rs.33000</span> <del class="rate-del">Rs.36,000</del></p>
                         <div class="review-container">
                             <p class="percentage">8%OFF</p>
                         </div>
@@ -857,7 +868,7 @@
                     <div class="mobile-details-container">
                         <p class="mobile-brand-name">Infinix</p>
                         <p class="mobile-name">Hot 50 5G</p>
-                        <p ><span class="rate">Rs.10499</span> <del class="rate-del">Rs.15,000</del></p>
+                        <p><span class="rate">Rs.10499</span> <del class="rate-del">Rs.15,000</del></p>
                         <div class="review-container">
                             <p class="percentage">30%OFF</p>
                         </div>
@@ -880,7 +891,7 @@
                     <div class="mobile-details-container">
                         <p class="mobile-brand-name">Lava</p>
                         <p class="mobile-name">Blaze Amoled 5G</p>
-                        <p ><span class="rate">Rs.16000</span> <del class="rate-del">Rs.19,000</del></p>
+                        <p><span class="rate">Rs.16000</span> <del class="rate-del">Rs.19,000</del></p>
                         <div class="review-container">
                             <p class="percentage">15%OFF</p>
                         </div>
@@ -917,7 +928,7 @@
                     <div class="mobile-details-container">
                         <p class="mobile-brand-name">Noise</p>
                         <p class="mobile-name">CMF By Watch Pro</p>
-                        <p ><span class="rate">Rs.5500 </span><del class="rate-del">Rs.6,000</del></p>
+                        <p><span class="rate">Rs.5500 </span><del class="rate-del">Rs.6,000</del></p>
                         <div class="review-container">
                             <p class="percentage">8%OFF</p>
                         </div>
@@ -941,7 +952,7 @@
                     <div class="mobile-details-container">
                         <p class="mobile-brand-name">OnePlus</p>
                         <p class="mobile-name">Neckband Pro</p>
-                        <p ><span class="rate">Rs.1499 </span><del class="rate-del">Rs.1,999</del></p>
+                        <p><span class="rate">Rs.1499 </span><del class="rate-del">Rs.1,999</del></p>
                         <div class="review-container">
                             <p class="percentage">16%OFF</p>
                         </div>
@@ -964,7 +975,7 @@
                     <div class="mobile-details-container">
                         <p class="mobile-brand-name">Boat</p>
                         <p class="mobile-name">Air Headphone Neo</p>
-                        <p ><span class="rate">Rs.2999 </span><del class="rate-del">Rs.3,999</del></p>
+                        <p><span class="rate">Rs.2999 </span><del class="rate-del">Rs.3,999</del></p>
                         <div class="review-container">
                             <p class="percentage">26%OFF</p>
                         </div>
@@ -987,7 +998,7 @@
                     <div class="mobile-details-container">
                         <p class="mobile-brand-name">Realme</p>
                         <p class="mobile-name">Buds T200 Lite</p>
-                        <p ><span class="rate">Rs.1399 </span><del class="rate-del">Rs.1,999</del></p>
+                        <p><span class="rate">Rs.1399 </span><del class="rate-del">Rs.1,999</del></p>
                         <div class="review-container">
                             <p class="percentage">30%OFF</p>
                         </div>
@@ -1010,7 +1021,7 @@
                     <div class="mobile-details-container">
                         <p class="mobile-brand-name">Lg</p>
                         <p class="mobile-name">S65T,Dolby Atoms</p>
-                        <p ><span class="rate">Rs.22900</span> <del class="rate-del">Rs.37,900</del></p>
+                        <p><span class="rate">Rs.22900</span> <del class="rate-del">Rs.37,900</del></p>
                         <div class="review-container">
                             <p class="percentage">39%OFF</p>
                         </div>
@@ -1033,7 +1044,7 @@
                     <div class="mobile-details-container">
                         <p class="mobile-brand-name">Mi</p>
                         <p class="mobile-name">Mi 10000Mah</p>
-                        <p ><span class="rate">Rs.1499 </span><del class="rate-del">Rs.2,999</del></p>
+                        <p><span class="rate">Rs.1499 </span><del class="rate-del">Rs.2,999</del></p>
                         <div class="review-container">
                             <p class="percentage">50%OFF</p>
                         </div>
@@ -1056,7 +1067,7 @@
                     <div class="mobile-details-container">
                         <p class="mobile-brand-name">Alexa</p>
                         <p class="mobile-name">Echo Dot(5Th Gen)</p>
-                        <p ><span class="rate">Rs.5999 </span><del class="rate-del">Rs.6,999</del></p>
+                        <p><span class="rate">Rs.5999 </span><del class="rate-del">Rs.6,999</del></p>
                         <div class="review-container">
                             <p class="percentage">10%OFF</p>
                         </div>
@@ -1079,7 +1090,7 @@
                     <div class="mobile-details-container">
                         <p class="mobile-brand-name">Boat</p>
                         <p class="mobile-name">Stone 350 Pro</p>
-                        <p ><span class="rate">Rs.1999 </span><del class="rate-del">Rs.5,999</del></p>
+                        <p><span class="rate">Rs.1999 </span><del class="rate-del">Rs.5,999</del></p>
                         <div class="review-container">
                             <p class="percentage">72%OFF</p>
                         </div>
@@ -1102,7 +1113,7 @@
                     <div class="mobile-details-container">
                         <p class="mobile-brand-name">Sony</p>
                         <p class="mobile-name">Ps5 Console CFI</p>
-                        <p ><span class="rate">Rs.54499</span> <del class="rate-del">Rs.59,499</del></p>
+                        <p><span class="rate">Rs.54499</span> <del class="rate-del">Rs.59,499</del></p>
                         <div class="review-container">
                             <p class="percentage">12%OFF</p>
                         </div>
@@ -1125,7 +1136,7 @@
                     <div class="mobile-details-container">
                         <p class="mobile-brand-name">Cp Plus</p>
                         <p class="mobile-name">Cp 16 Channels</p>
-                        <p ><span class="rate">Rs.19000</span> <del class="rate-del">Rs.29,000</del></p>
+                        <p><span class="rate">Rs.19000</span> <del class="rate-del">Rs.29,000</del></p>
                         <div class="review-container">
                             <p class="percentage">37%OFF</p>
                         </div>
@@ -1146,9 +1157,9 @@
 
             </div>
         </div><br>
-      
+
         <!--products details Electronics-->
-        
+
         <!--products details Toys and Baby-->
 
 
@@ -1183,5 +1194,10 @@
     const username = document.getElementById('username');
     var value = localStorage.getItem('username');
     username.innerText = value;
+
+
+
+
 </script>
+
 </html>

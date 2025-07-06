@@ -99,6 +99,7 @@
     // .register-container
     .register-container
     {
+        
          background-image: $primary-bg;
         padding: 60px 60px;
         box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
@@ -234,6 +235,8 @@
         height: 40px;
         background-color: var(--bs-danger);
         color: var(--bs-light);
+        text-align: center;
+        padding: 5px;
         display: none;
     }
    

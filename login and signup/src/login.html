@@ -19,6 +19,8 @@
 <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
 <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
 <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-database.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+
 
 </head>
 
@@ -54,10 +56,10 @@
                 <input type="password" id="register-password" name="password" class="register-password"
                     placeholder="Password 8digit" pattern="[a-zA-Z0-9]{8}" required><br>
                 <label>Confirm Password</label><br>
-                <input type="password" id="loginpassword" name="password" class="loginpassword"
+                <input type="password" id="confirm-password" name="password" class="loginpassword"
                     placeholder="Password 8digit" pattern="[a-zA-Z0-9]{8}" required><br><br>
                     <p id="error" style="color: red;"></p>
-                <button class="register-btn" onclick="register()">Register</button><br><br>
+                <button class="register-btn" id="submitregister" onclick="register()">Register</button><br><br>
                 <p class="forget">forget password</p>
                 <p>if You already account <span class="login" id="login">login</span></p>
             </div>
@@ -92,7 +94,7 @@
         </div>
 
         <div class="alertcontainer" id="alertcontainer">
-
+            
         </div>
     </div>
 </body>

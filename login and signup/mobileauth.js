@@ -17,11 +17,38 @@ const firebaseConfig = {
   appId: "1:873909040901:web:57ae96e0121ca5b6d9e96c"
 };
 
+
+
+
+
+
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
 
 const auth = firebase.auth();
 const database = firebase.database();
+
+
+
+const userDetails = id => {
+    window.localStorage.setItem('currently_loggedIn',id)
+}
+
+window.onload = () =>
+{
+    try{
+        const currentUser = window.localStorage.getItem('currently-loggedIn');
+        if(currentUser === null)
+        {
+            throw new Error('No Current User Found')
+        }else
+        {
+            userDetails(currentUser);
+        }
+    }catch(err){
+        logincontainer.style.display = "block";
+    }
+}
 
 
 
@@ -35,7 +62,7 @@ function register() {
   var counter = 2;
   console.log(email, pwd, username)
 
-  localStorage.setItem('username', username);
+  localStorage.setItem('usernames', username);
 
 
   auth.createUserWithEmailAndPassword(email, pwd).then((userCredential) => {
@@ -52,7 +79,7 @@ function register() {
       email: email,
     });
 
-    alert('success stored')
+
     alertmessge.style.display = "block"
     alertmessge.style.backgroundColor = "var(--bs-success)";
     alertmessge.innerText = "Register Successfully";
@@ -66,7 +93,16 @@ function register() {
   })
     .catch((error) => {
       var errormessge = error.message;
-      alert(errormessge);
+      alertmessge.style.display = "block"
+      alertmessge.style.backgroundColor = "var(--bs-danger)";
+      alertmessge.innerText = errormessge;
+      var interval = setInterval(() => {
+        counter--;
+        if (counter < 0) {
+          clearInterval(interval);
+          alertmessge.style.display = "none";
+        }
+      }, 1000)
     });
 
 
@@ -84,6 +120,7 @@ function login() {
     .then(() => {
       var user = auth.currentUser;
       var uid = user.uid;
+      userDetails(uid)
       var alertmessge = document.getElementById('alertcontainer');
       alertmessge.style.display = "block"
       alertmessge.style.backgroundColor = "var(--bs-success)";

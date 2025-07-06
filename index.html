@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="theme-color" content="#ffffff">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Cache-Control" content="no-store" />
     <!--app title-->
     <title>ShopEasy</title>
     <!--logo image added-->
@@ -1165,7 +1166,18 @@
 
 
 
-
+<script>
+    function login()
+    {
+        firebase.auth().onAuthStateChanged(function(user) {
+    if (!user) {
+      // If no user is logged in, redirect to login page
+      window.location.replace("https://shop-easy-ecommerce.vercel.app/login%20and%20signup/src/login.html");
+    }
+  });
+    }
+  
+</script>
 
 </body>
 <!--script external files insert-->
