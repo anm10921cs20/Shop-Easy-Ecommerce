@@ -169,7 +169,7 @@ cartCheckBtn.addEventListener('click',() =>
         if(openlogin>0)
         {
             clearInterval(openinterval);
-            window.location.href = "https://shop-easy-ecommerce.vercel.app/";
+            window.location.href = "https://shop-easy-ecommerce.vercel.app/login%20and%20signup/src/login.html";
         }
     },1000)
     

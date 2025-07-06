@@ -66,38 +66,25 @@ function login() {
   .then(() => {
     var user = auth.currentUser;
     var uid = user.uid;
-    window.alert('success')
-    window.location.replace('https://shop-easy-ecommerce.vercel.app/');
-
-
+    
+    if(uid === "ePzJQJPm3dZ9F1kjrPx01F44UtX2" )
+    {
+      window.location.href = "https://shop-easy-ecommerce.vercel.app/"
+    }
+    else
+    {
+      window.alert('wrong')
+    }
   })
-    .catch((error) => {
-      var errorCode = error.code;
-      var errormessage = error.message;
+  .catch((error)=>
+  {
+    document.getElementById('login-message').innerHTML = error.message;
+  })
 
-      console.log(errormessage)
-      console.log(errorCode)
-
-    if (errorCode === "auth/internal-error") {
-      alert("Your password is wrong.");
-    }
-    if (errorCode === "auth/wrong-password") {
-    alert('user not found')
-    }  else if (errorCode === "auth/user-not-found") {
-      alert("Email not registered.");
-    } else if (errorCode === "auth/invalid-email") {
-      alert("The email address is badly formatted.");
-    } else {
-      alert("Login failed: " + errorMessage);
-    }
-
-      
-      
-    })
-
-
-
+  
 }
+
+
 
 function admin()
 {
