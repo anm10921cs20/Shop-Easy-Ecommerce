@@ -99,7 +99,6 @@
     // .register-container
     .register-container
     {
-        display: block;
          background-image: $primary-bg;
         padding: 60px 60px;
         box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
@@ -320,17 +319,21 @@
     .close-icon
     {
        visibility: hidden;
-        position: absolute;
-        right: 69px;
-        bottom: 2px;
+        position: fixed;
+        padding: 10px;
+       right: 25%;
+        bottom: 43.4%; 
 
+       
        
     }
     .fa-eye
     {
-        position: absolute;
-            right: 69px;
-             bottom: 2px;
+        position: fixed;
+        padding: 10px;
+       right: 25%;
+        bottom: 43.4%; 
+
            
     }
     

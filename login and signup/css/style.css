@@ -69,7 +69,6 @@
     cursor: pointer;
   }
   .register-container {
-    display: block;
     background-image: linear-gradient(to right top, #d16ba5, #c777b9, #ba83ca, #aa8fd8, #9a9ae1, #8aa7ec, #79b3f4, #69bff8, #52cffe, #41dfff, #46eefa, #5ffbf1);
     padding: 60px 60px;
     box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
@@ -260,14 +259,16 @@
   }
   .close-icon {
     visibility: hidden;
-    position: absolute;
-    right: 69px;
-    bottom: 2px;
+    position: fixed;
+    padding: 10px;
+    right: 25%;
+    bottom: 43.4%;
   }
   .fa-eye {
-    position: absolute;
-    right: 69px;
-    bottom: 2px;
+    position: fixed;
+    padding: 10px;
+    right: 25%;
+    bottom: 43.4%;
   }
 }
 @media screen and (min-width: 768px) and (max-width: 1023px) {
