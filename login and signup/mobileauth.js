@@ -79,36 +79,29 @@ function googleLogin()
   var alertmessge = document.getElementById('alertcontainer');
   
   var counter = 2;
-  auth.signInWithPopup(google).then((result)=>
-  {
-    const user = result.user;
-     alertmessge.style.display = "block"
-      alertmessge.style.backgroundColor = "var(--bs-success)";
-      alertmessge.innerText = "login Successfully";
-      var interval = setInterval(() => {
-        counter--;
-        if (counter < 0) {
-          clearInterval(interval);
-          alertmessge.style.display = "none";
-        }
-      }, 1000)
-    localStorage.setItem('displayname',user.displayName);
-    window.location.replace('../../home/home.html');
-  }).catch((err)=>{
-    alertmessge.style.display = "block";
-    alertmessge.style.fontSize="12px";
-      alertmessge.style.backgroundColor = "var(--bs-danger)";
-      alertmessge.innerText = err.message;
-      var interval = setInterval(() => {
-        counter--;
-        if (counter < 0) {
-          clearInterval(interval);
-          alertmessge.style.fontSize="18px";
-          alertmessge.style.display = "none";
-        }
-      }, 1000)
-  })
+ 
+
+
+
+  auth.signInWithRedirect(google);
+
+
+  getRedirectResult(auth)
+.then((result)=>{
+  if (result) {
+      var user = result.user;
+      console.log("name: " + user.displayName);
+      // Handle signed-in user
+    }
+}).catch((err)=>{
+alert(err.message)
+})
+
+
+  
 }
+  
+
 
 
 
