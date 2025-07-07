@@ -237,6 +237,20 @@
     display: block;
     margin: 0 auto;
   }
+  .fa-google {
+    width: 30px;
+    height: 30px;
+    margin-left: 10px;
+  }
+  .fa-envelope {
+    width: 30px;
+    height: 30px;
+    margin-right: 12px;
+  }
+  .fa-facebook {
+    width: 30px;
+    height: 30px;
+  }
 }
 @media screen and (min-width: 768px) and (max-width: 1023px) {
   body {

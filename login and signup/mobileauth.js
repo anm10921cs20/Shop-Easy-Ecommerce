@@ -73,15 +73,36 @@ window.onload = () => {
 
 function googleLogin()
 {
+  var alertmessge = document.getElementById('alertcontainer');
+  
+  var counter = 2;
   auth.signInWithPopup(google).then((result)=>
   {
     const user = result.user;
-    alert('login Successfully: '+ user.displayName)
-    console.log(user);
+     alertmessge.style.display = "block"
+      alertmessge.style.backgroundColor = "var(--bs-success)";
+      alertmessge.innerText = "login Successfully";
+      var interval = setInterval(() => {
+        counter--;
+        if (counter < 0) {
+          clearInterval(interval);
+          alertmessge.style.display = "none";
+        }
+      }, 1000)
     localStorage.setItem('displayname',user.displayName);
     window.location.replace('../../home/home.html');
   }).catch((err)=>{
-    alert('error: '+ err.message );
+    alertmessge.style.display = "block";
+    alertmessge.style.fontSize="12px";
+      alertmessge.style.backgroundColor = "var(--bs-danger)";
+      alertmessge.innerText = err.message;
+      var interval = setInterval(() => {
+        counter--;
+        if (counter < 0) {
+          clearInterval(interval);
+          alertmessge.style.display = "none";
+        }
+      }, 1000)
   })
 }
 
@@ -163,7 +184,7 @@ function register() {
 
       database.ref("shopeasy/" + username).set({
         username:username,
-        email:username
+        email:email
       })
       alertmessge.style.display = "block"
       alertmessge.style.backgroundColor = "var(--bs-success)";

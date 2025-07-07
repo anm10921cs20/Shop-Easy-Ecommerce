@@ -209,7 +209,7 @@
     {
         overflow-y:scroll;
         scroll-behavior: smooth;
-        height: 650px;
+        height: 620px;
     }
     .cart-content::-webkit-scrollbar
     {
@@ -297,6 +297,16 @@
     .cart-btn
     {
         width: 90%;
+        display: block;
+        margin: auto;
+        border: none;
+        padding: 10px;
+        background-color: var(--bs-primary);
+        color: var(--bs-light);
+    }
+    .cart-btn-home
+    {
+         width: 90%;
         display: block;
         margin: auto;
         border: none;
