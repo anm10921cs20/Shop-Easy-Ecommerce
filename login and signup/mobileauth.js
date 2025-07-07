@@ -6,6 +6,8 @@
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
+
+
 // Your web app's Firebase configuration
 const firebaseConfig = {
   apiKey: "AIzaSyCDiJJl_8641jMbS80q4B5jYzD0-TgDVWk",
@@ -30,6 +32,7 @@ const auth = firebase.auth();
 const database = firebase.database();
 const db = firebase.firestore();
 const google = new firebase.auth.GoogleAuthProvider();
+const presistence = auth.setPersistence( firebase.auth.Auth.Persistence.LOCAL)
 
 
 
@@ -229,7 +232,7 @@ function login() {
 
 
 
-  firebase.auth().setPersistence(firebase.auth.Auth.Persistence.LOCAL)
+  auth.setPersistence(firebase.auth.Auth.Persistence.LOCAL)
     .then(() => {
       return auth.signInWithEmailAndPassword(loginemail, loginpwd)
         .then(() => {
@@ -316,7 +319,9 @@ function login() {
 
         })
 
-    })
+
+
+      })
 
     .catch((error) => {
       console.error("Login Error: ", error.message);

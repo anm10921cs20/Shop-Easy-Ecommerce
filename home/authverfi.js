@@ -63,3 +63,10 @@ function signOut()
     })
 }
 
+auth.onAuthStateChanged((user) => {
+  if (user) {
+    console.log("👋 Already logged in:", user.email);
+  } else {
+    console.log("🟡 Not logged in");
+  }
+});
