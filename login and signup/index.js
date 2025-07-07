@@ -63,6 +63,38 @@ forgetBtn.addEventListener('click', () => {
 })
 
 
+//eye icon register
+
+
+
+
+
+
+
+
+
+function showpass()
+{
+    var passwordvalue = document.getElementById('register-password');
+    var closeeye =document.querySelector('.fa-eye-slash');
+    var openeye = document.querySelector('.fa-eye')
+ 
+
+    if(passwordvalue.type === "password")
+    {
+        passwordvalue.type = "text";
+        closeeye.style.visibility = "visible";
+        openeye.style.visibility="hidden";
+    }
+    else
+    {
+        passwordvalue.type = "password";
+        openeye.style.visibility = "visible";
+        closeeye.style.visibility = "hidden";
+      
+     
+    }
+}
 
 
 

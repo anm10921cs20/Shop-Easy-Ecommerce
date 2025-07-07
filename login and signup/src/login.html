@@ -60,6 +60,10 @@
                 <label>Password</label><br>
                 <input type="password" id="register-password" name="password" class="register-password"
                     placeholder="Password 8digit" pattern="[a-zA-Z0-9]{8}" required><br><br>
+                    <div onclick="showpass()" class="eye-icon">
+                        <i  class="fa-solid fa-eye"></i>
+                         <i  class="fa-solid fa-eye-slash close-icon"></i>
+                    </div>
                 
                 <button class="register-btn" id="submitregister" onclick="register()">Register</button><br><br>
                 <p>if You already account <span class="login" id="login">login</span></p>

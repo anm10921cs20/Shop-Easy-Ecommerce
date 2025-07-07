@@ -99,12 +99,13 @@
     // .register-container
     .register-container
     {
-        
+        display: block;
          background-image: $primary-bg;
         padding: 60px 60px;
         box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
         border-radius: 12px;
         color: #fff;
+        position: relative;
     }
      .register-form>label 
      {
@@ -310,6 +311,29 @@
         width: 30px;
         height: 30px;
     }
+    .eye-icon
+    {
+        position: fixed;
+        top: 55.8%;
+        right: 11%; 
+    }
+    .close-icon
+    {
+       visibility: hidden;
+        position: absolute;
+        right: 69px;
+        bottom: 2px;
+
+       
+    }
+    .fa-eye
+    {
+        position: absolute;
+            right: 69px;
+             bottom: 2px;
+           
+    }
+    
 
 
     
