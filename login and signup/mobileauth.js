@@ -100,6 +100,7 @@ function googleLogin()
         counter--;
         if (counter < 0) {
           clearInterval(interval);
+          alertmessge.style.fontSize="18px";
           alertmessge.style.display = "none";
         }
       }, 1000)
