@@ -40,11 +40,24 @@ function googleLogin() {
 
 
   window.onload = function () {
+      const alertmessge = document.getElementById('alertcontainer');
+  let counter = 2;
   auth.getRedirectResult()
     .then((result) => {
       if (result.user) {
         const user = result.user;
-        console.log("Logged in as:", user.displayName);
+        alertmessge.style.display = "block"
+      alertmessge.style.backgroundColor = "var(--bs-success)";
+      alertmessge.innerText = "login Successfully";
+      var interval = setInterval(() => {
+        counter--;
+        if (counter < 0) {
+          clearInterval(interval);
+          alertmessge.style.display = "none";
+        }
+      }, 1000)
+    localStorage.setItem('displayname',user.displayName);
+    window.location.replace('../../home/home.html');
 
         db.collection("users").doc(user.uid).set({
           name: user.displayName,
@@ -53,14 +66,41 @@ function googleLogin() {
         }).then(() => {
           alert("User saved!");
         }).catch((e) => {
-          console.error("Firestore error:", e.message);
+           alertmessge.style.display = "block"
+      alertmessge.style.backgroundColor = "var(--bs-danger)";
+      alertmessge.innerText = "firestore error: " + e.message;
+      var interval = setInterval(() => {
+        counter--;
+        if (counter < 0) {
+          clearInterval(interval);
+          alertmessge.style.display = "none";
+        }
+      }, 1000)
         });
       } else {
-        console.log("No user result");
+        alertmessge.style.display = "block"
+      alertmessge.style.backgroundColor = "var(--bs-danger)";
+      alertmessge.innerText = "No user result";
+      var interval = setInterval(() => {
+        counter--;
+        if (counter < 0) {
+          clearInterval(interval);
+          alertmessge.style.display = "none";
+        }
+      }, 1000)
       }
     })
     .catch((error) => {
-      console.error("Redirect error:", error.message);
+      alertmessge.style.display = "block"
+      alertmessge.style.backgroundColor = "var(--bs-danger)";
+      alertmessge.innerText = "Redirect Error: " + error.message;
+      var interval = setInterval(() => {
+        counter--;
+        if (counter < 0) {
+          clearInterval(interval);
+          alertmessge.style.display = "none";
+        }
+      }, 1000)
     });
 };
 
