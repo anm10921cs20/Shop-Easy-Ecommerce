@@ -56,7 +56,7 @@ function signOut()
         window.localStorage.removeItem('currently_loggedIn');
         window.localStorage.removeItem('filename');
         window.localStorage.removeItem('displayname');
-        window.location.replace('../../index.html')
+        window.location.replace('../index.html')
     })
     .catch(()=>{
         console.log('error while signout')

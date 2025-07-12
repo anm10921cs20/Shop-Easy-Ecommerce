@@ -176,7 +176,7 @@
         margin-left: 4px;
         display: grid;
         align-content: center;
-        grid-template-columns: 2fr 2fr 2fr 2fr;
+        grid-template-columns: 2fr 2fr 2fr 2fr 2fr;
         row-gap: 33px;
         padding: 10px;
         

@@ -474,7 +474,7 @@
 
     body
     {
-        height: 5000px;
+        height: auto;
     }
 
     /* nav container nav-bar */
@@ -694,22 +694,30 @@
     }
 
     /* products collection */
+    .heading-home
+    {
+        font-size: 18px;
+        padding: 0 14px;
+    }
 
     .products-collection
     {
-        width: 90%;
-        margin:auto auto 0 30px;
+        width: 99%;
+        margin: 0 auto;
+        margin-left: 4px;
         display: grid;
         align-content: center;
-        grid-template-columns: 2fr 2fr 2fr 2fr;
-        row-gap: 18px;
-        padding: 10px 15px;
+        grid-template-columns: 2fr 2fr 2fr 2fr 2fr;
+        column-gap: 10px;
+        row-gap: 25px;
+        height: 300px;
+        padding: 0 10px;
         
     }
     .products
     {
-        height: 80px;
-        width: 80px;
+        height: 60px;
+        width: 60px;
     }
     .products-link
     {
@@ -725,7 +733,7 @@
 
     .grocery
     {
-        height: 400px;
+        height: 290px;
         width: 95%;
         margin: 0 auto;
         border-radius: 20px;
@@ -763,7 +771,7 @@
     }
     .grocery-products-items
     {
-        height: 280px;
+        height: 100px;
         display: flex;
         border-radius: 6px;
         justify-content: center;
@@ -776,6 +784,10 @@
         line-height: 16px;
         border: 1px solid rgba(0, 0, 0, 0.1);
 
+    }
+    .product-img
+    {
+        object-fit: contain;
     }
     
     .groceryitems-name
@@ -829,7 +841,7 @@
     /* mobile scrol container */
     .mobile
     {
-         height: 400px;
+         height: 290px;
         width: 95%;
         margin: 0 auto;
         border-radius: 20px;
@@ -842,19 +854,7 @@
     {
         display: none;
     }
-    .products-items
-    {
-         width: 155px;
-        height: 400px;
-        border-radius: 6px;
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
-        padding: 20px 16px;
-        background:#c9d3d40c;
-        line-height: 16px;
-        border: 1px solid rgba(0, 0, 0, 0.1);
-    }
+   
     .mobile-details-container
     {
         line-height: 10px;
@@ -909,10 +909,11 @@
     .products-items
     {
         width: 155px;
-        height: 360px;
+        height: 280px;
         border-radius: 6px;
         display: flex;
         justify-content: center;
+        align-items: center;
         flex-direction: column;
         padding: 20px 16px;
         background:#c9d3d40c;
