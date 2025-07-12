@@ -912,6 +912,7 @@
         align-content: center;
         grid-template-columns: 2fr 2fr 2fr;
         column-gap: 10px;
+        row-gap: 10px;
         height: 200px; 
     }
     .products-collection-price
@@ -924,8 +925,14 @@
         align-content: center;
         grid-template-columns: 2fr 2fr 2fr;
         column-gap: 10px;
+        row-gap: 13px;
         height: 100px; 
     }
+     .products-collection-price img
+     {
+        border-radius: 12px;
+     }
+    
 
     /* crousel active btn */
 
@@ -983,6 +990,22 @@
     .img-brand-container::-webkit-scrollbar
     {
         display: none;
+    }
+    .img-brand-container img
+    {
+        border-radius: 12px;
+    }
+    .color-orange
+    {
+        background-color: #ffe8ce;
+        padding: 20px 10px;
+        border-radius: 12px;
+    }
+    .color-violet
+    {
+        background-color: #ebdfff;
+        padding: 20px 10px;
+        border-radius: 12px;
     }
 
 
