@@ -471,7 +471,7 @@
     }
 
     .app-login {
-        padding: 20px 0px 20px 140px;
+        padding: 20px 0px 20px 190px;
     }
 
     .app-login-icon {
@@ -1012,6 +1012,13 @@
         background-position:top;
         background-size: contain;
     }
+     .img-added2
+    {
+        background-image: url('https://rukminim1.flixcart.com/fk-p-flap/920/380/image/9d5ea00f360f44c2.jpg?q=60');
+        background-repeat: no-repeat;
+        background-position:top;
+        background-size: contain;
+    }
     .products-more
     {
         display: flex;
@@ -1030,6 +1037,25 @@
     {
         color: #000;
         text-decoration: none;
+    }
+    .color-violet
+    {
+        background-color: #eda0fe;
+        padding: 30px 10px;
+        border-radius: 12px;
+    }
+    .reason-container
+    {
+        width: 100%;
+        display: grid;
+        grid-template-columns:  1fr 1fr;
+        padding: 0 18px;
+        row-gap: 23px;
+        column-gap: 8px;
+    }
+    .reason-container>a>img
+    {
+        border-radius: 15px;
     }
 
 
