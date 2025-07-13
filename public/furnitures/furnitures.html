@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--app title-->
+    <title>ShopEasy-Furnitures</title>
+    <!--logo image added-->
+    <link rel="icon" href="../images/logo/logo.png" type="text/png">
+
+    <!--bootstap css files insert-->
+    <link rel="stylesheet" href="../bootstrap-5.3.5-dist/css/bootstrap.min.css">
+
+    <!--external stylesheet insert-->
+    <link rel="stylesheet" href="../style.css" type="text/css">
+    <link rel="stylesheet" href="./style.css" type="text/css">
+
+    <!--cart external style-->
+    <link rel="stylesheet" href="../cart.css" type="text/css">
+
+
+
+    <!--fontawsesome cdn insert-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+
+    <!--external font added and insert-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <!--nav container-->
+    <div class="nav-container" id="nav-container">
+        <!--left bar-->
+        <div class="app-left-bar">
+            <i id="app-arrow" class="fas fa-arrow-left app-bars"></i>
+        </div>
+        <!--app title head and foot-->
+        <div class="app-title">
+            <h4 class="app-title_head">Furniture</h4>
+        </div>
+        <!--app login-->
+        <div class="app-login">
+
+        </div>
+        <div class="app-order">
+            <a href="#" class="app-order-name"><i class="fas fa-shopping-bag app-order-icon"></i></a>
+            <div class="cart-count" id="cart-count">0</div>
+        </div>
+    </div>
+    <br>
+
+    <!--cart files-->
+
+    <div class="cart">
+        <!--cart header-->
+        <div class="cart-header">
+
+            <h5 class="h6 text-light"><i class="fas fa-shopping-cart nav-head_sub-icon"></i> My Carts</h5>
+            <ion-icon name="close-sharp" id="cart-close"></ion-icon>
+        </div>
+        <br>
+        <div class="cart-body">
+            <div class="cart-content">
+
+            </div>
+        </div>
+
+        <div class="cart-foot">
+            <div class="cart-total-title">Total</div>
+            <div class="cart-total">Rs.00</div>
+
+        </div>
+        <div class="cart-items-total">
+            <div class="items-total-title">Total Items:</div>
+            <div class="items-total" id="cart-counter">0</div>
+        </div>
+        <div class="table-details">
+            <div class="Short-detail">Order Details</div>
+            <div class="short-detail-list" id="opencart"> Click here</div>
+
+
+        </div><br>
+        <button class="cart-btn">Checkout</button><br>
+
+    </div>
+
+
+    <!--table container-->
+    <div class="tabledetails" id="tabledetails">
+        <h6 class="tabletitle">Broncher</h6>
+        <button class="btn-close" id="btn-close"></button><br><br>
+        <div class="table-container" id="table-container">
+
+            <table id="table">
+                <thead>
+                    <tr>
+                        <td>Name</td>
+                        <td>QTY</td>
+                        <td>price</td>
+                        <td>Amt</td>
+                    </tr>
+                </thead>
+
+                <tfoot>
+                    <tr>
+                        <td>total</td>
+                        <td id="carttotalcount"></td>
+                        <td colspan="2" id="total">Rs.00</td>
+                    </tr>
+                </tfoot>
+            </table>
+
+        </div>
+        <button class="btntable" onclick="downloadable()">download click</button><br>
+        <iframe name="print_frame" width="0" height="0" frameborder="0" src="about:blank"></iframe>
+    </div>
+
+
+    <!--alert container-->
+
+    <div id="alertcontainer" class="alertcontainer">
+        <i class="fas fa-shopping-cart"></i>
+        <p class="para-alert" id="para-alert">Successful added to cart</p>
+    </div>
+
+    <!--main container-->
+    <div class="main-container">
+        <!--search page-->
+        <div class="search">
+            <div class="search-bar">
+                <a href="../search/search.html">
+                    <i class="fa-solid fa-magnifying-glass search-bar-image_icon"></i> <span
+                        class="search-bar-image_name">Search For Products</span>
+                </a>
+            </div>
+        </div><br>
+        <!--crousel bar-->
+        <div class="crousel-bar">
+            <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+                <div class="carousel-indicators crouser-btn">
+                    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active"
+                        aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1"
+                        aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2"
+                        aria-label="Slide 3"></button>
+                    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="3"
+                        aria-label="Slide 4"></button>
+                  
+
+
+
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active" data-bs-interval="2000">
+                        <img src="../images/furniture/crousel/image1.webp" class="d-block w-100" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>First slide label</h5>
+                            <p>Some representative placeholder content for the first slide.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item" data-bs-interval="2000">
+                        <img src="../images/furniture/crousel/image2.webp" class="d-block w-100" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Second slide label</h5>
+                            <p>Some representative placeholder content for the second slide.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item" data-bs-interval="2000">
+                        <img src="../images/furniture/crousel/image3.webp" class="d-block w-100" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Third slide label</h5>
+                            <p>Some representative placeholder content for the third slide.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item" data-bs-interval="2000">
+                        <img src="../images/furniture/crousel/image4.webp" class="d-block w-100" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Second slide label</h5>
+                            <p>Some representative placeholder content for the second slide.</p>
+                        </div>
+                    </div>
+
+
+                </div>
+
+            </div>
+        </div><br><br><br>
+
+
+        <!--products collection-->
+        <h2 class="shop-by-categories">Shop By Categories</h2>
+
+        <div class="products-collection">
+
+            <!--products list-->
+            <a href="./products brands/iphone/iphone.html" class="products-link">
+                <div class="products">
+                    <img src="https://rukminim1.flixcart.com/fk-p-flap/114/114/image/995c45280da1575d.jpg?q=60"
+                        width="60px" height="50px" alt="groceery">
+                    <p class="text-center products-name">Mattresses</p>
+                </div>
+            </a>
+            <a href="./products brands/motroala/motroala.html" class="products-link">
+                <div class="products">
+                    <img src="https://rukminim1.flixcart.com/fk-p-flap/114/114/image/c806ff5fc61e5288.jpg?q=60"
+                        width="60px" height="50px" alt="mobiles">
+                    <p class="text-center products-name">Beds</p>
+                </div>
+            </a>
+            <a href="./products brands/samsung/samsung.html" class="products-link">
+                <div class="products">
+                    <img src="https://rukminim1.flixcart.com/fk-p-flap/114/114/image/39369b9be6a06141.jpg?q=60"
+                        width="60px" height="50px" alt="Gadgets">
+                    <p class="text-center products-name">OfficeTables</p>
+                </div>
+            </a>
+            <a href="#" class="products-link">
+                <div class="products">
+                    <img src="https://rukminim1.flixcart.com/fk-p-flap/114/114/image/bd6aab1d706030e4.jpg?q=60"
+                        width="60px" height="50px" alt="Beauty">
+                    <p class="text-center products-name">Dressing</p>
+                </div>
+            </a>
+            <a href="#" class="products-link">
+                <div class="products">
+                    <img src="https://rukminim1.flixcart.com/fk-p-flap/114/114/image/f47d6068d168ac54.jpg?q=60"
+                        width="60px" height="50px" alt="Appliances">
+                    <p class="text-center products-name">Kids</p>
+                </div>
+            </a>
+            <a href="#" class="products-link">
+                <div class="products">
+                    <img src="https://rukminim1.flixcart.com/fk-p-flap/114/114/image/6df5d7ee51cb3b9e.jpg?q=60"
+                        width="60px" height="50px" alt="Electronics">
+                    <p class="text-center products-name">Collapsible</p>
+                </div>
+            </a>
+            <a href="#" class="products-link">
+                <div class="products">
+                    <img src="https://rukminim1.flixcart.com/fk-p-flap/114/114/image/602b4c28ef68b053.jpg?q=60"
+                        width="60px" height="50px" alt="Furnitures">
+                    <p class="text-center products-name">Sofas</p>
+                </div>
+            </a>
+            <a href="#" class="products-link">
+                <div class="products">
+                    <img src="https://rukminim1.flixcart.com/fk-p-flap/114/114/image/c7a2c0e4455e7ea1.jpg?q=60"
+                        width="60px" height="50px" alt="Toys,Baby">
+                    <p class="text-center products-name">SofaBeds</p>
+                </div>
+            </a>
+            <a href="#" class="products-link">
+                <div class="products">
+                    <img src="https://rukminim1.flixcart.com/fk-p-flap/114/114/image/2ff540a697c56842.jpg?q=60"
+                        width="60px" height="50px" alt="Toys,Baby">
+                    <p class="text-center products-name">Tv units</p>
+                </div>
+            </a>
+            <a href="#" class="products-link">
+                <div class="products">
+                    <img src="https://rukminim1.flixcart.com/fk-p-flap/114/114/image/8fe79f2b77b25de9.jpg?q=60"
+                        width="60px" height="50px" alt="Toys,Baby">
+                    <p class="text-center products-name">OfficeChair</p>
+                </div>
+            </a>
+            <a href="#" class="products-link">
+                <div class="products">
+                    <img src="https://rukminim1.flixcart.com/fk-p-flap/114/114/image/36dc173ada65a052.jpg?q=60"
+                        width="60px" height="50px" alt="Toys,Baby">
+                    <p class="text-center products-name">Wardrobes</p>
+                </div>
+            </a>
+            <a href="#" class="products-link">
+                <div class="products">
+                    <img src="https://rukminim1.flixcart.com/fk-p-flap/114/114/image/213628fb1a87d40a.jpg?q=60"
+                        width="60px" height="50px" alt="Toys,Baby">
+                    <p class="text-center products-name">Recliners</p>
+                </div>
+            </a>
+            <a href="#" class="products-link">
+                <div class="products">
+                    <img src="https://rukminim1.flixcart.com/fk-p-flap/114/114/image/9f44732711862740.jpg?q=60"
+                        width="60px" height="50px" alt="Toys,Baby">
+                    <p class="text-center products-name">Diningsets</p>
+                </div>
+            </a>
+            <a href="#" class="products-link">
+                <div class="products">
+                    <img src="https://rukminim1.flixcart.com/fk-p-flap/114/114/image/fd372898f06428d1.jpg?q=60"
+                        width="60px" height="50px" alt="Toys,Baby">
+                    <p class="text-center products-name">Laptoptable</p>
+                </div>
+            </a>
+            <a href="#" class="products-link">
+                <div class="products">
+                    <img src="https://rukminim1.flixcart.com/fk-p-flap/114/114/image/7f9b5e034b5f07cc.jpg?q=60"
+                        width="60px" height="50px" alt="Toys,Baby">
+                    <p class="text-center products-name">CoffeTable</p>
+                </div>
+            </a>
+            <a href="#" class="products-link">
+                <div class="products">
+                    <img src="https://rukminim1.flixcart.com/fk-p-flap/114/114/image/3c29fdff93b33d61.jpg?q=60"
+                        width="60px" height="50px" alt="Toys,Baby">
+                    <p class="text-center products-name">Hammocks</p>
+                </div>
+            </a>
+            <a href="#" class="products-link">
+                <div class="products">
+                    <img src="https://rukminim1.flixcart.com/fk-p-flap/114/114/image/678fb9ac9005fc5b.jpg?q=60"
+                        width="60px" height="50px" alt="Toys,Baby">
+                    <p class="text-center products-name">Shoerack</p>
+                </div>
+            </a>
+            <a href="#" class="products-link">
+                <div class="products">
+                    <img src="https://rukminim1.flixcart.com/fk-p-flap/114/114/image/06c08b3e884423e9.jpg?q=60"
+                        width="60px" height="50px" alt="Toys,Baby">
+                    <p class="text-center products-name">View all</p>
+                </div>
+            </a>
+        </div><br>
+ <h2 class="shop-by-categories">Shop By Room</h2><br>
+ <div class="matres-grid">
+           <img src="https://rukminim1.flixcart.com/fk-p-flap/200/200/image/b8d59db327f66b14.jpg?q=60" height="184px" width="184px" alt="">
+           <img src="https://rukminim1.flixcart.com/fk-p-flap/200/200/image/570e2e97c4d9386d.jpg?q=60" height="184px" width="184px" alt="">
+           <img src="https://rukminim1.flixcart.com/fk-p-flap/200/200/image/068fea3884638f36.jpg?q=60" height="184px" width="184px" alt="">
+           <img src="https://rukminim1.flixcart.com/fk-p-flap/200/200/image/7a77f8bfefe095d8.jpg?q=60" height="184px" width="184px" alt="">
+           <img src="https://rukminim1.flixcart.com/fk-p-flap/200/200/image/44df43b8e7989773.jpg?q=60" height="184px" width="184px" alt="">
+           <img src="https://rukminim1.flixcart.com/fk-p-flap/200/200/image/414bd019ad3b4a7d.jpg?q=60" height="184px" width="184px" alt="">
+
+ </div><br>
+
+
+
+        <h2 class="shop-by-categories">Hidden Gems</h2><br>
+
+        <div class="img-brand-container">
+            <a href="">
+                <img src="https://rukminim1.flixcart.com/fk-p-flap/960/1440/image/4102b96d085ca8f9.jpg?q=60"
+                    width="130px" height="196px" class="d-block" alt="">
+            </a>
+            <a href="">
+                <img src="https://rukminim1.flixcart.com/fk-p-flap/960/1440/image/06636b2038cad28e.jpg?q=60"
+                    width="130px" height="196px" class="d-block" alt="">
+            </a>
+
+            <a href="">
+                <img src="https://rukminim1.flixcart.com/fk-p-flap/960/1440/image/47edcb6686fb5c94.jpg?q=60"
+                    width="130px" height="196px" class="d-block" alt="">
+            </a>
+
+            <a href="">
+                <img src="https://rukminim1.flixcart.com/fk-p-flap/960/1440/image/b298df206573e330.jpg?q=60"
+                    width="130px" height="196px" class="d-block" alt="">
+            </a>
+
+            <a href="">
+                <img src="https://rukminim1.flixcart.com/fk-p-flap/960/1440/image/9d53f0ab18a7170f.jpg?q=60"
+                    width="130px" height="196px" class="d-block" alt="">
+            </a>
+
+            <a href="">
+                <img src="https://rukminim1.flixcart.com/fk-p-flap/960/1440/image/24a6008ada7b0c33.jpg?q=60"
+                    width="130px" height="196px" class="d-block" alt="">
+            </a>
+            <a href="">
+                <img src="https://rukminim1.flixcart.com/fk-p-flap/960/1440/image/af4b8b5aec621bef.jpg?q=60"
+                    width="130px" height="196px" class="d-block" alt="">
+            </a>
+            <a href="">
+                <img src="https://rukminim1.flixcart.com/fk-p-flap/960/1440/image/c92132c0944e5366.jpg?q=60"
+                    width="130px" height="196px" class="d-block" alt="">
+            </a>
+
+            <a href="">
+                <img src="https://rukminim1.flixcart.com/fk-p-flap/960/1440/image/48dce3ddc89c0052.jpg?q=60"
+                    width="130px" height="196px" class="d-block" alt="">
+            </a>
+            <a href="">
+                <img src="https://rukminim1.flixcart.com/fk-p-flap/960/1440/image/03687b96c8380771.jpg?q=60"
+                    width="130px" height="196px" class="d-block" alt="">
+            </a>
+            <a href="">
+                <img src="https://rukminim1.flixcart.com/fk-p-flap/960/1440/image/2a954cdafbd907ca.jpg?q=60"
+                    width="130px" height="196px" class="d-block" alt="">
+            </a>
+        </div>
+        <!--just arived-->
+        <br><br>
+        <h2 class="shop-by-categories">Gleeb Endosures Brands</h2><br>
+        <div class="img-brand-container">
+            <a href="">
+                <img src="https://rukminim1.flixcart.com/fk-p-flap/960/960/image/9a117f1c9689ae4f.jpg?q=60"
+                    width="263px" height="263px" class="d-block" alt="">
+            </a>
+            <a href="">
+                <img src="https://rukminim1.flixcart.com/fk-p-flap/960/960/image/ef1db3278f3aa876.jpg?q=60"
+                     width="263px" height="263px" class="d-block" alt="">
+            </a>
+
+            <a href="">
+                <img src="https://rukminim1.flixcart.com/fk-p-flap/960/960/image/b44c20e487f0ff93.jpg?q=60"
+                     width="263px" height="263px" class="d-block" alt="">
+            </a>
+
+            <a href="">
+                <img src="https://rukminim1.flixcart.com/fk-p-flap/960/960/image/99f547dc42cd8010.jpg?q=60"
+                     width="263px" height="263px" class="d-block" alt="">
+            </a>
+
+            <a href="">
+                <img src="https://rukminim1.flixcart.com/fk-p-flap/960/960/image/29eb059fcb223efc.jpg?q=60"
+                     width="263px" height="263px" class="d-block" alt="">
+            </a>
+
+            <a href="">
+                <img src="https://rukminim1.flixcart.com/fk-p-flap/960/960/image/e28d77961838ee2d.jpg?q=60"
+                     width="263px" height="263px" class="d-block" alt="">
+            </a>
+            <a href="">
+                <img src="https://rukminim1.flixcart.com/fk-p-flap/960/960/image/e417a175a9985d01.jpg?q=60"
+                     width="263px" height="263px" class="d-block" alt="">
+            </a>
+            <a href="">
+                <img src="https://rukminim1.flixcart.com/fk-p-flap/960/960/image/0d7405fae4a4f103.jpg?q=60"
+                     width="263px" height="263px" class="d-block" alt="">
+            </a>
+
+            <a href="">
+                <img src="https://rukminim1.flixcart.com/fk-p-flap/960/960/image/201a2412d364f767.jpg?q=60"
+                     width="263px" height="263px" class="d-block" alt="">
+            </a>
+            <br>
+        </div>
+
+        <br><br>
+        <h2 class="shop-by-categories">Star Brands Of This Sale</h2><br>
+        <div class="img-dis">
+            <img src="https://rukminim1.flixcart.com/fk-p-flap/880/300/image/e07c3cc31d31410b.jpg?q=60" height="111px"
+                width="96%" alt="">
+        </div><br>
+
+        <h2 class="shop-by-categories">Big loot on a Budget</h2>
+        <div class="products-collection-price">
+
+            <!--products list-->
+            <a href="#" class="products-link">
+                <div class="products-brand-img">
+                    <img src="https://rukminim1.flixcart.com/fk-p-flap/200/200/image/dddce21e50f9df29.jpg?q=60"
+                        width="184px" height="184px" alt="oil ghee">
+
+                </div>
+            </a>
+            <a href="#" class="products-link">
+                <div class="products-brand-img">
+                    <img src="https://rukminim1.flixcart.com/fk-p-flap/200/200/image/abb8997b85905fee.jpg?q=60"
+                        width="184px" height="184px" alt="mobiles">
+                </div>
+            </a>
+            
+        </div><br><br>
+
+        <h2 class="shop-by-categories">Shop By Materials</h2><br>
+ <div class="matres-grid">
+           <img src="https://rukminim1.flixcart.com/fk-p-flap/200/200/image/5f34b53a7d9409f5.jpg?q=60" height="184px" width="184px" alt="">
+           <img src="https://rukminim1.flixcart.com/fk-p-flap/200/200/image/be19882bd0ef84a2.jpg?q=60" height="184px" width="184px" alt="">
+           <img src="https://rukminim1.flixcart.com/fk-p-flap/200/200/image/6af3eb452c883e77.jpg?q=60" height="184px" width="184px" alt="">
+           <img src="https://rukminim1.flixcart.com/fk-p-flap/200/200/image/7fe22ad4ff7a9562.jpg?q=60" height="184px" width="184px" alt="">
+           <img src="https://rukminim1.flixcart.com/fk-p-flap/200/200/image/b2e60d9fe877e98b.jpg?q=60" height="184px" width="184px" alt="">
+           <img src="https://rukminim1.flixcart.com/fk-p-flap/200/200/image/81d1b4b614c58490.jpg?q=60" height="184px" width="184px" alt="">
+
+ </div><br>
+
+
+
+        <h2 class="shop-by-categories">No Cose EMI</h2><br>
+        <!--crousel bar-->
+
+        <div class="img-brand-container img-added1 color-gold">
+            <a href="">
+                <img src="https://rukminim1.flixcart.com/fk-p-flap/1020/1540/image/74d74c05b5588ed7.jpg?q=60"
+                    width="106px" height="160px" class="d-block" alt="">
+            </a>
+            <a href="">
+                <img src="https://rukminim1.flixcart.com/fk-p-flap/1020/1540/image/a429fb69a3c5b1a0.jpg?q=60"
+                    width="106px" height="160px" class="d-block" alt="">
+            </a>
+
+            <a href="">
+                <img src="https://rukminim1.flixcart.com/fk-p-flap/1020/1540/image/7ac9bb8bdfc53b0c.jpg?q=60"
+                    width="106px" height="160px" class="d-block" alt="">
+            </a>
+
+            <a href="">
+                <img src="https://rukminim1.flixcart.com/fk-p-flap/1020/1540/image/3f4cbfab5d030f25.jpg?q=60"
+                    width="106px" height="160px" class="d-block" alt="">
+            </a>
+
+            <a href="">
+                <img src="https://rukminim1.flixcart.com/fk-p-flap/1020/1540/image/b5daaf3985cb1895.jpg?q=60"
+                    width="106px" height="160px" class="d-block" alt="">
+            </a>
+
+           
+        </div>
+        <br>
+
+
+
+
+ <h2 class="shop-by-categories">Most Searched Brands</h2><br>
+ <div class="matres-grid">
+           <img src="https://rukminim1.flixcart.com/fk-p-flap/200/200/image/c09e9206a7343615.jpg?q=60" height="184px" width="184px" alt="">
+           <img src="https://rukminim1.flixcart.com/fk-p-flap/200/200/image/50f0a9ab0067a185.jpg?q=60" height="184px" width="184px" alt="">
+           <img src="https://rukminim1.flixcart.com/fk-p-flap/200/200/image/2ca432236aa46a70.jpg?q=60" height="184px" width="184px" alt="">
+           <img src="https://rukminim1.flixcart.com/fk-p-flap/200/200/image/8e081817d7a16064.jpg?q=60" height="184px" width="184px" alt="">
+           <img src="https://rukminim1.flixcart.com/fk-p-flap/200/200/image/c420391c201a7470.jpg?q=60" height="184px" width="184px" alt="">
+           <img src="https://rukminim1.flixcart.com/fk-p-flap/200/200/image/bb4c5955618a4578.jpg?q=60" height="184px" width="184px" alt="">
+
+ </div><br>
+
+ <h2 class="shop-by-categories">Most Searched Brands</h2><br>
+ <div class="matres-grid">
+           <img src="https://rukminim1.flixcart.com/fk-p-flap/200/200/image/d02b851b56616d50.jpg?q=60" height="184px" width="184px" alt="">
+           <img src="https://rukminim1.flixcart.com/fk-p-flap/200/200/image/f7c370f027bd601a.jpg?q=60" height="184px" width="184px" alt="">
+           <img src="https://rukminim1.flixcart.com/fk-p-flap/200/200/image/ca2f79568f4018a0.jpg?q=60" height="184px" width="184px" alt="">
+           <img src="https://rukminim1.flixcart.com/fk-p-flap/200/200/image/7ebb66042d59ceb3.jpg?q=60" height="184px" width="184px" alt="">
+
+ </div><br>
+
+
+       
+
+
+
+        <h2 class="shop-by-categories">Explore More</h2>
+        <a class="product-more_list-link" href=""><div class="products-more">
+            <h5 class="product-more_list">Beauty & Grooming</h5>
+            <i class="fas fa-chevron-right"></i>
+        </div></a> 
+        <a class="product-more_list-link" href=""><div class="products-more">
+            <h5 class="product-more_list">Sports & Fitness</h5>
+            <i class="fas fa-chevron-right"></i>
+        </div></a> 
+        <a class="product-more_list-link" href=""><div class="products-more">
+            <h5 class="product-more_list">Makeup & Fragrence</h5>
+            <i class="fas fa-chevron-right"></i>
+        </div></a> 
+        <a class="product-more_list-link" href=""><div class="products-more">
+            <h5 class="product-more_list">Books & Instruments</h5>
+            <i class="fas fa-chevron-right"></i>
+        </div></a> 
+        <a class="product-more_list-link" href=""><div class="products-more">
+            <h5 class="product-more_list">Toys & Stationary</h5>
+            <i class="fas fa-chevron-right"></i>
+        </div></a> 
+        <a class="product-more_list-link" href=""><div class="products-more">
+            <h5 class="product-more_list">Health Care</h5>
+            <i class="fas fa-chevron-right"></i>
+        </div></a> 
+        <a class="product-more_list-link" href=""><div class="products-more">
+            <h5 class="product-more_list">Food & Care</h5>
+            <i class="fas fa-chevron-right"></i>
+        </div></a> 
+        <a class="product-more_list-link" href=""><div class="products-more">
+            <h5 class="product-more_list">Auto Accessories</h5>
+            <i class="fas fa-chevron-right"></i>
+        </div></a> 
+        <a class="product-more_list-link" href=""><div class="products-more">
+            <h5 class="product-more_list">Babu Care</h5>
+            <i class="fas fa-chevron-right"></i>
+        </div></a> 
+
+    </div>
+    <br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+<!--script external files insert-->
+<script src="app.js"></script>
+
+<!--cart javascript insert-->
+<script src="../cart.js"></script>
+<!--bootstrap js files insert-->
+<script src="../bootstrap-5.3.5-dist/js/bootstrap.min.js">
+</script>
+<!--icons iconic websites script-->
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+
+</html>
