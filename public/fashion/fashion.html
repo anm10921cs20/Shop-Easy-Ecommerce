@@ -1,0 +1,1039 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--app title-->
+    <title>ShopEasy-fashion</title>
+    <!--logo image added-->
+    <link rel="icon" href="../images/logo/logo.png" type="text/png">
+
+    <!--bootstap css files insert-->
+    <link rel="stylesheet" href="../bootstrap-5.3.5-dist/css/bootstrap.min.css">
+
+    <!--external stylesheet insert-->
+    <link rel="stylesheet" href="../style.css" type="text/css">
+    <link rel="stylesheet" href="./style.css" type="text/css">
+
+    <!--cart external style-->
+    <link rel="stylesheet" href="../cart.css" type="text/css">
+
+
+
+    <!--fontawsesome cdn insert-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+
+    <!--external font added and insert-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <!--nav container-->
+    <div class="nav-container" id="nav-container">
+        <!--left bar-->
+        <div class="app-left-bar">
+            <i id="app-arrow" class="fas fa-arrow-left app-bars"></i>
+        </div>
+        <!--app title head and foot-->
+        <div class="app-title">
+            <h4 class="app-title_head">Fashion</h4>
+        </div>
+        <!--app login-->
+        <div class="app-login">
+
+        </div>
+        <div class="app-order">
+            <a href="#" class="app-order-name"><i class="fas fa-shopping-bag app-order-icon"></i></a>
+            <div class="cart-count" id="cart-count">0</div>
+        </div>
+    </div>
+    <br>
+
+    <!--cart files-->
+
+    <div class="cart">
+        <!--cart header-->
+        <div class="cart-header">
+
+            <h5 class="h6 text-light"><i class="fas fa-shopping-cart nav-head_sub-icon"></i> My Carts</h5>
+            <ion-icon name="close-sharp" id="cart-close"></ion-icon>
+        </div>
+        <br>
+        <div class="cart-body">
+            <div class="cart-content">
+
+            </div>
+        </div>
+
+        <div class="cart-foot">
+            <div class="cart-total-title">Total</div>
+            <div class="cart-total">Rs.00</div>
+
+        </div>
+        <div class="cart-items-total">
+            <div class="items-total-title">Total Items:</div>
+            <div class="items-total" id="cart-counter">0</div>
+        </div>
+        <div class="table-details">
+            <div class="Short-detail">Order Details</div>
+            <div class="short-detail-list" id="opencart"> Click here</div>
+
+
+        </div><br>
+        <button class="cart-btn">Checkout</button><br>
+
+    </div>
+
+
+    <!--table container-->
+    <div class="tabledetails" id="tabledetails">
+        <h6 class="tabletitle">Broncher</h6>
+        <button class="btn-close" id="btn-close"></button><br><br>
+        <div class="table-container" id="table-container">
+
+            <table id="table">
+                <thead>
+                    <tr>
+                        <td>Name</td>
+                        <td>QTY</td>
+                        <td>price</td>
+                        <td>Amt</td>
+                    </tr>
+                </thead>
+
+                <tfoot>
+                    <tr>
+                        <td>total</td>
+                        <td id="carttotalcount"></td>
+                        <td colspan="2" id="total">Rs.00</td>
+                    </tr>
+                </tfoot>
+            </table>
+
+        </div>
+        <button class="btntable" onclick="downloadable()">download click</button><br>
+        <iframe name="print_frame" width="0" height="0" frameborder="0" src="about:blank"></iframe>
+    </div>
+
+
+    <!--alert container-->
+
+    <div id="alertcontainer" class="alertcontainer">
+        <i class="fas fa-shopping-cart"></i>
+        <p class="para-alert" id="para-alert">Successful added to cart</p>
+    </div>
+
+    <!--main container-->
+    <div class="main-container">
+        <!--search page-->
+        <div class="search">
+            <div class="search-bar">
+                <a href="../search/search.html">
+                    <i class="fa-solid fa-magnifying-glass search-bar-image_icon"></i> <span
+                        class="search-bar-image_name">Search For Products</span>
+                </a>
+            </div>
+        </div><br>
+      
+
+ <div class="crousel-bar">
+            <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+                <div class="carousel-indicators crouser-btn">
+                    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active"
+                        aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1"
+                        aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2"
+                        aria-label="Slide 3"></button>
+                    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="3"
+                        aria-label="Slide 4"></button>
+                    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="4"
+                        aria-label="Slide 5"></button>
+                    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="5"
+                        aria-label="Slide 6"></button>
+                    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="6"
+                        aria-label="Slide 7"></button>
+                    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="7"
+                        aria-label="Slide 8"></button>
+
+
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active" data-bs-interval="2000">
+                        <img src="https://rukminim1.flixcart.com/fk-p-flap/960/460/image/eb8ca6282fdf1382.jpg?q=60" class="d-block w-100" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>First slide label</h5>
+                            <p>Some representative placeholder content for the first slide.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item" data-bs-interval="2000">
+                        <img src="https://rukminim1.flixcart.com/fk-p-flap/960/460/image/fec38597b6c754f6.jpg?q=60" class="d-block w-100" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Second slide label</h5>
+                            <p>Some representative placeholder content for the second slide.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item" data-bs-interval="2000">
+                        <img src="https://rukminim1.flixcart.com/fk-p-flap/960/460/image/6c04ba71b3aa25e7.jpg?q=60" class="d-block w-100" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Third slide label</h5>
+                            <p>Some representative placeholder content for the third slide.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item" data-bs-interval="2000">
+                        <img src="https://rukminim1.flixcart.com/fk-p-flap/960/460/image/e7116e5f2a4e1dc7.jpg?q=60" class="d-block w-100" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Second slide label</h5>
+                            <p>Some representative placeholder content for the second slide.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item" data-bs-interval="2000">
+                        <img src="https://rukminim1.flixcart.com/fk-p-flap/960/460/image/e549cab3b6282994.jpg?q=60" class="d-block w-100" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Second slide label</h5>
+                            <p>Some representative placeholder content for the second slide.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item" data-bs-interval="2000">
+                        <img src="https://rukminim1.flixcart.com/fk-p-flap/960/460/image/9da47ca48f2f6f02.jpg?q=60" class="d-block w-100" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Second slide label</h5>
+                            <p>Some representative placeholder content for the second slide.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item" data-bs-interval="2000">
+                        <img src="https://rukminim1.flixcart.com/fk-p-flap/960/460/image/c62e8fd2b3a4bb36.jpg?q=60" class="d-block w-100" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Second slide label</h5>
+                            <p>Some representative placeholder content for the second slide.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item" data-bs-interval="2000">
+                        <img src="https://rukminim1.flixcart.com/fk-p-flap/960/460/image/dc678816c67696c1.jpg?q=60" class="d-block w-100" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Second slide label</h5>
+                            <p>Some representative placeholder content for the second slide.</p>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div><br><br><br>
+        <!--products collection-->
+        <h2 class="shop-by-categories">Shop By Categories</h2>
+
+        <div class="products-collection">
+
+            <!--products list-->
+            <a href="./products brands/iphone/iphone.html" class="products-link">
+                <div class="products">
+                    <img src="https://rukminim1.flixcart.com/fk-p-flap/114/114/image/1d270e4e4eb4ec0e.jpg?q=60"
+                        width="60px" height="50px" alt="groceery">
+                    <p class="text-center products-name">Topwear</p>
+                </div>
+            </a>
+            <a href="./products brands/motroala/motroala.html" class="products-link">
+                <div class="products">
+                    <img src="https://rukminim1.flixcart.com/fk-p-flap/114/114/image/b34e18f9099f0ec3.jpg?q=60"
+                        width="60px" height="50px" alt="mobiles">
+                    <p class="text-center products-name">Trolley</p>
+                </div>
+            </a>
+            <a href="./products brands/samsung/samsung.html" class="products-link">
+                <div class="products">
+                    <img src="https://rukminim1.flixcart.com/fk-p-flap/114/114/image/a5f35604ea871cdb.jpg?q=60"
+                        width="60px" height="50px" alt="Gadgets">
+                    <p class="text-center products-name">Bottomwear</p>
+                </div>
+            </a>
+            <a href="#" class="products-link">
+                <div class="products">
+                    <img src="https://rukminim1.flixcart.com/fk-p-flap/114/114/image/179e1a9216a0647e.jpg?q=60"
+                        width="60px" height="50px" alt="Beauty">
+                    <p class="text-center products-name">SportShoe</p>
+                </div>
+            </a>
+            <a href="#" class="products-link">
+                <div class="products">
+                    <img src="https://rukminim1.flixcart.com/fk-p-flap/114/114/image/fd92db15a7684e33.jpg?q=60"
+                        width="60px" height="50px" alt="Appliances">
+                    <p class="text-center products-name">Essential</p>
+                </div>
+            </a>
+            <a href="#" class="products-link">
+                <div class="products">
+                    <img src="https://rukminim1.flixcart.com/fk-p-flap/114/114/image/33cda6388197d3c9.jpg?q=60"
+                        width="60px" height="50px" alt="Electronics">
+                    <p class="text-center products-name">CasualShoe</p>
+                </div>
+            </a>
+            <a href="#" class="products-link">
+                <div class="products">
+                    <img src="https://rukminim1.flixcart.com/fk-p-flap/114/114/image/20bf7152eba9938e.jpg?q=60"
+                        width="60px" height="50px" alt="Furnitures">
+                    <p class="text-center products-name">Watches</p>
+                </div>
+            </a>
+            <a href="#" class="products-link">
+                <div class="products">
+                    <img src="https://rukminim1.flixcart.com/fk-p-flap/114/114/image/649bdd55ea8aa1f5.jpg?q=60"
+                        width="60px" height="50px" alt="Toys,Baby">
+                    <p class="text-center products-name">Sandals</p>
+                </div>
+            </a>
+            <a href="#" class="products-link">
+                <div class="products">
+                    <img src="https://rukminim1.flixcart.com/fk-p-flap/114/114/image/e7f8fb41e16875fb.jpg?q=60"
+                        width="60px" height="50px" alt="Toys,Baby">
+                    <p class="text-center products-name">Formalwear</p>
+                </div>
+            </a>
+            <a href="#" class="products-link">
+                <div class="products">
+                    <img src="https://rukminim1.flixcart.com/fk-p-flap/114/114/image/9fd1256beeb248b8.jpg?q=60"
+                        width="60px" height="50px" alt="Toys,Baby">
+                    <p class="text-center products-name">MenAcc</p>
+                </div>
+            </a>
+            <a href="#" class="products-link">
+                <div class="products">
+                    <img src="https://rukminim1.flixcart.com/fk-p-flap/114/114/image/58b26b249476b559.jpg?q=60"
+                        width="60px" height="50px" alt="Toys,Baby">
+                    <p class="text-center products-name">Casualwear</p>
+                </div>
+            </a>
+
+
+            <a href="#" class="products-link">
+                <div class="products">
+                    <img src="https://rukminim1.flixcart.com/fk-p-flap/114/114/image/961b7f947148acd1.jpg?q=60"
+                        width="60px" height="50px" alt="Toys,Baby">
+                    <p class="text-center products-name">KurtaSets</p>
+                </div>
+            </a>
+             <a href="#" class="products-link">
+                <div class="products">
+                    <img src="https://rukminim1.flixcart.com/fk-p-flap/114/114/image/af8dd5e98f8e4dd2.jpg?q=60"
+                        width="60px" height="50px" alt="Toys,Baby">
+                    <p class="text-center products-name">Topwears</p>
+                </div>
+            </a>
+             <a href="#" class="products-link">
+                <div class="products">
+                    <img src="https://rukminim1.flixcart.com/fk-p-flap/114/114/image/6ef59a12d5c5e6d8.jpg?q=60"
+                        width="60px" height="50px" alt="Toys,Baby">
+                    <p class="text-center products-name">Sarees</p>
+                </div>
+            </a>
+             <a href="#" class="products-link">
+                <div class="products">
+                    <img src="https://rukminim1.flixcart.com/fk-p-flap/114/114/image/7b5632253c3398a6.jpg?q=60"
+                        width="60px" height="50px" alt="Toys,Baby">
+                    <p class="text-center products-name">Handbags</p>
+                </div>
+            </a>
+             <a href="#" class="products-link">
+                <div class="products">
+                    <img src="https://rukminim1.flixcart.com/fk-p-flap/114/114/image/70023a28afa7237d.jpg?q=60"
+                        width="60px" height="50px" alt="Toys,Baby">
+                    <p class="text-center products-name">Kids</p>
+                </div>
+            </a>
+             <a href="#" class="products-link">
+                <div class="products">
+                    <img src="https://rukminim1.flixcart.com/fk-p-flap/114/114/image/45f9e75f7f63a030.jpg?q=60"
+                        width="60px" height="50px" alt="Toys,Baby">
+                    <p class="text-center products-name">Jewellery</p>
+                </div>
+            </a>
+             <a href="#" class="products-link">
+                <div class="products">
+                    <img src="https://rukminim1.flixcart.com/fk-p-flap/114/114/image/24e672affb709cd5.jpg?q=60"
+                        width="60px" height="50px" alt="Toys,Baby">
+                    <p class="text-center products-name">WomenFoot</p>
+                </div>
+            </a>
+             <a href="#" class="products-link">
+                <div class="products">
+                    <img src="https://rukminim1.flixcart.com/fk-p-flap/114/114/image/1f18721a36ad207b.jpg?q=60"
+                        width="60px" height="50px" alt="Toys,Baby">
+                    <p class="text-center products-name">Bottomwear</p>
+                </div>
+            </a>
+             <a href="#" class="products-link">
+                <div class="products">
+                    <img src="https://rukminim1.flixcart.com/fk-p-flap/114/114/image/27688d986b977643.jpg?q=60"
+                        width="60px" height="50px" alt="Toys,Baby">
+                    <p class="text-center products-name">Kidsfoot</p>
+                </div>
+            </a>
+        </div><br>
+        <!--crousel bar-->
+        <h2 class="shop-by-categories">Shop For Others</h2>
+        <div class="products-collection-price1">
+
+            <!--products list-->
+            <a href="#" class="products-link">
+                <div class="products-brand-img">
+                    <img src="https://rukminim1.flixcart.com/fk-p-flap/200/220/image/8441fbfab643c94f.jpg?q=60"
+                        width="110px" height="136px" alt="oil ghee">
+
+                </div>
+            </a>
+            <a href="#" class="products-link">
+                <div class="products-brand-img">
+                    <img src="https://rukminim1.flixcart.com/fk-p-flap/200/220/image/9a5bb1ab9c46f324.jpg?q=60"
+                        width="110px" height="136px" alt="mobiles">
+                </div>
+            </a>
+            <a href="#" class="products-link">
+                <div class="products-brand-img">
+                    <img src="https://rukminim1.flixcart.com/fk-p-flap/200/220/image/c1b335ee8841875d.jpg?q=60"
+                        width="110px" height="136px" alt="Gadgets">
+                </div>
+            </a>
+
+        </div>
+
+        
+     
+        <!--just arived-->
+            <br>
+            <h2 class="shop-by-categories">Great Styles, greater savings </h2><br>
+            <div class="img-brand-container">
+                <a href="">
+                    <img src="https://rukminim1.flixcart.com/fk-p-flap/960/1440/image/7abb1f0e3965442e.jpg?q=60"
+                        width="116px" height="175px" class="d-block" alt="">
+                </a>
+                <a href="">
+                    <img src="https://rukminim1.flixcart.com/fk-p-flap/960/1440/image/ca072da122a245e3.jpg?q=60"
+                        width="116px" height="175px" class="d-block" alt="">
+                </a>
+
+                <a href="">
+                    <img src="https://rukminim1.flixcart.com/fk-p-flap/960/1440/image/7a689df281c12906.jpg?q=60"
+                        width="116px" height="175px" class="d-block" alt="">
+                </a>
+
+                <a href="">
+                    <img src="https://rukminim1.flixcart.com/fk-p-flap/960/1440/image/810fd07d259ceff7.jpg?q=60"
+                        width="116px" height="175px" class="d-block" alt="">
+                </a>
+
+                <a href="">
+                    <img src="https://rukminim1.flixcart.com/fk-p-flap/960/1440/image/6de55fd5b068ef49.jpg?q=60"
+                        width="116px" height="175px" class="d-block" alt="">
+                </a>
+                <a href="">
+                    <img src="https://rukminim1.flixcart.com/fk-p-flap/960/1440/image/fd06515b46567ae8.jpg?q=60"
+                        width="116px" height="175px" class="d-block" alt="">
+                </a>
+
+                <a href="">
+                    <img src="https://rukminim1.flixcart.com/fk-p-flap/960/1440/image/1e0c584893f3baff.jpg?q=60"
+                        width="116px" height="175px" class="d-block" alt="">
+                </a>
+
+                <a href="">
+                    <img src="https://rukminim1.flixcart.com/fk-p-flap/960/1440/image/1e0c584893f3baff.jpg?q=60"
+                        width="116px" height="175px" class="d-block" alt="">
+                </a>
+                <a href="">
+                    <img src="https://rukminim1.flixcart.com/fk-p-flap/960/1440/image/900f162fbfec1efd.jpg?q=60"
+                        width="116px" height="175px" class="d-block" alt="">
+                </a>
+
+                <a href="">
+                    <img src="https://rukminim1.flixcart.com/fk-p-flap/960/1440/image/59a5e239ccfd4dee.jpg?q=60"
+                        width="116px" height="175px" class="d-block" alt="">
+                </a>
+
+                <a href="">
+                    <img src="https://rukminim1.flixcart.com/fk-p-flap/960/1440/image/b17f379e7d68c226.jpg?q=60"
+                        width="116px" height="175px" class="d-block" alt="">
+                </a>
+                <a href="">
+                    <img src="https://rukminim1.flixcart.com/fk-p-flap/960/1440/image/eea9937996f53ee2.jpg?q=60"
+                        width="116px" height="175px" class="d-block" alt="">
+                </a>
+
+               <br>
+            </div><br>
+            <h2 class="shop-by-categories">Toe-tally trendy shoes </h2><br>
+            <div class="img-brand-container">
+                <a href="">
+                    <img src="https://rukminim1.flixcart.com/fk-p-flap/960/1440/image/4b9ced8089594a3a.jpg?q=60"
+                        width="116px" height="175px" class="d-block" alt="">
+                </a>
+                <a href="">
+                    <img src="https://rukminim1.flixcart.com/fk-p-flap/960/1440/image/211ee82c651fb9c2.jpg?q=60"
+                        width="116px" height="175px" class="d-block" alt="">
+                </a>
+
+                <a href="">
+                    <img src="https://rukminim1.flixcart.com/fk-p-flap/960/1440/image/90ba1c7134402492.jpg?q=60"
+                        width="116px" height="175px" class="d-block" alt="">
+                </a>
+
+                <a href="">
+                    <img src="https://rukminim1.flixcart.com/fk-p-flap/960/1440/image/e91a1d82d9eed578.jpg?q=60"
+                        width="116px" height="175px" class="d-block" alt="">
+                </a>
+
+                <a href="">
+                    <img src="https://rukminim1.flixcart.com/fk-p-flap/960/1440/image/63f27492d7e7c21f.jpg?q=60"
+                        width="116px" height="175px" class="d-block" alt="">
+                </a>
+                <a href="">
+                    <img src="https://rukminim1.flixcart.com/fk-p-flap/960/1440/image/250e802bfd55d1e7.jpg?q=60"
+                        width="116px" height="175px" class="d-block" alt="">
+                </a>
+
+                <a href="">
+                    <img src="https://rukminim1.flixcart.com/fk-p-flap/960/1440/image/89b58f38f98d0524.jpg?q=60"
+                        width="116px" height="175px" class="d-block" alt="">
+                </a>
+
+                <a href="">
+                    <img src="https://rukminim1.flixcart.com/fk-p-flap/960/1440/image/86837f00d21c3bb8.jpg?q=60"
+                        width="116px" height="175px" class="d-block" alt="">
+                </a>
+                <a href="">
+                    <img src="https://rukminim1.flixcart.com/fk-p-flap/960/1440/image/6b7b7d87c635c9ce.jpg?q=60"
+                        width="116px" height="175px" class="d-block" alt="">
+                </a>
+
+                <a href="">
+                    <img src="https://rukminim1.flixcart.com/fk-p-flap/960/1440/image/091807af932dd63d.jpg?q=60"
+                        width="116px" height="175px" class="d-block" alt="">
+                </a>
+
+                <a href="">
+                    <img src="https://rukminim1.flixcart.com/fk-p-flap/960/1440/image/6cc81600d7a4b794.jpg?q=60"
+                        width="116px" height="175px" class="d-block" alt="">
+                </a>
+
+               <br>
+            </div><br>
+             
+            <h2 class="shop-by-categories">Latest styles,loot price </h2><br>
+            <div class="img-brand-container">
+                <a href="">
+                    <img src="https://rukminim1.flixcart.com/fk-p-flap/960/1440/image/533e148e91aa45ba.jpg?q=60"
+                        width="116px" height="175px" class="d-block" alt="">
+                </a>
+                <a href="">
+                    <img src="https://rukminim1.flixcart.com/fk-p-flap/960/1440/image/599a3a85fa19b26e.jpg?q=60"
+                        width="116px" height="175px" class="d-block" alt="">
+                </a>
+
+                <a href="">
+                    <img src="https://rukminim1.flixcart.com/fk-p-flap/960/1440/image/ee5ce64ba0b0be0a.jpg?q=60"
+                        width="116px" height="175px" class="d-block" alt="">
+                </a>
+
+                <a href="">
+                    <img src="https://rukminim1.flixcart.com/fk-p-flap/960/1440/image/5a6c38ce13a239f7.jpg?q=60"
+                        width="116px" height="175px" class="d-block" alt="">
+                </a>
+
+                <a href="">
+                    <img src="https://rukminim1.flixcart.com/fk-p-flap/960/1440/image/d0cd50f9ed85f9e9.jpg?q=60"
+                        width="116px" height="175px" class="d-block" alt="">
+                </a>
+                <a href="">
+                    <img src="https://rukminim1.flixcart.com/fk-p-flap/960/1440/image/0321d1266395b17f.jpg?q=60"
+                        width="116px" height="175px" class="d-block" alt="">
+                </a>
+
+                <a href="">
+                    <img src="https://rukminim1.flixcart.com/fk-p-flap/960/1440/image/d472173c2b5f0d79.jpg?q=60"
+                        width="116px" height="175px" class="d-block" alt="">
+                </a>
+
+                <a href="">
+                    <img src="https://rukminim1.flixcart.com/fk-p-flap/960/1440/image/49deb97d1a5acad7.jpg?q=60"
+                        width="116px" height="175px" class="d-block" alt="">
+                </a>
+                <a href="">
+                    <img src="https://rukminim1.flixcart.com/fk-p-flap/960/1440/image/ea70866465bc313a.jpg?q=60"
+                        width="116px" height="175px" class="d-block" alt="">
+                </a>
+
+                <a href="">
+                    <img src="https://rukminim1.flixcart.com/fk-p-flap/960/1440/image/aa79961211d6ca15.jpg?q=60"
+                        width="116px" height="175px" class="d-block" alt="">
+                </a>
+
+                <a href="">
+                    <img src="https://rukminim1.flixcart.com/fk-p-flap/960/1440/image/8eee4b681159c758.jpg?q=60"
+                        width="116px" height="175px" class="d-block" alt="">
+                </a>
+               <br>
+            </div><br>
+             <br>
+            <h2 class="shop-by-categories">Add-ons to add to cart</h2><br>
+            <div class="img-brand-container">
+                <a href="">
+                    <img src="https://rukminim1.flixcart.com/fk-p-flap/960/1440/image/995491b38f4db73b.jpg?q=60"
+                        width="116px" height="175px" class="d-block" alt="">
+                </a>
+                <a href="">
+                    <img src="https://rukminim1.flixcart.com/fk-p-flap/960/1440/image/955874fb9f2d5337.jpg?q=60"
+                        width="116px" height="175px" class="d-block" alt="">
+                </a>
+
+                <a href="">
+                    <img src="https://rukminim1.flixcart.com/fk-p-flap/960/1440/image/29eac5ee0a0eb1b6.jpg?q=60"
+                        width="116px" height="175px" class="d-block" alt="">
+                </a>
+
+                <a href="">
+                    <img src="https://rukminim1.flixcart.com/fk-p-flap/960/1440/image/9bedffbe92f441c3.jpg?q=60"
+                        width="116px" height="175px" class="d-block" alt="">
+                </a>
+
+                <a href="">
+                    <img src="https://rukminim1.flixcart.com/fk-p-flap/960/1440/image/d873f22f6d584b96.jpg?q=60"
+                        width="116px" height="175px" class="d-block" alt="">
+                </a>
+                <a href="">
+                    <img src="https://rukminim1.flixcart.com/fk-p-flap/960/1440/image/d415225474808d70.jpg?q=60"
+                        width="116px" height="175px" class="d-block" alt="">
+                </a>
+
+                <a href="">
+                    <img src="https://rukminim1.flixcart.com/fk-p-flap/960/1440/image/90ee81cbfb7cdd8f.jpg?q=60"
+                        width="116px" height="175px" class="d-block" alt="">
+                </a>
+
+                <a href="">
+                    <img src="https://rukminim1.flixcart.com/fk-p-flap/960/1440/image/a79289502bc678f9.jpg?q=60"
+                        width="116px" height="175px" class="d-block" alt="">
+                </a>
+                <a href="">
+                    <img src="https://rukminim1.flixcart.com/fk-p-flap/960/1440/image/63c6e8da9dc0c03a.jpg?q=60"
+                        width="116px" height="175px" class="d-block" alt="">
+                </a>
+
+                <a href="">
+                    <img src="https://rukminim1.flixcart.com/fk-p-flap/960/1440/image/35b9e109d5e6fc52.jpg?q=60"
+                        width="116px" height="175px" class="d-block" alt="">
+                </a>
+
+                <a href="">
+                    <img src="https://rukminim1.flixcart.com/fk-p-flap/960/1440/image/3c544e9ebc3d3cd4.jpg?q=60"
+                        width="116px" height="175px" class="d-block" alt="">
+                </a>
+
+               <br>
+            </div><br>
+            <h2 class="shop-by-categories">Greatest Of all trends</h2>
+            <div class="img-brand-container">
+                <a href="">
+                    <img src="https://rukminim1.flixcart.com/fk-p-flap/960/1280/image/069e2d1f31b9fbff.jpg?q=60"
+                        width="263px" height="348px" class="d-block" alt="">
+                </a>
+                <a href="">
+                    <img src="https://rukminim1.flixcart.com/fk-p-flap/960/1280/image/fd4ee66db3c81634.jpg?q=60"
+                        width="263px" height="348px" class="d-block" alt="">
+                </a>
+
+                <a href="">
+                    <img src="https://rukminim1.flixcart.com/fk-p-flap/960/1280/image/90dfe129c6ef472b.jpg?q=60"
+                        width="263px" height="348px" class="d-block" alt="">
+                </a>
+
+                <a href="">
+                    <img src="https://rukminim1.flixcart.com/fk-p-flap/960/1280/image/5bbc08317196bc89.jpg?q=60"
+                        width="263px" height="348px" class="d-block" alt="">
+                </a>
+
+                <a href="">
+                    <img src="https://rukminim1.flixcart.com/fk-p-flap/960/1280/image/3276e74025b76606.jpg?q=60"
+                        width="263px" height="348px" class="d-block" alt="">
+                </a>
+                <a href="">
+                    <img src="https://rukminim1.flixcart.com/fk-p-flap/960/1280/image/bda051fa7f81108e.jpg?q=60"
+                        width="263px" height="348px" class="d-block" alt="">
+                </a>
+
+                <a href="">
+                    <img src="https://rukminim1.flixcart.com/fk-p-flap/960/1280/image/632ab76202ea0024.jpg?q=60"
+                        width="263px" height="348px" class="d-block" alt="">
+                </a>
+
+                <a href="">
+                    <img src="https://rukminim1.flixcart.com/fk-p-flap/960/1280/image/995b842f7f5ebe34.jpg?q=60"
+                        width="263px" height="348px" class="d-block" alt="">
+                </a>
+                <a href="">
+                    <img src="https://rukminim1.flixcart.com/fk-p-flap/960/1280/image/deb2070f68827b23.jpg?q=60"
+                        width="263px" height="348px" class="d-block" alt="">
+                </a>
+
+                <a href="">
+                    <img src="https://rukminim1.flixcart.com/fk-p-flap/960/1280/image/8ad5d9406b607b3f.jpg?q=60"
+                        width="263px" height="348px" class="d-block" alt="">
+                </a>
+
+                <a href="">
+                    <img src="https://rukminim1.flixcart.com/fk-p-flap/960/1280/image/1e8528851388dfde.jpg?q=60"
+                        width="263px" height="348px" class="d-block" alt="">
+                </a>
+
+               <br>
+            </div><br>
+              <h2 class="shop-by-categories">Flipkart House of brands</h2><br>
+            <div class="img-brand-container">
+                <a href="">
+                    <img src="https://rukminim1.flixcart.com/fk-p-flap/960/1280/image/528910aba58710ab.jpg?q=60"
+                        width="263px" height="348px" class="d-block" alt="">
+                </a>
+                <a href="">
+                    <img src="https://rukminim1.flixcart.com/fk-p-flap/960/1280/image/11e6ce081a5a9228.jpg?q=60"
+                        width="263px" height="348px" class="d-block" alt="">
+                </a>
+
+                <a href="">
+                    <img src="https://rukminim1.flixcart.com/fk-p-flap/960/1280/image/6d4cb4bc9b909824.jpg?q=60"
+                        width="263px" height="348px" class="d-block" alt="">
+                </a>
+
+                <a href="">
+                    <img src="https://rukminim1.flixcart.com/fk-p-flap/960/1280/image/4a599f40906ffb87.jpg?q=60"
+                        width="263px" height="348px" class="d-block" alt="">
+                </a>
+
+                <a href="">
+                    <img src="https://rukminim1.flixcart.com/fk-p-flap/960/1280/image/4b1fd059d45e0a6e.jpg?q=60"
+                        width="263px" height="348px" class="d-block" alt="">
+                </a>
+                <a href="">
+                    <img src="https://rukminim1.flixcart.com/fk-p-flap/960/1280/image/b4499545d57e3025.jpg?q=60"
+                        width="263px" height="348px" class="d-block" alt="">
+                </a>
+
+                <a href="">
+                    <img src="https://rukminim1.flixcart.com/fk-p-flap/960/1280/image/4b12aab9e035863b.jpg?q=60"
+                        width="263px" height="348px" class="d-block" alt="">
+                </a>
+
+                <a href="">
+                    <img src="https://rukminim1.flixcart.com/fk-p-flap/960/1280/image/9630e5c363becd81.jpg?q=60"
+                        width="263px" height="348px" class="d-block" alt="">
+                </a>
+                <a href="">
+                    <img src="https://rukminim1.flixcart.com/fk-p-flap/960/1280/image/e3c0bd4a256d8f81.jpg?q=60"
+                        width="263px" height="348px" class="d-block" alt="">
+                </a>
+
+                <a href="">
+                    <img src="https://rukminim1.flixcart.com/fk-p-flap/960/1280/image/97d76e6eca53043d.jpg?q=60"
+                        width="263px" height="348px" class="d-block" alt="">
+                </a>
+
+               <br>
+            </div><br>
+             <h2 class="shop-by-categories">Fresh Finds </h2><br>
+            <div class="img-brand-container">
+                <a href="">
+                    <img src="https://rukminim1.flixcart.com/fk-p-flap/960/1440/image/bbbff9ff3c4eb854.jpg?q=60"
+                        width="116px" height="175px" class="d-block" alt="">
+                </a>
+                <a href="">
+                    <img src="https://rukminim1.flixcart.com/fk-p-flap/960/1440/image/bf13f71bfab24a94.png?q=60"
+                        width="116px" height="175px" class="d-block" alt="">
+                </a>
+
+                <a href="">
+                    <img src="https://rukminim1.flixcart.com/fk-p-flap/960/1440/image/1a922a98163ad509.png?q=60"
+                        width="116px" height="175px" class="d-block" alt="">
+                </a>
+
+                <a href="">
+                    <img src="https://rukminim1.flixcart.com/fk-p-flap/960/1440/image/a8735fd1b7619f0a.png?q=60"
+                        width="116px" height="175px" class="d-block" alt="">
+                </a>
+
+                <a href="">
+                    <img src="https://rukminim1.flixcart.com/fk-p-flap/960/1440/image/baf1a35dc13a20a0.jpg?q=60"
+                        width="116px" height="175px" class="d-block" alt="">
+                </a>
+                <a href="">
+                    <img src="https://rukminim1.flixcart.com/fk-p-flap/960/1440/image/9d13d40b75b6043d.jpg?q=60"
+                        width="116px" height="175px" class="d-block" alt="">
+                </a>
+
+                <a href="">
+                    <img src="https://rukminim1.flixcart.com/fk-p-flap/960/1440/image/7045a9930d32c195.png?q=60"
+                        width="116px" height="175px" class="d-block" alt="">
+                </a>
+
+                <a href="">
+                    <img src="https://rukminim1.flixcart.com/fk-p-flap/960/1440/image/8ca1bb4dc1e513ef.jpg?q=60"
+                        width="116px" height="175px" class="d-block" alt="">
+                </a>
+                <a href="">
+                    <img src="https://rukminim1.flixcart.com/fk-p-flap/960/1440/image/aba4c5127cc22097.png?q=60"
+                        width="116px" height="175px" class="d-block" alt="">
+                </a>
+
+                <a href="">
+                    <img src="https://rukminim1.flixcart.com/fk-p-flap/960/1440/image/afa1618a9e426080.png?q=60"
+                        width="116px" height="175px" class="d-block" alt="">
+                </a>
+
+                <a href="">
+                    <img src="https://rukminim1.flixcart.com/fk-p-flap/960/1440/image/4ee95838468cfb36.jpg?q=60"
+                        width="116px" height="175px" class="d-block" alt="">
+                </a>
+                <a href="">
+                    <img src="https://rukminim1.flixcart.com/fk-p-flap/960/1440/image/787478ec4bcde500.png?q=60"
+                        width="116px" height="175px" class="d-block" alt="">
+                </a>
+
+               <br>
+            </div><br>
+             <h2 class="shop-by-categories">NextGen brands </h2><br>
+            <div class="img-brand-container">
+                <a href="">
+                    <img src="https://rukminim1.flixcart.com/fk-p-flap/960/1440/image/5e2e3af363f69859.jpg?q=60"
+                        width="116px" height="175px" class="d-block" alt="">
+                </a>
+                <a href="">
+                    <img src="https://rukminim1.flixcart.com/fk-p-flap/960/1440/image/fb6cedb69c0f0f21.jpg?q=60"
+                        width="116px" height="175px" class="d-block" alt="">
+                </a>
+
+                <a href="">
+                    <img src="https://rukminim1.flixcart.com/fk-p-flap/960/1440/image/d0261c13db85f308.jpg?q=60"
+                        width="116px" height="175px" class="d-block" alt="">
+                </a>
+
+                <a href="">
+                    <img src="https://rukminim1.flixcart.com/fk-p-flap/960/1440/image/4ee65bb85026027b.jpg?q=60"
+                        width="116px" height="175px" class="d-block" alt="">
+                </a>
+
+                <a href="">
+                    <img src="https://rukminim1.flixcart.com/fk-p-flap/960/1440/image/ff2b4c5540b59d96.jpg?q=60"
+                        width="116px" height="175px" class="d-block" alt="">
+                </a>
+                <a href="">
+                    <img src="https://rukminim1.flixcart.com/fk-p-flap/960/1440/image/065f648a9123e7cd.jpg?q=60"
+                        width="116px" height="175px" class="d-block" alt="">
+                </a>
+
+                <a href="">
+                    <img src="https://rukminim1.flixcart.com/fk-p-flap/960/1440/image/f35928887fb5a798.jpg?q=60"
+                        width="116px" height="175px" class="d-block" alt="">
+                </a>
+
+                <a href="">
+                    <img src="https://rukminim1.flixcart.com/fk-p-flap/960/1440/image/03619c1e12612a65.jpg?q=60"
+                        width="116px" height="175px" class="d-block" alt="">
+                </a>
+                <a href="">
+                    <img src="https://rukminim1.flixcart.com/fk-p-flap/960/1440/image/410534c3f37d3480.jpg?q=60"
+                        width="116px" height="175px" class="d-block" alt="">
+                </a>
+
+                <a href="">
+                    <img src="https://rukminim1.flixcart.com/fk-p-flap/960/1440/image/5e8e0e68492cd092.jpg?q=60"
+                        width="116px" height="175px" class="d-block" alt="">
+                </a>
+
+                <a href="">
+                    <img src="https://rukminim1.flixcart.com/fk-p-flap/960/1440/image/8a2a2b127f2e578e.jpg?q=60"
+                        width="116px" height="175px" class="d-block" alt="">
+                </a>
+                 <a href="">
+                    <img src="https://rukminim1.flixcart.com/fk-p-flap/960/1440/image/9b3034956c394cdd.jpg?q=60"
+                        width="116px" height="175px" class="d-block" alt="">
+                </a>
+
+               <br>
+            </div><br>
+             <h2 class="shop-by-categories">Stars brands, sales price</h2><br>
+            <div class="img-brand-container">
+                <a href="">
+                    <img src="https://rukminim1.flixcart.com/fk-p-flap/960/1280/image/f2995fca69a44d46.jpg?q=60"
+                        width="263px" height="348px" class="d-block" alt="">
+                </a>
+                <a href="">
+                    <img src="https://rukminim1.flixcart.com/fk-p-flap/960/1280/image/5c19f8ae475106a1.jpg?q=60"
+                        width="263px" height="348px" class="d-block" alt="">
+                </a>
+
+                <a href="">
+                    <img src="https://rukminim1.flixcart.com/fk-p-flap/960/1280/image/44e990bd85e8d748.jpg?q=60"
+                        width="263px" height="348px" class="d-block" alt="">
+                </a>
+
+                <a href="">
+                    <img src="https://rukminim1.flixcart.com/fk-p-flap/960/1280/image/fe393bb7d989cabd.jpg?q=60"
+                        width="263px" height="348px" class="d-block" alt="">
+                </a>
+
+                <a href="">
+                    <img src="https://rukminim1.flixcart.com/fk-p-flap/960/1280/image/8aa3baca415544bf.jpg?q=60"
+                        width="263px" height="348px" class="d-block" alt="">
+                </a>
+                <a href="">
+                    <img src="https://rukminim1.flixcart.com/fk-p-flap/960/1280/image/fc48805dc1cbe729.jpg?q=60"
+                        width="263px" height="348px" class="d-block" alt="">
+                </a>
+
+                <a href="">
+                    <img src="https://rukminim1.flixcart.com/fk-p-flap/960/1280/image/1d062b7095922a42.jpg?q=60"
+                        width="263px" height="348px" class="d-block" alt="">
+                </a>
+
+                <a href="">
+                    <img src="https://rukminim1.flixcart.com/fk-p-flap/960/1280/image/4e3bb0d83072b066.jpg?q=60"
+                        width="263px" height="348px" class="d-block" alt="">
+                </a>
+                <a href="">
+                    <img src="https://rukminim1.flixcart.com/fk-p-flap/960/1280/image/85f681084356ee9c.jpg?q=60"
+                        width="263px" height="348px" class="d-block" alt="">
+                </a>
+
+                <a href="">
+                    <img src="https://rukminim1.flixcart.com/fk-p-flap/960/1280/image/09608aa41a4be5dc.jpg?q=60"
+                        width="263px" height="348px" class="d-block" alt="">
+                </a>
+                <a href="">
+                    <img src="https://rukminim1.flixcart.com/fk-p-flap/960/1280/image/7321f57e2968c861.jpg?q=60"
+                        width="263px" height="348px" class="d-block" alt="">
+                </a>
+                <a href="">
+                    <img src="https://rukminim1.flixcart.com/fk-p-flap/960/1280/image/bc24bbd24c504034.jpg?q=60"
+                        width="263px" height="348px" class="d-block" alt="">
+                </a>
+
+               <br>
+            </div><br>
+        <h2 class="shop-by-categories">Big loot on a budget</h2>
+        <div class="products-collection-price">
+
+            <!--products list-->
+            <a href="#" class="products-link">
+                <div class="products-brand-img">
+                    <img src="https://rukminim1.flixcart.com/fk-p-flap/200/260/image/b614294ffba309ee.jpg?q=60"
+                        width="110px" height="136px" alt="oil ghee">
+
+                </div>
+            </a>
+            <a href="#" class="products-link">
+                <div class="products-brand-img">
+                    <img src="https://rukminim1.flixcart.com/fk-p-flap/200/260/image/3061cc139997d163.jpg?q=60"
+                        width="110px" height="136px" alt="mobiles">
+                </div>
+            </a>
+            <a href="#" class="products-link">
+                <div class="products-brand-img">
+                    <img src="https://rukminim1.flixcart.com/fk-p-flap/200/260/image/d7a78c94d38a647a.jpg?q=60"
+                        width="110px" height="136px" alt="Gadgets">
+                </div>
+            </a>
+            <a href="#" class="products-link">
+                <div class="products-brand-img">
+                    <img src="https://rukminim1.flixcart.com/fk-p-flap/200/260/image/35d1dd1960c6e7f3.jpg?q=60"
+                        width="110px" height="136px" alt="oil ghee">
+
+                </div>
+            </a>
+            <a href="#" class="products-link">
+                <div class="products-brand-img">
+                    <img src="https://rukminim1.flixcart.com/fk-p-flap/200/260/image/810aec9de4657083.jpg?q=60"
+                        width="110px" height="136px" alt="mobiles">
+                </div>
+            </a>
+            <a href="#" class="products-link">
+                <div class="products-brand-img">
+                    <img src="https://rukminim1.flixcart.com/fk-p-flap/200/260/image/6750c3c1147c25eb.jpg?q=60"
+                        width="110px" height="136px" alt="Gadgets">
+                </div>
+            </a>
+             <a href="#" class="products-link">
+                <div class="products-brand-img">
+                    <img src="https://rukminim1.flixcart.com/fk-p-flap/200/260/image/aecec22d92e573e0.jpg?q=60"
+                        width="110px" height="136px" alt="oil ghee">
+
+                </div>
+            </a>
+            <a href="#" class="products-link">
+                <div class="products-brand-img">
+                    <img src="https://rukminim1.flixcart.com/fk-p-flap/200/260/image/1d4a9f85a2ab5720.jpg?q=60"
+                        width="110px" height="136px" alt="mobiles">
+                </div>
+            </a>
+            <a href="#" class="products-link">
+                <div class="products-brand-img">
+                    <img src="https://rukminim1.flixcart.com/fk-p-flap/200/260/image/bdcb2e2ee5c73873.jpg?q=60"
+                        width="110px" height="136px" alt="Gadgets">
+                </div>
+            </a>
+            <a href="#" class="products-link">
+                <div class="products-brand-img">
+                    <img src="https://rukminim1.flixcart.com/fk-p-flap/200/260/image/393fb1c6ab29067b.jpg?q=60"
+                        width="110px" height="136px" alt="oil ghee">
+
+                </div>
+            </a>
+            <a href="#" class="products-link">
+                <div class="products-brand-img">
+                    <img src="https://rukminim1.flixcart.com/fk-p-flap/200/260/image/2a14c59324846b7c.jpg?q=60"
+                        width="110px" height="136px" alt="mobiles">
+                </div>
+            </a>
+            <a href="#" class="products-link">
+                <div class="products-brand-img">
+                    <img src="https://rukminim1.flixcart.com/fk-p-flap/200/260/image/597f9e3bfd3a8726.jpg?q=60"
+                        width="110px" height="136px" alt="Gadgets">
+                </div>
+            </a>
+
+        </div><br><br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+<!--script external files insert-->
+<script src="app.js"></script>
+
+<!--cart javascript insert-->
+<script src="../cart.js"></script>
+<!--bootstrap js files insert-->
+<script src="../bootstrap-5.3.5-dist/js/bootstrap.min.js">
+</script>
+<!--icons iconic websites script-->
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+
+</html>
