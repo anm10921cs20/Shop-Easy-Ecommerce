@@ -800,7 +800,7 @@
     }
     .products-items
     {
-        width: 455px;
+        width: 155px;
         height: 250px;
         border-radius: 6px;
         display: flex;
@@ -1147,20 +1147,7 @@
         
         display: none;
     }
-    .products-items
-    {
-        width: 455px;
-        height: 250px;
-        border-radius: 6px;
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
-        padding: 20px 16px;
-        background:#ffffff;
-        line-height: 16px;
-        border: 1px solid rgba(0, 0, 0, 0.1);
-        position: relative;
-    }
+    
     
     
 
