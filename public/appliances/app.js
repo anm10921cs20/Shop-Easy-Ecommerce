@@ -127,5 +127,5 @@ select5.addEventListener('click', () => {
    productcontainer4.style.display = "none";
    productcontainer5.style.display = "flex";
    animate.style.left = "530px";
-   productcontainer4.scrollLeft = 0;
+   productcontainer5.scrollLeft = 0;
 })
