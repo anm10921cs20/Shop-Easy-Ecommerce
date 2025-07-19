@@ -1046,6 +1046,8 @@
         width: 90px;
         border-radius: 12px;
     }
+
+    /* telivision */
     .products-container
     {
         background-color: #ffd86e;
@@ -1159,9 +1161,48 @@
     {
         display: none;
     }
+    .smart4k-btn
+    {
+        display: none;
+    }
+    .Qled-btn
+    {
+        display: none;
+    }
+    .inch55-btn
+    {
+        display: none;
+    }
+    .inch43-btn
+    {
+        display: none;
+    }
+
+
+    /* refrigrator */
     
     
-    
+     .products-container1
+    {
+        background-color: #55d9e8;
+        width: 387px;
+        height: 581px;
+        margin: 0 auto;
+        border-radius: 12px;
+
+    }
+    .single-door
+    {
+        display: none;
+    }
+    .deep-freezers
+    {
+        display: none;
+    }
+    .side-by-side
+    {
+        display: none;
+    }
 
 
 
