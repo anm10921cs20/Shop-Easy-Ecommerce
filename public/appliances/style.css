@@ -822,6 +822,10 @@
         border-radius: 7px;
 
     }
+    .products-items img
+    {
+        object-fit: contain;
+    }
     .fa-plus
     {
         color: #6B7FD7;
@@ -839,6 +843,7 @@
     {
         color: #000;
         font-weight: 600;
+        width: 20ch;
     }
     .rate
     {
