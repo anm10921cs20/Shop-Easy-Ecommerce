@@ -843,11 +843,12 @@
     {
         color: #000;
         font-weight: 600;
-        width: 20ch;
+        width: 14ch;
     }
     .rate
     {
         color: #000;
+        font-size: 15px;
     }
     .rate-del
     {
@@ -1208,6 +1209,28 @@
     {
         display: none;
     }
+
+
+    /* washing machine */
+
+
+    .ifb
+    {
+        display: none;
+    }
+    .semi
+    {
+        display: none;
+    }
+    .samsung
+    {
+        display: none;
+    }
+    .fully
+    {
+        display: none;
+    }
+
 
 
 
