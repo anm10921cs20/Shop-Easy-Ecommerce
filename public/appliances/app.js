@@ -677,4 +677,135 @@ select35.addEventListener('click', () => {
 })
 
 
+// fans
+
+//all product container select
+
+const productcontainer41 = document.getElementsByClassName('fans')[0];
+const productcontainer42 = document.getElementsByClassName('ped-fans')[0];
+const productcontainer43 = document.getElementsByClassName('celling')[0];
+const productcontainer44 = document.getElementsByClassName('table')[0];
+
+//all the containers see more btns
+
+
+
+const productmorebtn41 = document.getElementsByClassName('inch50-btn')[4];
+const productmorebtn42 = document.getElementsByClassName('smart4k-btn')[4];
+const productmorebtn43 = document.getElementsByClassName('Qled-btn')[4];
+const productmorebtn44 = document.getElementsByClassName('inch55-btn')[4];
+
+
+
+
+
+
+//all the container selection
+
+const select41 = document.getElementsByClassName('products-type1')[4];
+const select42 = document.getElementsByClassName('products-type2')[4];
+const select43 = document.getElementsByClassName('products-type3')[4];
+const select44 = document.getElementsByClassName('products-type4')[4];
+
+
+
+
+
+
+//animate function active
+
+const animate4 = document.getElementsByClassName('animate')[4];
+
+
+
+
+
+
+//function process
+
+//first btn first container
+
+select41.addEventListener('click', () => {
+
+   //container display show or hide
+   productcontainer41.style.display = "flex";
+   productcontainer42.style.display = "none";
+   productcontainer43.style.display = "none";
+   productcontainer44.style.display = "none";
+
+   //button see more
+
+   productmorebtn41.style.display = "block"
+   productmorebtn42.style.display = "none"
+   productmorebtn43.style.display = "none"
+   productmorebtn44.style.display = "none"
+
+   //animation set
+   animate4.style.left = "30px";
+
+   //scroll left
+   productcontainer41.scrollLeft = 0;
+})
+
+
+
+//second btn second container
+
+select42.addEventListener('click', () => {
+   productcontainer41.style.display = "none";
+   productcontainer42.style.display = "flex";
+   productcontainer43.style.display = "none";
+   productcontainer44.style.display = "none";
+
+
+   productmorebtn41.style.display = "none"
+   productmorebtn42.style.display = "block"
+   productmorebtn43.style.display = "none"
+   productmorebtn44.style.display = "none"
+
+
+   animate4.style.left = "155px";
+   productcontainer42.scrollLeft = 0;
+})
+
+
+
+//third btn third container
+
+select43.addEventListener('click', () => {
+   productcontainer41.style.display = "none";
+   productcontainer42.style.display = "none";
+   productcontainer43.style.display = "flex";
+   productcontainer44.style.display = "none";
+
+
+
+    productmorebtn41.style.display = "none"
+   productmorebtn42.style.display = "none"
+   productmorebtn43.style.display = "block"
+   productmorebtn44.style.display = "none"
+
+   animate4.style.left = "280px";
+   productcontainer43.scrollLeft = 0;
+})
+
+
+//fourth btn fourth container
+
+select44.addEventListener('click', () => {
+   productcontainer41.style.display = "none";
+   productcontainer42.style.display = "none";
+   productcontainer43.style.display = "none";
+   productcontainer44.style.display = "flex";
+
+
+    productmorebtn41.style.display = "none"
+   productmorebtn42.style.display = "none"
+   productmorebtn43.style.display = "none"
+   productmorebtn44.style.display = "block"
+
+
+   animate4.style.left = "400px";
+   productcontainer44.scrollLeft = 0;
+})
 

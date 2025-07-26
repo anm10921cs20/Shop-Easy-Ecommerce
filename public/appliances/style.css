@@ -1251,6 +1251,21 @@
         display: none;
     }
 
+    /* fans */
+
+    .ped-fans
+    {
+        display: none;
+    }
+    .celling
+    {
+        display: none;
+    }
+    .table
+    {
+        display: none;
+    }
+
 
 
 
