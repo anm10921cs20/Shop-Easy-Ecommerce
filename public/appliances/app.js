@@ -502,4 +502,179 @@ select25.addEventListener('click', () => {
 //air conditioner
 
 
+//all product container select
+
+const productcontainer31 = document.getElementsByClassName('ton1')[0];
+const productcontainer32 = document.getElementsByClassName('ton1-5')[0];
+const productcontainer33 = document.getElementsByClassName('ton2')[0];
+const productcontainer34 = document.getElementsByClassName('top')[0];
+const productcontainer35 = document.getElementsByClassName('energy')[0];
+
+
+//all the containers see more btns
+
+
+
+const productmorebtn31 = document.getElementsByClassName('inch50-btn')[3];
+const productmorebtn32 = document.getElementsByClassName('smart4k-btn')[3];
+const productmorebtn33 = document.getElementsByClassName('Qled-btn')[3];
+const productmorebtn34 = document.getElementsByClassName('inch55-btn')[3];
+const productmorebtn35 = document.getElementsByClassName('inch43-btn')[2];
+
+
+
+
+
+
+
+//all the container selection
+
+const select31 = document.getElementsByClassName('products-type1')[3];
+const select32 = document.getElementsByClassName('products-type2')[3];
+const select33 = document.getElementsByClassName('products-type3')[3];
+const select34 = document.getElementsByClassName('products-type4')[3];
+const select35 = document.getElementsByClassName('products-type5')[2];
+
+
+
+
+
+
+
+//animate function active
+
+const animate3 = document.getElementsByClassName('animate')[3];
+
+
+
+
+
+
+//function process
+
+//first btn first container
+
+select31.addEventListener('click', () => {
+
+   //container display show or hide
+   productcontainer31.style.display = "flex";
+   productcontainer32.style.display = "none";
+   productcontainer33.style.display = "none";
+   productcontainer34.style.display = "none";
+   productcontainer35.style.display = "none";
+
+
+   //button see more
+
+   productmorebtn31.style.display = "block"
+   productmorebtn32.style.display = "none"
+   productmorebtn33.style.display = "none"
+   productmorebtn34.style.display = "none"
+   productmorebtn35.style.display = "none"
+
+
+   //animation set
+   animate3.style.left = "30px";
+
+   //scroll left
+   productcontainer31.scrollLeft = 0;
+})
+
+
+
+//second btn second container
+
+select32.addEventListener('click', () => {
+   productcontainer31.style.display = "none";
+   productcontainer32.style.display = "flex";
+   productcontainer33.style.display = "none";
+   productcontainer34.style.display = "none";
+   productcontainer35.style.display = "none";
+
+
+
+   productmorebtn31.style.display = "none"
+   productmorebtn32.style.display = "block"
+   productmorebtn33.style.display = "none"
+   productmorebtn34.style.display = "none"
+   productmorebtn35.style.display = "none"
+
+
+
+   animate3.style.left = "155px";
+   productcontainer32.scrollLeft = 0;
+})
+
+
+
+//third btn third container
+
+select33.addEventListener('click', () => {
+   productcontainer31.style.display = "none";
+   productcontainer32.style.display = "none";
+   productcontainer33.style.display = "flex";
+   productcontainer34.style.display = "none";
+   productcontainer35.style.display = "none";
+
+
+
+
+   productmorebtn31.style.display = "none"
+   productmorebtn32.style.display = "none"
+   productmorebtn33.style.display = "block"
+   productmorebtn34.style.display = "none"
+   productmorebtn35.style.display = "none"
+
+
+   animate3.style.left = "280px";
+   productcontainer33.scrollLeft = 0;
+})
+
+
+//fourth btn fourth container
+
+select34.addEventListener('click', () => {
+   productcontainer31.style.display = "none";
+   productcontainer32.style.display = "none";
+   productcontainer33.style.display = "none";
+   productcontainer34.style.display = "flex";
+   productcontainer35.style.display = "none";
+
+
+
+    productmorebtn31.style.display = "none"
+   productmorebtn32.style.display = "none"
+   productmorebtn33.style.display = "none"
+   productmorebtn34.style.display = "block"
+   productmorebtn35.style.display = "none"
+
+
+
+   animate3.style.left = "400px";
+   productcontainer34.scrollLeft = 0;
+})
+
+
+//fifth btn fifth container
+
+select35.addEventListener('click', () => {
+   productcontainer31.style.display = "none";
+   productcontainer32.style.display = "none";
+   productcontainer33.style.display = "none";
+   productcontainer34.style.display = "none";
+   productcontainer35.style.display = "flex";
+
+
+   productmorebtn31.style.display = "none"
+   productmorebtn32.style.display = "none"
+   productmorebtn33.style.display = "none"
+   productmorebtn34.style.display = "none"
+   productmorebtn35.style.display = "block"
+
+
+   animate3.style.left = "530px";
+   productcontainer35.scrollLeft = 0;
+})
+
+
 
