@@ -684,7 +684,7 @@ select35.addEventListener('click', () => {
 const productcontainer41 = document.getElementsByClassName('fans')[0];
 const productcontainer42 = document.getElementsByClassName('ped-fans')[0];
 const productcontainer43 = document.getElementsByClassName('celling')[0];
-const productcontainer44 = document.getElementsByClassName('table')[0];
+const productcontainer44 = document.getElementsByClassName('tables')[0];
 
 //all the containers see more btns
 
@@ -809,4 +809,146 @@ select44.addEventListener('click', () => {
    animate4.style.left = "400px";
    productcontainer44.scrollLeft = 0;
 })
+
+
+//Kitchen Appliances
+
+
+
+//all product container select
+
+const productcontainer51 = document.getElementsByClassName('airs')[0];
+const productcontainer52 = document.getElementsByClassName('breakfast')[0];
+const productcontainer53 = document.getElementsByClassName('cook')[0];
+const productcontainer54 = document.getElementsByClassName('juicer')[0];
+
+//all the containers see more btns
+
+
+
+const productmorebtn51 = document.getElementsByClassName('inch50-btn')[5];
+const productmorebtn52 = document.getElementsByClassName('smart4k-btn')[5];
+const productmorebtn53 = document.getElementsByClassName('Qled-btn')[5];
+const productmorebtn54 = document.getElementsByClassName('inch55-btn')[5];
+
+
+
+
+
+
+//all the container selection
+
+const select51 = document.getElementsByClassName('products-type1')[5];
+const select52 = document.getElementsByClassName('products-type2')[5];
+const select53 = document.getElementsByClassName('products-type3')[5];
+const select54 = document.getElementsByClassName('products-type4')[5];
+
+
+
+
+
+
+
+//animate function active
+
+const animate5 = document.getElementsByClassName('animate')[5];
+
+
+
+
+
+
+//function process
+
+//first btn first container
+
+select51.addEventListener('click', () => {
+
+   //container display show or hide
+   productcontainer51.style.display = "flex";
+   productcontainer52.style.display = "none";
+   productcontainer53.style.display = "none";
+   productcontainer54.style.display = "none";
+
+   //button see more
+
+   productmorebtn51.style.display = "block"
+   productmorebtn52.style.display = "none"
+   productmorebtn53.style.display = "none"
+   productmorebtn54.style.display = "none"
+
+   //animation set
+   animate5.style.left = "30px";
+
+   //scroll left
+   productcontainer51.scrollLeft = 0;
+})
+
+
+
+//second btn second container
+
+select52.addEventListener('click', () => {
+   productcontainer51.style.display = "none";
+   productcontainer52.style.display = "flex";
+   productcontainer53.style.display = "none";
+   productcontainer54.style.display = "none";
+
+
+   productmorebtn51.style.display = "none"
+   productmorebtn52.style.display = "block"
+   productmorebtn53.style.display = "none"
+   productmorebtn54.style.display = "none"
+
+
+   animate5.style.left = "155px";
+   productcontainer52.scrollLeft = 0;
+})
+
+
+
+//third btn third container
+
+select53.addEventListener('click', () => {
+   productcontainer51.style.display = "none";
+   productcontainer52.style.display = "none";
+   productcontainer53.style.display = "flex";
+   productcontainer54.style.display = "none";
+
+
+
+    productmorebtn51.style.display = "none"
+   productmorebtn52.style.display = "none"
+   productmorebtn53.style.display = "block"
+   productmorebtn54.style.display = "none"
+
+   animate5.style.left = "280px";
+   productcontainer53.scrollLeft = 0;
+})
+
+
+//fourth btn fourth container
+
+select54.addEventListener('click', () => {
+   productcontainer51.style.display = "none";
+   productcontainer52.style.display = "none";
+   productcontainer53.style.display = "none";
+   productcontainer54.style.display = "flex";
+
+
+    productmorebtn51.style.display = "none"
+   productmorebtn52.style.display = "none"
+   productmorebtn53.style.display = "none"
+   productmorebtn54.style.display = "block"
+
+
+   animate5.style.left = "400px";
+   productcontainer54.scrollLeft = 0;
+})
+
+
+//home Apliances
+
+
+
 

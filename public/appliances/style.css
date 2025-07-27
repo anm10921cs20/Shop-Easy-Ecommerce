@@ -1261,7 +1261,22 @@
     {
         display: none;
     }
-    .table
+    .tables
+    {
+        display: none;
+    }
+
+    /* kitchen appliances */
+
+    .breakfast
+    {
+        display: none;
+    }
+    .cook
+    {
+        display: none;
+    }
+    .juicer
     {
         display: none;
     }
