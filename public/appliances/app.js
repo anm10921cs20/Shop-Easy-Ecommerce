@@ -712,6 +712,7 @@ const select44 = document.getElementsByClassName('products-type4')[4];
 
 
 
+
 //animate function active
 
 const animate4 = document.getElementsByClassName('animate')[4];
