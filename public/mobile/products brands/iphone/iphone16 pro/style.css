@@ -817,7 +817,7 @@
         gap: 10px;
         padding: 6px;
     }
-
+    
 
 
 
@@ -1011,6 +1011,30 @@
     {
         background-color:#fef7e9 ;
         border: 1px solid #fbbe4d;
+    }
+
+
+    /* animation */
+    .all-active
+    {
+        display: none;
+    }
+    .g5
+    {
+        display: none;
+    }
+
+    .launch
+    {
+        display: none;
+    }
+    .g5-active
+    {
+        display: block;
+    }
+    .launch-active
+    {
+        display: block;
     }
 
 

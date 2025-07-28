@@ -57,6 +57,7 @@ function heartactive()
 }
 
 
+//
 
 
 
@@ -65,4 +66,29 @@ function heartactive()
 
 
 
+//btn selected
+
+const btn5G = document.getElementsByClassName('btn-main')[0];
+const btnlaunched = document.getElementsByClassName('btn-main')[1];
+
+
+//main container
+
+const firstcontainer = document.getElementsByClassName('all')[0];
+const secondcontainer = document.getElementsByClassName('g5')[0];
+const thirdcontainer = document.getElementsByClassName('launch')[0];
+
+
+btn5G.addEventListener('click', () => {
+    firstcontainer.classList.toggle('all-active');
+    thirdcontainer.classList.add('launch');
+    secondcontainer.classList.toggle('g5-active');
+})
+
+btnlaunched.addEventListener('click', () => {
+    firstcontainer.classList.toggle('all-active');
+    secondcontainer.classList.add('g5');
+    thirdcontainer.classList.toggle('launch-active');
+
+})
 
