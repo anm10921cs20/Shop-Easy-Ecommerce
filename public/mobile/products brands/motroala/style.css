@@ -671,6 +671,10 @@
         height: 300px;
         width: 90%;
     }
+    .img-container img
+    {
+        margin-left: 4px;
+    }
     
     
 
