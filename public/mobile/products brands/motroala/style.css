@@ -670,10 +670,12 @@
         display: flex;
         height: 300px;
         width: 90%;
+        margin-left:5px ;
     }
-    .img-container img
+    .img-container
     {
-        margin-left: 4px;
+        width: 94%;
+        margin: 0 auto;
     }
     
     
