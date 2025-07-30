@@ -51,7 +51,7 @@
                 const arrowEarase = document.getElementById('value-close');
 
                 arrowEarase.addEventListener('click', () => {
-                    searchinput.value = "";
+                    window.location.reload();
                 })
 
                 const backward = document.getElementById('arrow-icon');
@@ -108,12 +108,12 @@
 
                     //iphone
 
-                    { title: "iPhone 16 Pro", file: "../mobile/products brands/iphone/iphone16 pro/iphone16pro.html" },
-                    { title: "iPhone 16 Pro Max", file: "../mobile/products brands/iphone/iphone 16promax/iphone16promax.html" },
-                    { title: "iPhone 16 Plus", file: "../mobile/products brands/iphone/iphone16plus/iphone16plus.html" },
-                    { title: "Dal & Pulses", file: "../beauty/beauty.html" },
-                    { title: "Salt & Sugar", file: "../appliances/appliances.html" },
-                    { title: "DryFruits & Nuts", file: "../food&health/food.html" },
+                    { title: "Apple iPhone 16 Pro", file: "../mobile/products brands/iphone/iphone16 pro/iphone16pro.html" },
+                    { title: "Apple iPhone 16 Pro Max", file: "../mobile/products brands/iphone/iphone 16promax/iphone16promax.html" },
+                    { title: "Apple iPhone 16 Plus", file: "../mobile/products brands/iphone/iphone16plus/iphone16plus.html" },
+                    { title: "Apple iPhone 16 e", file: "../mobile/products brands/iphone/iphone 16e/iphone16e.html" },
+                    { title: "Apple iPhone 14", file: "../mobile/products brands/iphone/iphone 14/iphone14.html" },
+                    { title: "Apple iPhone 13", file: "../mobile/products brands/iphone/iphone13/iphone13.html" },
                     { title: "Basmati Rice", file: "../furnitures/furnitures.html" },
                     { title: "Soft Drinks", file: "../toys and baby/toys.html" },
                     { title: "Juices & FruitDrinks", file: "../fashion/fashion.html" },
@@ -238,12 +238,12 @@
 
         //iphone
 
-        "iPhone 16 Pro": "https://rukminim2.flixcart.com/image/192/240/xif0q/mobile/o/h/m/-original-imah4jywmcz5ysz3.jpeg?q=60&crop=false",
-        "iPhone 16 Pro Max": "https://rukminim2.flixcart.com/image/192/240/xif0q/mobile/x/v/y/-original-imah4jz66dmcwhmd.jpeg?q=60&crop=false",
-        "iPhone 16 Plus": "https://rukminim2.flixcart.com/image/192/240/xif0q/mobile/o/8/z/-original-imah4jykj39bgzsh.jpeg?q=60&crop=false",
-        "Dal & Pulses": "https://rukminim1.flixcart.com/fk-p-flap/200/240/image/4b23f56bde1ba0c4.jpg?q=60",
-        "Salt & Sugar": "https://rukminim1.flixcart.com/fk-p-flap/200/240/image/b1749552a4386f8a.jpg?q=60",
-        "DryFruits & Nuts": "https://rukminim1.flixcart.com/fk-p-flap/200/240/image/31948eff29b75e23.jpg?q=60",
+        "Apple iPhone 16 Pro": "https://rukminim2.flixcart.com/image/192/240/xif0q/mobile/o/h/m/-original-imah4jywmcz5ysz3.jpeg?q=60&crop=false",
+        "Apple iPhone 16 Pro Max": "https://rukminim2.flixcart.com/image/192/240/xif0q/mobile/x/v/y/-original-imah4jz66dmcwhmd.jpeg?q=60&crop=false",
+        "Apple iPhone 16 Plus": "https://rukminim2.flixcart.com/image/192/240/xif0q/mobile/o/8/z/-original-imah4jykj39bgzsh.jpeg?q=60&crop=false",
+        "Apple iPhone 16 e": "https://rukminim1.flixcart.com/image/192/240/xif0q/mobile/u/r/r/-original-imah9khh8wgzdafb.jpeg?q=60&crop=false",
+        "Apple iPhone 14": "https://rukminim1.flixcart.com/image/192/240/xif0q/mobile/r/k/o/-original-imaghx9qtwbnhwvy.jpeg?q=60&crop=false",
+        "Apple iPhone 13": "https://rukminim1.flixcart.com/image/192/240/l0igvww0/mobile/r/q/m/-original-imagca5ajerqpfjy.jpeg?q=60&crop=false",
         "Basmati Rice": "https://rukminim1.flixcart.com/fk-p-flap/200/240/image/0ac60a08fd2d2b28.jpg?q=60",
         "Soft Drinks": "https://rukminim1.flixcart.com/fk-p-flap/200/240/image/9f4a6d4a039cfcab.jpg?q=60",
         "Juices & FruitDrinks": "https://rukminim1.flixcart.com/fk-p-flap/200/240/image/8c3ce1e829c5e391.jpg?q=60",
@@ -311,7 +311,7 @@
         // Add to front
         recentSearches.unshift(query);
         // Limit to 5
-        recentSearches = recentSearches.slice(0, 5);
+        recentSearches = recentSearches.slice(0,2);
         localStorage.setItem('recentSearches', JSON.stringify(recentSearches));
         renderRecentSearches();
     }
