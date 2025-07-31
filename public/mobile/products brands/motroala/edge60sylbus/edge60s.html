@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--app title-->
+    <title>ShopEasy-Moto</title>
+    <!--logo image added-->
+    <link rel="icon" href="../../../../images/logo/logo.png" type="text/png">
+
+    <!--bootstap css files insert-->
+    <link rel="stylesheet" href="../../../../bootstrap-5.3.5-dist/css/bootstrap.min.css">
+
+    <!--external stylesheet insert-->
+    <link rel="stylesheet" href="./style.css" type="text/css">
+    <link rel="stylesheet" href="../../../../cart.css" type="text/css">
+
+    <!--fontawsesome cdn insert-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+
+    <!--external font added and insert-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <!--nav container-->
+    <div class="nav-container" id="nav-container">
+        <!--left bar-->
+        <div class="app-left-bar">
+            <i id="app-arrow" class="fas fa-arrow-left app-bars"></i>
+        </div>
+        <!--app title head and foot-->
+        <div class="app-title">
+
+            <p class="app-title_head">Moto Edge 60 Stylus</p>
+        </div>
+        <!--app login-->
+        <div class="app-login">
+            <a href="../../../../search/search.html" class="app-order-name"><i class="fas fa-search app-search"></i></a>
+        </div>
+        <div class="app-order">
+            <a href="#" class="app-order-name"><i class="fas fa-shopping-bag app-order-icon"></i></a>
+            <div class="cart-count" id="cart-count">0</div>
+        </div>
+    </div>
+    <br>
+
+
+
+
+    <!--cart files-->
+
+    <div class="cart">
+        <!--cart header-->
+        <div class="cart-header">
+
+            <h5 class="h6 text-light"><i class="fas fa-shopping-cart nav-head_sub-icon"></i> My Carts</h5>
+            <ion-icon name="close-sharp" id="cart-close"></ion-icon>
+        </div>
+        <br>
+        <div class="cart-body">
+            <div class="cart-content">
+
+            </div>
+        </div>
+
+        <div class="cart-foot">
+            <div class="cart-total-title">Total</div>
+            <div class="cart-total">Rs.00</div>
+
+        </div>
+        <div class="cart-items-total">
+            <div class="items-total-title">Total Items:</div>
+            <div class="items-total" id="cart-counter">0</div>
+        </div>
+        <div class="table-details">
+            <div class="Short-detail">Order Details</div>
+            <div class="short-detail-list" id="opencart"> Click here</div>
+
+
+        </div><br>
+        <button class="cart-btn">Checkout</button><br>
+
+    </div>
+
+
+    <!--table container-->
+    <div class="tabledetails" id="tabledetails">
+        <h6 class="tabletitle">Broncher</h6>
+        <button class="btn-close" id="btn-close"></button><br><br>
+        <div class="table-container" id="table-container">
+
+            <table id="table">
+                <thead>
+                    <tr>
+                        <td>Name</td>
+                        <td>QTY</td>
+                        <td>price</td>
+                        <td>Amt</td>
+                    </tr>
+                </thead>
+
+                <tfoot>
+                    <tr>
+                        <td>total</td>
+                        <td id="carttotalcount"></td>
+                        <td colspan="2" id="total">Rs.00</td>
+                    </tr>
+                </tfoot>
+            </table>
+
+        </div>
+        <button class="btntable" onclick="downloadable()">download click</button><br>
+        <iframe name="print_frame" width="0" height="0" frameborder="0" src="about:blank"></iframe>
+    </div>
+
+
+    <!--alert container-->
+
+    <div id="alertcontainer" class="alertcontainer">
+        <i class="fas fa-shopping-cart"></i>
+        <p class="para-alert" id="para-alert">Successful added to cart</p>
+    </div>
+
+
+
+
+
+    <!-- main container -->
+
+
+    <div class="main-container">
+        <!-- sub details container -->
+        <div class="btn-container">
+            <div class="btn-main"><i class="fa-solid fa-signal icon-main"></i> 5G</div>
+            <div class="btn-main"><i class="fa-solid fa-rocket icon-main"></i> New Launches</div>
+        </div><br>
+
+        <!-- container details -->
+        <div class="container-details">
+
+            <!-- product container -->
+            <div class="products-main all">
+
+                <!-- main details -->
+                <div class="products-items">
+                    <div class="content-container">
+
+
+                        <a href="#"><img class="product-img"
+                                src="https://rukminim1.flixcart.com/image/192/240/xif0q/mobile/w/q/q/-original-imahb6qhbzpxdvpx.jpeg?q=60&crop=false"
+                                width="100px" height="120px" alt="sandoor"></a><br>
+                        <div class="mobile-details-container">
+                            <p class="mobile-brand-name">Panatone Surf The Web 256GB</p>
+                            <p class="mobile-name">Motoroala Edge 60 Stylus</p>
+                            <div class="star-review">
+                                <ion-icon name="star-sharp" class="star-icon"></ion-icon><ion-icon name="star-sharp"
+                                    class="star-icon"></ion-icon><ion-icon name="star-sharp"
+                                    class="star-icon"></ion-icon><ion-icon name="star-sharp"
+                                    class="star-icon"></ion-icon><ion-icon name="star-half-sharp"
+                                    class="star-icon"></ion-icon>
+                                <p>4.4</p>
+                            </div>
+                            <p class="rate-container"><span class="rate">Rs.22900</span><del
+                                    class="rate-del">Rs.28,900</del> <span class="percentage">33%OFF</span></p>
+                            <div class="bank-offers">
+                                <img src="https://rukminim2.flixcart.com/www/100/42/promos/30/08/2023/59dc7885-72bf-4135-9099-025f074b0eb1.png?q=90"
+                                    height="16px" width="38px" alt="">
+                                <p class="bank-details"> ₹19,900 with Bank offer</p>
+                            </div>
+                            <div class="bank-returns">
+                                <img src="https://rukminim2.flixcart.com/www/173/47/promos/09/02/2024/0b0b6063-507e-45e7-b8b0-f22a591bb06b.png?q=90"
+                                    height="18px" width="66px" alt="">
+                                <p class="bank-returns-topic"> 2 day delivery, </p>
+                            </div>
+                            <p class="waranty">1 year warranty by APPLE</p><br>
+
+
+                        </div>
+                        <button class="button fas fa-add"></button>
+                        <button class="buttons fas fa-heart"></button>
+                    </div>
+                    <div class="products-available">
+                        <div class="products-available-o">
+                            8 GB RAM | 256 GB Storage
+                        </div>
+                        <div class="products-availables">
+                            <div class="products-available-one">
+                                16.94cm (6.7inch) Full HD + Display
+                            </div>
+                            <div class="products-available-one">
+                                5000 mAh
+                            </div>
+
+                        </div>
+                        <div class="products-availables">
+                            <div class="products-available-one">
+                                50MP +  13MP
+                            </div>
+                            <div class="products-available-one">
+                                32MP Front Camera
+                            </div>
+
+                        </div>
+                    </div>
+
+
+                </div>
+                <div class="products-items">
+                    <div class="content-container">
+
+
+                        <a href="#"><img class="product-img"
+                                src="https://rukminim1.flixcart.com/image/192/240/xif0q/mobile/q/9/c/-original-imahb6qhqenzhrzq.jpeg?q=60&crop=false"
+                                width="100px" height="120px" alt="sandoor"></a><br>
+                        <div class="mobile-details-container">
+                            <p class="mobile-brand-name">Pantone Gibraltar Sea, 256 GB</p>
+                            <p class="mobile-name">Motoroala Edge 60 Stylus</p>
+                            <div class="star-review">
+                                <ion-icon name="star-sharp" class="star-icon"></ion-icon><ion-icon name="star-sharp"
+                                    class="star-icon"></ion-icon><ion-icon name="star-sharp"
+                                    class="star-icon"></ion-icon><ion-icon name="star-sharp"
+                                    class="star-icon"></ion-icon><ion-icon name="star-half-sharp"
+                                    class="star-icon"></ion-icon>
+                                <p>4.4</p>
+                            </div>
+                            <p class="rate-container"><span class="rate">Rs.22900</span><del
+                                    class="rate-del">Rs.28,900</del> <span class="percentage">33%OFF</span></p>
+                            <div class="bank-offers">
+                                <img src="https://rukminim2.flixcart.com/www/100/42/promos/30/08/2023/59dc7885-72bf-4135-9099-025f074b0eb1.png?q=90"
+                                    height="16px" width="38px" alt="">
+                                <p class="bank-details"> ₹19,900 with Bank offer</p>
+                            </div>
+                            <div class="bank-returns">
+                                <img src="https://rukminim2.flixcart.com/www/173/47/promos/09/02/2024/0b0b6063-507e-45e7-b8b0-f22a591bb06b.png?q=90"
+                                    height="18px" width="66px" alt="">
+                                <p class="bank-returns-topic"> 2 day delivery, </p>
+                            </div>
+                            <p class="waranty">1 year warranty by APPLE</p><br>
+
+
+                        </div>
+                        <button class="button fas fa-add"></button>
+                        <button class="buttons fas fa-heart"></button>
+                    </div>
+                    <div class="products-available">
+                        <div class="products-available-o">
+                            8 GB RAM | 256 GB Storage
+                        </div>
+                        <div class="products-availables">
+                            <div class="products-available-one">
+                                16.94cm (6.7inch) Full HD + Display
+                            </div>
+                            <div class="products-available-one">
+                                5200 mAh
+                            </div>
+
+                        </div>
+                        <div class="products-availables">
+                            <div class="products-available-one">
+                                50MP + 13MP
+                            </div>
+                            <div class="products-available-one">
+                                32MP Front Camera
+                            </div>
+
+                        </div>
+                    </div>
+
+
+                </div>
+              
+                
+             
+
+            </div>
+
+            <!-- second -->
+
+
+            <!-- product container -->
+            <div class="products-main g5">
+
+                   
+                <!-- main details -->
+                <div class="products-items">
+                    <div class="content-container">
+
+
+                        <a href="#"><img class="product-img"
+                                src="https://rukminim1.flixcart.com/image/192/240/xif0q/mobile/w/q/q/-original-imahb6qhbzpxdvpx.jpeg?q=60&crop=false"
+                                width="100px" height="120px" alt="sandoor"></a><br>
+                        <div class="mobile-details-container">
+                            <p class="mobile-brand-name">Panatone Surf The Web 256GB</p>
+                            <p class="mobile-name">Motoroala Edge 60 Stylus</p>
+                            <div class="star-review">
+                                <ion-icon name="star-sharp" class="star-icon"></ion-icon><ion-icon name="star-sharp"
+                                    class="star-icon"></ion-icon><ion-icon name="star-sharp"
+                                    class="star-icon"></ion-icon><ion-icon name="star-sharp"
+                                    class="star-icon"></ion-icon><ion-icon name="star-half-sharp"
+                                    class="star-icon"></ion-icon>
+                                <p>4.4</p>
+                            </div>
+                            <p class="rate-container"><span class="rate">Rs.22900</span><del
+                                    class="rate-del">Rs.28,900</del> <span class="percentage">33%OFF</span></p>
+                            <div class="bank-offers">
+                                <img src="https://rukminim2.flixcart.com/www/100/42/promos/30/08/2023/59dc7885-72bf-4135-9099-025f074b0eb1.png?q=90"
+                                    height="16px" width="38px" alt="">
+                                <p class="bank-details"> ₹19,900 with Bank offer</p>
+                            </div>
+                            <div class="bank-returns">
+                                <img src="https://rukminim2.flixcart.com/www/173/47/promos/09/02/2024/0b0b6063-507e-45e7-b8b0-f22a591bb06b.png?q=90"
+                                    height="18px" width="66px" alt="">
+                                <p class="bank-returns-topic"> 2 day delivery, </p>
+                            </div>
+                            <p class="waranty">1 year warranty by APPLE</p><br>
+
+
+                        </div>
+                        <button class="button fas fa-add"></button>
+                        <button class="buttons fas fa-heart"></button>
+                    </div>
+                    <div class="products-available">
+                        <div class="products-available-o">
+                            8 GB RAM | 256 GB Storage
+                        </div>
+                        <div class="products-availables">
+                            <div class="products-available-one">
+                                16.94cm (6.7inch) Full HD + Display
+                            </div>
+                            <div class="products-available-one">
+                                5000 mAh
+                            </div>
+
+                        </div>
+                        <div class="products-availables">
+                            <div class="products-available-one">
+                                50MP +  13MP
+                            </div>
+                            <div class="products-available-one">
+                                32MP Front Camera
+                            </div>
+
+                        </div>
+                    </div>
+
+
+                </div>
+                <div class="products-items">
+                    <div class="content-container">
+
+
+                        <a href="#"><img class="product-img"
+                                src="https://rukminim1.flixcart.com/image/192/240/xif0q/mobile/q/9/c/-original-imahb6qhqenzhrzq.jpeg?q=60&crop=false"
+                                width="100px" height="120px" alt="sandoor"></a><br>
+                        <div class="mobile-details-container">
+                            <p class="mobile-brand-name">Pantone Gibraltar Sea, 256 GB</p>
+                            <p class="mobile-name">Motoroala Edge 60 Stylus</p>
+                            <div class="star-review">
+                                <ion-icon name="star-sharp" class="star-icon"></ion-icon><ion-icon name="star-sharp"
+                                    class="star-icon"></ion-icon><ion-icon name="star-sharp"
+                                    class="star-icon"></ion-icon><ion-icon name="star-sharp"
+                                    class="star-icon"></ion-icon><ion-icon name="star-half-sharp"
+                                    class="star-icon"></ion-icon>
+                                <p>4.4</p>
+                            </div>
+                            <p class="rate-container"><span class="rate">Rs.22900</span><del
+                                    class="rate-del">Rs.28,900</del> <span class="percentage">33%OFF</span></p>
+                            <div class="bank-offers">
+                                <img src="https://rukminim2.flixcart.com/www/100/42/promos/30/08/2023/59dc7885-72bf-4135-9099-025f074b0eb1.png?q=90"
+                                    height="16px" width="38px" alt="">
+                                <p class="bank-details"> ₹19,900 with Bank offer</p>
+                            </div>
+                            <div class="bank-returns">
+                                <img src="https://rukminim2.flixcart.com/www/173/47/promos/09/02/2024/0b0b6063-507e-45e7-b8b0-f22a591bb06b.png?q=90"
+                                    height="18px" width="66px" alt="">
+                                <p class="bank-returns-topic"> 2 day delivery, </p>
+                            </div>
+                            <p class="waranty">1 year warranty by APPLE</p><br>
+
+
+                        </div>
+                        <button class="button fas fa-add"></button>
+                        <button class="buttons fas fa-heart"></button>
+                    </div>
+                    <div class="products-available">
+                        <div class="products-available-o">
+                            8 GB RAM | 256 GB Storage
+                        </div>
+                        <div class="products-availables">
+                            <div class="products-available-one">
+                                16.94cm (6.7inch) Full HD + Display
+                            </div>
+                            <div class="products-available-one">
+                                5200 mAh
+                            </div>
+
+                        </div>
+                        <div class="products-availables">
+                            <div class="products-available-one">
+                                50MP + 13MP
+                            </div>
+                            <div class="products-available-one">
+                                32MP Front Camera
+                            </div>
+
+                        </div>
+                    </div>
+
+
+                </div>
+                
+
+
+
+            </div>
+
+
+
+
+            <!-- third container -->
+
+
+            <!-- product container -->
+            <div class="products-main launch">
+
+               
+           
+                
+                
+
+
+
+            </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </div>
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!--products alert message-->
+
+    <div id="product-alert" class="product-alert">
+        <h5 class="h5-alert-product" id="alert-para"></h5>
+    </div>
+
+
+
+</body>
+<!--script external files insert-->
+<script src="app.js"></script>
+<!--cart script-->
+<script src="../../../../cart.js"></script>
+<!--bootstrap js files insert-->
+<script src="../../../../bootstrap-5.3.5-dist/js/bootstrap.min.js">
+</script>
+<!--icons iconic websites script-->
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+
+</html>
