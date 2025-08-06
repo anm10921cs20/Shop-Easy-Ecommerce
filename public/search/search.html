@@ -407,62 +407,7 @@
         }
     });
 
-    let recentSearches = JSON.parse(localStorage.getItem('recentSearches') || '[]');
-
-    function updateRecentSearches(query) {
-        if (!query || !query.trim()) return;
-        // Remove if already exists
-        recentSearches = recentSearches.filter(q => q.toLowerCase() !== query.toLowerCase());
-        // Add to front
-        recentSearches.unshift(query);
-        // Limit to 5
-        recentSearches = recentSearches.slice(0, 2);
-        localStorage.setItem('recentSearches', JSON.stringify(recentSearches));
-        renderRecentSearches();
-    }
-
-    function renderRecentSearches() {
-        let recentDiv = document.getElementById('recent-searches');
-        if (!recentDiv) {
-            recentDiv = document.createElement('div');
-            recentDiv.id = 'recent-searches';
-            recentDiv.style.marginTop = '10px';
-            results.parentNode.insertBefore(recentDiv, results);
-        }
-        if (recentSearches.length === 0) {
-            recentDiv.innerHTML = '';
-            return;
-        }
-        recentDiv.style.color = '#000';
-        recentDiv.style.paddingLeft = '20px';
-        recentDiv.innerHTML = '<strong>Recent Searches:</strong> ' + recentSearches.map(q =>
-            `<a href="#" class="recent-search-link" style="margin-right:8px">${q}</a>`
-        ).join('');
-        // Add click event to recent search links
-        recentDiv.querySelectorAll('.recent-search-link').forEach(link => {
-            link.onclick = function (e) {
-                e.preventDefault();
-                searchInput.value = this.textContent;
-                searchInput.dispatchEvent(new Event('input'));
-            };
-        });
-    }
-
-    // Save search on Enter key
-    searchInput.addEventListener('keydown', function (e) {
-        if (e.key === 'Enter') {
-            updateRecentSearches(this.value);
-        }
-    });
-
-    // Also save when user clicks a result
-    results.addEventListener('click', function (e) {
-        if (e.target.tagName === 'A' && e.target.classList.contains('movie-link')) {
-            updateRecentSearches(searchInput.value);
-        }
-    });
-
-    renderRecentSearches();
+    
 </script>
 
 </html>
