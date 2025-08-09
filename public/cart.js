@@ -1,3 +1,10 @@
+
+
+
+
+
+
+
 //cart
 
 const btnCartOpen = document.querySelector('.app-order-icon');
@@ -49,7 +56,7 @@ function cartitemsDelete() {
     this.parentElement.remove();
     proudctcount()
     totalvalueupdate()
-    
+
 }
 
 //funciton qty vallue
@@ -110,7 +117,7 @@ function totalvalueupdate() {
     }
     document.getElementsByClassName('cart-total')[0].innerText = "Rs." + total;
     document.getElementById('total').innerText = "Rs." + total;
-    
+
 
 }
 totalvalueupdate()
@@ -120,35 +127,39 @@ totalvalueupdate()
 
 var cartadd = document.getElementsByClassName('button');
 
- for (let i = 0; i < cartadd.length; i++) {
-     var button = cartadd[i];
- button.addEventListener('click', additemsclicked)
- }
+for (let i = 0; i < cartadd.length; i++) {
+    var button = cartadd[i];
+    button.addEventListener('click', additemsclicked)
+}
 
 
 
-    //add items cart infucntion
+//add items cart infucntion
 
-    function additemsclicked(event) {
-        var button = event.target;
-        var shopitemsvalue = button.parentElement;
-        var price = shopitemsvalue.getElementsByClassName('rate')[0].innerText;
-        var productname = shopitemsvalue.getElementsByClassName('mobile-name')[0].innerText;
-        var productbrand = shopitemsvalue.getElementsByClassName('mobile-brand-name')[0].innerText;
-        var productimg = shopitemsvalue.getElementsByClassName('product-img')[0].src;
-        addcartproduct(price, productname, productbrand, productimg);
-        var alertvalue = document.getElementById('alertcontainer');
-        alertvalue.style.display = "flex"
-        var counter = 3;
-        var interval = setInterval(() => {
-            counter--;
-            if (counter > 0) {
-                clearInterval(interval);
-                alertvalue.style.display = "none";
-            }
-        }, 1000)
-        totalvalueupdate()
-    }
+function additemsclicked(event) {
+    var button = event.target;
+    var shopitemsvalue = button.parentElement;
+    var price = shopitemsvalue.getElementsByClassName('rate')[0].innerText;
+    var productname = shopitemsvalue.getElementsByClassName('mobile-name')[0].innerText;
+    var productbrand = shopitemsvalue.getElementsByClassName('mobile-brand-name')[0].innerText;
+    var productimg = shopitemsvalue.getElementsByClassName('product-img')[0].src;
+   
+      
+    
+
+    addcartproduct(price, productname, productbrand, productimg);
+    var alertvalue = document.getElementById('alertcontainer');
+    alertvalue.style.display = "flex"
+    var counter = 3;
+    var interval = setInterval(() => {
+        counter--;
+        if (counter > 0) {
+            clearInterval(interval);
+            alertvalue.style.display = "none";
+        }
+    }, 1000)
+    totalvalueupdate()
+}
 
 
 //cart btn
@@ -157,6 +168,10 @@ var cartadd = document.getElementsByClassName('button');
 
 //add products function
 function addcartproduct(price, productname, productbrand, productimg) {
+
+
+    
+     
     var cartdiv = document.createElement('div');
     cartdiv.classList.add('cart-item');
     var cartitems = document.getElementsByClassName('cart-content')[0];
@@ -165,7 +180,7 @@ function addcartproduct(price, productname, productbrand, productimg) {
     var alertvalue = document.getElementById('alertcontainer');
     var alertpara = document.getElementById('para-alert');
 
-
+    
     for (var i = 0; i < cartproductname.length; i++) {
         if (cartproductname[i].innerText == productname.toUpperCase() && cartproductbrand[i].innerText == productbrand) {
             alertvalue.style.display = "flex";
@@ -207,8 +222,8 @@ function addcartproduct(price, productname, productbrand, productimg) {
     loadcontent()
     proudctcount()
 
-order()
-    
+    order()
+
 
 
 
@@ -217,31 +232,31 @@ order()
 
 
 function order() {
-        var cartorder = document.getElementsByClassName('cart-content')[0];
-        var cartorders = cartorder.getElementsByClassName('cart-item');
+    var cartorder = document.getElementsByClassName('cart-content')[0];
+    var cartorders = cartorder.getElementsByClassName('cart-item');
 
-        for (var i = 0; i < cartorders.length; i++)
-            var cartbronchure = cartorders[i];
-        var productname = cartbronchure.getElementsByClassName('cart-name')[0].innerText;
-        var productprice = cartbronchure.getElementsByClassName('cart-price')[0].innerText;
-        var productquantity = cartbronchure.getElementsByClassName('cart-quantity')[0].value;
-        var productamt = cartbronchure.getElementsByClassName('cart-amt')[0].innerText;
+    for (var i = 0; i < cartorders.length; i++)
+        var cartbronchure = cartorders[i];
+    var productname = cartbronchure.getElementsByClassName('cart-name')[0].innerText;
+    var productprice = cartbronchure.getElementsByClassName('cart-price')[0].innerText;
+    var productquantity = cartbronchure.getElementsByClassName('cart-quantity')[0].value;
+    var productamt = cartbronchure.getElementsByClassName('cart-amt')[0].innerText;
 
 
-        var cartorderobj = {
-            name: productname, price: productprice, priceamt:productamt, qty: productquantity
-        }
+    var cartorderobj = {
+        name: productname, price: productprice, priceamt: productamt, qty: productquantity
+    }
 
-        var table = document.getElementById('table')
-        
-        var dataname = cartorderobj.name;
-        var dataprice = cartorderobj.price;
-        var dataqty = cartorderobj.qty;
-        var dataamt = cartorderobj.priceamt;
+    var table = document.getElementById('table')
 
-        var table = document.getElementById('table');
-        
-        table.innerHTML += `
+    var dataname = cartorderobj.name;
+    var dataprice = cartorderobj.price;
+    var dataqty = cartorderobj.qty;
+    var dataamt = cartorderobj.priceamt;
+
+    var table = document.getElementById('table');
+
+    table.innerHTML += `
         
         <tr>
         <td>${dataname}</td>
@@ -252,32 +267,29 @@ function order() {
         </tr>
         `;
 
-       
-    }
+
+}
 
 
-    function downloadable()
-    {
-         window.frames["print_frame"].document.body.innerHTML = document.getElementById('table-container').innerHTML;
-         window.frames["print_frame"].window.focus();
-         window.frames["print_frame"].window.print();
-    }
+function downloadable() {
+    window.frames["print_frame"].document.body.innerHTML = document.getElementById('table-container').innerHTML;
+    window.frames["print_frame"].window.focus();
+    window.frames["print_frame"].window.print();
+}
 
 
-    var cartclose = document.getElementById('btn-close');
-    var carttarget = document.getElementById('tabledetails');
-    var cartopen = document.getElementById('opencart')
+var cartclose = document.getElementById('btn-close');
+var carttarget = document.getElementById('tabledetails');
+var cartopen = document.getElementById('opencart')
 
-    cartclose.addEventListener('click', () =>
-    {
-        carttarget.style.display = "none"
-    })
+cartclose.addEventListener('click', () => {
+    carttarget.style.display = "none"
+})
 
-    cartopen.addEventListener('click', () =>
-    {
-        carttarget.style.display = "block";
-    })
-   
+cartopen.addEventListener('click', () => {
+    carttarget.style.display = "block";
+})
+
 
 
 

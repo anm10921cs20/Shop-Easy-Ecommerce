@@ -427,6 +427,12 @@
     a:hover {
         color: #000;
     }
+    .results
+    {
+        height: 490px;
+        overflow: hidden;
+    }
+    
     
 
 

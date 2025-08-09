@@ -21,11 +21,7 @@ closeBtn.addEventListener('click', () =>
     openBar.style.transitionDuration = "0.9s";
 })
 
-const interval = setInterval(() => {
-const time = new Date();
-const value = time.toLocaleString();
-document.getElementById('time').innerText = value;
-},1000)
+
 
 
     
