@@ -972,6 +972,10 @@
     {
         display: none;
     }
+    .imgcontent img
+    {
+        border-radius: 20px;
+    }
 
 
 
