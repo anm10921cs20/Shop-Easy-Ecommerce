@@ -900,13 +900,13 @@
         align-content: center;
         grid-template-columns: 2fr 2fr 2fr;
         column-gap: 10px;
+        row-gap: 18px;
         height: 200px; 
     }
     .products-collection-price
     {
         width: 99%;
         margin: 0 auto;
-        margin-left: 4px;
         padding: 0 20px;
         display: grid;
         align-content: center;
@@ -974,9 +974,13 @@
     }
     .imgcontent img
     {
-        border-radius: 20px;
+        border-radius: 15px;
     }
-
+    .products-brand-img img
+    {
+        
+        border-radius: 10px;
+    }
 
 
 
