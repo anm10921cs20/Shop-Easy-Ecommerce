@@ -49,15 +49,19 @@
 
             <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
             <!--left side top first container-->
-            <script async>
+            <script defer>
                 const searchinput = document.getElementById('searchInput');
+                const inputs = searchInput.value;
+
+
                 const arrowEarase = document.getElementById('value-close');
 
-                arrowEarase.addEventListener('click', () => {
-                    window.location.reload();
-                })
+
+
 
                 const backward = document.getElementById('arrow-icon');
+
+
                 backward.addEventListener('click', () => {
                     window.history.back();
                 })
@@ -117,6 +121,8 @@
                     { title: "Tecno Phones", file: "../mobile/products brands/techno/techno.html" },
                     { title: "Redmi Phones", file: "../mobile/products brands/mi/mi.html" },
                     { title: "Vivo Phones", file: "../mobile/products brands/vivo/vivo.html" },
+                    { title: "Realme Phones", file: "../mobile/products brands/realme/realme.html" },
+
 
 
 
@@ -236,6 +242,12 @@
 
 
 
+                    //realme
+
+                    { title: "Realme P3 5G", file: "../mobile/products brands/realme/p3/p3.html" },
+
+
+
 
 
 
@@ -257,8 +269,24 @@
                 const searchInput = document.getElementById('searchInput');
                 const results = document.getElementById('results');
 
+
+                document.addEventListener('DOMContentLoaded', () => {
+                    searchInput.focus();
+                    if (searchInput.value.length < 1) {
+                        arrowEarase.style.display = 'block';
+                    }
+                    else {
+                        arrowEarase.style.display = 'none'
+                        console.log(searchInput.value)
+                    }
+                    arrowEarase.addEventListener('click', () => {
+                        window.location.reload();
+                    })
+                });
+
                 searchInput.addEventListener('input', function () {
                     const query = this.value.toLowerCase();
+                    query.length < 1 ? arrowEarase.style.display = 'none' : arrowEarase.style.display = 'block';
                     results.innerHTML = '';
                     if (query.length === 0) return;
 
@@ -360,6 +388,8 @@
         "Tecno Phones": "https://rukminim1.flixcart.com/fk-p-flap/114/114/image/60f3e65d2cdf8c64.png?q=60",
         "Redmi Phones": "https://rukminim1.flixcart.com/fk-p-flap/114/114/image/60f3e65d2cdf8c64.png?q=60",
         "Vivo Phones": "https://rukminim1.flixcart.com/fk-p-flap/114/114/image/a81d0748b1b8d662.png?q=60",
+        "Realme Phones": "https://rukminim1.flixcart.com/fk-p-flap/114/114/image/d16825ea8e5405bc.png?q=60",
+
 
 
         //iphone
@@ -482,6 +512,12 @@
         "CMF Nothing Phone 1": "https://rukminim2.flixcart.com/image/192/240/xif0q/mobile/z/u/9/-original-imah3ajcxshpd2t2.jpeg?q=60&crop=false",
         "Nothing Phone (2a) Plus": "https://rukminim2.flixcart.com/image/192/240/xif0q/mobile/d/k/i/-original-imah39xxhwwey8hr.jpeg?q=60&crop=false",
         "Nothing Phone (2a)": "https://rukminim2.flixcart.com/image/192/240/xif0q/mobile/h/i/x/-original-imagyr3vfpqrpkbv.jpeg?q=60&crop=false",
+
+
+        //realme
+
+        "Realme P3 5G": "https://rukminim2.flixcart.com/image/192/240/xif0q/mobile/b/b/x/-original-imahaff2rn28fy2z.jpeg?q=60&crop=false",
+
 
 
 

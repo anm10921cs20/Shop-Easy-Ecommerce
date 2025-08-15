@@ -369,6 +369,7 @@
         right: 22px;
         color: #000;
         padding: 4px;
+        display: none;
     }
     .movie-link {
         display: flex;

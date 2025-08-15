@@ -4,11 +4,6 @@
     box-sizing: border-box;
     font-family: "Poppins", sans-serif;
 }
-a
-{
-    text-decoration: none;
-    color: #000;
-}
 
 /* small mobile screen */
 @media only screen and (min-width:100px) and (max-width:399px) {
@@ -486,7 +481,7 @@ a
     }
 
     .app-login {
-        padding: 20px 10px 20px 160px;
+        padding: 20px 10px 20px 150px;
         
     }
 
@@ -811,7 +806,7 @@ a
     .products-items
     {
         position: relative;
-        height: 300px;
+        height: 230px;
         width: 98%;
         margin: 0 auto;
        
@@ -957,7 +952,7 @@ a
         text-align: center;
         padding: 4px;
         border-radius: 2px;
-        width: 70%;
+        width: 46%;
        margin-left: 6px;
     }
     .products-available-one
