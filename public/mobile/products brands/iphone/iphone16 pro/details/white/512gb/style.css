@@ -455,11 +455,6 @@ body {
         display: flex;
         border-bottom: 2px solid #77777731;
         height: 60px;
-        position: sticky;
-        top: 0;
-        left: 0;
-        z-index: 100000;
-        background-color: #fff;
     }
 
     .app-bars {
