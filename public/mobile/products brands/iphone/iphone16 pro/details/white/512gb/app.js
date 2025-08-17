@@ -7,7 +7,7 @@ var openBtn = document.getElementById('app-arrow');
 
 //event listener nav open
 openBtn.addEventListener('click', () => {
-   window.history.back();
+    window.history.back();
 })
 
 
@@ -20,18 +20,17 @@ document.addEventListener('DOMContentLoaded', loadcontent)
 
 
 
-function loadcontent()
-{
+function loadcontent() {
     const button = document.querySelectorAll('.btn-main');
     button.forEach((btn) => {
-        btn.addEventListener('click',selected);
+        btn.addEventListener('click', selected);
     })
 
     // heart btn
 
     const hearts = document.querySelectorAll('.buttons');
     hearts.forEach((heart) => {
-        heart.addEventListener('click',heartactive)
+        heart.addEventListener('click', heartactive)
     })
 
 
@@ -42,18 +41,16 @@ function loadcontent()
 
 
 //content remove
-function selected()
-{
+function selected() {
     this.classList.toggle('btn-main-active');
 
-    
+
 }
 
 
 //heart btn added and remove
 
-function heartactive()
-{
+function heartactive() {
     this.classList.toggle('buttons-active');
 }
 
@@ -69,7 +66,7 @@ vidoplay.addEventListener('click', () => {
 
     videoBlur.classList.toggle('blur-container-active');
     videocontainer.style.display = "block";
-    
+
 })
 const videoBlur = document.getElementById('blur-container');
 videoBlur.addEventListener('click', () => {
@@ -89,7 +86,7 @@ const knowmoreClose = document.getElementById('know-more-close');
 knowmore.addEventListener('click', () => {
     knowmoreContainer.style.display = "block";
 })
-knowmoreClose .addEventListener('click', () => {
+knowmoreClose.addEventListener('click', () => {
     knowmoreContainer.style.display = "none";
 })
 
@@ -116,5 +113,192 @@ imageChange.addEventListener('click', () => {
     imageChange.src = "https://rukminim1.flixcart.com/www/120/102/promos/04/09/2023/d8a65dd0-321c-4028-9496-660e67ad6696.png?q=60";
     const a = document.createElement('a');
     a.href = "../../../../../../../insidecart/insidecart.html"
- 
+
 })
+
+
+// btns container
+
+// img btns
+
+const imgbtnsclick1 = document.getElementsByClassName('img-colors')[0];
+const imgbtnsclick2 = document.getElementsByClassName('img-colors')[1];
+const imgbtnsclick3 = document.getElementsByClassName('img-colors')[2];
+const imgbtnsclick4 = document.getElementsByClassName('main-imgs')[0];
+
+// img color text change
+
+const imgcolor = document.getElementById('color1');
+const imgcolor1 = document.getElementById('color2');
+const imgcolor2 = document.getElementById('color3');
+const imgcolor3 = document.getElementById('color4');
+
+//img manuplation
+
+const startimg1 = document.getElementsByClassName('start-img')[0];
+const startimg2 = document.getElementsByClassName('start-img')[1];
+const startimg3 = document.getElementsByClassName('start-img')[2];
+const startimg4 = document.getElementsByClassName('start-img')[3];
+const startimg5 = document.getElementsByClassName('start-img')[4];
+const startimg6 = document.getElementsByClassName('start-img')[5];
+const startimg7 = document.getElementsByClassName('start-img')[6];
+const startimg8 = document.getElementsByClassName('start-img')[7];
+const startimg9 = document.getElementsByClassName('start-img')[8];
+const startimg10 = document.getElementsByClassName('start-img')[9];
+const startimg11= document.getElementsByClassName('start-img')[11];
+
+
+
+
+
+
+
+imgbtnsclick1.addEventListener('click', () => {
+    imgbtnsclick1.classList.add('main-imgs');
+    imgbtnsclick1.classList.remove('img-colors');
+    imgbtnsclick2.classList.remove('main-imgs');
+    imgbtnsclick3.classList.remove('main-imgs');
+    imgbtnsclick4.classList.remove('main-imgs');
+    imgbtnsclick2.classList.add('img-colors');
+    imgbtnsclick3.classList.add('img-colors');
+    imgbtnsclick4.classList.add('img-colors');
+    imgcolor.innerHTML = "Black Titanium";
+    imgcolor1.innerHTML = "Black Titanium";
+    imgcolor2.innerHTML = "Black Titanium";
+    imgcolor3.innerHTML = "Black Titanium";
+    startimg1.src = "https://rukminim1.flixcart.com/image/808/970/xif0q/mobile/e/x/e/-original-imah4jyw4fpqe7ru.jpeg?q=60&crop=false";
+    startimg2.src = "https://rukminim1.flixcart.com/image/808/970/xif0q/mobile/7/d/z/-original-imah4jywg4hhdvdg.jpeg?q=60&crop=false";
+    startimg3.src = "https://rukminim1.flixcart.com/image/808/970/xif0q/mobile/3/n/c/-original-imah4jywzxzwkq6g.jpeg?q=60&crop=false";
+    startimg4.src = "https://rukminim1.flixcart.com/image/808/970/xif0q/mobile/e/d/h/-original-imah4jywf7mnadye.jpeg?q=60&crop=false";
+
+
+
+
+})
+
+imgbtnsclick2.addEventListener('click', () => {
+    imgbtnsclick2.classList.add('main-imgs');
+    imgbtnsclick2.classList.remove('img-colors');
+    imgbtnsclick1.classList.remove('main-imgs');
+    imgbtnsclick3.classList.remove('main-imgs');
+    imgbtnsclick4.classList.remove('main-imgs');
+    imgbtnsclick1.classList.add('img-colors');
+    imgbtnsclick3.classList.add('img-colors');
+    imgbtnsclick4.classList.add('img-colors');
+    imgcolor.innerHTML = "Desert Titanium";
+    imgcolor1.innerHTML = "Desert Titanium";
+    imgcolor2.innerHTML = "Desert Titanium";
+    imgcolor3.innerHTML = "Desert Titanium";
+    startimg1.src = "https://rukminim1.flixcart.com/image/808/970/xif0q/mobile/7/d/z/-original-imah4jywfm9uuvzw.jpeg?q=60&crop=false"
+     startimg2.src = "https://rukminim1.flixcart.com/image/808/970/xif0q/mobile/o/e/f/-original-imah4jywbnu45unk.jpeg?q=60&crop=false";
+    startimg3.src = "https://rukminim1.flixcart.com/image/808/970/xif0q/mobile/p/k/z/-original-imah4jywhzmcyuwg.jpeg?q=60&crop=false";
+    startimg4.src = "https://rukminim1.flixcart.com/image/808/970/xif0q/mobile/n/6/v/-original-imah4jywmhy8b4du.jpeg?q=60&crop=false";
+
+
+})
+
+imgbtnsclick3.addEventListener('click', () => {
+    imgbtnsclick3.classList.add('main-imgs');
+    imgbtnsclick3.classList.remove('img-colors');
+    imgbtnsclick1.classList.remove('main-imgs');
+    imgbtnsclick4.classList.remove('main-imgs');
+    imgbtnsclick1.classList.add('img-colors');
+    imgbtnsclick2.classList.add('img-colors');
+    imgbtnsclick4.classList.add('img-colors');
+    imgcolor.innerHTML = "Natural Titanium";
+    imgcolor1.innerHTML = "Natural Titanium";
+    imgcolor2.innerHTML = "Natural Titanium";
+    imgcolor3.innerHTML = "Natural Titanium";
+    startimg1.src = "https://rukminim1.flixcart.com/image/808/970/xif0q/mobile/o/h/m/-original-imah4jywmcz5ysz3.jpeg?q=60&crop=false";
+     startimg2.src = "https://rukminim1.flixcart.com/image/808/970/xif0q/mobile/i/a/e/-original-imah4jywx3pnmh7y.jpeg?q=60&crop=false";
+    startimg3.src = "https://rukminim1.flixcart.com/image/808/970/xif0q/mobile/7/i/c/-original-imah4jyweenbdphu.jpeg?q=60&crop=false";
+    startimg4.src = "https://rukminim1.flixcart.com/image/808/970/xif0q/mobile/a/w/q/-original-imah4jywmuur2nwb.jpeg?q=60&crop=false";
+
+
+
+})
+
+imgbtnsclick4.addEventListener('click', () => {
+    imgbtnsclick4.classList.add('main-imgs');
+    imgbtnsclick4.classList.remove('img-colors');
+    imgbtnsclick1.classList.remove('main-imgs');
+    imgbtnsclick1.classList.add('img-colors');
+    imgbtnsclick2.classList.add('img-colors');
+    imgbtnsclick3.classList.add('img-colors');
+    imgcolor.innerHTML = "White Titanium";
+    imgcolor1.innerHTML = "White Titanium";
+    imgcolor2.innerHTML = "White Titanium";
+    imgcolor3.innerHTML = "White Titanium";
+    startimg1.src = "https://rukminim1.flixcart.com/image/808/970/xif0q/mobile/x/5/2/-original-imah4jywyma4j8vy.jpeg?q=60&crop=false";
+     startimg2.src = "https://rukminim1.flixcart.com/image/808/970/xif0q/mobile/c/q/2/-original-imah4jywwmbzebh4.jpeg?q=60&crop=false";
+    startimg3.src = "https://rukminim1.flixcart.com/image/808/970/xif0q/mobile/r/k/9/-original-imah4jywn67cjzfp.jpeg?q=60&crop=false";
+    startimg4.src = "https://rukminim1.flixcart.com/image/808/970/xif0q/mobile/1/k/q/-original-imah4jywmz4ezgxs.jpeg?q=60&crop=false";
+
+
+
+})
+
+// storage btns
+
+const storagebtns1 = document.getElementsByClassName('btn-storage')[0];
+const storagebtns2 = document.getElementsByClassName('btn-storage')[1];
+const storagebtns3 = document.getElementsByClassName('btn-storage')[2];
+const storagebtns4 = document.getElementsByClassName('btn-storage')[3];
+const storage = document.getElementById('storage');
+const storage1 = document.getElementById('storage1');
+const storage2 = document.getElementById('storage2');
+const storage3 = document.getElementById('storage3');
+const storage4 = document.getElementById('storage4');
+
+storagebtns1.addEventListener('click', () => {
+    storagebtns1.classList.add('main-btn')
+    storagebtns2.classList.remove('main-btn');
+    storagebtns3.classList.remove('main-btn');
+    storagebtns4.classList.remove('main-btn');
+    storage.innerHTML = "128 GB";
+    storage1.innerHTML = "128 GB";
+    storage2.innerHTML = "128 GB";
+    storage3.innerHTML = "128 GB";
+    storage4.innerHTML = "128 GB";
+
+})
+
+storagebtns2.addEventListener('click', () => {
+    storagebtns2.classList.add('main-btn')
+    storagebtns1.classList.remove('main-btn');
+    storagebtns3.classList.remove('main-btn');
+    storagebtns4.classList.remove('main-btn');
+    storage.innerHTML = "256 GB";
+    storage1.innerHTML = "256 GB";
+    storage2.innerHTML = "256 GB";
+    storage3.innerHTML = "256 GB";
+    storage4.innerHTML = "256 GB";
+})
+
+storagebtns3.addEventListener('click', () => {
+    storagebtns3.classList.add('main-btn')
+    storagebtns1.classList.remove('main-btn');
+    storagebtns2.classList.remove('main-btn');
+    storagebtns4.classList.remove('main-btn');
+    storage.innerHTML = "512 GB";
+    storage1.innerHTML = "512 GB";
+    storage2.innerHTML = "512 GB";
+    storage3.innerHTML = "512 GB";
+    storage4.innerHTML = "512 GB";
+})
+
+storagebtns4.addEventListener('click', () => {
+    storagebtns4.classList.add('main-btn')
+    storagebtns1.classList.remove('main-btn');
+    storagebtns2.classList.remove('main-btn');
+    storagebtns3.classList.remove('main-btn');
+    storage.innerHTML = "1 TB";
+    storage1.innerHTML = "1 TB";
+    storage2.innerHTML = "1 TB";
+    storage3.innerHTML = "1 TB";
+    storage4.innerHTML = "1 TB";
+})
+
+
+
+

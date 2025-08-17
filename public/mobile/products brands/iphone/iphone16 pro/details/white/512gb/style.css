@@ -455,11 +455,7 @@ body {
         display: flex;
         border-bottom: 2px solid #77777731;
         height: 60px;
-        position: sticky;
-        top: 0;
-        left: 0;
-        z-index: 100000;
-        background-color: #fff;
+       
     }
 
     .app-bars {
@@ -1383,6 +1379,141 @@ body {
         padding: 0 16px;
        
     }
+
+    /* varient container hidden */
+
+   #offcanavasbottom
+   {
+    height: 589px;
+    z-index: 1000000000;
+   }
+   .offcanvas-header
+   {
+    display: flex;
+    align-items: center;
+    height: 50px;
+    padding: 10px 10px;
+    gap: 14px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+   }
+   .close-btn-canvas
+   {
+    border: none;
+    background-color: transparent;
+    font-size: 25px;
+    color: rgba(0, 0, 0, 0.3);
+   }
+   .header-topic
+   {
+    font-size: 15px;
+    font-weight:300;
+    margin-top: 7px;
+   }
+   .header-bottom
+   {
+   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+   }
+   .header-bottom-container
+   {
+    width: 90%;
+    margin: 0 auto;
+   }
+   .full-container-offcanvas
+   {
+    width: 90%;
+    margin: 0 auto;
+   }
+   .img-color-title
+   {
+    font-size: 15px;
+   }
+   .img-color-container
+   {
+    display: flex;
+    gap: 10px;
+   }
+   .main-imgs
+   {
+    border: 1px solid var(--bs-primary);
+    padding: 4px;
+    border-radius: 5px;
+   }
+   
+   .img-colors
+   {
+    border: 1px dotted rgba(0, 0, 0, 0.2);
+    padding: 4px;
+    border-radius: 5px;
+   }
+   .box1
+   {
+    display: flex;
+    flex-direction: column;
+    font-size: 12px;
+   }
+   .color-name
+   {
+    color: #000;
+    width: 5ch;
+   }
+   .storage-btn
+   {
+    display: flex;
+    gap: 30px;
+   }
+   .btn-storage
+   {
+    
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    padding: 5px 10px;
+    border-radius: 12px;
+    color: rgb(71, 61, 61);
+   }
+   .main-btn
+   {
+    outline: 1px solid var(--bs-primary);
+    color: var(--bs-primary);
+    border: none;
+    padding: 5px 10px;
+    border-radius: 12px;
+   }
+   .main-img
+   {
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    border: none;
+   }
+
+   /* footer canvas */
+   .canvas-footer
+   {
+    padding: 0 10px;
+   }
+   .footer-btn
+   {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+   }
+   .footer-cancel
+   {
+    border: none;
+    background-color: transparent;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 9px 74px;
+    font-size: 14px;
+   }
+   .footer-apply
+   {
+    border: none;
+    background-color: transparent;
+    background-color: var(--bs-warning);
+    padding: 9px 74px;
+    font-size: 14px;
+   }
+   .hr
+   {
+    color: rgba(0, 0, 0, 0.3);
+   }
 
 
 
