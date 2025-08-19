@@ -31,7 +31,12 @@ function loadcontent()
     const hearts = document.querySelectorAll('.buttons');
     hearts.forEach((heart) => {
         heart.addEventListener('click',heartactive)
+        heart.addEventListener('click', (e) => {
+            e.preventDefault();
+        })
     })
+
+
 
 
 

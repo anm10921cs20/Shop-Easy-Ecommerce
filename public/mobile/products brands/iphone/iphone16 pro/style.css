@@ -472,6 +472,16 @@ a
         justify-content: space-around;
     
     }
+    .app-heart
+    {
+         padding: 19px 12px; 
+        position: relative;
+    }
+    .app-heart-icons
+    {
+        font-size: 25px;
+        color: var(--bs-danger);
+    }
     .app-title img
     {
      margin-bottom: 1px;
@@ -486,7 +496,7 @@ a
     }
 
     .app-login {
-        padding: 20px 10px 20px 160px;
+        padding: 20px 10px 20px 100px;
         
     }
 
