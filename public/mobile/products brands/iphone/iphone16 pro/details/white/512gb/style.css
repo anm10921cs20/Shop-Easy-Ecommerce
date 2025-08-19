@@ -1853,6 +1853,7 @@ body {
         left: 0;
         background-color: #fff;
         z-index: 2000000;
+        display: none;
     }
 
     .details-image-open {
