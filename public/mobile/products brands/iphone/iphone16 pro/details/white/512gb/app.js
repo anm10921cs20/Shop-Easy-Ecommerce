@@ -551,6 +551,21 @@ productsclose.addEventListener('click', () => {
 })
 
 
+// similar products 
+
+const similaropen = document.getElementById('product-similarly');
+const similarclose = document.getElementsByClassName('app-left-bar1')[0]
+const similarcontainer = document.getElementsByClassName('similar-open-container')[0];
+
+
+similaropen.addEventListener('click', () => {
+    similarcontainer.style.display = "block";
+})
+similarclose.addEventListener('click', () => {
+    similarcontainer.style.display = "none";
+})
+
+
 
 
 

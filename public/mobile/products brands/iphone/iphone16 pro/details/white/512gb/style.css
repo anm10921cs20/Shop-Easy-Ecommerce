@@ -343,6 +343,7 @@ body {
         display: flex;
         overflow-x: hidden;
         overflow-x: scroll;
+
     }
 
     .mobile::-webkit-scrollbar {
@@ -809,6 +810,7 @@ body {
         display: flex;
         overflow-x: hidden;
         overflow-x: scroll;
+        gap: 10px;
     }
 
     .mobile::-webkit-scrollbar {
@@ -1533,6 +1535,7 @@ body {
         height: 100vh;
         width: 100%;
         z-index: 10000000;
+        display: none;
     }
 
     .all-details-nav {
@@ -1683,7 +1686,7 @@ body {
         position: relative;
     }
 
-    .detailsallbox::-webkit-scrollbar {
+    .specs::-webkit-scrollbar {
         display: none;
     }
 
@@ -1722,59 +1725,164 @@ body {
         font-weight: 500;
         border-bottom: 1px solid rgba(0, 0, 0, 0.3);
     }
-    .more-info-container
-    {
+
+    .more-info-container {
         width: 90%;
         margin: 0 auto;
     }
-    .Warranty
-    {
+
+    .Warranty {
         font-size: 14px;
         font-weight: 600;
     }
-    .moreinfo-para
-    {
+
+    .moreinfo-para {
         color: #000;
         font-size: 14px;
     }
-    .generic
-    {
+
+    .generic {
         display: flex;
         line-height: 30px;
     }
-    .mobiles
-    {
+
+    .mobiles {
         color: #999;
         font-size: 12px;
     }
-    .india,.india1
-    {
+
+    .india,
+    .india1 {
         color: #000;
         font-size: 13px;
     }
-    .india
-    {
+
+    .india {
         margin-left: 100px;
     }
-    .india1
-    {
+
+    .india1 {
         margin-left: 92px;
     }
-    .waranty-details
-    {
+
+    .waranty-details {
         font-size: 12px;
 
     }
-    .products-details-container
-    {
+
+    .products-details-nav {
+        display: flex;
+        height: 60px;
+        align-items: center;
+        background-color: var(--bs-primary);
+        color: #fff;
+        position: sticky;
+        top: 0;
+    }
+
+    .products-details-container::-webkit-scrollbar {
+        display: none;
+    }
+
+    .products-details-container {
         position: fixed;
-        height: 10000px;
+        height: 920px;
+        overflow: scroll;
+        width: 100%;
+        top: 0;
+        left: 0;
+        background-color: #fff;
+        z-index: 2000000;
+        display: none;
+    }
+
+    /* similar products */
+
+    .products-similar {
+        width: 155px;
+        height: 325px;
+        border-radius: 6px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding: 20px 16px;
+        background: #c9d3d40c;
+        line-height: 16px;
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        gap: 2px;
+
+    }
+
+    .details-img-container {
+        line-height: 10px;
+    }
+
+    .brands-text {
+        font-size: 12px;
+        color: #999;
+    }
+
+    .brands-file-text {
+        font-size: 12px;
+        overflow: hidden;
+        width: 15ch;
+        height: 10px;
+    }
+
+    .rate-container {
+        display: flex;
+        font-size: 12px;
+    }
+
+    .percent-brands {
+        font-size: 12px;
+        color: #008c00;
+    }
+
+    .deel-rate {
+        color: #999;
+    }
+
+    .similar-open-container {
+        position: fixed;
+        height: 920px;
+        overflow: scroll;
         width: 100%;
         top: 0;
         left: 0;
         background-color: #fff;
         z-index: 2000000;
     }
+
+    .details-image-open {
+        display: flex;
+        width: 90%;
+        margin: 0 auto;
+        gap: 20px;  
+        align-items: center;
+
+    }
+
+    .similar-text {
+        font-size: 14px;
+    }
+
+    .border-bottom {
+        border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+        padding: 10px 0;
+    }
+    .products-similar-container-details
+    {
+        display: grid;
+        grid-template-columns:1fr 1fr;
+        width: 80%;
+        margin: 0 auto;
+        row-gap: 10px;
+        padding: 10px 0;
+        height: 1020px;
+    }
+
 
 
 
