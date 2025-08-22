@@ -120,10 +120,9 @@ imageChange.addEventListener('click', () => {
 // btns container
 
 // img btns
-
-const imgbtnsclick1 = document.getElementsByClassName('img-colors')[0];
-const imgbtnsclick2 = document.getElementsByClassName('main-imgs')[0];
-const imgbtnsclick3 = document.getElementsByClassName('img-colors')[1];
+const imgbtnsclick1 = document.getElementsByClassName('main-imgs')[0];
+const imgbtnsclick2 = document.getElementsByClassName('img-colors')[0];
+const imgbtnsclick3 =document.getElementsByClassName('img-colors')[1];
 const imgbtnsclick4 = document.getElementsByClassName('img-colors')[2];
 
 // img color text change
