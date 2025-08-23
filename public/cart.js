@@ -143,9 +143,9 @@ function additemsclicked(event) {
     var productname = shopitemsvalue.getElementsByClassName('mobile-name')[0].innerText;
     var productbrand = shopitemsvalue.getElementsByClassName('mobile-brand-name')[0].innerText;
     var productimg = shopitemsvalue.getElementsByClassName('product-img')[0].src;
-   
-      
-    
+
+
+
 
     addcartproduct(price, productname, productbrand, productimg);
     var alertvalue = document.getElementById('alertcontainer');
@@ -170,8 +170,8 @@ function additemsclicked(event) {
 function addcartproduct(price, productname, productbrand, productimg) {
 
 
-    
-     
+
+
     var cartdiv = document.createElement('div');
     cartdiv.classList.add('cart-item');
     var cartitems = document.getElementsByClassName('cart-content')[0];
@@ -180,7 +180,16 @@ function addcartproduct(price, productname, productbrand, productimg) {
     var alertvalue = document.getElementById('alertcontainer');
     var alertpara = document.getElementById('para-alert');
 
-    
+    for (var i = 0; i < cartitems.length; i++) {
+        if (cartproductname[i].innerText === true && cartproductbrand[i].innerText === true) {
+           
+        }
+
+    }
+
+
+
+
     for (var i = 0; i < cartproductname.length; i++) {
         if (cartproductname[i].innerText == productname.toUpperCase() && cartproductbrand[i].innerText == productbrand) {
             alertvalue.style.display = "flex";
@@ -199,7 +208,24 @@ function addcartproduct(price, productname, productbrand, productimg) {
                 }
             }, 1000)
             return;
-        }
+        }else
+        {
+            const data = {
+                name: productname,
+                img: productimg,
+                brand: productbrand,
+                price: price
+            };
+        
+
+          
+         
+              const sting = JSON.stringify(data);
+             window.localStorage.setItem('order', sting);
+           
+    }
+
+   
     }
 
     var cartboxcotnet = `
@@ -223,6 +249,7 @@ function addcartproduct(price, productname, productbrand, productimg) {
     proudctcount()
 
     order()
+    
 
 
 
@@ -290,6 +317,13 @@ cartopen.addEventListener('click', () => {
     carttarget.style.display = "block";
 })
 
+
+
+
+ 
+
+        
+        
 
 
 
