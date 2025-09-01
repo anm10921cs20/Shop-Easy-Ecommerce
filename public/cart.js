@@ -108,11 +108,18 @@ function totalvalueupdate() {
 
 
         var pricecart = price * quantity;
-        pricecartElement.innerText = "Rs." + pricecart;
+       
+
+        localStorage.setItem('pricecart',pricecart);
+        const innervalueprice = localStorage.getItem('pricecart')
+
+         pricecartElement.innerText = "Rs." + innervalueprice;
 
         total = total + price * quantity;
 
         total = Math.round(total * 100) / 100;
+        
+        localStorage.setItem('total',total);
 
     }
     document.getElementsByClassName('cart-total')[0].innerText = "Rs." + total;
@@ -139,10 +146,71 @@ for (let i = 0; i < cartadd.length; i++) {
 function additemsclicked(event) {
     var button = event.target;
     var shopitemsvalue = button.parentElement;
-    var price = shopitemsvalue.getElementsByClassName('rate')[0].innerText;
-    var productname = shopitemsvalue.getElementsByClassName('mobile-name')[0].innerText;
-    var productbrand = shopitemsvalue.getElementsByClassName('mobile-brand-name')[0].innerText;
-    var productimg = shopitemsvalue.getElementsByClassName('product-img')[0].src;
+   
+
+    var items = [];
+
+    
+    
+        
+                var datas = {
+                name: event.target.parentElement.children[2].children[1].textContent,
+                img: event.target.parentElement.children[0].children[0].src,
+                brand: event.target.parentElement.children[2].children[0].textContent,
+                price:  event.target.parentElement.children[2].children[3].children[0].textContent,
+                no :1
+            };
+            if(JSON.parse(localStorage.getItem('order')) === null )
+            {
+                     items.push(datas);
+                const sting = JSON.stringify(items);
+             localStorage.setItem('order', sting);
+            }else
+            {
+                const localItems = JSON.parse(localStorage.getItem('order'));
+                localItems.map(data=> {
+                    if(datas.brand == data.brand)
+                    {
+                        datas.no = datas.no + 1;
+                    }else
+                    {
+                    items.push(data)
+                    }
+                });
+                    items.push(datas)
+                    localStorage.setItem('order',JSON.stringify(items))
+                
+            }
+
+ 
+
+     shopitemsvalue.getElementsByClassName('product-img')[0].src;
+       
+           
+    
+                var dataget = localStorage.getItem('order');
+
+                var dataseq = JSON.parse(dataget)
+
+                for(let i = 0; i < dataseq.length; i++ )
+                {
+                      var price = dataseq[i].price;
+                      var productname = dataseq[i].name;
+                      var productbrand = dataseq[i].brand;
+                      var productimg = dataseq[i].img;
+                      
+                }
+
+               
+                
+        
+            
+            
+        
+
+          
+         
+              
 
 
 
@@ -210,23 +278,13 @@ function addcartproduct(price, productname, productbrand, productimg) {
             return;
         }else
         {
-            const data = {
-                name: productname,
-                img: productimg,
-                brand: productbrand,
-                price: price
-            };
-        
-
-          
-         
-              const sting = JSON.stringify(data);
-             window.localStorage.setItem('order', sting);
+            
            
     }
 
-   
+    var totalvalues = localStorage.getItem('pricecart')
     }
+   
 
     var cartboxcotnet = `
          <img src="${productimg}" alt="" class="cart-img">
@@ -234,7 +292,7 @@ function addcartproduct(price, productname, productbrand, productimg) {
                         <div class="cart-name">${productname}</div>
                         <div class="price-box">
                             <div class="cart-price">${price}</div>
-                            <div class="cart-amt">Rs.00</div>
+                            <div class="cart-amt">${totalvalues}</div>
                         </div>
                         <span class="cart-qtyname">Oty</span><input type="number" value="1" class="cart-quantity">
                         <div class="product-brand">${productbrand}</div>
@@ -242,9 +300,18 @@ function addcartproduct(price, productname, productbrand, productimg) {
                     <ion-icon name="trash" class="cart-remove"></ion-icon>
     `;
 
+   
 
-    cartdiv.innerHTML = cartboxcotnet;
+   
+    var cartcontainer = cartboxcotnet
+    
+    
+
+    cartdiv.innerHTML = cartcontainer;
     cartitems.append(cartdiv);
+   
+        
+     
     loadcontent()
     proudctcount()
 
@@ -336,3 +403,9 @@ cartopen.addEventListener('click', () => {
 
 //cart
 
+
+   
+
+    
+
+   

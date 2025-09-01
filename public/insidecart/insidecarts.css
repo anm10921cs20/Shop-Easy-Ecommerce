@@ -1,0 +1,100 @@
+
+@media only screen and (min-width:400px) and (max-width:767px) {
+
+   
+
+    /* nav container nav-bar */
+    .nav-bar
+    {
+        display: flex;
+        height: 40px;
+        padding: 34px 0;
+        align-items:center;
+    }
+     .app-bars {
+        padding: 20px;
+        font-size: 20px;
+        opacity: 0.9;
+    }
+
+    .app-title_head {
+        padding: 16px 5px;
+        font-size: 18px;
+    }
+    .cart-nav
+    {
+        display: flex;
+        height: 40px;
+        justify-content: space-around;
+        list-style-type: none;
+        position: relative;
+    }
+    .animate
+    {
+        position: absolute;
+        background-color: var(--bs-primary);
+        height: 3px;
+        bottom: 0;
+        left: 0;
+        width: 150px;
+        transition: all 0.4s;
+        display: none;
+        border-radius: 12px;
+    }
+    nav .first-icon, li:nth-child(1):hover~.animate
+    {
+        left: 30px;
+        display: block;
+    }
+    li:nth-child(2):hover~.animate
+    {
+        left: 240px;
+        display: block;
+    }
+    .li1
+    {
+        color: var(--bs-primary);
+    }
+    .cart-box
+    {
+        background-color: #f1f3f6;
+        height: auto;
+        width: 100%;
+    }
+    
+    .cart-items
+    {
+         height: 500px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .fa-shopping-basket,.fa-carrot
+    {
+        font-size: 100px;
+        padding: 70px;
+        color: #999;
+        
+    }
+    .text-show
+    {
+        color: #000;
+        font-size: 22px;
+        font-weight: 500;
+        padding: 15px 0;
+    }
+    .btn-primary
+    {
+        padding: 4px 40px;
+        font-weight: 500;
+    }
+
+    /* clear grocery */
+
+    .grocery
+    {
+        display: none;
+    }
+
+}
