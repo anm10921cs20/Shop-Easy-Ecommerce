@@ -101,5 +101,6 @@ window.onload = function()
 {
     const cartcount = localStorage.getItem('cart-count')
     const cartbox  = document.getElementById('cart-counts');
+    cartbox.innerText = cartcount;
 }
 

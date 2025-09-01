@@ -36,7 +36,7 @@ liBtn2.addEventListener('click', () => {
 
 // details about cart-box
 
-const containercartBox = document.querySelector('.cart-content');
+const containercartBox = document.querySelector('.cart-content0');
 const containercartBox1 = document.querySelector('.cart-content1');
 
 console.log(containercartBox.children.length);
@@ -60,14 +60,23 @@ const emptydetails1 = `
             </div>
 `;
 
-if (containercartBox.children.length <= 0) {
-    containercartBox.innerHTML = emptydetails;
+window.addEventListener('DOMContentLoaded',() =>  {
+    if (containercartBox.children.length <= 0) {
+        containercartBox.innerHTML = emptydetails;
 
 
-}
-if (containercartBox1.children.length <= 0) {
-    containercartBox1.innerHTML = emptydetails1;
-}
+    }
+    if (containercartBox1.children.length <= 0) {
+        containercartBox1.innerHTML = emptydetails1;
+    }
+
+
+
+
+
+})
+
+
 
 
 
@@ -81,144 +90,54 @@ if (containercartBox1.children.length <= 0) {
 var shopeasyLocal = localStorage.getItem('order');
 
 
-var dataContainer = JSON.parse(shopeasyLocal);
+var dataContainer = JSON.parse(shopeasyLocal) || [];
 
 
-window.onload = function() 
-{
+window.onload = function () {
     var count = dataContainer.length;
 
-localStorage.setItem('cart-count',count)
+    localStorage.setItem('cart-count', count)
 }
+
+
+dataContainer.forEach((items, index) => {
+
+    var cartdivs = document.createElement('div');
+    cartdivs.classList.add('cart-item');
+    cartdivs.innerHTML = ` <img src="${items.img}" alt="" class="cart-img">
+                    <div class="detail-box">
+                        <div class="cart-name">${items.name}</div>
+                        <div class="price-box">
+                            <div class="cart-price">${items.price}</div>
+                             
+                            
+                        </div>
+                        <span class="cart-qtyname">Oty</span><input type="number" value="1" class="cart-quantity">
+                        <div class="product-brand">${items.brand}</div>
+                    </div>
+                    <ion-icon name="trash" class="cart-remove"></ion-icon>`;
+
+
+
+    containercartBox.appendChild(cartdivs);
+
+
+
+
+})
 
 
 
 // container1
-var price1 = dataContainer[0].price;
-var productname1 = dataContainer[0].name;
-var productbrand1 = dataContainer[0].brand;
-var productimg1 = dataContainer[0].img;
 
 
 
 
 
 
-const divprod1 = `<br>
- <div class="cart-item">
- <img src="${productimg1}" alt="" class="cart-img">
-                    <div class="detail-box">
-                        <div class="cart-name">${productname1}</div>
-                        <div class="price-box">
-                            <div class="cart-price">${price1}</div>
-                            
-                        </div>
-                        <span class="cart-qtyname">Oty</span><input type="number" value="1" class="cart-quantity">
-                        <div class="product-brand">${productbrand1}</div>
-                    </div>
-                    <ion-icon name="trash" class="cart-remove"></ion-icon>
-            </div>
-
-`;
-
-
-containercartBox.innerHTML = divprod1;
-
-
-// container2
-var price2 = dataContainer[1].price;
-var productname2 = dataContainer[1].name;
-var productbrand2 = dataContainer[1].brand;
-var productimg2 = dataContainer[1].img;
 
 
 
-
-
-
-const divprod2 = `<br>
- <div class="cart-item">
- <img src="${productimg2}" alt="" class="cart-img">
-                    <div class="detail-box">
-                        <div class="cart-name">${productname2}</div>
-                        <div class="price-box">
-                            <div class="cart-price">${price2}</div>
-                            
-                        </div>
-                        <span class="cart-qtyname">Oty</span><input type="number" value="1" class="cart-quantity">
-                        <div class="product-brand">${productbrand2}</div>
-                    </div>
-                    <ion-icon name="trash" class="cart-remove"></ion-icon>
-            </div>
-
-`;
-
-
-containercartBox.innerHTML += divprod2;
-
-
-// container3
-var price3 = dataContainer[2].price;
-var productname3 = dataContainer[2].name;
-var productbrand3 = dataContainer[2].brand;
-var productimg3 = dataContainer[2].img;
-
-
-
-
-
-
-const divprod3 = `<br>
- <div class="cart-item">
- <img src="${productimg3}" alt="" class="cart-img">
-                    <div class="detail-box">
-                        <div class="cart-name">${productname3}</div>
-                        <div class="price-box">
-                            <div class="cart-price">${price3}</div>
-                            
-                        </div>
-                        <span class="cart-qtyname">Oty</span><input type="number" value="1" class="cart-quantity">
-                        <div class="product-brand">${productbrand3}</div>
-                    </div>
-                    <ion-icon name="trash" class="cart-remove"></ion-icon>
-            </div>
-
-`;
-
-
-containercartBox.innerHTML += divprod3;
-
-
-// container4
-var price4 = dataContainer[3].price;
-var productname4 = dataContainer[3].name;
-var productbrand4 = dataContainer[3].brand;
-var productimg4 = dataContainer[3].img;
-
-
-
-
-
-
-const divprod4 = `<br>
- <div class="cart-item">
- <img src="${productimg4}" alt="" class="cart-img">
-                    <div class="detail-box">
-                        <div class="cart-name">${productname4}</div>
-                        <div class="price-box">
-                            <div class="cart-price">${price4}</div>
-                            
-                        </div>
-                        <span class="cart-qtyname">Oty</span><input type="number" value="1" class="cart-quantity">
-                        <div class="product-brand">${productbrand4}</div>
-                    </div>
-                    <ion-icon name="trash" class="cart-remove"></ion-icon>
-            </div>
-
-`;
-
-
-containercartBox.innerHTML += divprod4;
 
 
 
@@ -234,26 +153,26 @@ containercartBox.innerHTML += divprod4;
 
 
 
-    var removeContainer = document.querySelectorAll('.cart-remove');
-    
-    removeContainer.forEach((btn, idx) => {
-        btn.addEventListener('click', function() {
-            // Remove the cart item from DOM
-            this.parentElement.remove();
-    
-            // Remove the item from dataContainer array
-            if (dataContainer && dataContainer.length > idx) {
-                dataContainer.splice(idx, 1); // Removes 1 element at index idx
-            }
-            localStorage.setItem("order", JSON.stringify(dataContainer));
-    
-            // If cart is empty, clear localStorage and show empty message
-            if (dataContainer.length === 0) {
-                localStorage.removeItem("order");
-                containercartBox.innerHTML = emptydetails;
-            }
-        });
+var removeContainer = document.querySelectorAll('.cart-remove');
+
+removeContainer.forEach((btn, idx) => {
+    btn.addEventListener('click', function () {
+        // Remove the cart item from DOM
+        this.parentElement.remove();
+
+        // Remove the item from dataContainer array
+        if (dataContainer && dataContainer.length > idx) {
+            dataContainer.splice(idx, 1); // Removes 1 element at index idx
+        }
+        localStorage.setItem("order", JSON.stringify(dataContainer));
+
+        // If cart is empty, clear localStorage and show empty message
+        if (dataContainer.length === 0) {
+            localStorage.removeItem("order");
+            containercartBox.innerHTML = emptydetails;
+        }
     });
+});
 
 
 
