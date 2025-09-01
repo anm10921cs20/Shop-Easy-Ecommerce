@@ -74,6 +74,14 @@ window.addEventListener('DOMContentLoaded',() =>  {
 
 
 
+
+
+})
+
+window.addEventListener('load', () => {
+    var count = dataContainer.length;
+
+    localStorage.setItem('cart-count', count)
 })
 
 
@@ -93,11 +101,7 @@ var shopeasyLocal = localStorage.getItem('order');
 var dataContainer = JSON.parse(shopeasyLocal) || [];
 
 
-window.onload = function () {
-    var count = dataContainer.length;
 
-    localStorage.setItem('cart-count', count)
-}
 
 
 dataContainer.forEach((items, index) => {
