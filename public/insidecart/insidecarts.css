@@ -57,7 +57,7 @@
     }
     .cart-box
     {
-        background-color: #f1f3f6;
+        background-color: #fff;
         height: auto;
         width: 100%;
     }
@@ -112,5 +112,57 @@
         top: 0;
         background-color: #fff;
         z-index: 1000;
+    }
+    .totalvalue
+    {
+        position: fixed;
+        bottom: 0;
+        background-color: #fff;
+        z-index: 1000;
+        height: 50px;
+        width: 100%;
+        padding: 4px 0;
+         border-top: 1px solid rgba(0, 0, 0,0.2);
+         border-bottom: 1px solid rgba(0, 0, 0,0.2);
+
+       
+        
+    }
+    .btn-warning
+    {
+        padding: 5px 50px;
+    }
+    .total-container
+    {
+        display: flex;
+        justify-content: space-between;
+        padding: 0 10px;
+        align-items: center;
+        
+    }
+    .total
+    {
+        font-size: 20px;
+    }
+    .fa-minus,.fa-plus
+    {
+        padding:2px 8px;
+    }
+    .productsamt
+    {
+        background-color: #f1f3f6;
+        height: 300px;
+        display: flex;
+        justify-content: center;
+        align-items: end;
+        border-bottom: 1px solid rgba(0, 0, 0,0.2);
+    }
+    .amt-container
+    {
+        background-color: #fff;
+        height: 275px;
+        width: 380px;
+        border-radius: 12px;
+        border: 1px solid #fffffd;
     }
 }

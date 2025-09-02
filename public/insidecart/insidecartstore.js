@@ -76,6 +76,8 @@ window.addEventListener('DOMContentLoaded',() =>  {
 
 
 
+
+
 })
 
 window.addEventListener('load', () => {
@@ -113,10 +115,9 @@ dataContainer.forEach((items, index) => {
                         <div class="cart-name">${items.name}</div>
                         <div class="price-box">
                             <div class="cart-price">${items.price}</div>
-                             
-                            
+                            <div class="cart-amt">0</div>  
                         </div>
-                        <span class="cart-qtyname">Oty</span><input type="number" value="1" class="cart-quantity">
+                        <span class="cart-qtyname">Oty</span><i class="fa-solid fa-minus"></i><input type="number" value="1" class="cart-quantity"><i class="fa-solid fa-plus"></i>
                         <div class="product-brand">${items.brand}</div>
                     </div>
                     <ion-icon name="trash" class="cart-remove"></ion-icon>`;
@@ -128,26 +129,111 @@ dataContainer.forEach((items, index) => {
 
 
 
+
+
 })
 
+
+function totalvalue()
+{
+    
+    var cartboxes = containercartBox.getElementsByClassName('cart-item');
+    var total = 0;
+    var pricecart = 0;
+    for(var i = 0; i < cartboxes.length; i++)
+    {
+        var cartbox = cartboxes[i];
+        var priceElement = cartbox.getElementsByClassName('cart-price')[0];
+        var pricecartElement = cartbox.getElementsByClassName('cart-amt')[0];
+        var quantityElement = cartbox.getElementsByClassName('cart-quantity')[0];
+        
+        
+        var price = parseFloat(priceElement.innerText.replace("Rs.", ""));
+        var quantity = quantityElement.value;
+        var pricecart = price * quantity;
+        
+
+        pricecartElement.innerText = "Rs." + pricecart;
+        total = total + price * quantity; 
+        total = Math.round(total * 100) / 100;
+    }
+    document.getElementsByClassName('total')[0].innerText = "Rs. " + total; 
+}
+totalvalue()
 
 
 // container1
 
 
 
+var qty =  document.querySelectorAll('.cart-quantity');
+qty.forEach((qtys) => {
+    qtys.addEventListener('change', qtyupdate);
+
+
+})
+
+
+
+function qtyupdate()
+{
+    if(isNaN(this.value)||this.value < 1)
+    {
+        this.value = 1;
+    }
+}
+
+qty.forEach((qtys) => {
+    qtys.addEventListener('change', function () {
+        qtyupdate.call(this);
+        totalvalue();
+
+
+      
+    });
+});
 
 
 
 
 
+  
+        
+
+
+        const minusBtns = document.querySelectorAll('.fa-minus');
+        const plusBtns = document.querySelectorAll('.fa-plus');
+        const qtyInputs = document.querySelectorAll('.cart-quantity');
+
+    //    increment
+
+    plusBtns.forEach((plus, id) => {
+        plus.addEventListener('click',function() {
+            qtyInputs[id].value = parseInt(qtyInputs[id].value) + 1;
+            totalvalue();
+        })
+    })
+
+    // decrement
+
+    minusBtns.forEach((minus, id) => {
+        minus.addEventListener('click',function()
+    {
+        var minusvalue = parseInt(qtyInputs[id].value)
+        if(minusvalue > 1)
+        {
+            qtyInputs[id].value = minusvalue-1;
+            totalvalue();
+        }
+    })
+        
+    })
 
 
 
 
 
-
-
+    
 
 
 
@@ -163,6 +249,7 @@ removeContainer.forEach((btn, idx) => {
     btn.addEventListener('click', function () {
         // Remove the cart item from DOM
         this.parentElement.remove();
+        totalvalue()
 
         // Remove the item from dataContainer array
         if (dataContainer && dataContainer.length > idx) {
@@ -177,6 +264,10 @@ removeContainer.forEach((btn, idx) => {
         }
     });
 });
+
+
+
+
 
 
 

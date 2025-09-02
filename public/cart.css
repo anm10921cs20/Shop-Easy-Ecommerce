@@ -404,6 +404,17 @@
     {
         color: #777;
     }
+     .carousel-indicators [data-bs-target] {
+        background-color: #474545;
+        width: 13px;
+        border-radius: 100%;
+        transition: 0.7s ease-in-out;
+    }
+
+    .carousel-indicators [aria-current="true"] {
+        background-color: var(--bs-primary);
+        transition: width 1s ease-in-out;
+    }
 }
 
 @media print {
