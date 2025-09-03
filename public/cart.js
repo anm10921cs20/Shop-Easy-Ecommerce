@@ -79,7 +79,7 @@ function proudctcount() {
     var cartcounter = document.getElementById('cart-counter');
     var tablecalc = document.getElementById('carttotalcount');
     var cartvalues = cartvalue.children.length;
-    cartcount.innerText = cartvalues;
+
     cartcounter.innerText = cartvalues;
     tablecalc.innerText = cartvalues;
 
@@ -108,18 +108,18 @@ function totalvalueupdate() {
 
 
         var pricecart = price * quantity;
-       
 
-        localStorage.setItem('pricecart',pricecart);
+
+        localStorage.setItem('pricecart', pricecart);
         const innervalueprice = localStorage.getItem('pricecart')
 
-         pricecartElement.innerText = "Rs." + innervalueprice;
+        pricecartElement.innerText = "Rs." + innervalueprice;
 
         total = total + price * quantity;
 
         total = Math.round(total * 100) / 100;
-        
-        localStorage.setItem('total',total);
+
+        localStorage.setItem('total', total);
 
     }
     document.getElementsByClassName('cart-total')[0].innerText = "Rs." + total;
@@ -139,6 +139,34 @@ for (let i = 0; i < cartadd.length; i++) {
     button.addEventListener('click', additemsclicked)
 }
 
+var cartheart = document.getElementsByClassName('fa-heart');
+for (let i = 0; i < cartheart.length; i++) {
+    var heart = cartheart[i];
+    heart.addEventListener('click', heartclicked)
+}
+
+// add items to heart like
+
+function heartclicked(event) {
+    var heart = event.target;
+    var heartitemsvalue = heart.parentElement;
+    console.log(heartitemsvalue);
+    
+
+
+    var hearts = [];
+
+    var heartdetails = {
+        anchor:heartitemsvalue.parentElement.href,
+        img: heartitemsvalue.getElementsByClassName('product-img')[0].src,
+        brand: event.target.parentElement.children[2].children[0].textContent,
+        price: event.target.parentElement.children[2].children[3].children[0].textContent,
+        no: 1
+    }
+    console.log(heartdetails);
+
+}
+
 
 
 //add items cart infucntion
@@ -146,71 +174,66 @@ for (let i = 0; i < cartadd.length; i++) {
 function additemsclicked(event) {
     var button = event.target;
     var shopitemsvalue = button.parentElement;
-   
+
 
     var items = [];
 
-    
-    
-        
-                var datas = {
-                name: event.target.parentElement.children[2].children[1].textContent,
-                img: event.target.parentElement.children[0].children[0].src,
-                brand: event.target.parentElement.children[2].children[0].textContent,
-                price:  event.target.parentElement.children[2].children[3].children[0].textContent,
-                no :1
-            };
-            if(JSON.parse(localStorage.getItem('order')) === null )
-            {
-                     items.push(datas);
-                const sting = JSON.stringify(items);
-             localStorage.setItem('order', sting);
-            }else
-            {
-                const localItems = JSON.parse(localStorage.getItem('order'));
-                localItems.map(data=> {
-                    if(datas.brand == data.brand)
-                    {
-                        datas.no = datas.no + 1;
-                    }else
-                    {
-                    items.push(data)
-                    }
-                });
-                    items.push(datas)
-                    localStorage.setItem('order',JSON.stringify(items))
-                
+
+
+
+    var datas = {
+        name: event.target.parentElement.children[2].children[1].textContent,
+        img: event.target.parentElement.children[0].children[0].src,
+        brand: event.target.parentElement.children[2].children[0].textContent,
+        price: event.target.parentElement.children[2].children[3].children[0].textContent,
+        no: 1
+    };
+    if (JSON.parse(localStorage.getItem('order')) === null) {
+        items.push(datas);
+        const sting = JSON.stringify(items);
+        localStorage.setItem('order', sting);
+    } else {
+        const localItems = JSON.parse(localStorage.getItem('order'));
+        localItems.map(data => {
+            if (datas.brand == data.brand) {
+                datas.no = datas.no + 1;
+            } else {
+                items.push(data)
             }
+        });
+        items.push(datas)
+        localStorage.setItem('order', JSON.stringify(items))
 
- 
+    }
 
-     shopitemsvalue.getElementsByClassName('product-img')[0].src;
-       
-           
-    
-                var dataget = localStorage.getItem('order');
 
-                var dataseq = JSON.parse(dataget)
 
-                for(let i = 0; i < dataseq.length; i++ )
-                {
-                      var price = dataseq[i].price;
-                      var productname = dataseq[i].name;
-                      var productbrand = dataseq[i].brand;
-                      var productimg = dataseq[i].img;
-                      
-                }
+    shopitemsvalue.getElementsByClassName('product-img')[0].src;
 
-               
-                
-        
-            
-            
-        
 
-          
-         
-              
+
+    var dataget = localStorage.getItem('order');
+
+    var dataseq = JSON.parse(dataget)
+
+    for (let i = 0; i < dataseq.length; i++) {
+        var price = dataseq[i].price;
+        var productname = dataseq[i].name;
+        var productbrand = dataseq[i].brand;
+        var productimg = dataseq[i].img;
+
+    }
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -250,7 +273,7 @@ function addcartproduct(price, productname, productbrand, productimg) {
 
     for (var i = 0; i < cartitems.length; i++) {
         if (cartproductname[i].innerText === true && cartproductbrand[i].innerText === true) {
-           
+
         }
 
     }
@@ -276,15 +299,14 @@ function addcartproduct(price, productname, productbrand, productimg) {
                 }
             }, 1000)
             return;
-        }else
-        {
-            
-           
+        } else {
+
+
+        }
+
+        var totalvalues = localStorage.getItem('pricecart')
     }
 
-    var totalvalues = localStorage.getItem('pricecart')
-    }
-   
 
     var cartboxcotnet = `
          <img src="${productimg}" alt="" class="cart-img">
@@ -300,23 +322,23 @@ function addcartproduct(price, productname, productbrand, productimg) {
                     <ion-icon name="trash" class="cart-remove"></ion-icon>
     `;
 
-   
 
-   
+
+
     var cartcontainer = cartboxcotnet
-    
-    
+
+
 
     cartdiv.innerHTML = cartcontainer;
     cartitems.append(cartdiv);
-   
-        
-     
+
+
+
     loadcontent()
     proudctcount()
 
     order()
-    
+
 
 
 
@@ -387,10 +409,10 @@ cartopen.addEventListener('click', () => {
 
 
 
- 
 
-        
-        
+
+
+
 
 
 
@@ -404,8 +426,7 @@ cartopen.addEventListener('click', () => {
 //cart
 
 
-   
 
-    
 
-   
+
+

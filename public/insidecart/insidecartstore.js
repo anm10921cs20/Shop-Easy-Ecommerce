@@ -34,6 +34,8 @@ liBtn2.addEventListener('click', () => {
 
 })
 
+var total = 0;
+
 // details about cart-box
 
 const containercartBox = document.querySelector('.cart-content0');
@@ -60,30 +62,212 @@ const emptydetails1 = `
             </div>
 `;
 
-window.addEventListener('DOMContentLoaded',() =>  {
+window.addEventListener('DOMContentLoaded', () => {
     if (containercartBox.children.length <= 0) {
         containercartBox.innerHTML = emptydetails;
+
+
+    } else {
+        const productsdetails = document.createElement('div');
+        productsdetails.classList.add('productsamt');
+        shopeasy.append(productsdetails);
+
+
+        const productsvalue = `
+    <div class="pricedetails">
+        <h4 class="pricedetails-tit">Price Details</h4>
+        <i class="fas fa-chevron-down"></i>
+    </div><br>
+    <div class="details-container">
+        <div class="details-price">
+            <p class="price">Price(<span class="qty"></span>)</p>
+            <p class="pricetotal"></p>
+
+        </div>
+        <div class="details-price">
+            <p class="price">Protect Promise Fee</p>
+            <p class="pricetotal">Rs.99</p>
+
+        </div>
+        
+        <div class="details-price common too-low" id="tolow">
+            <p class="price">Coupons For You</p>
+            <p class="pricetotal1 text-success">Rs.50</p>
+        </div>
+         <div class="details-price common low" id="low">
+            <p class="price">Coupons For You</p>
+            <p class="pricetotal1 text-success">Rs.100</p>
+        </div>
+         <div class="details-price common average" id="average">
+            <p class="price">Coupons For You</p>
+            <p class="pricetotal1 text-success">Rs.500</p>
+        </div>
+         <div class="details-price common medium" id="medium">
+            <p class="price">Coupons For You</p>
+            <p class="pricetotal1 text-success">Rs.1000</p>
+        </div>
+         <div class="details-price common high" id="high">
+            <p class="price">Coupons For You</p>
+            <p class="pricetotal1 text-success">Rs.2000</p>
+        </div>
+         <div class="details-price common too-high" id="too-high">
+            <p class="price">Coupons For You</p>
+            <p class="pricetotal1 text-success">Rs.3000</p>
+        </div>
+         <div class="details-price common higly" id="highly">
+            <p class="price">Coupons For You</p>
+            <p class="pricetotal1 text-success">Rs.4000</p>
+        </div>
+    </div>
+     <div class="details-price text-primary">
+            <p class="price">Total Amount</p>
+            <p class="pricetotal2">${pricedecrease}</p>
+
+        </div>
+
+        
+
+    `;
+        const productss = document.createElement('div');
+        productss.classList.add('details-price-active')
+        productss.innerHTML = productsvalue;
+        productsdetails.append(productss);
+        shopeasy.append(productsdetails);
+
+        update()
+        const btnplace = document.getElementsByClassName('totalvalue')[0];
+        btnplace.style.display = "block";
+
+
+
+
+      
+
+        const tooLowDiscount = document.getElementById('tolow');
+        console.log(tooLowDiscount);
+
+
+
+        const lowDiscount = document.getElementById('low');
+        const averageDiscount = document.getElementById('average');
+        const mediumDiscount = document.getElementById('medium');
+        const highDiscount = document.getElementById('high');
+        const toohighDiscount = document.getElementById('too-high');
+        const highlyDiscount = document.getElementById('highly');
+        var corner = document.querySelectorAll('.common');
+
+        if (parseInt(totalamt + 99) < 500) {
+            
+            lowDiscount.style.display = "none";
+            averageDiscount.style.display = "none";
+            mediumDiscount.style.display = "none";
+            highDiscount.style.display = "none";
+            toohighDiscount.style.display = "none";
+            highlyDiscount.style.display = "none";
+            parseInt(totalamt+ 99) - 50;
+            return;
+           
+        }
+        else if (parseInt(totalamt + 99) < 1000) {
+            tooLowDiscount.style.display = "none";
+            averageDiscount.style.display = "none";
+            mediumDiscount.style.display = "none";
+            highDiscount.style.display = "none";
+            toohighDiscount.style.display = "none";
+            highlyDiscount.style.display = "none";
+             var pricedecrease =   parseInt(totalamt+ 99) - 100;
+            return;
+
+        }
+         else if (parseInt(totalamt + 99) < 5000) {
+            tooLowDiscount.style.display = "none";
+            lowDiscount.style.display = "none";
+            mediumDiscount.style.display = "none";
+            highDiscount.style.display = "none";
+            toohighDiscount.style.display = "none";
+            highlyDiscount.style.display = "none";
+             var pricedecrease =   parseInt(totalamt+ 99) - 500;
+            return;
+
+        }
+         else if (parseInt(totalamt + 99) < 10000) {
+            tooLowDiscount.style.display = "none";
+            lowDiscount.style.display = "none";
+            averageDiscount.style.display = "none";
+            highDiscount.style.display = "none";
+            toohighDiscount.style.display = "none";
+            highlyDiscount.style.display = "none";
+             var pricedecrease =   parseInt(totalamt+ 99) - 1000;
+            return;
+
+        }
+         else if (parseInt(totalamt + 99) < 15000) {
+            tooLowDiscount.style.display = "none";
+            lowDiscount.style.display = "none";
+            averageDiscount.style.display = "none";
+            mediumDiscount.style.display = "none";
+            toohighDiscount.style.display = "none";
+            highlyDiscount.style.display = "none";
+             var pricedecrease =   parseInt(totalamt+ 99) - 2000;
+            return;
+        }
+          else if (parseInt(totalamt + 99) < 20000) {
+            tooLowDiscount.style.display = "none";
+            lowDiscount.style.display = "none";
+            averageDiscount.style.display = "none";
+            mediumDiscount.style.display = "none";
+             highDiscount.style.display = "none";
+            highlyDiscount.style.display = "none";
+             var pricedecrease =   parseInt(totalamt- 3099);
+             console.log(pricedecrease);
+             
+               
+            return;
+        }
+        else if (parseInt(totalamt + 99) < 1000000000) {
+            tooLowDiscount.style.display = "none";
+            lowDiscount.style.display = "none";
+            averageDiscount.style.display = "none";
+            mediumDiscount.style.display = "none";
+             highDiscount.style.display = "none";
+              highlyDiscount.style.display = "none";
+               var pricedecrease =   parseInt(totalamt+ 99);
+               pricedecrease-4000;
+           
+            return;
+        }
+
+
 
 
     }
     if (containercartBox1.children.length <= 0) {
         containercartBox1.innerHTML = emptydetails1;
     }
-
-
-
-
-
-
-
-
+    else {
+        var productsdetails = document.createElement('div');
+        productsdetails.classList.add('productsamt');
+        shopeasy.append(productsdetails);
+    }
 
 })
+
+
+
+
+
+var counts = document.getElementById('cart-counts');
+var countvalue = localStorage.getItem('cart-count');
+counts.innerText = `(${countvalue})`;
+
+
+
 
 window.addEventListener('load', () => {
     var count = dataContainer.length;
 
     localStorage.setItem('cart-count', count)
+
 })
 
 
@@ -131,33 +315,43 @@ dataContainer.forEach((items, index) => {
 
 
 
+
 })
 
 
-function totalvalue()
-{
-    
+function totalvalue() {
+
     var cartboxes = containercartBox.getElementsByClassName('cart-item');
     var total = 0;
     var pricecart = 0;
-    for(var i = 0; i < cartboxes.length; i++)
-    {
+    for (var i = 0; i < cartboxes.length; i++) {
         var cartbox = cartboxes[i];
         var priceElement = cartbox.getElementsByClassName('cart-price')[0];
         var pricecartElement = cartbox.getElementsByClassName('cart-amt')[0];
         var quantityElement = cartbox.getElementsByClassName('cart-quantity')[0];
-        
-        
+
+
         var price = parseFloat(priceElement.innerText.replace("Rs.", ""));
         var quantity = quantityElement.value;
         var pricecart = price * quantity;
-        
+
 
         pricecartElement.innerText = "Rs." + pricecart;
-        total = total + price * quantity; 
+        total = total + price * quantity;
         total = Math.round(total * 100) / 100;
+
+
+
     }
-    document.getElementsByClassName('total')[0].innerText = "Rs. " + total; 
+    totalamt = total - 99;
+    document.getElementsByClassName('total')[0].innerText = "Rs. " + (totalamt < 1000 ? totalamt - 100 :  totalamt -100 && totalamt < 5000 ?  totalamt -500 : totalamt - 500  && totalamt < 10000 ?  totalamt -1000 : totalamt - 1000  && totalamt < 15000 ?  totalamt -2000 : totalamt - 2000  && totalamt < 20000 ?  totalamt -3000 : totalamt - 3000  && totalamt <1000000000 ?  totalamt -4000 : totalamt -4000);
+
+
+
+
+
+
+
 }
 totalvalue()
 
@@ -166,7 +360,7 @@ totalvalue()
 
 
 
-var qty =  document.querySelectorAll('.cart-quantity');
+var qty = document.querySelectorAll('.cart-quantity');
 qty.forEach((qtys) => {
     qtys.addEventListener('change', qtyupdate);
 
@@ -175,10 +369,8 @@ qty.forEach((qtys) => {
 
 
 
-function qtyupdate()
-{
-    if(isNaN(this.value)||this.value < 1)
-    {
+function qtyupdate() {
+    if (isNaN(this.value) || this.value < 1) {
         this.value = 1;
     }
 }
@@ -189,7 +381,7 @@ qty.forEach((qtys) => {
         totalvalue();
 
 
-      
+
     });
 });
 
@@ -197,43 +389,87 @@ qty.forEach((qtys) => {
 
 
 
-  
-        
 
 
-        const minusBtns = document.querySelectorAll('.fa-minus');
-        const plusBtns = document.querySelectorAll('.fa-plus');
-        const qtyInputs = document.querySelectorAll('.cart-quantity');
 
-    //    increment
 
-    plusBtns.forEach((plus, id) => {
-        plus.addEventListener('click',function() {
-            qtyInputs[id].value = parseInt(qtyInputs[id].value) + 1;
-            totalvalue();
-        })
+const minusBtns = document.querySelectorAll('.fa-minus');
+const plusBtns = document.querySelectorAll('.fa-plus');
+const qtyInputs = document.querySelectorAll('.cart-quantity');
+
+//    increment
+
+plusBtns.forEach((plus, id) => {
+    plus.addEventListener('click', function () {
+        qtyInputs[id].value = parseInt(qtyInputs[id].value) + 1;
+        totalvalue();
+        update();
+
+
+
     })
+})
 
-    // decrement
+// decrement
 
-    minusBtns.forEach((minus, id) => {
-        minus.addEventListener('click',function()
-    {
+minusBtns.forEach((minus, id) => {
+    minus.addEventListener('click', function () {
         var minusvalue = parseInt(qtyInputs[id].value)
-        if(minusvalue > 1)
-        {
-            qtyInputs[id].value = minusvalue-1;
+        if (minusvalue > 1) {
+            qtyInputs[id].value = minusvalue - 1;
             totalvalue();
+            update()
+
         }
     })
-        
+
+})
+
+
+
+
+
+function update() {
+
+
+      const pricediscount = document.querySelectorAll('.pricetotal1');
+
+        pricediscount.forEach((btns) => {
+            let btnValue = btns.innerText;
+            
+        })
+ var totalprice = (totalamt + 99);
+    totalvalue.call(this)
+   
+    console.log(typeof (totalprice));
+
+    document.getElementsByClassName('pricetotal')[0].innerText = "Rs." + totalprice;
+    document.getElementsByClassName('pricetotal2')[0].innerText = "Rs." + (totalamt < 1000 ? totalamt - 100 :  totalamt -100 && totalamt < 5000 ?  totalamt -500 : totalamt - 500  && totalamt < 10000 ?  totalamt -1000 : totalamt - 1000  && totalamt < 15000 ?  totalamt -2000 : totalamt - 2000  && totalamt < 20000 ?  totalamt -3000 : totalamt - 3000  && totalamt <1000000000 ?  totalamt -4000 : totalamt -4000);
+
+    const detailsContainer = document.getElementsByClassName('details-container')[0];
+    const chevronDown = document.getElementsByClassName('fa-chevron-down')[0];
+    const priceDetails = document.getElementsByClassName('pricedetails')[0];
+
+    priceDetails.addEventListener('click', () => {
+        detailsContainer.classList.toggle('details-container-active')
+        chevronDown.classList.toggle('fa-chevron-down-active');
     })
+    var qtyss = document.getElementsByClassName('qty')[0];
+    qtyss.innerText = `${countvalue} item`;
 
 
 
 
 
-    
+
+}
+
+
+
+
+
+
+
 
 
 
@@ -250,6 +486,7 @@ removeContainer.forEach((btn, idx) => {
         // Remove the cart item from DOM
         this.parentElement.remove();
         totalvalue()
+        update()
 
         // Remove the item from dataContainer array
         if (dataContainer && dataContainer.length > idx) {
@@ -259,6 +496,7 @@ removeContainer.forEach((btn, idx) => {
 
         // If cart is empty, clear localStorage and show empty message
         if (dataContainer.length === 0) {
+            window.location.reload();
             localStorage.removeItem("order");
             containercartBox.innerHTML = emptydetails;
         }
