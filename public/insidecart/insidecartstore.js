@@ -63,8 +63,43 @@ const emptydetails1 = `
 `;
 
 window.addEventListener('DOMContentLoaded', () => {
-    if (containercartBox.children.length <= 0) {
+
+    shopeasycart();
+    grocerycart();
+
+   
+   
+    
+
+})
+
+console.log(containercartBox1.children.length);
+
+
+
+var counts = document.getElementById('cart-counts');
+var countvalue = localStorage.getItem('cart-count');
+counts.innerText = `(${countvalue})`;
+
+
+
+
+window.addEventListener('load', () => {
+    var count = dataContainer.length;
+
+    localStorage.setItem('cart-count', count)
+
+})
+
+
+
+// shopeasy cart
+
+function shopeasycart()
+{
+ if (containercartBox.children.length <= 0) {
         containercartBox.innerHTML = emptydetails;
+        return
 
 
     } else {
@@ -240,39 +275,20 @@ window.addEventListener('DOMContentLoaded', () => {
 
 
 
+
     }
+}
+
+
+// grocery 
+
+function grocerycart()
+{
     if (containercartBox1.children.length <= 0) {
         containercartBox1.innerHTML = emptydetails1;
+        return
     }
-    else {
-        var productsdetails = document.createElement('div');
-        productsdetails.classList.add('productsamt');
-        shopeasy.append(productsdetails);
-    }
-
-})
-
-
-
-
-
-var counts = document.getElementById('cart-counts');
-var countvalue = localStorage.getItem('cart-count');
-counts.innerText = `(${countvalue})`;
-
-
-
-
-window.addEventListener('load', () => {
-    var count = dataContainer.length;
-
-    localStorage.setItem('cart-count', count)
-
-})
-
-
-
-
+}
 
 
 
