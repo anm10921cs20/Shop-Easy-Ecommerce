@@ -41,7 +41,6 @@ var total = 0;
 const containercartBox = document.querySelector('.cart-content0');
 const containercartBox1 = document.querySelector('.cart-content1');
 
-console.log(containercartBox.children.length);
 
 
 
@@ -64,16 +63,11 @@ const emptydetails1 = `
 
 window.addEventListener('DOMContentLoaded', () => {
 
-    shopeasycart();
-    grocerycart();
-
-   
-   
-    
+    shopeasycart(); 
 
 })
 
-console.log(containercartBox1.children.length);
+
 
 
 
@@ -282,13 +276,7 @@ function shopeasycart()
 
 // grocery 
 
-function grocerycart()
-{
-    if (containercartBox1.children.length <= 0) {
-        containercartBox1.innerHTML = emptydetails1;
-        return
-    }
-}
+
 
 
 
@@ -359,8 +347,8 @@ function totalvalue() {
 
 
     }
-    totalamt = total - 99;
-    document.getElementsByClassName('total')[0].innerText = "Rs. " + (totalamt < 1000 ? totalamt - 100 :  totalamt -100 && totalamt < 5000 ?  totalamt -500 : totalamt - 500  && totalamt < 10000 ?  totalamt -1000 : totalamt - 1000  && totalamt < 15000 ?  totalamt -2000 : totalamt - 2000  && totalamt < 20000 ?  totalamt -3000 : totalamt - 3000  && totalamt <1000000000 ?  totalamt -4000 : totalamt -4000);
+    totalamt = total + 99;
+    document.getElementsByClassName('total')[0].innerText = "Rs. " + (totalamt < 500 ? totalamt - 50 :  totalamt -50 && totalamt < 1000 ? totalamt - 100 :  totalamt -100 && totalamt < 5000 ?  totalamt -500 : totalamt - 500  && totalamt < 10000 ?  totalamt -1000 : totalamt - 1000  && totalamt < 15000 ?  totalamt -2000 : totalamt - 2000  && totalamt < 20000 ?  totalamt -3000 : totalamt - 3000  && totalamt <1000000000 ?  totalamt -4000 : totalamt -4000);
 
 
 
@@ -454,13 +442,13 @@ function update() {
             let btnValue = btns.innerText;
             
         })
- var totalprice = (totalamt + 99);
+ var totalprice = (totalamt-99);
     totalvalue.call(this)
    
     console.log(typeof (totalprice));
 
     document.getElementsByClassName('pricetotal')[0].innerText = "Rs." + totalprice;
-    document.getElementsByClassName('pricetotal2')[0].innerText = "Rs." + (totalamt < 1000 ? totalamt - 100 :  totalamt -100 && totalamt < 5000 ?  totalamt -500 : totalamt - 500  && totalamt < 10000 ?  totalamt -1000 : totalamt - 1000  && totalamt < 15000 ?  totalamt -2000 : totalamt - 2000  && totalamt < 20000 ?  totalamt -3000 : totalamt - 3000  && totalamt <1000000000 ?  totalamt -4000 : totalamt -4000);
+    document.getElementsByClassName('pricetotal2')[0].innerText = "Rs." + (totalamt < 500 ? totalamt - 50 :  totalamt -50 && totalamt < 1000 ? totalamt - 100 :  totalamt -100 && totalamt < 5000 ?  totalamt -500 : totalamt - 500  && totalamt < 10000 ?  totalamt -1000 : totalamt - 1000  && totalamt < 15000 ?  totalamt -2000 : totalamt - 2000  && totalamt < 20000 ?  totalamt -3000 : totalamt - 3000  && totalamt <100000 ?  totalamt -4000 : totalamt -4000);
 
     const detailsContainer = document.getElementsByClassName('details-container')[0];
     const chevronDown = document.getElementsByClassName('fa-chevron-down')[0];
@@ -501,6 +489,7 @@ removeContainer.forEach((btn, idx) => {
     btn.addEventListener('click', function () {
         // Remove the cart item from DOM
         this.parentElement.remove();
+          window.location.reload();
         totalvalue()
         update()
 
@@ -512,7 +501,6 @@ removeContainer.forEach((btn, idx) => {
 
         // If cart is empty, clear localStorage and show empty message
         if (dataContainer.length === 0) {
-            window.location.reload();
             localStorage.removeItem("order");
             containercartBox.innerHTML = emptydetails;
         }

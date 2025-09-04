@@ -150,20 +150,48 @@ for (let i = 0; i < cartheart.length; i++) {
 function heartclicked(event) {
     var heart = event.target;
     var heartitemsvalue = heart.parentElement;
-    console.log(heartitemsvalue);
     
-
+    
+   
 
     var hearts = [];
 
     var heartdetails = {
         anchor:heartitemsvalue.parentElement.href,
         img: heartitemsvalue.getElementsByClassName('product-img')[0].src,
-        brand: event.target.parentElement.children[2].children[0].textContent,
-        price: event.target.parentElement.children[2].children[3].children[0].textContent,
+        brand: heartitemsvalue.getElementsByClassName('mobile-brand-name')[0].innerText,
+        name: heartitemsvalue.getElementsByClassName('mobile-name')[0].innerText,
+        price:heartitemsvalue.getElementsByClassName('rate')[0].innerText,
+        delprice:heartitemsvalue.getElementsByClassName('rate-del')[0].innerText,
+        percent:heartitemsvalue.getElementsByClassName('percentage')[0].innerText,
+        bank:heartitemsvalue.getElementsByClassName('bank-details')[0].innerText,
+        warrantybrand:heartitemsvalue.getElementsByClassName('waranty')[0].innerText,
         no: 1
     }
-    console.log(heartdetails);
+   
+
+    if(JSON.parse(localStorage.getItem('heart')) === null)
+    {
+        hearts.push(heartdetails);
+        const heartcontainer = JSON.stringify(hearts);
+        localStorage.setItem('heart',heartcontainer);
+    }
+    else
+    {
+        const localhearts = JSON.parse(localStorage.getItem('heart'));
+        localhearts.map(heartdata => {
+            if(heartdetails.brand == heartdata.brand)
+            {
+                heartdetails.no = heartdetails.no  + 1;
+            }
+            else
+            {
+                hearts.push(heartdata);
+            }
+        });
+        hearts.push(heartdetails);
+        localStorage.setItem('heart',JSON.stringify(hearts))
+    }
 
 }
 
@@ -182,10 +210,10 @@ function additemsclicked(event) {
 
 
     var datas = {
-        name: event.target.parentElement.children[2].children[1].textContent,
-        img: event.target.parentElement.children[0].children[0].src,
-        brand: event.target.parentElement.children[2].children[0].textContent,
-        price: event.target.parentElement.children[2].children[3].children[0].textContent,
+        name: shopitemsvalue.getElementsByClassName('mobile-name')[0].innerText,
+        img: shopitemsvalue.getElementsByClassName('product-img')[0].src,
+        brand: shopitemsvalue.getElementsByClassName('mobile-brand-name')[0].innerText,
+        price: shopitemsvalue.getElementsByClassName('rate')[0].innerText,
         no: 1
     };
     if (JSON.parse(localStorage.getItem('order')) === null) {
