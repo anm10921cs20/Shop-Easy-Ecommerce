@@ -104,7 +104,22 @@ function additemsclicked(event) {
 
 
 
-    
+    shopitemsvalue.getElementsByClassName('product-img')[0].src;
+
+
+
+    var dataget = localStorage.getItem('order');
+
+    var dataseq = JSON.parse(dataget)
+
+    for (let i = 0; i < dataseq.length; i++) {
+        var price = dataseq[i].price;
+        var productname = dataseq[i].name;
+        var productbrand = dataseq[i].brand;
+        var productimg = dataseq[i].img;
+
+    }
+
 
 
 
@@ -215,11 +230,9 @@ function addcartproduct(price, productname, productbrand, productimg) {
 
 
 
-    loadcontent()
-    proudctcount()
 
-    order()
 
+  
 
 
 
@@ -231,6 +244,7 @@ function addcartproduct(price, productname, productbrand, productimg) {
 var counts = document.getElementById('cart-count');
 var countvalue = localStorage.getItem('cart-count');
 counts.innerText = countvalue;
+
 
 
 

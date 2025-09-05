@@ -85,6 +85,10 @@ function shopeasycart()
         const productsdetails = document.createElement('div');
         productsdetails.classList.add('productsamt');
         shopeasy.append(productsdetails);
+        const br = document.createElement('br');
+        shopeasy.append(br)
+        shopeasy.append(br)
+
 
 
         const productsvalue = `
@@ -100,7 +104,7 @@ function shopeasycart()
         </div>
         <div class="details-price">
             <p class="price">Protect Promise Fee</p>
-            <p class="pricetotal">Rs.99</p>
+            <p class="pricetotal1">Rs.99</p>
 
         </div>
         
@@ -138,6 +142,7 @@ function shopeasycart()
             <p class="pricetotal2">${pricedecrease}</p>
 
         </div>
+        
 
         
 
@@ -158,7 +163,7 @@ function shopeasycart()
       
 
         const tooLowDiscount = document.getElementById('tolow');
-        console.log(tooLowDiscount);
+       
 
 
 
@@ -243,7 +248,7 @@ function shopeasycart()
                
             return;
         }
-        else if (parseInt(totalamt + 99) < 1000000) {
+        else if (parseInt(totalamt + 99) < 1000000000) {
             tooLowDiscount.style.display = "none";
             lowDiscount.style.display = "none";
             averageDiscount.style.display = "none";
@@ -299,7 +304,7 @@ dataContainer.forEach((items, index) => {
                         <span class="cart-qtyname">Oty</span><i class="fa-solid fa-minus"></i><input type="number" value="1" class="cart-quantity"><i class="fa-solid fa-plus"></i>
                         <div class="product-brand">${items.brand}</div>
                     </div>
-                    <ion-icon name="trash" class="cart-remove"></ion-icon>`;
+                    <ion-icon name="trash" class="cart-remove removeshopeasy"></ion-icon>`;
 
 
 
@@ -451,7 +456,7 @@ function update() {
  var totalprice = (totalamt-99);
     totalvalue.call(this)
    
-    console.log(typeof (totalprice));
+   
 
     document.getElementsByClassName('pricetotal')[0].innerText = "Rs." + totalprice;
     document.getElementsByClassName('pricetotal2')[0].innerText = "Rs." + (totalamt < 500 ? totalamt - 50 :  totalamt -50 && totalamt < 1000 ? totalamt - 100 :  totalamt -100 && totalamt < 5000 ?  totalamt -500 : totalamt - 500  && totalamt < 10000 ?  totalamt -1000 : totalamt - 1000  && totalamt < 15000 ?  totalamt -2000 : totalamt - 2000  && totalamt < 50000 ?  totalamt -3000 : totalamt - 3000  && totalamt <100000 ?  totalamt -4000 : totalamt -4000);
@@ -489,7 +494,7 @@ function update() {
 
 
 
-var removeContainer = document.querySelectorAll('.cart-remove');
+var removeContainer = document.querySelectorAll('.removeshopeasy');
 
 removeContainer.forEach((btn, idx) => {
     btn.addEventListener('click', function () {
@@ -509,6 +514,7 @@ removeContainer.forEach((btn, idx) => {
         if (dataContainer.length === 0) {
             localStorage.removeItem("order");
             containercartBox.innerHTML = emptydetails;
+            window.location.reload();
         }
     });
 });

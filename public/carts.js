@@ -16,12 +16,12 @@ function additemsclicked(event) {
     var button = event.target;
     var shopitemsvalue = button.parentElement;
     
-    var items = [];
+    var items1 = [];
 
 
 
 
-    var datas = {
+    var datas1 = {
         name: shopitemsvalue.getElementsByClassName('mobile-name')[0].innerText,
         img: shopitemsvalue.getElementsByClassName('product-img')[0].src,
         brand: shopitemsvalue.getElementsByClassName('mobile-brand-name')[0].innerText,
@@ -29,23 +29,25 @@ function additemsclicked(event) {
         no: 1
     };
     if (JSON.parse(localStorage.getItem('groceryorder')) === null) {
-        items.push(datas);
-        const sting = JSON.stringify(items);
-        localStorage.setItem('groceryorder', sting);
+        items1.push(datas1);
+        const stings = JSON.stringify(items1);
+        localStorage.setItem('groceryorder', stings);
     } else {
-        const localItems = JSON.parse(localStorage.getItem('groceryorder'));
-        localItems.map(data => {
-            if (datas.brand == data.brand) {
-                datas.no = datas.no + 1;
+        const localItems1 = JSON.parse(localStorage.getItem('groceryorder'));
+        localItems1.map(datas => {
+            if (datas1.price == datas.price) {
+                datas1.no = datas1.no + 1;
             } else {
-                items.push(data)
+                items1.push(datas)
             }
         });
-        items.push(datas)
-        localStorage.setItem('groceryorder', JSON.stringify(items))
+        items1.push(datas1)
+        localStorage.setItem('groceryorder', JSON.stringify(items1))
 
     }
 
+
+   
 
 
 
@@ -62,3 +64,11 @@ function additemsclicked(event) {
     }, 1000)
     totalvalueupdate()
 }
+
+
+var counts = document.getElementById('cart-count');
+var countvalue = JSON.parse(localStorage.getItem('groceryorder')).length;
+console.log(countvalue);
+
+counts.innerText = countvalue;
+

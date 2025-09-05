@@ -49,81 +49,17 @@
             <h4 class="app-title_head">Grocery</h4>
         </div>
         <!--app login-->
-        <div class="app-login">
-            
+         <div class="app-heart">
+            <a href="../heart/heart.html"><i class="fas fa-heart"></i></a>
         </div>
         <div class="app-order">
-            <a href="#" class="app-order-name"><i class="fas fa-shopping-bag app-order-icon"></i></a>
+            <a href="../insidecart/insidecart.html" class="app-order-name"><i class="fas fa-shopping-bag app-order-icon"></i></a>
             <div class="cart-count" id="cart-count">0</div>
         </div>
     </div>
     <br>
 
-    <!--cart files-->
 
-    <div class="cart">
-        <!--cart header-->
-        <div class="cart-header">
-
-            <h5 class="h6 text-light"><i class="fas fa-shopping-cart nav-head_sub-icon"></i> My Carts</h5>
-            <ion-icon name="close-sharp" id="cart-close"></ion-icon>
-        </div>
-         <br>
-        <div class="cart-body">
-            <div class="cart-content">
-
-            </div>
-        </div>
-
-        <div class="cart-foot">
-            <div class="cart-total-title">Total</div>
-            <div class="cart-total">Rs.00</div>
-
-        </div>
-        <div class="cart-items-total">
-            <div class="items-total-title">Total Items:</div>
-            <div class="items-total" id="cart-counter">0</div>
-        </div>
-         <div class="table-details">   <div class="Short-detail">Order Details</div>
-        <div class="short-detail-list" id="opencart"> Click here</div>
-
-        
-    </div><br>
-        <button class="cart-btn">Checkout</button><br>
-
-    </div>
-
-
-     <!--table container-->
-    <div class="tabledetails" id="tabledetails">
-        <h6 class="tabletitle">Broncher</h6>
-        <button class="btn-close" id="btn-close"></button><br><br>
-         <div class="table-container" id="table-container">
-        
-       <table id="table">
-            <thead>
-                <tr>
-                <td>Name</td>
-                <td>QTY</td>
-                <td>price</td>
-                <td>Amt</td>
-            </tr>
-            </thead>
-            
-            <tfoot>
-                <tr>
-                    <td>total</td>
-                    <td id="carttotalcount"></td>
-                    <td colspan="2" id="total">Rs.00</td>
-                </tr>
-            </tfoot>
-        </table>
-      
-    </div>
-      <button class="btntable" onclick="downloadable()">download click</button><br>
-      <iframe name="print_frame" width="0" height="0" frameborder="0" src="about:blank"></iframe>
-    </div>
-   
 
     <!--alert container-->
 
@@ -674,7 +610,7 @@
 <script src="app.js"></script>
 
 <!--cart javascript insert-->
-<script src="../cart.js"></script>
+<script src="../carts.js"></script>
 <!--bootstrap js files insert-->
 <script src="../bootstrap-5.3.5-dist/js/bootstrap.min.js">
 </script>
