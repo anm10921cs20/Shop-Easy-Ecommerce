@@ -71,18 +71,6 @@ window.addEventListener('DOMContentLoaded', () => {
 
 
 
-var counts = document.getElementById('cart-counts');
-var countvalue = localStorage.getItem('cart-count');
-counts.innerText = `(${countvalue})`;
-
-
-
-    var count = dataContainer.length;
-
-    localStorage.setItem('cart-count', count)
-
-
-
 
 // shopeasy cart
 
@@ -318,6 +306,21 @@ dataContainer.forEach((items, index) => {
 
 
 })
+
+window.addEventListener('load', () => {
+  var count = dataContainer.length;
+
+    localStorage.setItem('cart-count', count)
+
+});
+
+var counts = document.getElementById('cart-counts');
+var countvalue = localStorage.getItem('cart-count');
+counts.innerText = `(${countvalue})`;
+
+
+
+
 
 
 function totalvalue() {
