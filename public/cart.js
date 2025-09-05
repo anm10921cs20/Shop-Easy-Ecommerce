@@ -104,21 +104,6 @@ function additemsclicked(event) {
 
 
 
-    shopitemsvalue.getElementsByClassName('product-img')[0].src;
-
-
-
-    var dataget = localStorage.getItem('order');
-
-    var dataseq = JSON.parse(dataget)
-
-    for (let i = 0; i < dataseq.length; i++) {
-        var price = dataseq[i].price;
-        var productname = dataseq[i].name;
-        var productbrand = dataseq[i].brand;
-        var productimg = dataseq[i].img;
-
-    }
 
 
 
@@ -133,8 +118,7 @@ function additemsclicked(event) {
 
 
 
-
-    addcartproduct(price, productname, productbrand, productimg);
+   
     var alertvalue = document.getElementById('alertcontainer');
     alertvalue.style.display = "flex"
     var counter = 3;
@@ -145,7 +129,7 @@ function additemsclicked(event) {
             alertvalue.style.display = "none";
         }
     }, 1000)
-    totalvalueupdate()
+ 
 }
 
 
