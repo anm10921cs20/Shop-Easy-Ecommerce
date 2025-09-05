@@ -65,16 +65,9 @@
         </div>
         <div class="app-order">
             <a href="./insidecart/insidecart.html" class="app-order-name"><i class="fas fa-shopping-bag app-order-icon"></i></a>
-            <div class="cart-count" id="cart-counts">0</div>
+            <div class="cart-count" id="cart-count">0</div>
 
-            <script>
-               
-                   var counts = document.getElementById('cart-counts');
-                   var countvalue = localStorage.getItem('cart-count') ;
-                   counts.innerText=countvalue;
-               
-            
-            </script>
+           
         </div>
 
         <!--app bars connect nav-menus-->
@@ -2019,6 +2012,8 @@
 </script>
 <!--script external files insert-->
 <script src="app.js"></script>
+
+<script src="./cart.js"></script>
 
 
 <!--bootstrap js files insert-->

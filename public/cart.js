@@ -7,18 +7,18 @@
 
 //cart
 
-const btnCartOpen = document.querySelector('.app-order-icon');
-const cart = document.querySelector('.cart');
-const btnCartClose = document.querySelector('#cart-close');
+// const btnCartOpen = document.querySelector('.app-order-icon');
+// const cart = document.querySelector('.cart');
+// const btnCartClose = document.querySelector('#cart-close');
 
 
 
-btnCartOpen.addEventListener('click', () => {
-    cart.classList.add('cart-active');
-})
-btnCartClose.addEventListener('click', () => {
-    cart.classList.remove('cart-active');
-})
+// btnCartOpen.addEventListener('click', () => {
+//     cart.classList.add('cart-active');
+// })
+// btnCartClose.addEventListener('click', () => {
+//     cart.classList.remove('cart-active');
+// })
 
 
 
@@ -372,6 +372,21 @@ function addcartproduct(price, productname, productbrand, productimg) {
 
 
 }
+
+
+               
+                   var counts = document.getElementById('cart-count');
+                   var countvalue = localStorage.getItem('cart-count') ;
+                   counts.innerText=countvalue;
+
+                   var linkcart = document.getElementsByClassName('app-order')[0];
+
+                linkcart.addEventListener('click', () => 
+                {
+                    window.location.replace("http://127.0.0.1:5501/public/insidecart/insidecart.html")
+                })
+               
+           
 
 
 
