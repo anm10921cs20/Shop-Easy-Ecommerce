@@ -137,82 +137,6 @@ function additemsclicked(event) {
 
 
 
-//add products function
-function addcartproduct(price, productname, productbrand, productimg) {
-
-
-
-
-    var cartdiv = document.createElement('div');
-    cartdiv.classList.add('cart-item');
-    var cartitems = document.getElementsByClassName('cart-content')[0];
-    var cartproductname = cartitems.getElementsByClassName('cart-name');
-    var cartproductbrand = cartitems.getElementsByClassName('product-brand');
-    var alertvalue = document.getElementById('alertcontainer');
-    var alertpara = document.getElementById('para-alert');
-
-    for (var i = 0; i < cartitems.length; i++) {
-        if (cartproductname[i].innerText === true && cartproductbrand[i].innerText === true) {
-
-        }
-
-    }
-
-
-
-
-    for (var i = 0; i < cartproductname.length; i++) {
-        if (cartproductname[i].innerText == productname.toUpperCase() && cartproductbrand[i].innerText == productbrand) {
-            alertvalue.style.display = "flex";
-            alertvalue.style.backgroundColor = "var(--bs-danger)";
-            alertpara.innerText = "Already Added To Cart";
-            var counter = 3;
-
-            var interval = setInterval(() => {
-                counter--;
-                if (counter > 0) {
-                    clearInterval(interval);
-
-                    alertpara.innerText = " Successful added to cart";
-                    alertvalue.style.backgroundColor = "#26A96C";
-                    alertvalue.style.display = "none";
-                }
-            }, 1000)
-            return;
-        } else {
-
-
-        }
-
-        var totalvalues = localStorage.getItem('pricecart')
-    }
-
-
-    var cartboxcotnet = `
-         <img src="${productimg}" alt="" class="cart-img">
-                    <div class="detail-box">
-                        <div class="cart-name">${productname}</div>
-                        <div class="price-box">
-                            <div class="cart-price">${price}</div>
-                            <div class="cart-amt">${totalvalues}</div>
-                        </div>
-                        <span class="cart-qtyname">Oty</span><input type="number" value="1" class="cart-quantity">
-                        <div class="product-brand">${productbrand}</div>
-                    </div>
-                    <ion-icon name="trash" class="cart-remove"></ion-icon>
-    `;
-
-
-
-
-    var cartcontainer = cartboxcotnet
-
-
-
-    cartdiv.innerHTML = cartcontainer;
-    cartitems.append(cartdiv);
-
-
 
 
 
@@ -221,7 +145,7 @@ function addcartproduct(price, productname, productbrand, productimg) {
 
 
 
-}
+
 
 
 
