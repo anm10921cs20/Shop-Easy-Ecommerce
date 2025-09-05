@@ -67,12 +67,12 @@
             <a href="./insidecart/insidecart.html" class="app-order-name"><i class="fas fa-shopping-bag app-order-icon"></i></a>
             <div class="cart-count" id="cart-counts">0</div>
 
-            <script async>
-                window.addEventListener('load', () =>{
+            <script>
+               
                    var counts = document.getElementById('cart-counts');
                    var countvalue = localStorage.getItem('cart-count') ;
                    counts.innerText=countvalue;
-                })
+               
             
             </script>
         </div>
