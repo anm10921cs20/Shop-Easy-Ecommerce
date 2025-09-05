@@ -27,14 +27,14 @@ function grocerycart() {
 
 
         const productsvalue = `
-    <div class="pricedetails">
+    <div class="pricedetails1">
         <h4 class="pricedetails-tit">Price Details</h4>
-        <i class="fas fa-chevron-down"></i>
+        <i class="fas fa-chevron-down chevron"></i>
     </div><br>
-    <div class="details-container">
+    <div class="details-container1">
         <div class="details-price">
-            <p class="price">Price(<span class="qty"></span>)</p>
-            <p class="pricetotal"></p>
+            <p class="price">Price(<span class="qty1"></span>)</p>
+            <p class="pricetotal1"></p>
 
         </div>
         <div class="details-price">
@@ -74,7 +74,7 @@ function grocerycart() {
     </div>
      <div class="details-price text-primary">
             <p class="price">Total Amount</p>
-            <p class="pricetotal2">${pricedecrease}</p>
+            <p class="pricetotal12">${pricedecrease}</p>
 
         </div>
         
@@ -171,7 +171,7 @@ function grocerycart() {
             toohighDiscount.style.display = "flex";
             highlyDiscount.style.display = "none";
              var pricedecrease =   parseInt(totalamt1- 3099);
-             console.log(pricedecrease);
+             
              
                
             return;
@@ -361,23 +361,32 @@ function update1() {
             let btnValue = btns.innerText;
             
         })
- var totalprice1 = (totalamt1-50);
+
     totalvaluegrocery.call(this)
    
     
-    document.getElementsByClassName('pricetotal')[1].innerText = "Rs." + totalprice1;
-    document.getElementsByClassName('pricetotal2')[1].innerText = "Rs." + (totalamt1 < 500 ? totalamt1 - 50 :  totalamt1 -50 && totalamt1 < 1000 ? totalamt1 - 100 :  totalamt1 -100 && totalamt1 < 5000 ?  totalamt1 -500 : totalamt1 - 500  && totalamt1 < 10000 ?  totalamt1 -1000 : totalamt1 - 1000  && totalamt1 < 15000 ?  totalamt1 -2000 : totalamt1 - 2000  && totalamt1 < 50000 ?  totalamt1 -3000 : totalamt1 - 3000  && totalamt1 <100000 ?  totalamt1 -4000 : totalamt1 -4000);
+    const pricetotalElems = document.getElementsByClassName('pricetotal1')[0];
 
-    const detailsContainer1 = document.getElementsByClassName('details-container')[1];
-    const chevronDown1 = document.getElementsByClassName('fa-chevron-down')[1];
-    const priceDetails1 = document.getElementsByClassName('pricedetails')[1];
+        pricetotalElems.innerText = "Rs." + (totalamt1-50);
+    
+    const pricetotal2Elems = document.getElementsByClassName('pricetotal12')[0];
+    
+        pricetotal2Elems.innerText = "Rs." + (totalamt1 < 500 ? totalamt1 - 50 :  totalamt1 -50 && totalamt1 < 1000 ? totalamt1 - 100 :  totalamt1 -100 && totalamt1 < 5000 ?  totalamt1 -500 : totalamt1 - 500  && totalamt1 < 10000 ?  totalamt1 -1000 : totalamt1 - 1000  && totalamt1 < 15000 ?  totalamt1 -2000 : totalamt1 - 2000  && totalamt1 < 50000 ?  totalamt1 -3000 : totalamt1 - 3000  && totalamt1 <100000 ?  totalamt1 -4000 : totalamt1 -4000);
+    
 
-    priceDetails1.addEventListener('click', () => {
-        detailsContainer1.classList.toggle('details-container-active')
-        chevronDown1.classList.toggle('fa-chevron-down-active');
-    })
-    var qtyss = document.getElementsByClassName('qty')[1];
-    qtyss.innerText = `${grocerycounts} item`;
+    const detailsContainerElems = document.getElementsByClassName('details-container1')[0];
+    const chevronDownElems = document.getElementsByClassName('chevron')[0];
+    const priceDetailsElems = document.getElementsByClassName('pricedetails1')[0];
+   
+        priceDetailsElems.addEventListener('click', () => {
+            detailsContainerElems.classList.toggle('details-container-active')
+            chevronDownElems.classList.toggle('fa-chevron-down-active');
+        })
+   
+    var qtyElems = document.getElementsByClassName('qty1')[0];
+    
+        qtyElems.innerText = `${grocerycounts} item`;
+    
 
 
 
