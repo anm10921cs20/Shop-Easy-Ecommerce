@@ -321,12 +321,10 @@ dataContainer.forEach((items, index) => {
 
   var count = dataContainer.length;
 
-    localStorage.setItem('cart-count', count)
-
 
 
 var counts = document.getElementById('cart-counts');
-var countvalue = localStorage.getItem('cart-count');
+var countvalue = count;
 counts.innerText = `(${countvalue})`;
 
 
