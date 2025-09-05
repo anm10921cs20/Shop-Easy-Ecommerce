@@ -171,7 +171,7 @@ function shopeasycart()
         var corner = document.querySelectorAll('.common');
 
         if (parseInt(totalamt + 99) < 500) {
-            
+              tooLowDiscount.style.display = "flex";
             lowDiscount.style.display = "none";
             averageDiscount.style.display = "none";
             mediumDiscount.style.display = "none";
@@ -184,6 +184,7 @@ function shopeasycart()
         }
         else if (parseInt(totalamt + 99) < 1000) {
             tooLowDiscount.style.display = "none";
+             lowDiscount.style.display = "flex";
             averageDiscount.style.display = "none";
             mediumDiscount.style.display = "none";
             highDiscount.style.display = "none";
@@ -196,6 +197,7 @@ function shopeasycart()
          else if (parseInt(totalamt + 99) < 5000) {
             tooLowDiscount.style.display = "none";
             lowDiscount.style.display = "none";
+             averageDiscount.style.display = "flex";
             mediumDiscount.style.display = "none";
             highDiscount.style.display = "none";
             toohighDiscount.style.display = "none";
@@ -208,6 +210,7 @@ function shopeasycart()
             tooLowDiscount.style.display = "none";
             lowDiscount.style.display = "none";
             averageDiscount.style.display = "none";
+             mediumDiscount.style.display = "flex";
             highDiscount.style.display = "none";
             toohighDiscount.style.display = "none";
             highlyDiscount.style.display = "none";
@@ -220,17 +223,19 @@ function shopeasycart()
             lowDiscount.style.display = "none";
             averageDiscount.style.display = "none";
             mediumDiscount.style.display = "none";
+            highDiscount.style.display = "flex";
             toohighDiscount.style.display = "none";
             highlyDiscount.style.display = "none";
              var pricedecrease =   parseInt(totalamt+ 99) - 2000;
             return;
         }
-          else if (parseInt(totalamt + 99) < 20000) {
+          else if (parseInt(totalamt + 99) < 50000) {
             tooLowDiscount.style.display = "none";
             lowDiscount.style.display = "none";
             averageDiscount.style.display = "none";
             mediumDiscount.style.display = "none";
              highDiscount.style.display = "none";
+            toohighDiscount.style.display = "flex";
             highlyDiscount.style.display = "none";
              var pricedecrease =   parseInt(totalamt- 3099);
              console.log(pricedecrease);
@@ -238,13 +243,14 @@ function shopeasycart()
                
             return;
         }
-        else if (parseInt(totalamt + 99) < 1000000000) {
+        else if (parseInt(totalamt + 99) < 1000000) {
             tooLowDiscount.style.display = "none";
             lowDiscount.style.display = "none";
             averageDiscount.style.display = "none";
             mediumDiscount.style.display = "none";
              highDiscount.style.display = "none";
-              highlyDiscount.style.display = "none";
+            toohighDiscount.style.display = "none";
+              highlyDiscount.style.display = "flex";
                var pricedecrease =   parseInt(totalamt+ 99);
                pricedecrease-4000;
            
@@ -307,12 +313,12 @@ dataContainer.forEach((items, index) => {
 
 })
 
-window.addEventListener('load', () => {
+
   var count = dataContainer.length;
 
     localStorage.setItem('cart-count', count)
 
-});
+
 
 var counts = document.getElementById('cart-counts');
 var countvalue = localStorage.getItem('cart-count');
@@ -348,7 +354,7 @@ function totalvalue() {
 
     }
     totalamt = total + 99;
-    document.getElementsByClassName('total')[0].innerText = "Rs. " + (totalamt < 500 ? totalamt - 50 :  totalamt -50 && totalamt < 1000 ? totalamt - 100 :  totalamt -100 && totalamt < 5000 ?  totalamt -500 : totalamt - 500  && totalamt < 10000 ?  totalamt -1000 : totalamt - 1000  && totalamt < 15000 ?  totalamt -2000 : totalamt - 2000  && totalamt < 20000 ?  totalamt -3000 : totalamt - 3000  && totalamt <1000000000 ?  totalamt -4000 : totalamt -4000);
+    document.getElementsByClassName('total')[0].innerText = "Rs. " + (totalamt < 500 ? totalamt - 50 :  totalamt -50 && totalamt < 1000 ? totalamt - 100 :  totalamt -100 && totalamt < 5000 ?  totalamt -500 : totalamt - 500  && totalamt < 10000 ?  totalamt -1000 : totalamt - 1000  && totalamt < 15000 ?  totalamt -2000 : totalamt - 2000  && totalamt < 50000 ?  totalamt -3000 : totalamt - 3000  && totalamt <1000000000 ?  totalamt -4000 : totalamt -4000);
 
 
 
@@ -448,7 +454,7 @@ function update() {
     console.log(typeof (totalprice));
 
     document.getElementsByClassName('pricetotal')[0].innerText = "Rs." + totalprice;
-    document.getElementsByClassName('pricetotal2')[0].innerText = "Rs." + (totalamt < 500 ? totalamt - 50 :  totalamt -50 && totalamt < 1000 ? totalamt - 100 :  totalamt -100 && totalamt < 5000 ?  totalamt -500 : totalamt - 500  && totalamt < 10000 ?  totalamt -1000 : totalamt - 1000  && totalamt < 15000 ?  totalamt -2000 : totalamt - 2000  && totalamt < 20000 ?  totalamt -3000 : totalamt - 3000  && totalamt <100000 ?  totalamt -4000 : totalamt -4000);
+    document.getElementsByClassName('pricetotal2')[0].innerText = "Rs." + (totalamt < 500 ? totalamt - 50 :  totalamt -50 && totalamt < 1000 ? totalamt - 100 :  totalamt -100 && totalamt < 5000 ?  totalamt -500 : totalamt - 500  && totalamt < 10000 ?  totalamt -1000 : totalamt - 1000  && totalamt < 15000 ?  totalamt -2000 : totalamt - 2000  && totalamt < 50000 ?  totalamt -3000 : totalamt - 3000  && totalamt <100000 ?  totalamt -4000 : totalamt -4000);
 
     const detailsContainer = document.getElementsByClassName('details-container')[0];
     const chevronDown = document.getElementsByClassName('fa-chevron-down')[0];
