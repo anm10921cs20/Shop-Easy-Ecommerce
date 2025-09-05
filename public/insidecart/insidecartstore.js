@@ -77,13 +77,10 @@ counts.innerText = `(${countvalue})`;
 
 
 
-
-window.addEventListener('load', () => {
     var count = dataContainer.length;
 
     localStorage.setItem('cart-count', count)
 
-})
 
 
 
