@@ -319,13 +319,13 @@ dataContainer.forEach((items, index) => {
 })
 
 
-//   var count = dataContainer.length;
+  var count = dataContainer.length;
 
 
 
-// var counts = document.getElementById('cart-counts');
-// var countvalue = count;
-// counts.innerText = `(${countvalue})`;
+var counts = document.getElementById('cart-counts');
+var countvalue = count;
+counts.innerText = `(${countvalue})`;
 
 
 
