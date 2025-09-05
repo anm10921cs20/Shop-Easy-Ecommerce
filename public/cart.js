@@ -2,134 +2,6 @@
 
 
 
-
-
-
-//cart
-
-// const btnCartOpen = document.querySelector('.app-order-icon');
-// const cart = document.querySelector('.cart');
-// const btnCartClose = document.querySelector('#cart-close');
-
-
-
-// btnCartOpen.addEventListener('click', () => {
-//     cart.classList.add('cart-active');
-// })
-// btnCartClose.addEventListener('click', () => {
-//     cart.classList.remove('cart-active');
-// })
-
-
-
-window.addEventListener('DOMContentLoaded', loaditems)
-
-function loaditems() {
-    loadcontent()
-}
-
-
-//delete cart items
-
-function loadcontent() {
-    //remove cart items
-
-    var deleteBtn = document.querySelectorAll('.cart-remove');
-    deleteBtn.forEach((btn) => {
-        btn.addEventListener('click', cartitemsDelete);
-
-    });
-
-    var quantityitems = document.querySelectorAll('.cart-quantity');
-    quantityitems.forEach((input) => {
-        input.addEventListener('change', qtyvalue)
-    })
-}
-
-
-
-
-
-//fucntion of cart delete
-
-function cartitemsDelete() {
-    this.parentElement.remove();
-    proudctcount()
-    totalvalueupdate()
-
-}
-
-//funciton qty vallue
-
-function qtyvalue() {
-    if (isNaN(this.value) || this.value < 1) {
-        this.value = 1;
-    }
-    totalvalueupdate()
-    order()
-}
-
-
-
-//function proudct count
-
-function proudctcount() {
-    var cartcount = document.getElementById('cart-count');
-    var cartvalue = document.querySelector('.cart-content');
-    var cartcounter = document.getElementById('cart-counter');
-    var tablecalc = document.getElementById('carttotalcount');
-    var cartvalues = cartvalue.children.length;
-
-    cartcounter.innerText = cartvalues;
-    tablecalc.innerText = cartvalues;
-
-
-}
-proudctcount()
-
-
-
-//total update
-
-
-function totalvalueupdate() {
-    var cart = document.getElementsByClassName('cart-content')[0];
-    var cartboxes = cart.getElementsByClassName('cart-item');
-    var total = 0;
-    var pricecart = 0;
-    for (var i = 0; i < cartboxes.length; i++) {
-        var cartbox = cartboxes[i];
-        var priceElement = cartbox.getElementsByClassName('cart-price')[0];
-        var pricecartElement = cartbox.getElementsByClassName('cart-amt')[0];
-        var quantityElement = cartbox.getElementsByClassName('cart-quantity')[0];
-
-        var price = parseFloat(priceElement.innerText.replace("Rs.", ""));
-        var quantity = quantityElement.value;
-
-
-        var pricecart = price * quantity;
-
-
-        localStorage.setItem('pricecart', pricecart);
-        const innervalueprice = localStorage.getItem('pricecart')
-
-        pricecartElement.innerText = "Rs." + innervalueprice;
-
-        total = total + price * quantity;
-
-        total = Math.round(total * 100) / 100;
-
-        localStorage.setItem('total', total);
-
-    }
-    document.getElementsByClassName('cart-total')[0].innerText = "Rs." + total;
-    document.getElementById('total').innerText = "Rs." + total;
-
-
-}
-totalvalueupdate()
-
-
 //add items in cart
 
 var cartadd = document.getElementsByClassName('button');
@@ -150,47 +22,43 @@ for (let i = 0; i < cartheart.length; i++) {
 function heartclicked(event) {
     var heart = event.target;
     var heartitemsvalue = heart.parentElement;
-    
-    
-   
+
+
+
 
     var hearts = [];
 
     var heartdetails = {
-        anchor:heartitemsvalue.parentElement.href,
+        anchor: heartitemsvalue.parentElement.href,
         img: heartitemsvalue.getElementsByClassName('product-img')[0].src,
         brand: heartitemsvalue.getElementsByClassName('mobile-brand-name')[0].innerText,
         name: heartitemsvalue.getElementsByClassName('mobile-name')[0].innerText,
-        price:heartitemsvalue.getElementsByClassName('rate')[0].innerText,
-        delprice:heartitemsvalue.getElementsByClassName('rate-del')[0].innerText,
-        percent:heartitemsvalue.getElementsByClassName('percentage')[0].innerText,
-        bank:heartitemsvalue.getElementsByClassName('bank-details')[0].innerText,
-        warrantybrand:heartitemsvalue.getElementsByClassName('waranty')[0].innerText,
+        price: heartitemsvalue.getElementsByClassName('rate')[0].innerText,
+        delprice: heartitemsvalue.getElementsByClassName('rate-del')[0].innerText,
+        percent: heartitemsvalue.getElementsByClassName('percentage')[0].innerText,
+        bank: heartitemsvalue.getElementsByClassName('bank-details')[0].innerText,
+        warrantybrand: heartitemsvalue.getElementsByClassName('waranty')[0].innerText,
         no: 1
     }
-   
 
-    if(JSON.parse(localStorage.getItem('heart')) === null)
-    {
+
+    if (JSON.parse(localStorage.getItem('heart')) === null) {
         hearts.push(heartdetails);
         const heartcontainer = JSON.stringify(hearts);
-        localStorage.setItem('heart',heartcontainer);
+        localStorage.setItem('heart', heartcontainer);
     }
-    else
-    {
+    else {
         const localhearts = JSON.parse(localStorage.getItem('heart'));
         localhearts.map(heartdata => {
-            if(heartdetails.brand == heartdata.brand)
-            {
-                heartdetails.no = heartdetails.no  + 1;
+            if (heartdetails.brand == heartdata.brand) {
+                heartdetails.no = heartdetails.no + 1;
             }
-            else
-            {
+            else {
                 hearts.push(heartdata);
             }
         });
         hearts.push(heartdetails);
-        localStorage.setItem('heart',JSON.stringify(hearts))
+        localStorage.setItem('heart', JSON.stringify(hearts))
     }
 
 }
@@ -236,22 +104,7 @@ function additemsclicked(event) {
 
 
 
-    shopitemsvalue.getElementsByClassName('product-img')[0].src;
-
-
-
-    var dataget = localStorage.getItem('order');
-
-    var dataseq = JSON.parse(dataget)
-
-    for (let i = 0; i < dataseq.length; i++) {
-        var price = dataseq[i].price;
-        var productname = dataseq[i].name;
-        var productbrand = dataseq[i].brand;
-        var productimg = dataseq[i].img;
-
-    }
-
+    
 
 
 
@@ -374,80 +227,14 @@ function addcartproduct(price, productname, productbrand, productimg) {
 }
 
 
-               
-                   var counts = document.getElementById('cart-count');
-                   var countvalue = localStorage.getItem('cart-count') ;
-                   counts.innerText=countvalue;
 
-                   var linkcart = document.getElementsByClassName('app-order')[0];
-
-                linkcart.addEventListener('click', () => 
-                {
-                    window.location.replace("http://127.0.0.1:5501/public/insidecart/insidecart.html")
-                })
-               
-           
+var counts = document.getElementById('cart-count');
+var countvalue = localStorage.getItem('cart-count');
+counts.innerText = countvalue;
 
 
 
-function order() {
-    var cartorder = document.getElementsByClassName('cart-content')[0];
-    var cartorders = cartorder.getElementsByClassName('cart-item');
 
-    for (var i = 0; i < cartorders.length; i++)
-        var cartbronchure = cartorders[i];
-    var productname = cartbronchure.getElementsByClassName('cart-name')[0].innerText;
-    var productprice = cartbronchure.getElementsByClassName('cart-price')[0].innerText;
-    var productquantity = cartbronchure.getElementsByClassName('cart-quantity')[0].value;
-    var productamt = cartbronchure.getElementsByClassName('cart-amt')[0].innerText;
-
-
-    var cartorderobj = {
-        name: productname, price: productprice, priceamt: productamt, qty: productquantity
-    }
-
-    var table = document.getElementById('table')
-
-    var dataname = cartorderobj.name;
-    var dataprice = cartorderobj.price;
-    var dataqty = cartorderobj.qty;
-    var dataamt = cartorderobj.priceamt;
-
-    var table = document.getElementById('table');
-
-    table.innerHTML += `
-        
-        <tr>
-        <td>${dataname}</td>
-        <td>${dataqty}</td>
-        <td id="dataprice">${dataprice}</td>
-        <td id="dataprice">${dataamt}</td>
-
-        </tr>
-        `;
-
-
-}
-
-
-function downloadable() {
-    window.frames["print_frame"].document.body.innerHTML = document.getElementById('table-container').innerHTML;
-    window.frames["print_frame"].window.focus();
-    window.frames["print_frame"].window.print();
-}
-
-
-var cartclose = document.getElementById('btn-close');
-var carttarget = document.getElementById('tabledetails');
-var cartopen = document.getElementById('opencart')
-
-cartclose.addEventListener('click', () => {
-    carttarget.style.display = "none"
-})
-
-cartopen.addEventListener('click', () => {
-    carttarget.style.display = "block";
-})
 
 
 

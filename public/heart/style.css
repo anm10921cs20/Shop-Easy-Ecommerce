@@ -4,6 +4,31 @@
    
 
     /* nav container nav-bar */
+    .app-order {
+        padding: 21px;
+        position: absolute;
+        right:10px;
+        top: 1px;
+    }
+
+    .app-order-icon {
+        font-size: 20px;
+    }
+
+    .app-order-name {
+        color: #000;
+    }
+     .cart-count
+     {
+        position: absolute;
+        top: 3px;
+        right:3px;
+        background-color: var(--bs-danger);
+        border-radius: 50%;
+        padding: 0 8px;
+        color: #fff;
+     }
+
     .nav-bar
     {
         display: flex;
