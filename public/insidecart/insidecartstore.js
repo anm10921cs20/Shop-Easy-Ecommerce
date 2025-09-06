@@ -319,13 +319,13 @@ dataContainer.forEach((items, index) => {
 })
 
 
-  var count = dataContainer.length;
+//   var count = dataContainer.length;
 
 
 
-var counts = document.getElementById('cart-counts');
-var countvalue = count;
-counts.innerText = `(${countvalue})`;
+// var counts = document.getElementById('cart-counts');
+// var countvalue = count;
+// counts.innerText = `(${countvalue})`;
 
 
 
@@ -467,8 +467,8 @@ function update() {
         detailsContainer.classList.toggle('details-container-active')
         chevronDown.classList.toggle('fa-chevron-down-active');
     })
-    var qtyss = document.getElementsByClassName('qty')[0];
-    qtyss.innerText = `${countvalue} item`;
+    // var qtyss = document.getElementsByClassName('qty')[0];
+    // qtyss.innerText = `${countvalue} item`;
 
 
 
