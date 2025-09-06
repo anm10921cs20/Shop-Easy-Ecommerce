@@ -83,6 +83,3 @@ function additemsclicked(event) {
 
 }
 
-var counts = document.getElementById('cart-count');
-var countvalue = JSON.parse(localStorage.getItem('order')).length;
-counts.innerText = countvalue;
