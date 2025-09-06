@@ -281,7 +281,7 @@ function shopeasycart()
 
 // cart shopping data
 
-var shopeasyLocal = localStorage.getItem('order');
+var shopeasyLocal = localStorage.getItem('shoporder');
 
 
 var dataContainer = JSON.parse(shopeasyLocal) || [];
@@ -319,13 +319,13 @@ dataContainer.forEach((items, index) => {
 })
 
 
-//   var count = dataContainer.length;
+  var count = dataContainer.length;
 
 
 
-// var counts = document.getElementById('cart-counts');
-// var countvalue = count;
-// counts.innerText = `(${countvalue})`;
+var counts = document.getElementById('cart-counts');
+var countvalue = count;
+counts.innerText = `(${countvalue})`;
 
 
 
@@ -467,8 +467,8 @@ function update() {
         detailsContainer.classList.toggle('details-container-active')
         chevronDown.classList.toggle('fa-chevron-down-active');
     })
-    // var qtyss = document.getElementsByClassName('qty')[0];
-    // qtyss.innerText = `${countvalue} item`;
+    var qtyss = document.getElementsByClassName('qty')[0];
+    qtyss.innerText = `${countvalue} item`;
 
 
 
@@ -510,7 +510,7 @@ removeContainer.forEach((btn, idx) => {
 
         // If cart is empty, clear localStorage and show empty message
         if (dataContainer.length === 0) {
-            localStorage.removeItem("order");
+            localStorage.removeItem("shoporder");
             containercartBox.innerHTML = emptydetails;
             window.location.reload();
         }
