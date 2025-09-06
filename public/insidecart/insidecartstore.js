@@ -506,7 +506,7 @@ removeContainer.forEach((btn, idx) => {
         if (dataContainer && dataContainer.length > idx) {
             dataContainer.splice(idx, 1); // Removes 1 element at index idx
         }
-        localStorage.setItem("order", JSON.stringify(dataContainer));
+        localStorage.setItem("shoporder", JSON.stringify(dataContainer));
 
         // If cart is empty, clear localStorage and show empty message
         if (dataContainer.length === 0) {
