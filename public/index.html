@@ -16,9 +16,11 @@
     <!--external stylesheet insert-->
     <link rel="stylesheet" href="style.css" type="text/css">
 
+    <link rel="stylesheet" href="./login.css">
+
     <!--cart external style new sheet-->
 
-   
+
 
     <!-- fiere base -->
 
@@ -57,17 +59,17 @@
         </div>
         <!--app login-->
         <div class="app-login">
-           <i
-                    class="fa-regular fa-circle-user app-login-icon"></i>        
+            <i class="fa-regular fa-circle-user app-login-icon"></i>
         </div>
         <div class="app-heart">
             <a href="./heart/heart.html"><i class="fas fa-heart"></i></a>
         </div>
         <div class="app-order">
-            <a href="./insidecart/insidecart.html" class="app-order-name"><i class="fas fa-shopping-bag app-order-icon"></i></a>
+            <a href="./insidecart/insidecart.html" class="app-order-name"><i
+                    class="fas fa-shopping-bag app-order-icon"></i></a>
             <div class="cart-count" id="cart-count">0</div>
 
-           
+
         </div>
 
         <!--app bars connect nav-menus-->
@@ -76,9 +78,9 @@
             <!--nav bar header content inside-->
             <div class="nav-bar-head">
                 <div class="nav-bar-head_sub">
-                
-                        <h5 class="h6 text-light"><i class="fas fa-user nav-head_sub-icon"></i>Login & Signup</h5>
-                    
+
+                    <h5 class="h6 text-light"><i class="fas fa-user nav-head_sub-icon"></i>Login & Signup</h5>
+
 
                 </div>
                 <div class="nav-bar-foot_sub">
@@ -96,11 +98,18 @@
                     <li class="nav-menu_items"><a href="#"><i class="fa-solid fa-eject"></i> About</a></li>
                     <hr>
                     <li class="nav-menu_items"><a href="#"><i class="fas fa-download nav-menu-icons"></i> App</a></li>
-                    <li class="nav-menu_items"><a href="#"><i class="fa-solid fa-basket-shopping"></i> Grocery</a></li>
-                    <li class="nav-menu_items"><a href="#"><i class="fa-solid fa-file-contract"></i> Legal</a></li>
+                    <li class="nav-menu_items"><a href="./insidecart/insidecart.html"><i
+                                class="fa-solid fa-shopping-bag"></i> My Cart</a></li>
+                    <li class="nav-menu_items"><a href="./heart/heart.html"><i class="fa-solid fa-heart"
+                                id="fa-heart"></i> My Wishlist</a></li>
+                    <li class="nav-menu_items"><a href="./insidecart/insidecart.html"><i class="fa-solid fa-user"></i>
+                            My Account</a></li>
+
+
                     <hr>
                     <li class="nav-menu_items"><a href="#"><i class="fa-solid fa-user-tie"></i> Customer Care</a></li>
-                    <li class="nav-menu_items"><a href="#"><i class="fa-solid fa-user"></i> Login</a></li>
+                    <li class="nav-menu_items"><a href="#"><i class="fa-solid fa-file-contract"></i> Legal</a></li>
+
                     <hr>
                 </ul>
 
@@ -109,12 +118,125 @@
     </div>
     <br>
 
-   
+
+
+    <!-- login database cretion in the container -->
+
+    <div class="loginpage-container">
+        <div class="header-items">
+            <div class="header-content1">
+                <div class="close-btn" id="close-login"><i class="fas fa-close close-login"></i></div>
+            </div>
+            <div class="header-topic">
+                <div class="data-tit-header">Shop Easy</div>
+                <div class="img"><i class="fas fa-shopping-bag shop"></i></div>
+            </div>
+        </div>
+        <br>
+        <p class="top-title">Log in for the best experience</p>
+        <p class="top-second-title">Enter your Email ID to <span id="changecontent">Login</span></p>
+        <br>
+        <div class="datastores-files">
+            <div class="login-container">
+                <form>
+                    <div class="form-floating mb-3">
+                        <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+                        <label for="floatingInput" id="float-item">Email address</label>
+                    </div>
+                    <div class="form-floating">
+                        <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+                        <label for="floatingPassword" id="float-item">Password</label>
+                    </div><br>
+                    <div class="showpassword"><input type="checkbox" id="showpassword" class="show" onclick="showpassword()"> Show Password</div>
+                    <br>
+                    <p class="forget-password">Forget Password</p>
+                </form>
+            </div>
+            <div class="register-container">
+                <form>
+                    <div class="form-floating mb-3">
+                        <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+                        <label for="floatingInput" id="float-item">Email address</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control" id="floatingPassword" placeholder="Password">
+                        <label for="floatingPassword" id="float-item">Name</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+                        <label for="floatingPassword" id="float-item">Create Password</label>
+                    </div>
+                    <div class="form-floating">
+                        <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+                        <label for="floatingPassword" id="float-item">Confirm Password</label>
+                    </div><br>
+                    <div class="showpassword"><input type="checkbox" id="showpassword" class="show" onclick="showpassword()"> Show Password</div>
+
+                </form><br>
+            </div>
+            <div class="forget-container">
+                <form>
+                    <div class="form-floating mb-3">
+                        <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+                        <label for="floatingInput" id="float-item">Email address</label>
+                    </div>
+                    
+
+                </form><br>
+            </div>
+        </div>
+        <div class=" btn-continue">Login</div><br>
+        <div class="register-id login-container">New User? Register</div>
+        <div class="register-id register-container">Already? Account</div>
+        <div class="register-id forget-container">Already? Login</div>
+
+
+    </div>
 
 
 
 
-  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     <!--main container-->
     <div class="main-container">
@@ -154,14 +276,16 @@
                 </div>
                 <div class="carousel-inner">
                     <div class="carousel-item active" data-bs-interval="2000">
-                        <img src="https://rukminim2.flixcart.com/fk-p-flap/960/460/image/e05ca9c356a799d2.jpeg?q=60" class="d-block w-100" alt="...">
+                        <img src="https://rukminim2.flixcart.com/fk-p-flap/960/460/image/e05ca9c356a799d2.jpeg?q=60"
+                            class="d-block w-100" alt="...">
                         <div class="carousel-caption d-none d-md-block">
                             <h5>First slide label</h5>
                             <p>Some representative placeholder content for the first slide.</p>
                         </div>
                     </div>
                     <div class="carousel-item" data-bs-interval="2000">
-                        <img src="https://rukminim2.flixcart.com/fk-p-flap/960/460/image/519df349cae5528b.jpg?q=60" class="d-block w-100" alt="...">
+                        <img src="https://rukminim2.flixcart.com/fk-p-flap/960/460/image/519df349cae5528b.jpg?q=60"
+                            class="d-block w-100" alt="...">
                         <div class="carousel-caption d-none d-md-block">
                             <h5>Second slide label</h5>
                             <p>Some representative placeholder content for the second slide.</p>
@@ -175,7 +299,8 @@
                         </div>
                     </div>
                     <div class="carousel-item" data-bs-interval="2000">
-                        <img src="https://rukminim2.flixcart.com/fk-p-flap/960/460/image/6dbe72c0da97abf8.jpeg?q=60" class="d-block w-100" alt="...">
+                        <img src="https://rukminim2.flixcart.com/fk-p-flap/960/460/image/6dbe72c0da97abf8.jpeg?q=60"
+                            class="d-block w-100" alt="...">
                         <div class="carousel-caption d-none d-md-block">
                             <h5>Second slide label</h5>
                             <p>Some representative placeholder content for the second slide.</p>
@@ -1171,14 +1296,14 @@
 
             </div>
         </div><br>
-      
+
 
         <!--products details Electronics-->
 
         <!--products details Toys and Baby-->
 
 
-        
+
         <!--products details mobile-->
         <div class="mobile-container">
             <div class="grocery-tit">
@@ -1495,7 +1620,7 @@
         </div>
 
 
-        
+
         <!--products details mobile-->
         <div class="mobile-container">
             <div class="grocery-tit">
@@ -1886,7 +2011,7 @@
 
 
 
-       
+
 
 
 
@@ -1924,6 +2049,8 @@
 <script src="app.js"></script>
 
 <script src="./cart.js"></script>
+
+<script src="./login.js"></script>
 
 
 <!--bootstrap js files insert-->

@@ -518,6 +518,10 @@
     .app-login {
         padding: 20px 14px 20px 60px;
     }
+    #fa-heart
+    {
+        font-size: 17px;
+    }
 
     .app-login-icon {
         font-size: 22px;

@@ -153,7 +153,8 @@ function shopeasycart()
         productsdetails.append(productss);
         shopeasy.append(productsdetails);
 
-        update()
+        update();
+        
         const btnplace = document.getElementsByClassName('totalvalue')[0];
         btnplace.style.display = "block";
 
@@ -301,7 +302,7 @@ dataContainer.forEach((items, index) => {
                             <div class="cart-price">${items.price}</div>
                             <div class="cart-amt">0</div>  
                         </div>
-                        <span class="cart-qtyname">Oty</span><i class="fa-solid fa-minus"></i><input type="number" value="1" class="cart-quantity"><i class="fa-solid fa-plus"></i>
+                        <span class="cart-qtyname">Oty</span><i class="fa-solid fa-minus" id="minus"></i><input type="number" value="1" class="cart-quantity" id="cart-quantity"><i class="fa-solid fa-plus" id="plus"></i>
                         <div class="product-brand">${items.brand}</div>
                     </div>
                     <ion-icon name="trash" class="cart-remove removeshopeasy"></ion-icon>`;
@@ -406,37 +407,7 @@ qty.forEach((qtys) => {
 
 
 
-const minusBtns = document.querySelectorAll('.fa-minus');
-const plusBtns = document.querySelectorAll('.fa-plus');
-const qtyInputs = document.querySelectorAll('.cart-quantity');
 
-//    increment
-
-plusBtns.forEach((plus, id) => {
-    plus.addEventListener('click', function () {
-        qtyInputs[id].value = parseInt(qtyInputs[id].value) + 1;
-        totalvalue();
-        update();
-
-
-
-    })
-})
-
-// decrement
-
-minusBtns.forEach((minus, id) => {
-    minus.addEventListener('click', function () {
-        var minusvalue = parseInt(qtyInputs[id].value)
-        if (minusvalue > 1) {
-            qtyInputs[id].value = minusvalue - 1;
-            totalvalue();
-            update()
-
-        }
-    })
-
-})
 
 
 

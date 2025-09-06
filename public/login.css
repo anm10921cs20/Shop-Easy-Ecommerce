@@ -1,0 +1,128 @@
+@media screen and (min-width:400px) and (max-width:767px) {
+    .loginpage-container {
+        position: fixed;
+        top: 0;
+        left: 0;
+        background-color: #fff;
+        height: 100vh;
+        width: 100%;
+        z-index: 45623985673;
+        transition: all 0.5s ease-in-out;
+        margin-left:-109%;
+    }
+    .loginpage-container-active
+    {
+        margin-left: 0;
+        transition: all 0.5s ease-in-out;
+    }
+
+    .header-items {
+        display: flex;
+        justify-content: start;
+        gap: 120px;
+        align-items: center;
+        padding: 0 20px;
+        background-color: var(--bs-primary);
+        height: 60px;
+    }
+
+    .close-login {
+        color: #fff;
+        font-size: 22px;
+        font-weight: lighter;
+    }
+    .header-topic
+    {
+        display: flex;
+        gap: 8px;
+    }
+    .data-tit-header
+    {
+        font-size: 17px;
+        color: #fff;
+        text-shadow: 1px 1px 1px #fff;
+        font-style: italic;
+   
+    }
+    .shop
+    {
+        font-size: 17px;
+        color: var(--bs-warning);
+    }
+    .top-title
+    {
+        font-size: 15px;
+        width: 90%;
+        margin: 0 auto;
+    }
+    .top-second-title
+    {
+        color: rgba(0, 0, 0, 0.5);
+        font-size: 14px;
+        width: 90%;
+        margin: 0 auto;
+    }
+    .login-container
+    {
+        width: 90%;
+        margin: 0 auto;
+    }
+    .register-container
+    {
+         width: 90%;
+        margin: 0 auto;
+        display: none;
+    }
+    .forget-container
+    {
+       width: 90%;
+        margin: 0 auto; 
+         display: none;
+    }
+    .form-control
+    {
+        width: 100%;
+        margin: 0 auto;
+        height: 20px;
+    }
+    .form-control:focus
+    {
+        border-color: var(--bs-primary);
+        box-shadow: none;
+        border-radius: 3px;
+    }
+    .forget-password
+    {
+        font-size: 14px;
+        color: var(--bs-primary);
+        text-align: center;
+    }
+    .btn-continue
+    {
+        width: 90%;
+        border-radius: none;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        background-color: #ff5800;
+        color: #fff;
+        font-size: 14px;
+        padding: 8px 0;
+    }
+    .register-id
+    {
+        color: var(--bs-primary);
+        text-align: end;
+        font-size: 15px;
+        width: 90%;
+        margin: 0 auto;
+    }
+    .showpassword
+    {
+        text-align: end;
+    }
+  
+   
+
+
+}

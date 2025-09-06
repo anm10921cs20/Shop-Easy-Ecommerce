@@ -215,7 +215,7 @@ groceryStorageContainer.forEach((values, id) => {
                             <div class="cart-price">${values.price}</div>
                             <div class="cart-amt">0</div>  
                         </div>
-                        <span class="cart-qtyname">Oty</span><i class="fa-solid fa-minus"></i><input type="number" value="1" class="cart-quantity"><i class="fa-solid fa-plus"></i>
+                        <span class="cart-qtyname">Oty</span><i class="fa-solid fa-minus minus1"></i><input type="number" value="1" class="cart-quantity cart-quantity1"><i class="fa-solid fa-plus plus1"></i>
                         <div class="product-brand">${values.brand}</div>
                     </div>
                     <ion-icon name="trash" class="cart-remove removegrocery"></ion-icon>`;
@@ -242,7 +242,7 @@ function totalvaluegrocery() {
         var cartbox = cartboxes[i];
         var priceElement = cartbox.getElementsByClassName('cart-price')[0];
         var pricecartElement = cartbox.getElementsByClassName('cart-amt')[0];
-        var quantityElement = cartbox.getElementsByClassName('cart-quantity')[0];
+        var quantityElement = cartbox.getElementsByClassName('cart-quantity1')[0];
 
 
         var price = parseFloat(priceElement.innerText.replace("Rs.", ""));
@@ -319,30 +319,34 @@ qty1.forEach((qty1ss) => {
     })
 })
 
-const minusBtns1 = document.querySelectorAll('.fa-minus');
-const plusBtns1 = document.querySelectorAll('.fa-plus');
-const qtyInputs1 = document.querySelectorAll('.cart-quantity');
+const minusBtns2 = document.querySelectorAll('.fa-minus');
+const plusBtns2 = document.querySelectorAll('.fa-plus');
+const qtyInputs2 = document.querySelectorAll('.cart-quantity');
 
 // increment
 
-plusBtns1.forEach((plus1, id) => {
+plusBtns2.forEach((plus1, id) => {
     plus1.addEventListener('click', function () {
-        qtyInputs1[id].value = parseInt(qtyInputs1[id].value) + 1;
+        qtyInputs2[id].value = parseInt(qtyInputs2[id].value) + 1;
         totalvaluegrocery();
         update1()
+        update()
+        totalvaluegrocery();
     })
 })
 
 // decrement
 
-minusBtns1.forEach((minus1, id) => {
+minusBtns2.forEach((minus1, id) => {
     minus1.addEventListener('click', function (){
-        var minus1 = parseInt(qtyInputs1[id].value);
+        var minus1 = parseInt(qtyInputs2[id].value);
         if(minus1 > 1)
         {
-            qtyInputs1[id].value = minus1 -1;
+            qtyInputs2[id].value = minus1 -1;
             totalvaluegrocery();
-            update1()
+            update1();
+             update()
+        totalvaluegrocery();
         }
     })
 })
