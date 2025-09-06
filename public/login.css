@@ -76,7 +76,8 @@
     .forget-container
     {
        width: 90%;
-        margin: 0 auto; 
+        margin: 0 auto;
+        height: 40px; 
          display: none;
     }
     .form-control
@@ -109,17 +110,76 @@
         font-size: 14px;
         padding: 8px 0;
     }
-    .register-id
+    .register-id1
     {
         color: var(--bs-primary);
         text-align: end;
         font-size: 15px;
         width: 90%;
-        margin: 0 auto;
+        margin: -55px auto;
+        
+    }
+      .register-id2
+    {
+        color: var(--bs-primary);
+        text-align: end;
+        font-size: 15px;
+        width: 90%;
+        margin: -37px auto;
+        
+    }
+      .register-id3
+    {
+        color: var(--bs-primary);
+        text-align: end;
+        font-size: 15px;
+        width: 90%;
+        margin: -16px auto;
+        
     }
     .showpassword
     {
         text-align: end;
+    }
+    .loginbtn
+    {
+         width: 90%;
+        border-radius: none;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        background-color: #ff5800;
+        color: #fff;
+        font-size: 14px;
+        padding: 8px 0;
+    }
+    .registerbtn
+    {
+      
+         width: 90%;
+        border-radius: none;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        background-color: #ff5800;
+        color: #fff;
+        font-size: 14px;
+        padding: 8px 0;
+          display: none;
+    }
+    .forgetbtn
+    {
+        
+         width: 90%;
+        border-radius: none;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        background-color: #ff5800;
+        color: #fff;
+        font-size: 14px;
+        padding: 8px 0;
+        display: none;
     }
   
    

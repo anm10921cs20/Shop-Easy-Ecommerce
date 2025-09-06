@@ -278,7 +278,16 @@ var removeContainer1 = document.querySelectorAll(".removegrocery");
 removeContainer1.forEach((btns, idx) => {
     btns.addEventListener('click', function() {
         this.parentElement.remove()
-       window.location.reload;
+        var alertvalue = document.getElementById('alertcontainer');
+        alertvalue.style.display = "flex"
+        var counter = 8;
+        var interval = setInterval(() => {
+            counter--;
+            if (counter > 0) {
+                clearInterval(interval);
+                alertvalue.style.display = "none";
+            }
+        }, 1000)
         totalvaluegrocery()
         update1()
         if(groceryStorageContainer && groceryStorageContainer.length > idx)

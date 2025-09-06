@@ -161,15 +161,25 @@ heartcontainers.forEach((heartspack, idx) => {
 var removeContainer = document.querySelectorAll('.cart-remove');
 
 removeContainer.forEach((btn, idx) => {
-     btn.addEventListener('click', (e) => {
-            e.preventDefault()
-        })
+    btn.addEventListener('click', (e) => {
+        e.preventDefault()
+    })
     btn.addEventListener('click', function () {
         // Remove the cart item from DOM
         this.parentElement.remove();
-        window.location.reload();
-       
-       
+        var alertvalue = document.getElementById('alertcontainer');
+        alertvalue.style.display = "flex"
+        var counter = 8;
+        var interval = setInterval(() => {
+            counter--;
+            if (counter > 0) {
+                clearInterval(interval);
+                alertvalue.style.display = "none";
+            }
+        }, 1000)
+        
+
+
 
         // Remove the item from dataContainer array
         if (heartcontainers && heartcontainers.length > idx) {

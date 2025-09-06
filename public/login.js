@@ -32,14 +32,18 @@ const changeContent = document.querySelector('#changecontent')
 
 // btn continue
 
-const btnSubmit = document.getElementsByClassName('btn-continue')[0];
+const loginbtn = document.getElementsByClassName('loginbtn')[0];
+const registerbtn = document.getElementsByClassName('registerbtn')[0];
+const forgetbtn = document.getElementsByClassName('forgetbtn')[0];
+
 
 forgetContainerOpen.addEventListener('click', () => {
     loginContainer.style.display = "none";
     loginContainer1.style.display = "none";
     forgetContainer.style.display = "block";
     forgetContainer1.style.display = "block";
-    btnSubmit.innerText = 'Send';
+    forgetbtn.style.display = "flex";
+    loginbtn.style.display = 'none';
     changeContent.innerText = 'Forget Password';
 })
 alreadyLogin1.addEventListener('click', () => {
@@ -47,7 +51,9 @@ alreadyLogin1.addEventListener('click', () => {
     loginContainer1.style.display = "block";
     forgetContainer.style.display = "none";
     forgetContainer1.style.display = "none";
-    btnSubmit.innerText = 'Login';
+    loginbtn.style.display = 'flex';
+    forgetbtn.style.display = 'none';
+
     changeContent.innerText = 'Login';
 })
 
@@ -59,7 +65,8 @@ loginContainer1.addEventListener('click', () => {
     loginContainer1.style.display = "none";
     registerContainer.style.display = "block";
     registerContainer1.style.display = "block";
-    btnSubmit.innerText = 'Register';
+     registerbtn.style.display = "flex";
+    loginbtn.style.display = 'none';
     changeContent.innerText = 'New User Registeration';
 })
 registerContainer1.addEventListener('click', () => {
@@ -67,6 +74,65 @@ registerContainer1.addEventListener('click', () => {
     loginContainer1.style.display = "block";
     registerContainer.style.display = "none";
     registerContainer1.style.display = "none";
-    btnSubmit.innerText = 'Login';
+   registerbtn.style.display = "none";
+    loginbtn.style.display = 'flex';
     changeContent.innerText = 'Login';
 })
+
+
+// show password
+const show = document.getElementsByClassName('show')[0];
+
+
+const password1 = document.getElementsByClassName('login-password')[0];
+
+    show.addEventListener('click', function() {
+    if(password1.type === "password")
+    {
+        password1.type = "text";
+    }
+    else
+    {
+        password1.type = "password";
+    }
+    
+})
+
+// show password2
+const show1 = document.getElementsByClassName('show')[1];
+
+
+const password2 = document.getElementsByClassName('register-password')[0];
+const password3 = document.getElementsByClassName('register-password')[1];
+
+    show1.addEventListener('click', function() {
+    if(password2.type === "password" && password3.type === "password")
+    {
+        password2.type = "text";
+        password3.type = "text";
+    }
+    else
+    {
+        password2.type = "password";
+        password3.type = "password";
+    }
+    
+})
+
+var p = document.createElement('p');
+p.classList.add('para-alert');
+loginbtn.addEventListener('click', () => {
+    var alertvalue = document.getElementById('alertcontainer');
+    alertvalue.style.display = "flex";
+    p.innerText = "Welcome to Shop Easy"
+    alertvalue.append(p);
+    var counter = 5;
+    var interval = setInterval(() => {
+        counter--;
+        if (counter > 0) {
+            clearInterval(interval);
+            alertvalue.style.display = "none";
+        }
+    }, 1000)
+})
+

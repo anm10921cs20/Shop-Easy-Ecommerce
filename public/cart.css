@@ -314,19 +314,29 @@
     .alertcontainer
     {
         position: fixed;
-        background-color: #26A96C;
-        height: 50px;
+        background-color: rgba(0, 0, 0, 0.808);
+        height: 40px;
         bottom: 0;
         width: 100%;
-        z-index: 2000;
+        z-index: 23489535433532742000;
         color: #fff;
         display: flex;
         flex-direction: row;
         justify-content: center;
         align-items: center;
         gap: 10px;
+        transition: all 0.4s ease-in-out;
        display: none;
+        animation: jump 0.5s ease-in-out  1 ;
+      
     }
+    @keyframes jump {
+        from{
+             transform: translateY(-80px);
+        }
+        
+    }
+
     .para-alert
     {
         margin-top: 14px;

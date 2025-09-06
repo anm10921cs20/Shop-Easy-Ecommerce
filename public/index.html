@@ -18,6 +18,8 @@
 
     <link rel="stylesheet" href="./login.css">
 
+    <link rel="stylesheet" href="./cart.css">
+
     <!--cart external style new sheet-->
 
 
@@ -144,10 +146,10 @@
                         <label for="floatingInput" id="float-item">Email address</label>
                     </div>
                     <div class="form-floating">
-                        <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+                        <input type="password" class="form-control login-password" id="floatingPassword loginpassword" placeholder="Password">
                         <label for="floatingPassword" id="float-item">Password</label>
                     </div><br>
-                    <div class="showpassword"><input type="checkbox" id="showpassword" class="show" onclick="showpassword()"> Show Password</div>
+                    <div class="showpassword"><input type="checkbox" id="showpassword" class="show"> Show Password</div>
                     <br>
                     <p class="forget-password">Forget Password</p>
                 </form>
@@ -163,14 +165,14 @@
                         <label for="floatingPassword" id="float-item">Name</label>
                     </div>
                     <div class="form-floating mb-3">
-                        <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+                        <input type="password" class="form-control register-password" id="floatingPassword" placeholder="Password">
                         <label for="floatingPassword" id="float-item">Create Password</label>
                     </div>
                     <div class="form-floating">
-                        <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+                        <input type="password" class="form-control register-password" id="floatingPassword" placeholder="Password">
                         <label for="floatingPassword" id="float-item">Confirm Password</label>
                     </div><br>
-                    <div class="showpassword"><input type="checkbox" id="showpassword" class="show" onclick="showpassword()"> Show Password</div>
+                    <div class="showpassword"><input type="checkbox" id="showpassword" class="show" > Show Password</div>
 
                 </form><br>
             </div>
@@ -185,10 +187,13 @@
                 </form><br>
             </div>
         </div>
-        <div class=" btn-continue">Login</div><br>
-        <div class="register-id login-container">New User? Register</div>
-        <div class="register-id register-container">Already? Account</div>
-        <div class="register-id forget-container">Already? Login</div>
+       
+         <div class="  loginbtn">Login</div><br>
+          <div class="  registerbtn">Register</div><br>
+           <div class=" forgetbtn">Send</div><br>
+        <div class="register-id1 login-container">New User? Register</div>
+        <div class="register-id2 register-container">Already? Account</div>
+        <div class="register-id3 forget-container">Already? Login</div>
 
 
     </div>
@@ -235,6 +240,9 @@
 
 
 
+    <div id="alertcontainer" class="alertcontainer">
+       
+    </div>
 
 
 
