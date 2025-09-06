@@ -19,7 +19,7 @@ function additemsclicked(event) {
     var items1 = [];
 
 
-
+    
 
     var datas1 = {
         name: shopitemsvalue.getElementsByClassName('mobile-name')[0].innerText,
@@ -62,8 +62,10 @@ function additemsclicked(event) {
             alertvalue.style.display = "none";
         }
     }, 1000)
-    totalvalueupdate()
+   
 }
+
+
 
 
 var counts = document.getElementById('cart-count');

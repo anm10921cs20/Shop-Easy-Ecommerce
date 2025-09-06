@@ -34,7 +34,7 @@ function grocerycart() {
     <div class="details-container1">
         <div class="details-price">
             <p class="price">Price(<span class="qty1"></span>)</p>
-            <p class="pricetotal1"></p>
+            <p class="pricetotal11"></p>
 
         </div>
         <div class="details-price">
@@ -215,7 +215,7 @@ groceryStorageContainer.forEach((values, id) => {
                             <div class="cart-price">${values.price}</div>
                             <div class="cart-amt">0</div>  
                         </div>
-                        <span class="cart-qtyname">Oty</span><i class="fa-solid fa-minus minus1"></i><input type="number" value="1" class="cart-quantity cart-quantity1"><i class="fa-solid fa-plus plus1"></i>
+                        <span class="cart-qtyname">Oty</span><i class="fa-solid fa-minus minus2"></i><input type="number" value="1" class="cart-quantity "><i class="fa-solid fa-plus plus2"></i>
                         <div class="product-brand">${values.brand}</div>
                     </div>
                     <ion-icon name="trash" class="cart-remove removegrocery"></ion-icon>`;
@@ -242,7 +242,7 @@ function totalvaluegrocery() {
         var cartbox = cartboxes[i];
         var priceElement = cartbox.getElementsByClassName('cart-price')[0];
         var pricecartElement = cartbox.getElementsByClassName('cart-amt')[0];
-        var quantityElement = cartbox.getElementsByClassName('cart-quantity1')[0];
+        var quantityElement = cartbox.getElementsByClassName('cart-quantity')[0];
 
 
         var price = parseFloat(priceElement.innerText.replace("Rs.", ""));
@@ -319,8 +319,8 @@ qty1.forEach((qty1ss) => {
     })
 })
 
-const minusBtns2 = document.querySelectorAll('.fa-minus');
-const plusBtns2 = document.querySelectorAll('.fa-plus');
+const minusBtns2 = document.querySelectorAll('.minus2');
+const plusBtns2 = document.querySelectorAll('.plus2');
 const qtyInputs2 = document.querySelectorAll('.cart-quantity');
 
 // increment
@@ -330,8 +330,7 @@ plusBtns2.forEach((plus1, id) => {
         qtyInputs2[id].value = parseInt(qtyInputs2[id].value) + 1;
         totalvaluegrocery();
         update1()
-        update()
-        totalvaluegrocery();
+         
     })
 })
 
@@ -345,8 +344,7 @@ minusBtns2.forEach((minus1, id) => {
             qtyInputs2[id].value = minus1 -1;
             totalvaluegrocery();
             update1();
-             update()
-        totalvaluegrocery();
+             
         }
     })
 })
@@ -369,7 +367,7 @@ function update1() {
     totalvaluegrocery.call(this)
    
     
-    const pricetotalElems = document.getElementsByClassName('pricetotal1')[0];
+    const pricetotalElems = document.getElementsByClassName('pricetotal11')[0];
 
         pricetotalElems.innerText = "Rs." + (totalamt1-50);
     
