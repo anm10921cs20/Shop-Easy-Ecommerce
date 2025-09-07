@@ -81,11 +81,11 @@ function login() {
         const user = auth.currentUser;
         useruid(user.uid);
 
-        
-     const loginpagecontainer = document.getElementsByClassName('loginpage-container')[0];
-     console.log(loginpagecontainer);
-     
-                loginpagecontainer.style,display = "none";
+
+        const loginpagecontainer = document.getElementsByClassName('loginpage-container')[0];
+        console.log(loginpagecontainer);
+
+        loginpagecontainer.style.display = "none";
 
         const ids = localStorage.getItem('userid');
         console.log(ids);
@@ -93,14 +93,14 @@ function login() {
         const docRef = firesttore.collection('users').doc(ids)
         docRef.get().then(doc => {
             if (doc.exists) {
-                var username = doc.data().username;
-                localStorage.setItem('nameid', username);
+                const username = doc.data().username;
+                localStorage.setItem('names', username);
 
 
 
 
 
-                
+
 
 
 
@@ -140,7 +140,7 @@ const datalogin = document.getElementsByClassName('app-login')[0];
 function signOut() {
     auth.signOut().then(() => {
         window.localStorage.removeItem('userid');
-        window.localStorage.removeItem('nameid');
+        window.localStorage.removeItem('names');
         window.location.reload();
 
     })
@@ -155,32 +155,56 @@ function signOut() {
 
 auth.onAuthStateChanged((user) => {
     if (user) {
-        
-            const nameid = localStorage.getItem('nameid');
+
+        const nameid = localStorage.getItem('names');
         document.getElementById('login-name').innerText = nameid;
-       
-        
-         console.log("👋 Already logged in:", user.email);
+        console.log("👋 Already logged in:", user.email);
+
+
 
         // signout
-                const unlist = document.getElementsByClassName('nav-bar-body_nav-menu')[0];
-                const li = document.createElement('li');
-                li.classList.add('nav-menu_items');
-                li.innerHTML = `<a href="#"><i class="fa-solid fa-user"></i> Logout</a>`;
-                unlist.append(li);
-                const logout = document.getElementsByClassName('nav-menu_items')[11];
-                logout.addEventListener('click', () => {
-                signOut();
-                })
+        const unlist = document.getElementsByClassName('nav-bar-body_nav-menu')[0];
+        const li = document.createElement('li');
+        li.classList.add('nav-menu_items');
+        li.innerHTML = `<a href="#"><i class="fa-solid fa-user"></i> Logout</a>`;
+        unlist.append(li);
+        const logout = document.getElementsByClassName('nav-menu_items')[11];
+        logout.addEventListener('click', () => {
+            signOut();
+        })
 
-                // login non
+        // login non
 
-               
+
+        // login container hidden
+
+        const loginpagecontainer4 = document.getElementsByClassName('loginpage-container')[0];
+        console.log(loginpagecontainer4);
+        loginpagecontainer4.style.display = "none";
+
+
+        // login image hidden
+
+        const loginimg = document.getElementsByClassName('app-login')[0];
+        
+       loginimg.onclick = function()
+       {
+        window.location.replace('./insidecart/insidecart.html')
+       }
+
+
     } else {
         console.log("🟡 Not logged in");
-         const loginpagecontainer = document.getElementsByClassName('loginpage-container')[0];
-          loginpagecontainer.style,display = "block";
-        
+        const loginpagecontainer = document.getElementsByClassName('loginpage-container')[0];
+        loginpagecontainer.style, display = "block";
+
+
+         // login image open
+
+        const loginimg = document.getElementsByClassName('app-login')[0];
+     
+       
+
     }
 });
 
