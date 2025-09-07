@@ -104,8 +104,7 @@
                                 class="fa-solid fa-shopping-bag"></i> My Cart</a></li>
                     <li class="nav-menu_items"><a href="./heart/heart.html"><i class="fa-solid fa-heart"
                                 id="fa-heart"></i> My Wishlist</a></li>
-                    <li class="nav-menu_items"><a href="./insidecart/insidecart.html"><i class="fa-solid fa-user"></i>
-                            My Account</a></li>
+                    
 
 
                     <hr>
@@ -149,7 +148,7 @@
                         <input type="password" class="form-control login-password" id="loginpassword" placeholder="Password">
                         <label for="floatingPassword" id="float-item">Password</label>
                     </div><br>
-                    <div class="showpassword"><input type="checkbox" id="showpassword" class="show"> Show Password</div>
+                    <div class="showpassword"><input type="checkbox" class="show"> Show Password</div>
                     <br>
                     <p class="forget-password">Forget Password</p>
                 </form>
@@ -169,14 +168,14 @@
                         <input type="password" class="form-control register-password" id="register-password"  placeholder="Password">
                         <label for="floatingPassword" id="float-item">Create Password</label>
                     </div><br>
-                    <div class="showpassword"><input type="checkbox" id="showpassword" class="show" > Show Password</div>
+                    <div class="showpassword"><input type="checkbox"  class="show" > Show Password</div>
 
                 </form><br>
             </div>
             <div class="forget-container">
                 <form>
                     <div class="form-floating mb-3">
-                        <input type="email" class="form-control"  placeholder="name@example.com">
+                        <input type="email" class="form-control" id="forget-email"  placeholder="name@example.com">
                         <label for="floatingInput" id="float-item">Email address</label>
                     </div>
                     
@@ -187,7 +186,7 @@
        
          <div class="  loginbtn" onclick="login()">Login</div><br>
           <div class="  registerbtn" onclick="register()">Register</div><br>
-           <div class=" forgetbtn">Send</div><br>
+           <div class=" forgetbtn" onclick="reset()">Send</div><br>
         <div class="register-id1 login-container">New User? Register</div>
         <div class="register-id2 register-container">Already? Account</div>
         <div class="register-id3 forget-container">Already? Login</div>
@@ -2058,6 +2057,8 @@
 <script src="./login.js"></script>
 
 <script src="./logindb.js"></script>
+
+<script src="./auth.js"></script>
 
 
 <!--bootstrap js files insert-->

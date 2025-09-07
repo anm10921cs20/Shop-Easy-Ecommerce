@@ -90,32 +90,45 @@ function additemsclicked(event) {
         items.push(datas);
         const sting = JSON.stringify(items);
         localStorage.setItem('shoporder', sting);
-       
-        
+
+
 
     } else {
         const localItems = JSON.parse(localStorage.getItem('shoporder'));
         localItems.map(data => {
             if (datas.brand == data.brand) {
-                datas.no = datas.no + 1;
+                var alertvalue = document.getElementById('alertcontainer');
+                var paravalue = document.getElementById('para-alert');
+                alertvalue.style.display = "flex"
+                var counter = 3;
+                var interval = setInterval(() => {
+                    counter--;
+                    if (counter > 0) {
+                        clearInterval(interval);
+                        alertvalue.style.display = "none";
+
+                        paravalue.innerText = "Successful added to cart";
+                    } else {
+                        paravalue.innerText = "Already Added";
+                    }
+                }, 1000)
+
+
+
             } else {
                 items.push(data)
-              
-              
+
+
 
             }
         });
         items.push(datas)
 
-        
-        
+
+
         localStorage.setItem('shoporder', JSON.stringify(items))
 
     }
-
-
-
-
 
 
 

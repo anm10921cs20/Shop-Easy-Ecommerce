@@ -36,7 +36,19 @@ function additemsclicked(event) {
         const localItems1 = JSON.parse(localStorage.getItem('groceryorder'));
         localItems1.map(datas => {
             if (datas1.price == datas.price) {
-                datas1.no = datas1.no + 1;
+                var alertvalue = document.getElementById('alertcontainer');
+                var paravalue = document.getElementById('para-alert');
+                alertvalue.style.display = "flex"
+                var counter = 3;
+                var interval = setInterval(() => {
+                    counter--;
+                    if (counter > 0) {
+                        clearInterval(interval);
+                        alertvalue.style.display = "none";
+                        paravalue.innerText = "Already Added";
+                    }
+                }, 1000)
+                
             } else {
                 items1.push(datas)
             }

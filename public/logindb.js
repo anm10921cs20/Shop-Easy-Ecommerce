@@ -14,7 +14,7 @@ firebase.initializeApp(firebaseConfig);
 const auth = firebase.auth();
 const db = firebase.database();
 const firesttore = firebase.firestore();
-auth.setPersistence(firebase.auth.Auth.Persistence.LOCAL);
+
 
 
 const useruid = (id) => {
@@ -34,6 +34,7 @@ function register() {
 
     auth.createUserWithEmailAndPassword(emails1, password).then((userCredential) => {
         const uid = userCredential.user.uid;
+   
 
         db.ref("shopeasyusers/" + names).set(
             {
@@ -55,6 +56,7 @@ function register() {
         document.getElementById('register-email').value = "";
         document.getElementById('register-name').value = "";
         document.getElementById('register-password').value = "";
+        
     }).catch((err) => {
         const error = err.message;
         console.log(error);
@@ -82,38 +84,12 @@ function login() {
         useruid(user.uid);
 
 
-        const loginpagecontainer = document.getElementsByClassName('loginpage-container')[0];
+        const loginpagecontainer = document.getElementsByClassName('.loginpage-container')[0];
         console.log(loginpagecontainer);
 
         loginpagecontainer.style.display = "none";
 
-        const ids = localStorage.getItem('userid');
-        console.log(ids);
-
-        const docRef = firesttore.collection('users').doc(ids)
-        docRef.get().then(doc => {
-            if (doc.exists) {
-                const username = doc.data().username;
-                localStorage.setItem('names', username);
-
-
-
-
-
-
-
-
-
-
-
-
-            } else {
-                console.log(`No such Document`)
-            }
-        }).catch(err => {
-            console.log(`Error getting document : ${err}`)
-        })
-
+     
 
     })
 
@@ -131,16 +107,35 @@ function login() {
 }
 
 
+   const uservalue = localStorage.getItem('userid');
+        
+
+        const docRef = firesttore.collection('users').doc(uservalue)
+        docRef.get().then(doc => {
+            if (doc.exists) {
+                var username = doc.data().username;
+            localStorage.setItem('nameid', username);
+
+            } else {
+                console.log(`No such Document`)
+            }
+        }).catch(err => {
+            console.log(`Error getting document : ${err}`)
+        })
+
+
+
 const datalogin = document.getElementsByClassName('app-login')[0];
 
 
 
 
 
-function signOut() {
+function signOut(auth) {
     auth.signOut().then(() => {
         window.localStorage.removeItem('userid');
-        window.localStorage.removeItem('names');
+        window.localStorage.removeItem('nameid');
+        window.localStorage.removeItem('useremail');
         window.location.reload();
 
     })
@@ -151,61 +146,49 @@ function signOut() {
 
 
 
+function reset() {
+    const forgetEmail = document.getElementById('forget-email').value;
+    auth.sendPasswordResetEmail(forgetEmail).then(() => {
+        var p = document.createElement('p');
+        p.classList.add('para-alert');
+        var alertvalue = document.getElementById('alertcontainer');
+        alertvalue.style.display = "flex";
+        p.innerText = "Successfully Sent"
+        alertvalue.append(p);
+        var counter = 5;
+        var interval = setInterval(() => {
+            counter--;
+            if (counter > 0) {
+                clearInterval(interval);
+                alertvalue.style.display = "none";
+            }
+        }, 1000)
+    }).catch((err) => {
+         var p = document.createElement('p');
+        p.classList.add('para-alert');
+        var alertvalue = document.getElementById('alertcontainer');
+        alertvalue.style.display = "flex";
+        p.innerText = err.message;
+        alertvalue.append(p);
+        var counter = 5;
+        var interval = setInterval(() => {
+            counter--;
+            if (counter > 0) {
+                clearInterval(interval);
+                alertvalue.style.display = "none";
+            }
+        }, 1000)
+    })
 
 
-auth.onAuthStateChanged((user) => {
-    if (user) {
 
-        const nameid = localStorage.getItem('names');
-        document.getElementById('login-name').innerText = nameid;
-        console.log("👋 Already logged in:", user.email);
+}
 
 
 
-        // signout
-        const unlist = document.getElementsByClassName('nav-bar-body_nav-menu')[0];
-        const li = document.createElement('li');
-        li.classList.add('nav-menu_items');
-        li.innerHTML = `<a href="#"><i class="fa-solid fa-user"></i> Logout</a>`;
-        unlist.append(li);
-        const logout = document.getElementsByClassName('nav-menu_items')[11];
-        logout.addEventListener('click', () => {
-            signOut();
-        })
-
-        // login non
 
 
-        // login container hidden
-
-        const loginpagecontainer4 = document.getElementsByClassName('loginpage-container')[0];
-        console.log(loginpagecontainer4);
-        loginpagecontainer4.style.display = "none";
 
 
-        // login image hidden
-
-        const loginimg = document.getElementsByClassName('app-login')[0];
-        
-       loginimg.onclick = function()
-       {
-        window.location.replace('./insidecart/insidecart.html')
-       }
-
-
-    } else {
-        console.log("🟡 Not logged in");
-        const loginpagecontainer = document.getElementsByClassName('loginpage-container')[0];
-        loginpagecontainer.style, display = "block";
-
-
-         // login image open
-
-        const loginimg = document.getElementsByClassName('app-login')[0];
-     
-       
-
-    }
-});
 
 
