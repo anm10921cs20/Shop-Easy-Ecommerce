@@ -103,18 +103,18 @@ const show1 = document.getElementsByClassName('show')[1];
 
 
 const password2 = document.getElementsByClassName('register-password')[0];
-const password3 = document.getElementsByClassName('register-password')[1];
+
 
     show1.addEventListener('click', function() {
-    if(password2.type === "password" && password3.type === "password")
+    if(password2.type === "password")
     {
         password2.type = "text";
-        password3.type = "text";
+       
     }
     else
     {
         password2.type = "password";
-        password3.type = "password";
+        
     }
     
 })
@@ -124,7 +124,7 @@ p.classList.add('para-alert');
 loginbtn.addEventListener('click', () => {
     var alertvalue = document.getElementById('alertcontainer');
     alertvalue.style.display = "flex";
-    p.innerText = "Welcome to Shop Easy"
+    p.innerText = "Login Successfully"
     alertvalue.append(p);
     var counter = 5;
     var interval = setInterval(() => {

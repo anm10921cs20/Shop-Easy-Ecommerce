@@ -94,13 +94,7 @@ function googleLogin() {
       alertmessge.style.display = "block"
       alertmessge.style.backgroundColor = "var(--bs-danger)";
       alertmessge.innerText = "Redirect Error: " + error.message;
-      var interval = setInterval(() => {
-        counter--;
-        if (counter < 0) {
-          clearInterval(interval);
-          alertmessge.style.display = "none";
-        }
-      }, 1000)
+     
     });
 };
 
@@ -151,7 +145,7 @@ function register() {
 }
 
 function login() {
-  const email = document.getElementById('loginemail').value;
+  const email = document.getElementById('login-email').value;
   const pwd = document.getElementById('loginpassword').value;
   const alertMsg = document.getElementById('alertcontainer');
   let counter = 2;
