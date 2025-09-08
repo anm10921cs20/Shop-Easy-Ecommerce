@@ -512,6 +512,7 @@ removeContainer.forEach((btn, idx) => {
             if (counter > 0) {
                 clearInterval(interval);
                 alertvalue.style.display = "none";
+                alertpara.innerText = "";
                 
             }
         }, 1000)
@@ -565,8 +566,9 @@ Mainbtn.addEventListener('click', function () {
 
 
 
-    } else {
-       alert('ok') 
+    } 
+    else {
+       window.location.href = "../checkout/shopeasy.html";
     }
 })
 

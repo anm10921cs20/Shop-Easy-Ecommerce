@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShopEasy-Checkout</title>
+    <link rel="icon" href="../images/logo/logo.png" type="text/png">
+
+    <link rel="stylesheet" href="../bootstrap-5.3.5-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./shopeasy.css">
+    <link rel="stylesheet" href="../cart.css">
+
+
+    <!-- fiere base -->
+
+    <script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-database-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-firestore-compat.js"></script>
+
+    <!-- login styles -->
+
+    <link rel="stylesheet" href="../login.css">
+
+
+    <!--fontawsesome cdn insert-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <div class="containers1">
+        <div class="nav-bars">
+            <div class="cart-header">
+                <nav class="nav-bar">
+                    <div class="app-left-bar">
+                        <i id="app-arrow" class="fas fa-arrow-left app-bars"></i>
+                    </div>
+                    <div class="app-title">
+                        <h4 class="app-title_head">Select Address <span id></span></h4>
+                    </div>
+                </nav>
+                <div class="first-container">
+                    <div class="main-header">
+                        <div class="circle">
+                            <div class="container1">
+                                <div class="circle1">
+                                    1
+                                </div>
+                                <div class="tit">
+                                    Address
+                                </div>
+                            </div>
+                            <div class="line1"></div>
+                            <div class="container2">
+                                <div class="circle2">
+                                    2
+                                </div>
+                                <div class="tit">
+                                    OrderSummary
+                                </div>
+                            </div>
+                            <div class="line2"></div>
+                            <div class="container3">
+                                <div class="circle3">
+                                    3
+                                </div>
+                                <div class="tit">
+                                    Payment
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="color-line">
+                    </div>
+                    <div class="add-btn" id="address-fill">
+                        <i class="fa-solid fa-plus"></i>
+                        Add a new address
+                    </div>
+                    <div class="color-line">
+                    </div>
+                    <div class=" btn-maincontainer">
+                                    <button class="btn btn-mainadd">Delivery Here</button>
+                                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- second container new name add abd address -->
+
+    <div class="address-content">
+        <div class="nav-bars">
+            <div class="cart-header">
+                <nav class="nav-bar">
+                    <div class="app-left-bar">
+                        <i id="app-arrow1" class="fas fa-arrow-left app-bars"></i>
+                    </div>
+                    <div class="app-title">
+                        <h4 class="app-title_head">Add delivery address <span id></span></h4>
+                    </div>
+                </nav>
+                <div class="first-container">
+                    <div class="main-header">
+                        <div class="circle">
+                            <div class="container1">
+                                <div class="circle1">
+                                    1
+                                </div>
+                                <div class="tit">
+                                    Address
+                                </div>
+                            </div>
+                            <div class="line1"></div>
+                            <div class="container2">
+                                <div class="circle2">
+                                    2
+                                </div>
+                                <div class="tit">
+                                    OrderSummary
+                                </div>
+                            </div>
+                            <div class="line2"></div>
+                            <div class="container3">
+                                <div class="circle3">
+                                    3
+                                </div>
+                                <div class="tit">
+                                    Payment
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="color-line">
+                    </div>
+                    <div class="form-submit">
+
+
+                        <div class="form-data">
+                            <form>
+                                <div class="form-floating mb-3">
+                                    <input type="text" class="form-control" id="floatingInput"
+                                        placeholder="name@example.com">
+                                    <label for="floatingInput">Full Name (Required)</label>
+                                </div>
+                                <div class="form-floating mb-3">
+                                    <input type="phone" class="form-control" id="floatingPassword"
+                                        placeholder="Password">
+                                    <label for="floatingPassword">Phone Number (Required)</label>
+                                </div>
+                                <div class="set1">
+                                    <div class="form-floating mb-3">
+                                        <input type="phone" class="form-control" id="floatingPassword"
+                                            placeholder="Password">
+                                        <label for="floatingPassword">Pin code (Required)</label>
+                                    </div>
+                                    <div class="form-floating mb-3">
+                                        <input type="phone" class="form-control" id="floatingPassword"
+                                            placeholder="Password">
+                                        <label for="floatingPassword">State (Required)</label>
+                                    </div>
+                                </div>
+                                <div class="form-floating mb-3">
+                                    <input type="phone" class="form-control" id="floatingPassword"
+                                        placeholder="Password">
+                                    <label for="floatingPassword">City (Required)</label>
+                                </div>
+                                <div class="form-floating mb-3">
+                                    <input type="phone" class="form-control" id="floatingPassword"
+                                        placeholder="Password">
+                                    <label for="floatingPassword">House No., Building Name (Required)</label>
+                                </div>
+                                <div class="form-floating mb-3">
+                                    <input type="phone" class="form-control" id="floatingPassword"
+                                        placeholder="Password">
+                                    <label for="floatingPassword">Road name, Area, Colony (Required)</label>
+                                </div>
+                                <div class="workaddress">
+                                    <div class="btn-type">Type of address</div>
+                                    <div class="btn-work">
+                                        <button class="btn btn-class" id="home"><i class="fa-solid fa-house" ></i> Home</button>
+                                        <button class="btn btn-class" id="work"><i class="fa-solid fa-building"></i> Work</button>
+                                    </div>
+                                </div><br>
+                                <div class=" btn-update">
+                                    <button class="btn btn-saveaddress">Save Address</button>
+                                </div>
+
+                            </form>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+
+
+    <!-- add address form -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class="cart-box grocery">
+        <div class="cart-content1">
+        </div>
+
+        <!-- container -->
+
+        <div class="totalvalue">
+            <div class="total-container">
+                <div class="total">
+
+                </div>
+                <div class="placeorder">
+                    <button class="placeorder-button btn btn-warning">Place Order</button>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+    <br><br><br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+<script src="./shopeasy.js"></script>
+
+
+<!--icons iconic websites script-->
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+
+<script src="../bootstrap-5.3.5-dist/js/bootstrap.min.js"></script>
+
+</html>
