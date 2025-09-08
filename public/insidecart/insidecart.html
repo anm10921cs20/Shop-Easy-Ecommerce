@@ -11,6 +11,18 @@
     <link rel="stylesheet" href="./insidecarts.css">
     <link rel="stylesheet" href="../cart.css">
 
+    
+    <!-- fiere base -->
+
+    <script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-database-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-firestore-compat.js"></script>
+
+    <!-- login styles -->
+
+    <link rel="stylesheet" href="../login.css">
+
 
     <!--fontawsesome cdn insert-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
@@ -61,7 +73,7 @@
 
                 </div>
                 <div class="placeorder">
-                    <button class="placeorder-button btn btn-warning">Place Order</button>
+                    <button class="placeorder-button btn btn-warning" id="maincart">Place Order</button>
                 </div>
             </div>
 
@@ -103,7 +115,7 @@
 
 <div id="alertcontainer" class="alertcontainer">
         <i class="fas fa-shopping-cart"></i>
-        <p class="para-alert" id="para-alert">Successful Remove to cart</p>
+        <p class="para-alert" id="para-alert"></p>
     </div>
 
 
@@ -111,6 +123,93 @@
 
 
 
+
+
+
+    <!-- login database cretion in the container -->
+
+    <div class="loginpage-container logincontainer">
+        <div class="header-items">
+            <div class="header-content1">
+                <div class="close-btn" id="close-login"><i class="fas fa-close close-login"></i></div>
+            </div>
+            <div class="header-topic">
+                <div class="data-tit-header">Shop Easy</div>
+                <div class="img"><i class="fas fa-shopping-bag shop"></i></div>
+            </div>
+        </div>
+        <br>
+        <p class="top-title">Log in for the best experience</p>
+        <p class="top-second-title">Enter your Email ID to <span id="changecontent">Login</span></p>
+        <br>
+        <div class="datastores-files">
+            <div class="login-container">
+                <form>
+                    <div class="form-floating mb-3">
+                        <input type="email" class="form-control" id="login-email"  placeholder="name@example.com">
+                        <label for="floatingInput" id="float-item">Email address</label>
+                    </div>
+                    <div class="form-floating">
+                        <input type="password" class="form-control login-password" id="loginpassword" placeholder="Password">
+                        <label for="floatingPassword" id="float-item">Password</label>
+                    </div><br>
+                    <div class="showpassword"><input type="checkbox" class="show"> Show Password</div>
+                    <br>
+                    <p class="forget-password">Forget Password</p>
+                </form>
+            </div>
+            <div class="register-container">
+                <form>
+                    <div class="form-floating mb-3">
+                        <input type="email" class="form-control" id="register-email"  placeholder="name@example.com">
+                        <label for="floatingInput" id="float-item">Email address</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control" id="register-name"  placeholder="Password">
+                        <label for="floatingPassword" id="float-item">Name</label>
+                    </div>
+                    
+                    <div class="form-floating">
+                        <input type="password" class="form-control register-password" id="register-password"  placeholder="Password">
+                        <label for="floatingPassword" id="float-item">Create Password</label>
+                    </div><br>
+                    <div class="showpassword"><input type="checkbox"  class="show" > Show Password</div>
+
+                </form><br>
+            </div>
+            <div class="forget-container">
+                <form>
+                    <div class="form-floating mb-3">
+                        <input type="email" class="form-control" id="forget-email"  placeholder="name@example.com">
+                        <label for="floatingInput" id="float-item">Email address</label>
+                    </div>
+                    
+
+                </form><br>
+            </div>
+        </div>
+       
+         <div class="  loginbtn" onclick="login1()">Login</div><br>
+          <div class="  registerbtn" onclick="register()">Register</div><br>
+           <div class=" forgetbtn" onclick="reset()">Send</div><br>
+        <div class="register-id1 login-container">New User? Register</div>
+        <div class="register-id2 register-container">Already? Account</div>
+        <div class="register-id3 forget-container">Already? Login</div>
+
+
+    </div>
+
+
+
+    <div class="logindatacontainer">
+        <div class="login-point">
+            <p>ShopEasy Login</p>
+        </div>
+        <div class="button">
+            <button class="btn btn-danger" id="cancelbtn">Cancel</button>
+            <button class="btn btn-primary" id="signinbtn">SignIn</button>
+        </div>
+    </div>
 
 
 
@@ -135,6 +234,10 @@
 </body>
 <script src="./insidecartstore.js"></script>
 <script src="./insidegrocerycart.js"></script>
+<!-- login page -->
+<script src="../loginfiles/cartauth.js"></script>
+<script src="../loginfiles/cartdb.js"></script>
+<script src="../loginfiles/cartlogin.js"></script>
 <!--icons iconic websites script-->
 <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
 

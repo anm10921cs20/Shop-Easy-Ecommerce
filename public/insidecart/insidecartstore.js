@@ -63,7 +63,7 @@ const emptydetails1 = `
 
 window.addEventListener('DOMContentLoaded', () => {
 
-    shopeasycart(); 
+    shopeasycart();
 
 })
 
@@ -74,9 +74,8 @@ window.addEventListener('DOMContentLoaded', () => {
 
 // shopeasy cart
 
-function shopeasycart()
-{
- if (containercartBox.children.length <= 0) {
+function shopeasycart() {
+    if (containercartBox.children.length <= 0) {
         containercartBox.innerHTML = emptydetails;
         return
 
@@ -154,17 +153,17 @@ function shopeasycart()
         shopeasy.append(productsdetails);
 
         update();
-        
+
         const btnplace = document.getElementsByClassName('totalvalue')[0];
         btnplace.style.display = "block";
 
 
 
 
-      
+
 
         const tooLowDiscount = document.getElementById('tolow');
-       
+
 
 
 
@@ -177,54 +176,54 @@ function shopeasycart()
         var corner = document.querySelectorAll('.common');
 
         if (parseInt(totalamt + 99) < 500) {
-              tooLowDiscount.style.display = "flex";
+            tooLowDiscount.style.display = "flex";
             lowDiscount.style.display = "none";
             averageDiscount.style.display = "none";
             mediumDiscount.style.display = "none";
             highDiscount.style.display = "none";
             toohighDiscount.style.display = "none";
             highlyDiscount.style.display = "none";
-            parseInt(totalamt+ 99) - 50;
+            parseInt(totalamt + 99) - 50;
             return;
-           
+
         }
         else if (parseInt(totalamt + 99) < 1000) {
             tooLowDiscount.style.display = "none";
-             lowDiscount.style.display = "flex";
+            lowDiscount.style.display = "flex";
             averageDiscount.style.display = "none";
             mediumDiscount.style.display = "none";
             highDiscount.style.display = "none";
             toohighDiscount.style.display = "none";
             highlyDiscount.style.display = "none";
-             var pricedecrease =   parseInt(totalamt+ 99) - 100;
+            var pricedecrease = parseInt(totalamt + 99) - 100;
             return;
 
         }
-         else if (parseInt(totalamt + 99) < 5000) {
+        else if (parseInt(totalamt + 99) < 5000) {
             tooLowDiscount.style.display = "none";
             lowDiscount.style.display = "none";
-             averageDiscount.style.display = "flex";
+            averageDiscount.style.display = "flex";
             mediumDiscount.style.display = "none";
             highDiscount.style.display = "none";
             toohighDiscount.style.display = "none";
             highlyDiscount.style.display = "none";
-             var pricedecrease =   parseInt(totalamt+ 99) - 500;
+            var pricedecrease = parseInt(totalamt + 99) - 500;
             return;
 
         }
-         else if (parseInt(totalamt + 99) < 10000) {
+        else if (parseInt(totalamt + 99) < 10000) {
             tooLowDiscount.style.display = "none";
             lowDiscount.style.display = "none";
             averageDiscount.style.display = "none";
-             mediumDiscount.style.display = "flex";
+            mediumDiscount.style.display = "flex";
             highDiscount.style.display = "none";
             toohighDiscount.style.display = "none";
             highlyDiscount.style.display = "none";
-             var pricedecrease =   parseInt(totalamt+ 99) - 1000;
+            var pricedecrease = parseInt(totalamt + 99) - 1000;
             return;
 
         }
-         else if (parseInt(totalamt + 99) < 15000) {
+        else if (parseInt(totalamt + 99) < 15000) {
             tooLowDiscount.style.display = "none";
             lowDiscount.style.display = "none";
             averageDiscount.style.display = "none";
@@ -232,21 +231,21 @@ function shopeasycart()
             highDiscount.style.display = "flex";
             toohighDiscount.style.display = "none";
             highlyDiscount.style.display = "none";
-             var pricedecrease =   parseInt(totalamt+ 99) - 2000;
+            var pricedecrease = parseInt(totalamt + 99) - 2000;
             return;
         }
-          else if (parseInt(totalamt + 99) < 50000) {
+        else if (parseInt(totalamt + 99) < 50000) {
             tooLowDiscount.style.display = "none";
             lowDiscount.style.display = "none";
             averageDiscount.style.display = "none";
             mediumDiscount.style.display = "none";
-             highDiscount.style.display = "none";
+            highDiscount.style.display = "none";
             toohighDiscount.style.display = "flex";
             highlyDiscount.style.display = "none";
-             var pricedecrease =   parseInt(totalamt- 3099);
-             console.log(pricedecrease);
-             
-               
+            var pricedecrease = parseInt(totalamt - 3099);
+            console.log(pricedecrease);
+
+
             return;
         }
         else if (parseInt(totalamt + 99) < 1000000000) {
@@ -254,12 +253,12 @@ function shopeasycart()
             lowDiscount.style.display = "none";
             averageDiscount.style.display = "none";
             mediumDiscount.style.display = "none";
-             highDiscount.style.display = "none";
+            highDiscount.style.display = "none";
             toohighDiscount.style.display = "none";
-              highlyDiscount.style.display = "flex";
-               var pricedecrease =   parseInt(totalamt+ 99);
-               pricedecrease-4000;
-           
+            highlyDiscount.style.display = "flex";
+            var pricedecrease = parseInt(totalamt + 99);
+            pricedecrease - 4000;
+
             return;
         }
 
@@ -286,6 +285,8 @@ var shopeasyLocal = localStorage.getItem('shoporder');
 
 
 var dataContainer = JSON.parse(shopeasyLocal) || [];
+
+
 
 
 
@@ -320,7 +321,9 @@ dataContainer.forEach((items, index) => {
 })
 
 
-  var count = dataContainer.length;
+
+
+var count = dataContainer.length;
 
 
 
@@ -358,7 +361,7 @@ function totalvalue() {
 
     }
     totalamt = total + 99;
-    document.getElementsByClassName('total')[0].innerText = "Rs. " + (totalamt < 500 ? totalamt - 50 :  totalamt -50 && totalamt < 1000 ? totalamt - 100 :  totalamt -100 && totalamt < 5000 ?  totalamt -500 : totalamt - 500  && totalamt < 10000 ?  totalamt -1000 : totalamt - 1000  && totalamt < 15000 ?  totalamt -2000 : totalamt - 2000  && totalamt < 50000 ?  totalamt -3000 : totalamt - 3000  && totalamt <1000000000 ?  totalamt -4000 : totalamt -4000);
+    document.getElementsByClassName('total')[0].innerText = "Rs. " + (totalamt < 500 ? totalamt - 50 : totalamt - 50 && totalamt < 1000 ? totalamt - 100 : totalamt - 100 && totalamt < 5000 ? totalamt - 500 : totalamt - 500 && totalamt < 10000 ? totalamt - 1000 : totalamt - 1000 && totalamt < 15000 ? totalamt - 2000 : totalamt - 2000 && totalamt < 50000 ? totalamt - 3000 : totalamt - 3000 && totalamt < 1000000000 ? totalamt - 4000 : totalamt - 4000);
 
 
 
@@ -387,13 +390,12 @@ plusBtns1.forEach((plus1, id) => {
 // decrement
 
 minusBtns1.forEach((minus1, id) => {
-    minus1.addEventListener('click', function (){
+    minus1.addEventListener('click', function () {
         var minus1 = parseInt(qtyInputs1[id].value);
-        if(minus1 > 1)
-        {
-            qtyInputs1[id].value = minus1 -1;
-             update()
-        totalvalue();
+        if (minus1 > 1) {
+            qtyInputs1[id].value = minus1 - 1;
+            update()
+            totalvalue();
         }
     })
 })
@@ -447,19 +449,19 @@ qty.forEach((qtys) => {
 function update() {
 
 
-      const pricediscount = document.querySelectorAll('.pricetotal1');
+    const pricediscount = document.querySelectorAll('.pricetotal1');
 
-        pricediscount.forEach((btns) => {
-            let btnValue = btns.innerText;
-            
-        })
- var totalprice = (totalamt-99);
+    pricediscount.forEach((btns) => {
+        let btnValue = btns.innerText;
+
+    })
+    var totalprice = (totalamt - 99);
     totalvalue.call(this)
-   
-   
+
+
 
     document.getElementsByClassName('pricetotal')[0].innerText = "Rs." + totalprice;
-    document.getElementsByClassName('pricetotal2')[0].innerText = "Rs." + (totalamt < 500 ? totalamt - 50 :  totalamt -50 && totalamt < 1000 ? totalamt - 100 :  totalamt -100 && totalamt < 5000 ?  totalamt -500 : totalamt - 500  && totalamt < 10000 ?  totalamt -1000 : totalamt - 1000  && totalamt < 15000 ?  totalamt -2000 : totalamt - 2000  && totalamt < 50000 ?  totalamt -3000 : totalamt - 3000  && totalamt <100000 ?  totalamt -4000 : totalamt -4000);
+    document.getElementsByClassName('pricetotal2')[0].innerText = "Rs." + (totalamt < 500 ? totalamt - 50 : totalamt - 50 && totalamt < 1000 ? totalamt - 100 : totalamt - 100 && totalamt < 5000 ? totalamt - 500 : totalamt - 500 && totalamt < 10000 ? totalamt - 1000 : totalamt - 1000 && totalamt < 15000 ? totalamt - 2000 : totalamt - 2000 && totalamt < 50000 ? totalamt - 3000 : totalamt - 3000 && totalamt < 100000 ? totalamt - 4000 : totalamt - 4000);
 
     const detailsContainer = document.getElementsByClassName('details-container')[0];
     const chevronDown = document.getElementsByClassName('fa-chevron-down')[0];
@@ -500,14 +502,17 @@ removeContainer.forEach((btn, idx) => {
     btn.addEventListener('click', function () {
         // Remove the cart item from DOM
         this.parentElement.remove();
-           var alertvalue = document.getElementById('alertcontainer');
-        alertvalue.style.display = "flex"
+        var alertvalue = document.getElementById('alertcontainer');
+        var alertpara = document.getElementsByClassName('para-alert')[0];
+        alertvalue.style.display = "flex";
+        alertpara.innerText = "Successful Remove to cart";
         var counter = 8;
         var interval = setInterval(() => {
             counter--;
             if (counter > 0) {
                 clearInterval(interval);
                 alertvalue.style.display = "none";
+                
             }
         }, 1000)
         totalvalue()
@@ -518,6 +523,7 @@ removeContainer.forEach((btn, idx) => {
             dataContainer.splice(idx, 1); // Removes 1 element at index idx
         }
         localStorage.setItem("shoporder", JSON.stringify(dataContainer));
+        localStorage.setItem('mainorder', JSON.stringify(dataContainer));
 
         // If cart is empty, clear localStorage and show empty message
         if (dataContainer.length === 0) {
@@ -531,8 +537,38 @@ removeContainer.forEach((btn, idx) => {
 
 
 
+const Mainbtn = document.getElementById('maincart');
+Mainbtn.addEventListener('click', function () {
+    if (localStorage.getItem('userid') === null) {
+
+        const logindata = document.getElementsByClassName('logindatacontainer')[0];
+        logindata.style.display = "block";
+      
+  const logindataclose = document.getElementById('cancelbtn');
+        logindataclose.addEventListener('click', () => {
+            logindata.style.display = "none";
+        })
+
+       const signbtn = document.getElementById('signinbtn'); 
+       signbtn.addEventListener('click', () => {
+         const loginpageContainer = document.getElementsByClassName('loginpage-container')[0];
+        loginpageContainer.classList.add('loginpage-container-active');
+
+        //  close login btn
+
+        const closeLogin = document.getElementsByClassName('close-login')[0];
+        closeLogin.addEventListener('click', () => {
+            loginpageContainer.classList.remove('loginpage-container-active');
+        });
+       })
+       
 
 
+
+    } else {
+       alert('ok') 
+    }
+})
 
 
 

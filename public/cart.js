@@ -90,6 +90,7 @@ function additemsclicked(event) {
         items.push(datas);
         const sting = JSON.stringify(items);
         localStorage.setItem('shoporder', sting);
+         localStorage.setItem('mainorder', JSON.stringify(datas));
 
 
 
@@ -127,6 +128,7 @@ function additemsclicked(event) {
 
 
         localStorage.setItem('shoporder', JSON.stringify(items))
+          localStorage.setItem('mainorder', JSON.stringify(items));
 
     }
 
