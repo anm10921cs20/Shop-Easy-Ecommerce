@@ -342,6 +342,17 @@
         box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.2);
 
     }
+    #address-fill1
+    {
+        height: auto;
+        padding: 20px;
+        color: var(--bs-primary);
+        font-size: 15px;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+        box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.2);
+      
+    }
+    
 
     label {
         font-size: 13px;
@@ -425,6 +436,67 @@
         padding: 8px 0;
         width: 99%;
         border-radius: none;
+    }
+    .btn-mainadd:hover
+    {
+        background-color: var(--bs-primary);
+        color: #fff;
+    }
+    .btn-saveaddress:hover
+    {
+        border: 1px solid #ff5800;
+        background-color: #ff5800;
+        color: #fff;
+        padding: 8px 0;
+        width: 90%;
+    }
+    .locate:hover
+    {
+         background-color: var(--bs-primary);
+        color: #fff;
+    }
+    .head-content
+    {
+        display: flex;
+        gap: 10px;
+    }
+    .addressdata
+    {
+        width: 80%;
+        display: flex;
+        justify-content: start;
+        column-gap: 40px;
+        line-height: 20px;
+        color: #000;
+    }
+    .index-value
+    {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 140px;
+
+    }
+    .head-content-para
+    {
+        font-size: 11px;
+        background-color: rgba(153, 153, 153, 0.356);
+        padding: 2px;
+    }
+     .cart-remove
+    {
+        color: #ff43439f;
+        font-size: 20px;
+        padding: 10px;
+        display: block;
+        margin: auto auto;
+        position: absolute;
+        right: 20px;
+    }
+    .address-select
+    {
+        position: absolute;
+        left: 20px;
     }
 
 

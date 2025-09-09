@@ -296,7 +296,7 @@ dataContainer.forEach((items, index) => {
 
     var cartdivs = document.createElement('div');
     cartdivs.classList.add('cart-item');
-    cartdivs.innerHTML = ` <img src="${items.img}" alt="" class="cart-img">
+    cartdivs.innerHTML = ` <a href="${items.anchor}"><img src="${items.img}" alt="" class="cart-img"></a>
                     <div class="detail-box">
                         <div class="cart-name">${items.name}</div>
                         <div class="price-box">

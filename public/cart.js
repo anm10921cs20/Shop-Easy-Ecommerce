@@ -64,6 +64,23 @@ function heartclicked(event) {
         localStorage.setItem('heart', JSON.stringify(hearts))
     }
 
+
+
+
+    var alertvalue = document.getElementById('alertcontainer');
+     var paravalue = document.getElementById('para-alert');
+    alertvalue.style.display = "flex";
+    paravalue.innerText = "Succes Added To Wishlist"
+    var counter = 3;
+    var interval = setInterval(() => {
+        counter--;
+        if (counter > 0) {
+            clearInterval(interval);
+            alertvalue.style.display = "none";
+            paravalue.innerText = "";
+        }
+    }, 1000)
+
 }
 
 
@@ -80,6 +97,7 @@ function additemsclicked(event) {
 
 
     var datas = {
+        anchor:shopitemsvalue.parentElement.href,
         name: shopitemsvalue.getElementsByClassName('mobile-name')[0].innerText,
         img: shopitemsvalue.getElementsByClassName('product-img')[0].src,
         brand: shopitemsvalue.getElementsByClassName('mobile-brand-name')[0].innerText,

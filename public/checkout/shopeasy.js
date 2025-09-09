@@ -22,3 +22,132 @@ openBtn1.addEventListener('click', () => {
     addressaddContainer.style.display = "none";
     maincontainer.style.display = "block";
 })
+
+function addressstore() {
+    const forms = document.getElementById('form');
+    const names = document.getElementsByClassName('form-control')[0].value;
+    const phoneno = document.getElementsByClassName('form-control')[1].value;
+    const pincode = document.getElementsByClassName('form-control')[2].value;
+    const state = document.getElementsByClassName('form-control')[3].value;
+    const city = document.getElementsByClassName('form-control')[4].value;
+    const houseno = document.getElementsByClassName('form-control')[5].value;
+    const roadname = document.getElementsByClassName('form-control')[6].value;
+
+
+    const home = document.getElementsByClassName('locate')[0];
+    const work = document.getElementsByClassName('locate')[0];
+
+    home.addEventListener('click', () => {
+        home.innerText;
+    })
+
+    work.addEventListener('click', () => {
+        work.innerText;
+    })
+
+    var detailsstore = [];
+
+    var addressdata = {
+        name: names,
+        phoneno: phoneno,
+        pincode: pincode,
+        state: state,
+        city: city,
+        houseno: houseno,
+        roadname: roadname,
+        homevalue: home.innerText,
+        workvalue: work,
+        no:1
+    };
+  
+
+
+    if (JSON.parse(localStorage.getItem('address-details')) === null) {
+          detailsstore.push(addressdata)
+        localStorage.setItem('address-details', JSON.stringify(detailsstore));
+    } else {
+        const valueaddress = JSON.parse(localStorage.getItem('address-details'));
+        valueaddress.map(vals=>{
+            if(addressdata.houseno == vals.houseno)
+            {
+               
+            }
+            else
+            {
+                detailsstore.push(vals);
+            }
+        })
+        detailsstore.push(addressdata)
+        localStorage.setItem('address-details', JSON.stringify(detailsstore));
+    }
+
+
+
+
+
+
+
+
+}
+
+const btnsaveaddress = document.getElementsByClassName('btn-saveaddress')[0];
+const form = document.getElementsByClassName('form-control')[0]
+const form1 = document.getElementsByClassName('form-control')[1]
+const form2 = document.getElementsByClassName('form-control')[2]
+const form3 = document.getElementsByClassName('form-control')[3]
+const form4 = document.getElementsByClassName('form-control')[4]
+const form5 = document.getElementsByClassName('form-control')[5]
+const form6 = document.getElementsByClassName('form-control')[6]
+
+
+btnsaveaddress.addEventListener('click', (e) => {
+
+    const names = document.getElementsByClassName('form-control')[0].value;
+    const phoneno = document.getElementsByClassName('form-control')[1].value;
+    const pincode = document.getElementsByClassName('form-control')[2].value;
+    const state = document.getElementsByClassName('form-control')[3].value;
+    const city = document.getElementsByClassName('form-control')[4].value;
+    const houseno = document.getElementsByClassName('form-control')[5].value;
+    const roadname = document.getElementsByClassName('form-control')[6].value;
+
+
+    e.preventDefault();
+
+    addressstore()
+    addressaddContainer.style.display = "none";
+    window.location.reload()
+
+})
+
+
+
+
+
+
+// add items like
+
+
+const containeraddress = document.getElementsByClassName('add-btns')[0];
+
+
+
+const items = localStorage.getItem('address-details');
+
+const addressitems = JSON.parse(items) || [];
+
+const addresscount = document.getElementById('countaddress');
+var addresscountvalue = addressitems.length
+addresscount.innerText = `(${addresscountvalue})`;
+
+
+addressitems.forEach((items, idx) => {
+    const divcont = document.createElement('div');
+    divcont.classList.add('addressdata');
+    divcont.innerHTML = `<div class="index-value"><input type="radio" name="address" class="address-select"></div><div><div class="head-content"><h6>${items.name}</h6><p class="head-content-para">${items.homevalue}</p></div>
+<p>${items.houseno},${items.roadname},${items.city},${items.state},${items.pincode}</p><p>${items.phoneno}</p><br>  
+
+</div>
+<ion-icon name="trash" class="cart-remove removeshopeasy"></ion-icon>
+`
+    containeraddress.append(divcont)
+});
