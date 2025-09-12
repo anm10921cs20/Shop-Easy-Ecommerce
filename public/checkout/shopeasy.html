@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="../bootstrap-5.3.5-dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="./shopeasy.css">
     <link rel="stylesheet" href="../cart.css">
+    <link rel="stylesheet" href="../insidecart/insidecarts.css">
 
 
     <!-- fiere base -->
@@ -39,7 +40,7 @@
                         <i id="app-arrows" class="fas fa-arrow-left app-bars"></i>
                     </div>
                     <div class="app-title">
-                        <h4 class="app-title_head">Select Address   <span id="countaddress"></span></h4>
+                        <h4 class="app-title_head">Select Address <span id="countaddress"></span></h4>
                     </div>
                 </nav>
                 <div class="first-container">
@@ -82,7 +83,7 @@
                     <div class="color-line">
                     </div>
                     <div class="add-btn add-btns" id="address-fill1">
-                       
+
                     </div>
                     <div class=" btn-maincontainer">
                         <button class="btn btn-mainadd">Delivery Here</button>
@@ -186,22 +187,22 @@
                                     <div class="btn-type">Type of address</div>
                                     <div class="btn-work">
                                         <div class="btn btn-class locate"><i class="fa-solid fa-house"></i> Home</div>
-                                       
-                                        </div>
+
                                     </div>
-                                </div><br>
-                                <div class="fill"></div><br>
-                                <div class=" btn-update">
-                                    <button class="btn btn-saveaddress">Save Address</button>
                                 </div>
-
-                            </form>
+                        </div><br>
+                        <div class="fill"></div><br>
+                        <div class=" btn-update">
+                            <button class="btn btn-saveaddress">Save Address</button>
                         </div>
-                    </div>
 
+                        </form>
+                    </div>
                 </div>
+
             </div>
         </div>
+    </div>
 
 
     </div>
@@ -265,17 +266,159 @@
                     <div class="color-line">
                     </div>
                     <div class="add-btn add-btns cart-details-container" id="address-fills">
-                       
+
                     </div>
-                     <div class="color-line">
+                    <div class="color-line">
                     </div>
-                    <div class=" btn-maincontainer">
-                        <button class="btn btn-orderadd">Delivery Here</button>
+                    <div class=" btn-ordercontainer">
+                        <div class="total-container">
+                            <div class="total-value">Rs.0</div>
+                            <div class="btn btn-orderadd">Continue</div>
+                        </div>
+
+                    </div>
+                    <div class="add-btn add-btns datascroll" id="address-fills">
+                        <div class="detailscontainer">
+                            <div class="pricedetails">
+                                <h4 class="pricedetails-tit">Price Details</h4>
+                                <i class="fas fa-chevron-down"></i>
+                            </div><br>
+                            <div class="details-container">
+                                <div class="details-price">
+                                    <p class="price">Price(<span class="qty"></span>)</p>
+                                    <p class="pricetotal" id="total-value2"></p>
+
+                                </div>
+                                <div class="details-price">
+                                    <p class="price">Protect Promise Fee</p>
+                                    <p class="pricetotal1">Rs.99</p>
+
+                                </div>
+
+
+                            </div>
+                            <div class="details-price text-primary">
+                                <p class="price">Total Amount</p>
+                                <p class="pricetotal2" id="total-value1"></p>
+
+                            </div>
+                        </div>
+
                     </div>
                 </div>
             </div>
         </div>
     </div>
+
+
+
+
+    <!-- payments container -->
+
+
+    <div class="containers3">
+        <div class="nav-bars">
+            <div class="cart-header">
+                <nav class="nav-bar">
+                    <div class="app-left-bar">
+                        <i id="app-arrows1" class="fas fa-arrow-left app-bars"></i>
+                    </div>
+                    <div class="app-title">
+                        <h4 class="app-title_head">Payments <span id="countaddress"></span></h4>
+                    </div>
+                </nav>
+                <div class="first-container">
+                    <div class="main-header">
+                        <div class="circle">
+                            <div class="container1">
+                                <div class="tick1">
+                                    <i class="fa-solid fa-check"></i>
+                                </div>
+                                <div class="tit">
+                                    Address
+                                </div>
+                            </div>
+                            <div class="line1"></div>
+                            <div class="container2">
+                                <div class="tick1">
+                                    <i class="fa-solid fa-check"></i>
+                                </div>
+                                <div class="tit">
+                                    OrderSummary
+                                </div>
+                            </div>
+                            <div class="line2"></div>
+                            <div class="container3">
+                                <div class="circle1">
+                                    3
+                                </div>
+                                <div class="tit">
+                                    Payment
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="color-line">
+                    </div>
+                    <div class="main-amt">
+                        <div class="totaldetails">
+                            <div class="details-price">
+                                <p class="price">Price(<span class="qtya"></span>)</p>
+                                <p class="pricetotal" id="total-value3"></p>
+
+                            </div>
+                            <div class="details-price">
+                                <p class="price">Protect Promise Fee</p>
+                                <p class="pricetotal1">Rs.99</p>
+
+                            </div>
+                        </div>
+                        <div class="totalamount">
+                            <p class="totalamount-tit">Total Amount <i class="fas fa-chevron-down text-primary"></i></p>
+                            <p class="total-amt"></p>
+                        </div>
+
+                    </div>
+                    <div>
+                        <p class="text-success text-center">Payment Methods Select</p><br>
+                        <hr>
+                        <div class="cashondelivery">
+                            <div class="cashset"> <ion-icon name="cash-outline" class="cash"></ion-icon>
+                                <p class="cash-tit">Cash on Delivery</p>
+                            </div>
+                            <div class="cheveron "><i class="fas fa-chevron-down text-dark"></i></div>
+                        </div>
+                        <div class="notes-btn">
+                            <button class="btn-deliveradd">Delivery Here</button>
+                        </div>
+                        <hr>
+                        <div class="upi">
+                        <div class="cashondelivery">
+                            <div class="cashset"> <ion-icon name="logo-paypal" class="cash"></ion-icon> 
+                                <p class="cash-tit">UPI</p>
+                            </div>
+                            <div class="cheveron "><i class="fas fa-chevron-down text-dark"></i></div>
+                        </div>
+                        <div class="notes-btn">
+                            <div class="upiid">
+                                <p>UPI ID</p>
+                                <input type="text" placeholder="Enter Your Upi id">
+                            </div><br>
+                            <button class="btn-deliveradd" id="upidelivery">Delivery Here</button>
+                        </div>
+                        <hr>
+                        </div>
+                    </div>
+
+                    <div class=" btn-maincontainer">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
 
 
 
@@ -354,6 +497,9 @@
 
     </div>
     <br><br><br>
+
+
+
 
 
 

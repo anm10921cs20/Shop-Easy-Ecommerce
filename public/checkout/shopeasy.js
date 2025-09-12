@@ -331,7 +331,7 @@ addressitems.forEach((items, idx) => {
     const divcont = document.createElement('div');
     divcont.classList.add('addressdata');
     divcont.innerHTML = `<div class="index-value"><input type="radio" name="address" class="address-select"></div><div class="data"><div class="head-content"><h6>${items.name}</h6><p class="head-content-para">${items.homevalue}</p></div>
-<p>${items.houseno},${items.roadname},${items.city},${items.state},${items.pincode}</p><p>${items.phoneno}</p><br>  
+<p>${items.houseno},${items.roadname},${items.city},${items.state} ${items.pincode}</p><p>${items.phoneno}</p><br>  
 
 </div>
 <ion-icon name="trash" class="cart-remove"></ion-icon>
@@ -414,24 +414,17 @@ const datastored = JSON.parse(datamainorder) || [];
 datastored.forEach((datas, idx) => {
     const datadiv = document.createElement('div');
     datadiv.classList.add('cart-itemdata');
-    datadiv.innerHTML = `<div class="img-values"><img src="${datas.img}" alt="" class="cart-img"> <div><select class="select-qty">
-    <option value="1">1</option>
-    <option value="2">2</option>
-     <option value="3">3</option>
-      <option value="4">4</option>
-       <option value="5">5</option>
-        <option value="6">6</option>
-         <option value="7">7</option>
-          <option value="8">8</option>
-           <option value="9">9</option>
-           <option value="10">10</option>
+    datadiv.classList.add('cart-item')
+    datadiv.innerHTML = `<div class="img-values"><img src="${datas.img}" alt="" class="cart-img"> <div>Qty
+   <input type="number" class="cart-quantity" value="1">
 
-    </select></div></div>
+</div></div>
                     <div class="detail-box">
                    
                         <div class="cart-name">${datas.name}</div>
                         <div class="price-box">
                             <div class="cart-price">${datas.price}</div>
+                             <div class="cart-amt">0</div> 
                         </div>
                        
                         <div class="product-brand">${datas.brand}</div> 
@@ -450,8 +443,8 @@ datastored.forEach((datas, idx) => {
 
 const mainbtn = document.getElementsByClassName('btn-mainadd')[0];
 mainbtn.addEventListener('click', () => {
-    orderContiner.style.display="block";
-    maincontainer.style.display="none";
+    orderContiner.style.display = "block";
+    maincontainer.style.display = "none";
 })
 
 var openBtn2 = document.getElementsByClassName('app-bars')[2];
@@ -462,4 +455,143 @@ openBtn2.addEventListener('click', () => {
     maincontainer.style.display = "block";
 })
 
+function carttotal() {
+    var cartboxes = dataapend.getElementsByClassName('cart-itemdata');
+    var total = 0;
+    for (var i = 0; i < cartboxes.length; i++) {
+        var cartbox = cartboxes[i];
+        var priceElement = cartbox.getElementsByClassName('cart-price')[0]; // Corrected index access
+        var qtyElement = cartbox.getElementsByClassName('cart-quantity')[0];
+        var qtyamt = cartbox.getElementsByClassName('cart-amt')[0];
 
+        // Check if priceElement is defined before accessing its properties
+        if (priceElement) {
+            var price = parseFloat(priceElement.innerText.replace("Rs.", ""));
+            var qty = qtyElement.value;
+            console.log(qty)
+            qtyamt.innerText = "RS." + price * qty;
+
+            total = total + price * qty;
+        } else {
+            // Handle the case where priceElement is not found
+            console.warn("Element with class 'cart-price' not found in cart item:", cartbox);
+        }
+
+    }
+
+
+
+    var totalvalue = (total + 100);
+    document.getElementById('total-value1').innerText = "Rs." + totalvalue;
+    document.getElementsByClassName('total-value')[0].innerText = "Rs." + totalvalue;
+    document.getElementsByClassName('total-amt')[0].innerText = "Rs." + totalvalue;
+    document.getElementById('total-value2').innerText = "Rs." + total;
+
+    document.getElementById('upidelivery').innerText = "Rs." + totalvalue;
+
+    
+
+    const totalstorage = localStorage.getItem('finaltotal');
+    document.getElementById('total-value3').innerText = "Rs." + total;
+
+
+
+
+
+    localStorage.setItem('finaltotal', totalvalue)
+    
+}
+carttotal()
+
+
+
+var qtyes = document.querySelectorAll('.cart-quantity');
+
+qtyes.forEach((qtys) => {
+    qtys.addEventListener('change', updateqty)
+
+})
+
+
+function updateqty() {
+    if (isNaN(this.value) || this.value < 1) {
+        this.value = 1;
+
+    }
+    var qtyarray = [];
+    for (var i = 0; i < qtyes.length; i++) {
+        qtyarray.push(qtyes[i].value)
+        localStorage.setItem('qty-value', JSON.stringify(qtyarray))
+    }
+
+
+    carttotal()
+}
+
+
+// details 
+var countervalue = datastored.length
+const detailsContainer = document.getElementsByClassName('details-container')[0];
+const chevronDown = document.getElementsByClassName('fa-chevron-down')[0];
+const priceDetails = document.getElementsByClassName('pricedetails')[0];
+
+priceDetails.addEventListener('click', () => {
+    detailsContainer.classList.toggle('details-container-active')
+    chevronDown.classList.toggle('fa-chevron-down-active');
+})
+var qtyss = document.getElementsByClassName('qty')[0];
+var qtysa = document.getElementsByClassName('qtya')[0];
+
+
+qtyss.innerText = `${countervalue}item`;
+qtysa.innerText = `${countervalue}item`;
+
+
+
+
+// payment page
+
+const finaltotal = localStorage.getItem('finaltotal');
+
+
+const totalamount = document.getElementsByClassName('totalamount')[0];
+const totaloontiner = document.getElementsByClassName('totaldetails')[0];
+const chevronDown1 = document.getElementsByClassName('fa-chevron-down')[1];
+totalamount.addEventListener('click', () => {
+    totaloontiner.classList.toggle('totaldetails-active');
+    chevronDown1.classList.toggle('fa-chevron-down-active');
+})
+
+
+const btnorder = document.getElementsByClassName('btn-orderadd')[0];
+const paymentcontainer = document.getElementsByClassName('containers3')[0];
+
+btnorder.addEventListener('click', () => {
+    orderContiner.style.display = "none";
+    paymentcontainer.style.display = "block";
+
+})
+var openBtn3 = document.getElementById('app-arrows1');
+
+//event listener nav open
+openBtn3.addEventListener('click', () => {
+    orderContiner.style.display = "block";
+    paymentcontainer.style.display = "none";
+})
+
+const chevronDown2 = document.getElementsByClassName('fa-chevron-down')[2];
+
+const cashon = document.getElementsByClassName('cashondelivery')[0];
+const notebnt = document.getElementsByClassName('notes-btn')[0];
+cashon.addEventListener('click', () => {
+      notebnt.classList.toggle('notes-btn-active');
+    chevronDown2.classList.toggle('fa-chevron-down-active');
+})
+const chevronDown3 = document.getElementsByClassName('fa-chevron-down')[3];
+
+const cashon1 = document.getElementsByClassName('cashondelivery')[1];
+const notebnt1 = document.getElementsByClassName('notes-btn')[1];
+cashon1.addEventListener('click', () => {
+      notebnt1.classList.toggle('notes-btn-active');
+    chevronDown3.classList.toggle('fa-chevron-down-active');
+})

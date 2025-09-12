@@ -570,7 +570,7 @@
     {
         color: #000;
         border: 1px solid rgba(0, 0, 0, 0.2);
-        padding: 0 4px;
+        width: 50px;
         border-radius: 4px;
        
     }
@@ -579,15 +579,123 @@
         outline: none;
         border: 1px solid var(--bs-primary);
     }
-    option
+ 
+    .btn-ordercontainer
     {
+        position: fixed;
+        bottom: 0px;
         background-color: #fff;
-        font-size: 12px;
-        border: none;
-        outline: none;
-        box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.2),
-        -2px -2px 3px rgba(0, 0, 0, 0.2);
+        z-index: 20000;
+        height: 45px;
+        width: 100%;
     }
+    .btn-orderadd
+    {
+        background-color: #ffc200;
+        padding: 5px 50px;
+    }
+    .detailscontainer
+    {
+        height: auto;
+        width: 100%;
+        background-color: #f1f3f6;
+    }
+    .btn-orderadd:hover,
+    .btn-orderadd:focus
+    {
+        background-color: #ffc200;
+        padding: 5px 50px; 
+    }
+    .totalamount
+    {
+        display: flex;
+        color: var(--bs-primary);
+        justify-content: space-between;
+        width: 90%;
+        height: 40px;
+        margin: 0 auto;
+        align-items: center;
+        background-color: #f0f5ff;
+        border-radius: 12px;
+        padding: 0 20px;
+         transition: all 0.5s ease-in-out;
+    }
+    .totaldetails
+    {
+       color: var(--bs-dark);
+        justify-content: space-between;
+        width: 90%;
+        margin: 0 auto;
+        align-items: center;
+        background-color: #f0f5ff;
+        border-radius: 12px;
+        transition: all 0.1s 2s;
+        display: none;
+         
+    }
+    .totaldetails-active
+    {
+        display: block;
+        transition: all 0.5s ease-in-out;
+    }
+    .main-amt
+    {
+        padding: 12px 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+         transition:height 1s ease-in-out;
+    }
+    .containers3
+    {
+        display: none;
+    }
+    .cashondelivery
+    {
+        display: flex;
+        justify-content: space-between;
+        width: 90%;
+        margin: 0 auto;
+        height: 40px;
+    }
+    .notes-btn
+    {
+         width: 90%;
+        margin: 0 auto;
+          display: flex;
+          flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        display: none;
+    }
+    .btn-deliveradd
+    {
+        background-color: #ffc200;
+        border: none;
+        width: 80%;
+        padding: 7px 0;
+        border-radius: 4px;
+      
+    }
+    .cashset
+    {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+    .cash
+    {
+        font-size: 29px;
+        margin-bottom: 10px;
+    }
+    .notes-btn-active
+    {
+        display: flex;
+    }
+
+
+
 
 
 
