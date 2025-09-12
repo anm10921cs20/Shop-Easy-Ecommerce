@@ -57,23 +57,21 @@ function addressstore() {
         roadname: roadname,
         homevalue: home.innerText,
         workvalue: work,
-        no:1
+        no: 1
     };
-  
+
 
 
     if (JSON.parse(localStorage.getItem('address-details')) === null) {
-          detailsstore.push(addressdata)
+        detailsstore.push(addressdata)
         localStorage.setItem('address-details', JSON.stringify(detailsstore));
     } else {
         const valueaddress = JSON.parse(localStorage.getItem('address-details'));
-        valueaddress.map(vals=>{
-            if(addressdata.houseno == vals.houseno)
-            {
-               
+        valueaddress.map(vals => {
+            if (addressdata.houseno == vals.houseno) {
+
             }
-            else
-            {
+            else {
                 detailsstore.push(vals);
             }
         })
@@ -98,6 +96,7 @@ const form3 = document.getElementsByClassName('form-control')[3]
 const form4 = document.getElementsByClassName('form-control')[4]
 const form5 = document.getElementsByClassName('form-control')[5]
 const form6 = document.getElementsByClassName('form-control')[6]
+const alert = document.getElementsByClassName('fill')[0];
 
 
 btnsaveaddress.addEventListener('click', (e) => {
@@ -113,9 +112,197 @@ btnsaveaddress.addEventListener('click', (e) => {
 
     e.preventDefault();
 
-    addressstore()
-    addressaddContainer.style.display = "none";
-    window.location.reload()
+    var counter = 16;
+
+
+    if (form.value.length < 5) {
+        var interval = setInterval(() => {
+            counter--;
+            if (counter < 0) {
+                clearInterval(interval);
+                form.style.border = "1px solid rgba(0, 0, 0, 0.2)";
+                form1.style.border = "1px solid rgba(0, 0, 0, 0.2)";
+                form2.style.border = "1px solid rgba(0, 0, 0, 0.2)";
+                form3.style.border = "1px solid rgba(0, 0, 0, 0.2)";
+                form4.style.border = "1px solid rgba(0, 0, 0, 0.2)";
+                form5.style.border = "1px solid rgba(0, 0, 0, 0.2)";
+                form6.style.border = "1px solid rgba(0, 0, 0, 0.2)";
+                alert.innerText = "";
+
+            }
+        }, 1000)
+        form.style.border = "1px solid var(--bs-danger)";
+        form1.style.border = "1px solid var(--bs-danger)";
+        form2.style.border = "1px solid var(--bs-danger)";
+        form3.style.border = "1px solid var(--bs-danger)";
+        form4.style.border = "1px solid var(--bs-danger)";
+        form5.style.border = "1px solid var(--bs-danger)";
+        form6.style.border = "1px solid var(--bs-danger)";
+        alert.innerText = "Fill Blank Details";
+    }
+    if (form1.value.length < 5) {
+        var interval = setInterval(() => {
+            counter--;
+            if (counter < 0) {
+                clearInterval(interval);
+                form.style.border = "1px solid rgba(0, 0, 0, 0.2)";
+                form1.style.border = "1px solid rgba(0, 0, 0, 0.2)";
+                form2.style.border = "1px solid rgba(0, 0, 0, 0.2)";
+                form3.style.border = "1px solid rgba(0, 0, 0, 0.2)";
+                form4.style.border = "1px solid rgba(0, 0, 0, 0.2)";
+                form5.style.border = "1px solid rgba(0, 0, 0, 0.2)";
+                form6.style.border = "1px solid rgba(0, 0, 0, 0.2)";
+                alert.innerText = "";
+
+            }
+        }, 1000)
+
+        form.style.border = "1px solid var(--bs-danger)";
+        form1.style.border = "1px solid var(--bs-danger)";
+        form2.style.border = "1px solid var(--bs-danger)";
+        form3.style.border = "1px solid var(--bs-danger)";
+        form4.style.border = "1px solid var(--bs-danger)";
+        form5.style.border = "1px solid var(--bs-danger)";
+        form6.style.border = "1px solid var(--bs-danger)";
+        alert.innerText = "Fill Blank Details";
+
+    }
+    if (form2.value.length < 5) {
+        var interval = setInterval(() => {
+            counter--;
+            if (counter < 0) {
+                clearInterval(interval);
+                form.style.border = "1px solid rgba(0, 0, 0, 0.2)";
+                form1.style.border = "1px solid rgba(0, 0, 0, 0.2)";
+                form2.style.border = "1px solid rgba(0, 0, 0, 0.2)";
+                form3.style.border = "1px solid rgba(0, 0, 0, 0.2)";
+                form4.style.border = "1px solid rgba(0, 0, 0, 0.2)";
+                form5.style.border = "1px solid rgba(0, 0, 0, 0.2)";
+                form6.style.border = "1px solid rgba(0, 0, 0, 0.2)";
+                alert.innerText = "";
+
+            }
+        }, 1000)
+        form.style.border = "1px solid var(--bs-danger)";
+        form1.style.border = "1px solid var(--bs-danger)";
+        form2.style.border = "1px solid var(--bs-danger)";
+        form3.style.border = "1px solid var(--bs-danger)";
+        form4.style.border = "1px solid var(--bs-danger)";
+        form5.style.border = "1px solid var(--bs-danger)";
+        form6.style.border = "1px solid var(--bs-danger)";
+        alert.innerText = "Fill Blank Details";
+
+    }
+    if (form3.value.length < 5) {
+        var interval = setInterval(() => {
+            counter--;
+            if (counter < 0) {
+                clearInterval(interval);
+                form.style.border = "1px solid rgba(0, 0, 0, 0.2)";
+                form1.style.border = "1px solid rgba(0, 0, 0, 0.2)";
+                form2.style.border = "1px solid rgba(0, 0, 0, 0.2)";
+                form3.style.border = "1px solid rgba(0, 0, 0, 0.2)";
+                form4.style.border = "1px solid rgba(0, 0, 0, 0.2)";
+                form5.style.border = "1px solid rgba(0, 0, 0, 0.2)";
+                form6.style.border = "1px solid rgba(0, 0, 0, 0.2)";
+                alert.innerText = "";
+            }
+        }, 1000)
+        form.style.border = "1px solid var(--bs-danger)";
+        form1.style.border = "1px solid var(--bs-danger)";
+        form2.style.border = "1px solid var(--bs-danger)";
+        form3.style.border = "1px solid var(--bs-danger)";
+        form4.style.border = "1px solid var(--bs-danger)";
+        form5.style.border = "1px solid var(--bs-danger)";
+        form6.style.border = "1px solid var(--bs-danger)";
+        alert.innerText = "Fill Blank Details";
+
+    }
+    if (form4.value.length < 5) {
+        var interval = setInterval(() => {
+            counter--;
+            if (counter < 0) {
+                clearInterval(interval);
+                form.style.border = "1px solid rgba(0, 0, 0, 0.2)";
+                form1.style.border = "1px solid rgba(0, 0, 0, 0.2)";
+                form2.style.border = "1px solid rgba(0, 0, 0, 0.2)";
+                form3.style.border = "1px solid rgba(0, 0, 0, 0.2)";
+                form4.style.border = "1px solid rgba(0, 0, 0, 0.2)";
+                form5.style.border = "1px solid rgba(0, 0, 0, 0.2)";
+                form6.style.border = "1px solid rgba(0, 0, 0, 0.2)";
+                alert.innerText = "";
+
+            }
+        }, 1000)
+        form.style.border = "1px solid var(--bs-danger)";
+        form1.style.border = "1px solid var(--bs-danger)";
+        form2.style.border = "1px solid var(--bs-danger)";
+        form3.style.border = "1px solid var(--bs-danger)";
+        form4.style.border = "1px solid var(--bs-danger)";
+        form5.style.border = "1px solid var(--bs-danger)";
+        form6.style.border = "1px solid var(--bs-danger)";
+        alert.innerText = "Fill Blank Details";
+
+    }
+    if (form5.value.length < 5) {
+        var interval = setInterval(() => {
+            counter--;
+            if (counter < 0) {
+                clearInterval(interval);
+                form.style.border = "1px solid rgba(0, 0, 0, 0.2)";
+                form1.style.border = "1px solid rgba(0, 0, 0, 0.2)";
+                form2.style.border = "1px solid rgba(0, 0, 0, 0.2)";
+                form3.style.border = "1px solid rgba(0, 0, 0, 0.2)";
+                form4.style.border = "1px solid rgba(0, 0, 0, 0.2)";
+                form5.style.border = "1px solid rgba(0, 0, 0, 0.2)";
+                form6.style.border = "1px solid rgba(0, 0, 0, 0.2)";
+                alert.innerText = "";
+
+            }
+        }, 1000)
+        form.style.border = "1px solid var(--bs-danger)";
+        form1.style.border = "1px solid var(--bs-danger)";
+        form2.style.border = "1px solid var(--bs-danger)";
+        form3.style.border = "1px solid var(--bs-danger)";
+        form4.style.border = "1px solid var(--bs-danger)";
+        form5.style.border = "1px solid var(--bs-danger)";
+        form6.style.border = "1px solid var(--bs-danger)";
+        alert.innerText = "Fill Blank Details";
+
+    }
+    if (form6.value.length < 5) {
+        var interval = setInterval(() => {
+            counter--;
+            if (counter < 0) {
+                clearInterval(interval);
+                form.style.border = "1px solid rgba(0, 0, 0, 0.2)";
+                form1.style.border = "1px solid rgba(0, 0, 0, 0.2)";
+                form2.style.border = "1px solid rgba(0, 0, 0, 0.2)";
+                form3.style.border = "1px solid rgba(0, 0, 0, 0.2)";
+                form4.style.border = "1px solid rgba(0, 0, 0, 0.2)";
+                form5.style.border = "1px solid rgba(0, 0, 0, 0.2)";
+                form6.style.border = "1px solid rgba(0, 0, 0, 0.2)";
+                alert.innerText = "";
+
+            }
+        }, 1000)
+        form.style.border = "1px solid var(--bs-danger)";
+        form1.style.border = "1px solid var(--bs-danger)";
+        form2.style.border = "1px solid var(--bs-danger)";
+        form3.style.border = "1px solid var(--bs-danger)";
+        form4.style.border = "1px solid var(--bs-danger)";
+        form5.style.border = "1px solid var(--bs-danger)";
+        form6.style.border = "1px solid var(--bs-danger)";
+        alert.innerText = "Fill Blank Details";
+
+    }
+
+    else {
+        addressstore();
+        addressaddContainer.style.display = "none";
+        window.location.reload()
+
+    }
 
 })
 
@@ -147,7 +334,41 @@ addressitems.forEach((items, idx) => {
 <p>${items.houseno},${items.roadname},${items.city},${items.state},${items.pincode}</p><p>${items.phoneno}</p><br>  
 
 </div>
-<ion-icon name="trash" class="cart-remove removeshopeasy"></ion-icon>
+<ion-icon name="trash" class="cart-remove"></ion-icon>
 `
     containeraddress.append(divcont)
 });
+
+
+const containerDeleteBtn = document.querySelectorAll('.cart-remove');
+
+containerDeleteBtn.forEach((delbtn, idx) => {
+    delbtn.addEventListener('click', function () {
+
+        this.parentElement.remove()
+
+
+        if (addressitems && addressitems.length > idx) {
+            addressitems.splice(idx, 1);  //remove one by one index in local storage
+        }
+        localStorage.setItem('address-details', JSON.stringify(addressitems));
+
+
+        //  storage can empty index clear localstorage key data
+
+        if (addressitems.length === 0) {
+            localStorage.removeItem('address-details');
+            window.location.reload()
+
+        }
+    });
+})
+
+
+if (addressitems.length === 0) {
+    const divs = document.createElement('div');
+    divs.innerHTML = `<div>Address Page Empty Please Add New Address</div>`;
+    divs.style.color = "#000"
+    containeraddress.append(divs)
+}
+

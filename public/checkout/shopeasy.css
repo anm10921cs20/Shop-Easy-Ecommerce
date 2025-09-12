@@ -468,6 +468,7 @@
         column-gap: 40px;
         line-height: 20px;
         color: #000;
+        text-transform: capitalize;
     }
     .index-value
     {
@@ -497,6 +498,13 @@
     {
         position: absolute;
         left: 20px;
+    }
+    .fill
+    {
+        display: flex;
+        justify-content: center;
+        color: var(--bs-danger);
+        font-size: 14px;
     }
 
 
