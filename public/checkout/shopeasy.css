@@ -470,6 +470,10 @@
         color: #000;
         text-transform: capitalize;
     }
+    .containers2
+    {
+        display: none;
+    }
     .index-value
     {
         display: flex;
@@ -505,6 +509,84 @@
         justify-content: center;
         color: var(--bs-danger);
         font-size: 14px;
+    }
+    .tick1
+    {
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        color: var(--bs-primary);
+        
+        font-weight: 600;
+        text-align: center;
+        font-size: 12px;
+        border: 1px solid var(--bs-primary);
+    }
+    .addressedit
+    {
+        display: flex;
+        justify-content: space-between;
+    }
+    .deliverto
+    {
+        color: #000;
+    }
+    .change
+    {
+        border: 1px solid rgba(0, 0, 0, 0.2);
+        height: 30px;
+        width: 68px;
+        text-align: center;
+        border-radius: 4px;
+    }
+    .addressdetail
+    {
+        display: flex;
+        flex-direction: column;
+    }
+  #address-fills
+    {
+        width: 100%;
+        margin: none;
+        color: #000;
+    }
+    .cart-itemdata
+    {
+        display: flex;
+        height: 140px;
+        gap: 20px;
+    }
+    .cart-delivery
+    {
+        font-size: 12px;
+    }
+    .img-values
+    {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    .select-qty
+    {
+        color: #000;
+        border: 1px solid rgba(0, 0, 0, 0.2);
+        padding: 0 4px;
+        border-radius: 4px;
+       
+    }
+    .select-qty:focus,.select-qty:hover
+    {
+        outline: none;
+        border: 1px solid var(--bs-primary);
+    }
+    option
+    {
+        background-color: #fff;
+        font-size: 12px;
+        border: none;
+        outline: none;
+        box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.2),
+        -2px -2px 3px rgba(0, 0, 0, 0.2);
     }
 
 

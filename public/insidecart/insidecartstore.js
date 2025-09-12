@@ -377,6 +377,10 @@ const minusBtns1 = document.querySelectorAll('.minus1');
 const plusBtns1 = document.querySelectorAll('.plus1');
 const qtyInputs1 = document.querySelectorAll('.cart-quantity1');
 
+
+
+
+
 // increment
 
 plusBtns1.forEach((plus1, id) => {

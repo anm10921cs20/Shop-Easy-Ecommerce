@@ -1,4 +1,4 @@
-var openBtn = document.getElementById('app-arrow');
+var openBtn = document.getElementById('app-arrows');
 
 //event listener nav open
 openBtn.addEventListener('click', () => {
@@ -330,7 +330,7 @@ addresscount.innerText = `(${addresscountvalue})`;
 addressitems.forEach((items, idx) => {
     const divcont = document.createElement('div');
     divcont.classList.add('addressdata');
-    divcont.innerHTML = `<div class="index-value"><input type="radio" name="address" class="address-select"></div><div><div class="head-content"><h6>${items.name}</h6><p class="head-content-para">${items.homevalue}</p></div>
+    divcont.innerHTML = `<div class="index-value"><input type="radio" name="address" class="address-select"></div><div class="data"><div class="head-content"><h6>${items.name}</h6><p class="head-content-para">${items.homevalue}</p></div>
 <p>${items.houseno},${items.roadname},${items.city},${items.state},${items.pincode}</p><p>${items.phoneno}</p><br>  
 
 </div>
@@ -371,4 +371,87 @@ if (addressitems.length === 0) {
     divs.style.color = "#000"
     containeraddress.append(divs)
 }
+
+
+
+
+
+// address click store storage in local click event
+
+const addressdata = document.querySelectorAll(".addressdata");
+const radioaddress = document.getElementsByClassName('address-select');
+
+addressdata.forEach((data, idx) => {
+    data.addEventListener('click', () => {
+        var value = document.getElementsByClassName('data')[0].innerHTML;
+        radioaddress[idx].checked = true;
+        localStorage.setItem('currentaddress', value);
+
+    })
+})
+
+
+const orderContiner = document.getElementsByClassName('containers2')[0];
+const change = document.getElementsByClassName('change')[0];
+change.addEventListener('click', () => {
+    maincontainer.style.display = "block";
+    orderContiner.style.display = "none";
+})
+
+const datalocal = localStorage.getItem('currentaddress');
+var d = document.createElement('div');
+d.innerHTML = datalocal;
+d.classList.add('addressdata')
+d.classList.add('addressdetail')
+const addresssotes = document.getElementsByClassName('addressdatastore')[0];
+addresssotes.append(d);
+
+const dataapend = document.getElementsByClassName('cart-details-container')[0];
+const datamainorder = localStorage.getItem('mainorder');
+
+const datastored = JSON.parse(datamainorder) || [];
+
+datastored.forEach((datas, idx) => {
+    const datadiv = document.createElement('div');
+    datadiv.classList.add('cart-itemdata');
+    datadiv.innerHTML = `<div class="img-values"><img src="${datas.img}" alt="" class="cart-img"> <div><select class="select-qty">
+    <option value="1">1</option>
+    <option value="2">2</option>
+    <option>More</option>
+    </select></div></div>
+                    <div class="detail-box">
+                   
+                        <div class="cart-name">${datas.name}</div>
+                        <div class="price-box">
+                            <div class="cart-price">${datas.price}</div>
+                        </div>
+                       
+                        <div class="product-brand">${datas.brand}</div> 
+                        <div class="cart-delivery">Delivery by 2Days</div>
+                    </div>
+                   
+ `
+
+    dataapend.append(datadiv);
+
+
+
+
+
+})
+
+const mainbtn = document.getElementsByClassName('btn-mainadd')[0];
+mainbtn.addEventListener('click', () => {
+    orderContiner.style.display="block";
+    maincontainer.style.display="none";
+})
+
+var openBtn2 = document.getElementsByClassName('app-bars')[2];
+
+//event listener nav open
+openBtn2.addEventListener('click', () => {
+    orderContiner.style.display = "none";
+    maincontainer.style.display = "block";
+})
+
 
