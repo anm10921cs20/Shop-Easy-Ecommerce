@@ -1,3 +1,17 @@
+const firebaseConfig = {
+    apiKey: "AIzaSyA2OdKypmjrY-X7XKId64MndF4HtIRe-bs",
+    authDomain: "shopeasy-login.firebaseapp.com",
+    databaseURL: "https://shopeasy-login-default-rtdb.firebaseio.com",
+    projectId: "shopeasy-login",
+    storageBucket: "shopeasy-login.firebasestorage.app",
+    messagingSenderId: "255206950436",
+    appId: "1:255206950436:web:2e972fbaf4ae6b8f1c7ab1",
+    measurementId: "G-YDHQQF7XN8"
+  };
+
+  firebase.initializeApp(firebaseConfig);
+  const db = firebase.database();
+
 var openBtn = document.getElementById('app-arrows');
 
 //event listener nav open
@@ -630,6 +644,14 @@ yes.addEventListener('click', () => {
     orderconfirm.style.display = "none";
     alertcontainer.style.display = "block";
     const localdetails = localStorage.getItem('mainorder');
+
+     db.ref('shoporders/' + localStorage.getItem('nameid') ).push({
+        order:localdetails,
+        total:localStorage.getItem('finaltotal'),
+        qty:localStorage.getItem('qty-value'),
+        address:localStorage.getItem('currentaddress'),
+        date:new Date().toLocaleString()
+    })
     const localdetails1 = localStorage.getItem('finaltotal');
     const localdetails2 = localStorage.getItem('qty-value');
 
@@ -674,7 +696,7 @@ yes.addEventListener('click', () => {
         localStorage.removeItem('finaltotal');
         localStorage.removeItem('qty-value');
         localStorage.removeItem('shoporder');
-        window.location.href = "../insidecart/insidecart.html";
+        window.location.replace("../insidecart/insidecart.html");
     },5000)
 })
 
