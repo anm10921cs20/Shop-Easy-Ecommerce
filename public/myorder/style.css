@@ -1,0 +1,58 @@
+@media only screen and (min-width:400px) and (max-width:767px) {
+
+
+
+    /* nav container nav-bar */
+    .nav-bar {
+        display: flex;
+        height: 40px;
+        padding: 34px 0;
+        align-items: center;
+    }
+
+    .app-bars {
+        padding: 20px;
+        font-size: 20px;
+        opacity: 0.9;
+    }
+
+    .app-title_head {
+        padding: 16px 5px;
+        font-size: 18px;
+    }
+
+    .cart-nav {
+        display: flex;
+        height: 40px;
+        justify-content: space-around;
+        list-style-type: none;
+        position: relative;
+    }
+
+    .animate {
+        position: absolute;
+        background-color: var(--bs-primary);
+        height: 3px;
+        bottom: 0;
+        left: 0;
+        width: 150px;
+        transition: all 0.4s;
+        display: none;
+        border-radius: 12px;
+    }
+
+   /* new datas */
+
+   
+
+
+
+
+
+
+
+
+
+
+
+}

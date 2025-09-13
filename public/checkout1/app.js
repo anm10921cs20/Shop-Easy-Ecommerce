@@ -649,7 +649,7 @@ yes.addEventListener('click', () => {
     const localdetails = localStorage.getItem('groceryorder');
 
     db.ref('grocerycart/' +localStorage.getItem('userid')+ localStorage.getItem('nameid') ).push({
-        order:localdetails,
+        order:localStorage.getItem('groceryorder'),
         total:localStorage.getItem('finaltotal'),
         qty:localStorage.getItem('qty-value'),
         address:localStorage.getItem('currentaddress'),
