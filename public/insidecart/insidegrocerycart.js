@@ -410,4 +410,37 @@ function update1() {
 
 
 
+const Mainbtn1 = document.getElementById('grocery-cart');
+Mainbtn1.addEventListener('click', function () {
+    if (localStorage.getItem('userid') === null) {
+
+        const logindata = document.getElementsByClassName('logindatacontainer')[0];
+        logindata.style.display = "block";
+      
+  const logindataclose = document.getElementById('cancelbtn');
+        logindataclose.addEventListener('click', () => {
+            logindata.style.display = "none";
+        })
+
+       const signbtn = document.getElementById('signinbtn'); 
+       signbtn.addEventListener('click', () => {
+         const loginpageContainer = document.getElementsByClassName('loginpage-container')[0];
+        loginpageContainer.classList.add('loginpage-container-active');
+
+        //  close login btn
+
+        const closeLogin = document.getElementsByClassName('close-login')[0];
+        closeLogin.addEventListener('click', () => {
+            loginpageContainer.classList.remove('loginpage-container-active');
+        });
+       })
+       
+
+
+
+    } 
+    else {
+       window.location.href = "../checkout1/grocerycheck.html";
+    }
+})
 
