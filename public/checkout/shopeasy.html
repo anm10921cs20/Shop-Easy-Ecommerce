@@ -85,6 +85,7 @@
                     <div class="add-btn add-btns" id="address-fill1">
 
                     </div>
+                    <div class="text-center text-primary py-4">Click Any One Address</div>
                     <div class=" btn-maincontainer">
                         <button class="btn btn-mainadd">Delivery Here</button>
                     </div>
@@ -379,7 +380,7 @@
                         </div>
 
                     </div>
-                    <div>
+                    <div><br>
                         <p class="text-success text-center">Payment Methods Select</p><br>
                         <hr>
                         <div class="cashondelivery">
@@ -389,24 +390,38 @@
                             <div class="cheveron "><i class="fas fa-chevron-down text-dark"></i></div>
                         </div>
                         <div class="notes-btn">
-                            <button class="btn-deliveradd">Delivery Here</button>
+                            <p class="cash-para">Pay with cash upon delivery.</p>
+                            <button class="btn-deliveradd" id="cashondeliver">Delivery Here</button>
                         </div>
                         <hr>
                         <div class="upi">
-                        <div class="cashondelivery">
-                            <div class="cashset"> <ion-icon name="logo-paypal" class="cash"></ion-icon> 
-                                <p class="cash-tit">UPI</p>
+                            <div class="cashondelivery">
+                                <div class="cashset"> <ion-icon name="logo-paypal" class="cash"></ion-icon>
+                                    <p class="cash-tit">UPI</p>
+                                </div>
+                                <div class="cheveron "><i class="fas fa-chevron-down text-dark"></i></div>
                             </div>
-                            <div class="cheveron "><i class="fas fa-chevron-down text-dark"></i></div>
+                            <div class="notes-btn">
+                                <div class="upiid">
+                                    <p class="upi-tit">UPI ID</p>
+                                    <input type="text" placeholder="Enter Your Upi id" class="upi-input">
+                                </div><br>
+                                <button class="btn-deliveradd" id="upidelivery">Delivery Here</button>
+                            </div>
+                            <hr>
                         </div>
-                        <div class="notes-btn">
-                            <div class="upiid">
-                                <p>UPI ID</p>
-                                <input type="text" placeholder="Enter Your Upi id">
-                            </div><br>
-                            <button class="btn-deliveradd" id="upidelivery">Delivery Here</button>
-                        </div>
-                        <hr>
+                        <div class="upi">
+                            <div class="cashondelivery">
+                                <div class="cashset"> <ion-icon name="card" class="cash"></ion-icon>
+                                    <p class="cash-tit">Credit/Debit/ATM Card</p>
+                                </div>
+                                <div class="cheveron "><i class="fas fa-chevron-down text-dark"></i></div>
+                            </div>
+                            <div class="notes-btn">
+                                
+                                <button class="btn-deliveradd" id="upidelivery">Delivery Here</button>
+                            </div>
+                            <hr>
                         </div>
                     </div>
 
@@ -421,10 +436,24 @@
 
 
 
+<div class="order-cash-backgrop">
+<div class="order-cash-confirm"><br>
+    <p class="order-confirm-tit">Are You Sure Confirm Place Order in Cash on Delivery</p>
+    <div class="dtails-btns">
+        <div class="yes">Yes</div>
+        <div class="no">No</div>
+    </div>
+</div>
+</div>
 
-
-
-
+<div class="alert-container">
+<div class="order-success">
+    <ion-icon name="checkmark-circle" class="checkmark"></ion-icon>
+    <p class="thanlypu"> THANK YOU</p>
+    <p class="order">YOUR ORDER IS CONFIRMED</p>
+    <a href="#"><div class="btn-orders">Your Orders</div></a>
+</div>
+</div>
 
 
 

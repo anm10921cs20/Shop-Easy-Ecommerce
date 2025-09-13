@@ -330,7 +330,7 @@ addresscount.innerText = `(${addresscountvalue})`;
 addressitems.forEach((items, idx) => {
     const divcont = document.createElement('div');
     divcont.classList.add('addressdata');
-    divcont.innerHTML = `<div class="index-value"><input type="radio" name="address" class="address-select"></div><div class="data"><div class="head-content"><h6>${items.name}</h6><p class="head-content-para">${items.homevalue}</p></div>
+    divcont.innerHTML = `<div class="index-value"><input type="hidden" name="address" class="address-select"></div><div class="data"><div class="head-content"><h6>${items.name}</h6><p class="head-content-para">${items.homevalue}</p></div>
 <p>${items.houseno},${items.roadname},${items.city},${items.state} ${items.pincode}</p><p>${items.phoneno}</p><br>  
 
 </div>
@@ -383,9 +383,10 @@ const radioaddress = document.getElementsByClassName('address-select');
 
 addressdata.forEach((data, idx) => {
     data.addEventListener('click', () => {
-        var value = document.getElementsByClassName('data')[0].innerHTML;
+        var value = document.getElementsByClassName('data')[idx].innerHTML;
         radioaddress[idx].checked = true;
         localStorage.setItem('currentaddress', value);
+        window.location.reload();
 
     })
 })
@@ -407,7 +408,7 @@ const addresssotes = document.getElementsByClassName('addressdatastore')[0];
 addresssotes.append(d);
 
 const dataapend = document.getElementsByClassName('cart-details-container')[0];
-const datamainorder = localStorage.getItem('mainorder');
+const datamainorder = localStorage.getItem('shoporder');
 
 const datastored = JSON.parse(datamainorder) || [];
 
@@ -468,7 +469,6 @@ function carttotal() {
         if (priceElement) {
             var price = parseFloat(priceElement.innerText.replace("Rs.", ""));
             var qty = qtyElement.value;
-            console.log(qty)
             qtyamt.innerText = "RS." + price * qty;
 
             total = total + price * qty;
@@ -489,7 +489,7 @@ function carttotal() {
 
     document.getElementById('upidelivery').innerText = "Rs." + totalvalue;
 
-    
+
 
     const totalstorage = localStorage.getItem('finaltotal');
     document.getElementById('total-value3').innerText = "Rs." + total;
@@ -499,7 +499,7 @@ function carttotal() {
 
 
     localStorage.setItem('finaltotal', totalvalue)
-    
+
 }
 carttotal()
 
@@ -584,7 +584,7 @@ const chevronDown2 = document.getElementsByClassName('fa-chevron-down')[2];
 const cashon = document.getElementsByClassName('cashondelivery')[0];
 const notebnt = document.getElementsByClassName('notes-btn')[0];
 cashon.addEventListener('click', () => {
-      notebnt.classList.toggle('notes-btn-active');
+    notebnt.classList.toggle('notes-btn-active');
     chevronDown2.classList.toggle('fa-chevron-down-active');
 })
 const chevronDown3 = document.getElementsByClassName('fa-chevron-down')[3];
@@ -592,6 +592,89 @@ const chevronDown3 = document.getElementsByClassName('fa-chevron-down')[3];
 const cashon1 = document.getElementsByClassName('cashondelivery')[1];
 const notebnt1 = document.getElementsByClassName('notes-btn')[1];
 cashon1.addEventListener('click', () => {
-      notebnt1.classList.toggle('notes-btn-active');
+    notebnt1.classList.toggle('notes-btn-active');
     chevronDown3.classList.toggle('fa-chevron-down-active');
 })
+
+const chevronDown4 = document.getElementsByClassName('fa-chevron-down')[4];
+
+const cashon2 = document.getElementsByClassName('cashondelivery')[2];
+const notebnt2 = document.getElementsByClassName('notes-btn')[2];
+cashon2.addEventListener('click', () => {
+    notebnt2.classList.toggle('notes-btn-active');
+    chevronDown4.classList.toggle('fa-chevron-down-active');
+})
+
+
+
+
+
+// cash on delivery btn
+
+const castondeliverbtn = document.getElementById('cashondeliver');
+const ordercashback = document.getElementsByClassName('order-cash-backgrop')[0];
+const orderconfirm = document.getElementsByClassName('order-cash-confirm')[0];
+const no = document.getElementsByClassName('no')[0];
+const yes = document.getElementsByClassName('yes')[0];
+const alertcontainer = document.getElementsByClassName('alert-container')[0];
+castondeliverbtn.addEventListener('click', () => {
+    ordercashback.style.display = "block";
+    orderconfirm.style.display = "block";
+})
+no.addEventListener('click', () => {
+    ordercashback.style.display = "none";
+    orderconfirm.style.display = "none";
+});
+yes.addEventListener('click', () => {
+    ordercashback.style.display = "none";
+    orderconfirm.style.display = "none";
+    alertcontainer.style.display = "block";
+    const localdetails = localStorage.getItem('mainorder');
+    const localdetails1 = localStorage.getItem('finaltotal');
+    const localdetails2 = localStorage.getItem('qty-value');
+
+    const neworder = [];
+    const totalorder = [];
+    const qtyorder = [];
+
+
+        const orderdata = JSON.parse(localStorage.getItem('neworder')) || [];
+        const orderdata1 = JSON.parse(localStorage.getItem('totalorder')) || [];
+        const orderdata2 = JSON.parse(localStorage.getItem('qtyorder')) || [];
+
+        orderdata.map((data) => {
+            neworder.push(data);
+
+        });
+        orderdata1.map((data1) => {
+
+            totalorder.push(data1);
+
+        }); orderdata2.map((data2) => {
+
+            qtyorder.push(data2);
+        });
+        neworder.push(localdetails);
+        totalorder.push(localdetails1);
+        qtyorder.push(localdetails2);
+        localStorage.setItem('neworder', JSON.stringify(neworder));
+        localStorage.setItem('totalorder', JSON.stringify(totalorder));
+        localStorage.setItem('qtyorder', JSON.stringify(qtyorder));
+    
+   
+
+
+
+
+    setTimeout(() => {
+        ordercashback.style.display = "none";
+        orderconfirm.style.display = "none";
+        alertcontainer.style.display = "none";
+        localStorage.removeItem('mainorder');
+        localStorage.removeItem('finaltotal');
+        localStorage.removeItem('qty-value');
+        localStorage.removeItem('shoporder');
+        window.location.href = "../insidecart/insidecart.html";
+    },5000)
+})
+
