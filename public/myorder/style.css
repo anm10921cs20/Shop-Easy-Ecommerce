@@ -42,8 +42,34 @@
     }
 
    /* new datas */
-
-   
+   .orders-items
+   {
+    border-top: 1px solid rgba(0, 0, 0, 0.2);
+   }
+   .order-item
+   {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 20px;
+    height: 100px;
+    gap: 10px;
+   }
+   .img-contain
+   {
+    object-fit: cover;
+    height: 40px;
+    width: 40px;
+   }
+   .first-order
+   {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    height: 120px;
+    width: 100%;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    padding: 20px 10px;
+   }
 
 
 
