@@ -645,7 +645,7 @@ yes.addEventListener('click', () => {
     alertcontainer.style.display = "block";
     const localdetails = localStorage.getItem('mainorder');
 
-     db.ref('shoporders/' + localStorage.getItem('nameid') ).push({
+     db.ref('shoporders/' + localStorage.getItem('useremail') ).push({
         order:localdetails,
         total:localStorage.getItem('finaltotal'),
         qty:localStorage.getItem('qty-value'),
