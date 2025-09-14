@@ -74,7 +74,8 @@ db.ref('maincart/' + localStorage.getItem('userid') + localStorage.getItem('name
                 emptyDiv.classList.add('emptydiv');
                 emptyDiv.innerHTML = `
                 <p class=""empty-para>Orders Is Empty Please Order AnyThings</p>
-                `
+                `;
+                contentcontainer.appendChild(emptyDiv);
             }
             
             }
