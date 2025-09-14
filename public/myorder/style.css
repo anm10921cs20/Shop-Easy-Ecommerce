@@ -56,9 +56,9 @@
    }
    .img-contain
    {
-    object-fit: cover;
-    height: 40px;
-    width: 40px;
+    object-fit: contain;
+    height: 70px;
+    width: 100px;
    }
    .first-order
    {
@@ -68,7 +68,8 @@
     height: 120px;
     width: 100%;
     border-bottom: 1px solid rgba(0, 0, 0, 0.2);
-    padding: 20px 10px;
+    padding: 10px 20px;
+    align-items: center;
    }
 
 

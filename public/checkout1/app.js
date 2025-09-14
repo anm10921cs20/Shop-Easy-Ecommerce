@@ -664,9 +664,9 @@ yes.addEventListener('click', () => {
     const qtyorder = [];
 
 
-        const orderdata = JSON.parse(localStorage.getItem('neworder')) || [];
-        const orderdata1 = JSON.parse(localStorage.getItem('totalorder')) || [];
-        const orderdata2 = JSON.parse(localStorage.getItem('qtyorder')) || [];
+        const orderdata = JSON.parse(localStorage.getItem('groceryorders')) || [];
+        const orderdata1 = JSON.parse(localStorage.getItem('grocerytotalorder')) || [];
+        const orderdata2 = JSON.parse(localStorage.getItem('groceryqtyorder')) || [];
 
         orderdata.map((data) => {
             neworder.push(data);
@@ -683,9 +683,9 @@ yes.addEventListener('click', () => {
         neworder.push(localdetails);
         totalorder.push(localdetails1);
         qtyorder.push(localdetails2);
-        localStorage.setItem('neworder', JSON.stringify(neworder));
-        localStorage.setItem('totalorder', JSON.stringify(totalorder));
-        localStorage.setItem('qtyorder', JSON.stringify(qtyorder));
+        localStorage.setItem('groceryorders', JSON.stringify(neworder));
+        localStorage.setItem('grocerytotalorder', JSON.stringify(totalorder));
+        localStorage.setItem('grocerytyorder', JSON.stringify(qtyorder));
     
    
 

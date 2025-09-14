@@ -443,7 +443,6 @@ datastored.forEach((datas, idx) => {
                         </div>
                        
                         <div class="product-brand">${datas.brand}</div> 
-                        <div class="cart-delivery">Delivery by 2Days</div>
                     </div>
                    
  `
@@ -692,7 +691,6 @@ yes.addEventListener('click', () => {
         ordercashback.style.display = "none";
         orderconfirm.style.display = "none";
         alertcontainer.style.display = "none";
-        localStorage.removeItem('mainorder');
         localStorage.removeItem('finaltotal');
         localStorage.removeItem('qty-value');
         localStorage.removeItem('shoporder');
