@@ -66,9 +66,20 @@ db.ref('maincart/' + localStorage.getItem('userid') + localStorage.getItem('name
             thirddiv.innerHTML = `<i class="fa-solid fa-chevron-right"></i>
             `
             maindataContainer.appendChild(thirddiv)
+
+           
+            if(contentcontainer.children.length < 0)
+            {
+                const emptyDiv = document.createElement('div')
+                emptyDiv.classList.add('emptydiv');
+                emptyDiv.innerHTML = `
+                <p class=""empty-para>Orders Is Empty Please Order AnyThings</p>
+                `
+            }
+            
             }
 
-
+            
 
 
 
@@ -83,6 +94,9 @@ db.ref('maincart/' + localStorage.getItem('userid') + localStorage.getItem('name
 
 
 
+
+    
+    
 
 
 
