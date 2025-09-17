@@ -46,6 +46,9 @@ db.ref('maincart/' + localStorage.getItem('userid') + localStorage.getItem('name
 
             const datass = JSON.parse(add[2])
             const date = data[1].date;
+            const two = 1758103624002;
+
+            localStorage.setItem('datestore',two)
            
             
 
