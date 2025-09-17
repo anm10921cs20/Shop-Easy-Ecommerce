@@ -45,22 +45,60 @@ db.ref('maincart/' + localStorage.getItem('userid') + localStorage.getItem('name
 
 
             const datass = JSON.parse(add[2])
-            const twoDays = 2 * 24 * 60 * 60 * 1000;
-            const datereg = data[1].date;
 
-            
-            const delivery = document.getElementsByClassName('delivery');
-            if (datereg >= twoDays) {
+           const twoDays = 2 * 24 * 60 * 60 * 1000; // 2 days in ms
 
-                for (var d = 0; d < delivery.length; d++) {
-                    delivery[d].style.color = "var(--bs-success)";
-                    delivery[d].innerText = "Deliverd Success";
-                }
-            } else {
-                console.log('not going delivery');
+    // Example: same format as your console log
+   
+
+    const datereg = data[1].date;
+
+    // ✅ Parse "DD/MM/YYYY, HH:MM:SS"
+    function parseCustomDate(str) {
+      const [datePart, timePart] = str.split(", ");
+      const [day, month, year] = datePart.split("/");
+      const [hour, minute, second] = timePart.split(":");
+
+      return new Date(
+        parseInt(year),           // YYYY
+        parseInt(month) - 1,      // JS months are 0-based
+        parseInt(day),            // DD
+        parseInt(hour),           // HH
+        parseInt(minute),         // MM
+        parseInt(second)          // SS
+      );
+    }
+
+    const jsDate = parseCustomDate(datereg);
+    const regTime = jsDate.getTime();
+    const now = Date.now();
+    const diff = now - regTime;
+
+    const delivery = document.getElementsByClassName("delivery");
+
+    if (isNaN(regTime)) {
+      console.error("❌ Invalid date format:", datereg);
+    } else if (diff >= twoDays) {
+      for (let d = 0; d < delivery.length; d++) {
+        delivery[d].style.color = "green";
+        delivery[d].innerText = "Delivered Success";
+      }
+    } else {
+      const remain = Math.ceil((twoDays - diff) / (1000 * 60 * 60));
+      console.log("⏳ Still active! Expires in " + remain + " hours.");
+    }
+    
 
 
-            }
+
+
+
+
+
+
+
+
+
 
             for (var i = 0; i < datass.length; i++) {
                 const div = document.createElement('div')
