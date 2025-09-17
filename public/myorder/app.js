@@ -45,60 +45,52 @@ db.ref('maincart/' + localStorage.getItem('userid') + localStorage.getItem('name
 
 
             const datass = JSON.parse(add[2])
+            const datereg = data[1].date;
 
-           const twoDays = 2 * 24 * 60 * 60 * 1000; // 2 days in ms
+            
+         const TWO_DAYS = 2 * 24 * 60 * 60 * 1000; // 2 நாட்கள் milliseconds
 
-    // Example: same format as your console log
-   
-
-    const datereg = data[1].date;
-
-    // ✅ Parse "DD/MM/YYYY, HH:MM:SS"
+    // 🔹 Safe parse function
     function parseCustomDate(str) {
+      if (!str) return null;
       const [datePart, timePart] = str.split(", ");
-      const [day, month, year] = datePart.split("/");
-      const [hour, minute, second] = timePart.split(":");
-
-      return new Date(
-        parseInt(year),           // YYYY
-        parseInt(month) - 1,      // JS months are 0-based
-        parseInt(day),            // DD
-        parseInt(hour),           // HH
-        parseInt(minute),         // MM
-        parseInt(second)          // SS
-      );
+      const [day, month, year] = datePart.split("/").map(Number);
+      let hour = 0, minute = 0, second = 0;
+      if (timePart) [hour, minute, second] = timePart.split(":").map(Number);
+      return new Date(year, month - 1, day, hour, minute, second);
     }
 
-    const jsDate = parseCustomDate(datereg);
-    const regTime = jsDate.getTime();
-    const now = Date.now();
-    const diff = now - regTime;
-
-    const delivery = document.getElementsByClassName("delivery");
-
-    if (isNaN(regTime)) {
-      console.error("❌ Invalid date format:", datereg);
-    } else if (diff >= twoDays) {
-      for (let d = 0; d < delivery.length; d++) {
-        delivery[d].style.color = "green";
-        delivery[d].innerText = "Delivered Success";
-      }
+    const startDate = parseCustomDate(datereg);
+    if (!startDate || isNaN(startDate.getTime())) {
+      console.error("❌ Invalid date:", datereg);
     } else {
-      const remain = Math.ceil((twoDays - diff) / (1000 * 60 * 60));
-      console.log("⏳ Still active! Expires in " + remain + " hours.");
+      const expireTime = startDate.getTime() + TWO_DAYS;
+      const delivery = document.getElementsByClassName("delivery");
+
+      function updateStatus() {
+        const now = Date.now();
+        const diff = expireTime - now;
+
+        if (diff <= 0) {
+          // ✅ 2 நாள் முடிஞ்சாச்சு → எல்லா elements update பண்ணு
+          for (let d = 0; d < delivery.length; d++) {
+            delivery[d].style.color = "green";
+            delivery[d].innerText = "Delivered Success";
+          }
+        } else {
+          // ✅ இன்னும் time உள்ளது → எல்லாவற்றிலும் same text
+          const hours = Math.floor(diff / (1000 * 60 * 60));
+          const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+          const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+          for (let d = 0; d < delivery.length; d++) {
+            delivery[d].innerText = `⏳ ${hours} ${minutes}  ${seconds}Delivery Time`;
+          }
+        }
+      }
+
+      updateStatus();                 // first run
+      setInterval(updateStatus, 1000); // update every second
     }
-    
-
-
-
-
-
-
-
-
-
-
-
 
             for (var i = 0; i < datass.length; i++) {
                 const div = document.createElement('div')
