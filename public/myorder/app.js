@@ -511,7 +511,7 @@ db.ref('grocerycart/' + localStorage.getItem('userid') + localStorage.getItem('n
                 var specialprice = parseInt(totalprice) -10;
                 var qty = parseInt(detail[1].qty[i]);
                 var qtyvlaue  = parseInt(totalprice) * qty;
-                    
+
                 
                 
                 var total = qtyvlaue + 59 - 10;
@@ -625,3 +625,18 @@ db.ref('grocerycart/' + localStorage.getItem('userid') + localStorage.getItem('n
 
 
 
+
+
+        //back button
+
+        window.addEventListener("popstate", function (event) {
+  // mobile back button detect
+  console.log("🔙 Back button pressed!");
+  
+  // ❌ cancel navigation → prevent back
+  history.pushState(null, null, location.href); 
+  alert("Back button disabled!");
+});
+
+// first time call → block back
+history.pushState(null, null, location.href);
