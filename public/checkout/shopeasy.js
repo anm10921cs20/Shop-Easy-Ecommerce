@@ -649,7 +649,8 @@ yes.addEventListener('click', () => {
         total:localStorage.getItem('finaltotal'),
         qty:localStorage.getItem('qty-value'),
         address:localStorage.getItem('currentaddress'),
-        date:new Date().toLocaleString()
+        date:new Date().getTime(),
+        orderdate:new Date().toLocaleString()
     })
     const localdetails1 = localStorage.getItem('finaltotal');
     const localdetails2 = localStorage.getItem('qty-value');
@@ -694,7 +695,7 @@ yes.addEventListener('click', () => {
         localStorage.removeItem('finaltotal');
         localStorage.removeItem('qty-value');
         localStorage.removeItem('shoporder');
-        window.location.replace("../insidecart/insidecart.html");
+        window.location.replace("../myorder/myorder.html");
     },3000)
 })
 

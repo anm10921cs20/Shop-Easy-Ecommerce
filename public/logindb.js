@@ -1,5 +1,5 @@
 
- const firebaseConfig = {
+const firebaseConfig = {
     apiKey: "AIzaSyA2OdKypmjrY-X7XKId64MndF4HtIRe-bs",
     authDomain: "shopeasy-login.firebaseapp.com",
     databaseURL: "https://shopeasy-login-default-rtdb.firebaseio.com",
@@ -8,7 +8,7 @@
     messagingSenderId: "255206950436",
     appId: "1:255206950436:web:2e972fbaf4ae6b8f1c7ab1",
     measurementId: "G-YDHQQF7XN8"
-  };
+};
 
 
 
@@ -40,7 +40,7 @@ function register() {
 
     auth.createUserWithEmailAndPassword(emails1, password).then((userCredential) => {
         const uid = userCredential.user.uid;
-   
+
 
         db.ref("shopeasyusers/" + names).set(
             {
@@ -62,7 +62,7 @@ function register() {
         document.getElementById('register-email').value = "";
         document.getElementById('register-name').value = "";
         document.getElementById('register-password').value = "";
-        
+
     }).catch((err) => {
         const error = err.message;
         console.log(error);
@@ -80,6 +80,8 @@ function register() {
 function login() {
     const loginemail = document.getElementById('login-email').value;
     const loginpassword = document.getElementById('loginpassword').value;
+    var p = document.createElement('p');
+    p.classList.add('para-alert');
 
 
 
@@ -94,10 +96,41 @@ function login() {
         console.log(loginpagecontainer);
 
         loginpagecontainer.style.display = "none";
+        var alertvalue = document.getElementById('alertcontainer');
+        alertvalue.style.display = "flex";
+        p.innerText = "Login Successfully"
+        alertvalue.append(p);
+        var counter = 5;
+        var interval = setInterval(() => {
+            counter--;
+            if (counter > 0) {
+                clearInterval(interval);
+                alertvalue.style.display = "none";
+                 p.innerText = ""
+            }
+        }, 1000)
 
-     
+
+
+    }).catch((err) => {
+        var error = err.message;
+
+        var alertvalue = document.getElementById('alertcontainer');
+        alertvalue.style.display = "flex";
+        p.innerText = error
+        alertvalue.append(p);
+        var counter = 5;
+        var interval = setInterval(() => {
+            counter--;
+            if (counter > 0) {
+                clearInterval(interval);
+                alertvalue.style.display = "none";
+                 p.innerText = ""
+            }
+        }, 1000)
 
     })
+
 
 
 
@@ -113,21 +146,21 @@ function login() {
 }
 
 
-   const uservalue = localStorage.getItem('userid');
-        
+const uservalue = localStorage.getItem('userid');
 
-        const docRef = firesttore.collection('users').doc(uservalue)
-        docRef.get().then(doc => {
-            if (doc.exists) {
-                var username = doc.data().username;
-            localStorage.setItem('nameid', username);
 
-            } else {
-                console.log(`No such Document`)
-            }
-        }).catch(err => {
-            console.log(`Error getting document : ${err}`)
-        })
+const docRef = firesttore.collection('users').doc(uservalue)
+docRef.get().then(doc => {
+    if (doc.exists) {
+        var username = doc.data().username;
+        localStorage.setItem('nameid', username);
+
+    } else {
+        console.log(`No such Document`)
+    }
+}).catch(err => {
+    console.log(`Error getting document : ${err}`)
+})
 
 
 
@@ -167,10 +200,11 @@ function reset() {
             if (counter > 0) {
                 clearInterval(interval);
                 alertvalue.style.display = "none";
+                 p.innerText = ""
             }
         }, 1000)
     }).catch((err) => {
-         var p = document.createElement('p');
+        var p = document.createElement('p');
         p.classList.add('para-alert');
         var alertvalue = document.getElementById('alertcontainer');
         alertvalue.style.display = "flex";
@@ -182,6 +216,7 @@ function reset() {
             if (counter > 0) {
                 clearInterval(interval);
                 alertvalue.style.display = "none";
+                 p.innerText = ""
             }
         }, 1000)
     })

@@ -119,20 +119,6 @@ const password2 = document.getElementsByClassName('register-password')[0];
     
 })
 
-var p = document.createElement('p');
-p.classList.add('para-alert');
-loginbtn.addEventListener('click', () => {
-    var alertvalue = document.getElementById('alertcontainer');
-    alertvalue.style.display = "flex";
-    p.innerText = "Login Successfully"
-    alertvalue.append(p);
-    var counter = 5;
-    var interval = setInterval(() => {
-        counter--;
-        if (counter > 0) {
-            clearInterval(interval);
-            alertvalue.style.display = "none";
-        }
-    }, 1000)
-})
+
+
 

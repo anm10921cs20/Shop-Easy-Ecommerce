@@ -2,7 +2,7 @@ var openBtn = document.getElementById('app-arrow');
 
 //event listener nav open
 openBtn.addEventListener('click', () => {
-    window.history.back();
+   window.location.replace("../index.html")
 })
 
 const firebaseConfig = {
@@ -51,16 +51,34 @@ db.ref('maincart/' + localStorage.getItem('userid') + localStorage.getItem('name
          const TWO_DAYS = 2 * 24 * 60 * 60 * 1000; // 2 நாட்கள் milliseconds
 
     // 🔹 Safe parse function
+   // 🔹 Safe parse function
     function parseCustomDate(str) {
-      if (!str) return null;
-      const [datePart, timePart] = str.split(", ");
+      if (!str) return null; // Still handle null/undefined/empty string
+      const stringStr = String(str); // Convert to string
+      const [datePart, timePart] = stringStr.split(", ");
       const [day, month, year] = datePart.split("/").map(Number);
       let hour = 0, minute = 0, second = 0;
       if (timePart) [hour, minute, second] = timePart.split(":").map(Number);
       return new Date(year, month - 1, day, hour, minute, second);
     }
 
-    const startDate = parseCustomDate(datereg);
+   let startDate;
+
+if (typeof datereg === "number") {
+  // timestamp milliseconds
+  startDate = new Date(datereg);
+} else {
+  // string like "14/09/2025, 22:17:26"
+  startDate = parseCustomDate(datereg);
+}
+
+if (!startDate || isNaN(startDate.getTime())) {
+  console.error("❌ Invalid date:", datereg);
+} else {
+  // proceed countdown logic
+}
+   
+    
     if (!startDate || isNaN(startDate.getTime())) {
       console.error("❌ Invalid date:", datereg);
     } else {
@@ -75,7 +93,7 @@ db.ref('maincart/' + localStorage.getItem('userid') + localStorage.getItem('name
           // ✅ 2 நாள் முடிஞ்சாச்சு → எல்லா elements update பண்ணு
           for (let d = 0; d < delivery.length; d++) {
             delivery[d].style.color = "green";
-            delivery[d].innerText = "Delivered Success";
+            delivery[d].innerText = "✔️ Delivered Success";
           }
         } else {
           // ✅ இன்னும் time உள்ளது → எல்லாவற்றிலும் same text
@@ -83,7 +101,7 @@ db.ref('maincart/' + localStorage.getItem('userid') + localStorage.getItem('name
           const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
           const seconds = Math.floor((diff % (1000 * 60)) / 1000);
           for (let d = 0; d < delivery.length; d++) {
-            delivery[d].innerText = `⏳ ${hours} ${minutes}  ${seconds}Delivery Time`;
+            delivery[d].innerText = `⏳ ${hours} ${minutes}  ${seconds}Delivery`;
           }
         }
       }

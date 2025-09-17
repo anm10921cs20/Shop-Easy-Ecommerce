@@ -699,7 +699,7 @@ yes.addEventListener('click', () => {
         localStorage.removeItem('groceryorder');
         localStorage.removeItem('finaltotal');
         localStorage.removeItem('qty-value');
-        window.location.replace ("../insidecart/insidecart.html");
+        window.location.replace ("../myorder/myorder.html");
     },5000)
 })
 
