@@ -647,7 +647,7 @@ yes.addEventListener('click', () => {
      db.ref('maincart/' +localStorage.getItem('userid')+ localStorage.getItem('nameid')).push({
         order:localStorage.getItem('shoporder'),
         total:localStorage.getItem('finaltotal'),
-        qty:localStorage.getItem('qty-value'),
+        qty:JSON.parse(localStorage.getItem('qty-value')),
         address:localStorage.getItem('currentaddress'),
         date:new Date().getTime(),
         orderdate:new Date().toLocaleString()

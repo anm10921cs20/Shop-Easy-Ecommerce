@@ -647,11 +647,13 @@ yes.addEventListener('click', () => {
     orderconfirm.style.display = "none";
     alertcontainer.style.display = "block";
     const localdetails = localStorage.getItem('groceryorder');
+    const qty = localStorage.getItem('qty-value');
+    const qtyvalue = JSON.parse(qty);
 
     db.ref('grocerycart/' + localStorage.getItem('userid') + localStorage.getItem('nameid')).push({
         order: localStorage.getItem('groceryorder'),
         total: localStorage.getItem('finaltotal'),
-        qty: localStorage.getItem('qty-value'),
+        qty: qtyvalue,
         address: localStorage.getItem('currentaddress'),
         date: new Date().getTime(),
         orderdate: new Date().toLocaleString()

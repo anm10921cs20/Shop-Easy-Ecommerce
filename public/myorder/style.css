@@ -95,6 +95,7 @@
     top: 0;
     left: 0;
     display: none;
+    overflow: scroll;
    }
    .maindata
    {
@@ -111,7 +112,7 @@
     height: 70px;
     object-fit: contain;
    }
-   .order-summary
+   .order-summary,.address-details,.price-details
    {
     width: 90%;
     margin: 0 auto;
@@ -146,6 +147,29 @@
    {
     font-size: 14px;
    }
+   .totalamt
+   {
+    border-top: 0.1px dashed #999;
+    border-bottom: 0.1px dashed #999;
+    width: 90%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 20px;
+    padding: 2px;
+    height: 50px;
+    align-content: center;
+   }
+   .title
+   {
+    color: #000;
+    font-size: 15px;
+    font-weight: 700;
+    padding: 0 20px;
+   }
+  
+  
+  
    
 
 
