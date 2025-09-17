@@ -7,10 +7,10 @@ const firebaseConfig = {
     messagingSenderId: "255206950436",
     appId: "1:255206950436:web:2e972fbaf4ae6b8f1c7ab1",
     measurementId: "G-YDHQQF7XN8"
-  };
+};
 
-  firebase.initializeApp(firebaseConfig);
-  const db = firebase.database();
+firebase.initializeApp(firebaseConfig);
+const db = firebase.database();
 
 
 
@@ -648,12 +648,13 @@ yes.addEventListener('click', () => {
     alertcontainer.style.display = "block";
     const localdetails = localStorage.getItem('groceryorder');
 
-    db.ref('grocerycart/' +localStorage.getItem('userid')+ localStorage.getItem('nameid') ).push({
-        order:localStorage.getItem('groceryorder'),
-        total:localStorage.getItem('finaltotal'),
-        qty:localStorage.getItem('qty-value'),
-        address:localStorage.getItem('currentaddress'),
-        date:new Date().toLocaleString()
+    db.ref('grocerycart/' + localStorage.getItem('userid') + localStorage.getItem('nameid')).push({
+        order: localStorage.getItem('groceryorder'),
+        total: localStorage.getItem('finaltotal'),
+        qty: localStorage.getItem('qty-value'),
+        address: localStorage.getItem('currentaddress'),
+        date: new Date().getTime(),
+        orderdate: new Date().toLocaleString()
     })
 
     const localdetails1 = localStorage.getItem('finaltotal');
@@ -664,30 +665,30 @@ yes.addEventListener('click', () => {
     const qtyorder = [];
 
 
-        const orderdata = JSON.parse(localStorage.getItem('groceryorders')) || [];
-        const orderdata1 = JSON.parse(localStorage.getItem('grocerytotalorder')) || [];
-        const orderdata2 = JSON.parse(localStorage.getItem('groceryqtyorder')) || [];
+    const orderdata = JSON.parse(localStorage.getItem('groceryorders')) || [];
+    const orderdata1 = JSON.parse(localStorage.getItem('grocerytotalorder')) || [];
+    const orderdata2 = JSON.parse(localStorage.getItem('groceryqtyorder')) || [];
 
-        orderdata.map((data) => {
-            neworder.push(data);
+    orderdata.map((data) => {
+        neworder.push(data);
 
-        });
-        orderdata1.map((data1) => {
+    });
+    orderdata1.map((data1) => {
 
-            totalorder.push(data1);
+        totalorder.push(data1);
 
-        }); orderdata2.map((data2) => {
+    }); orderdata2.map((data2) => {
 
-            qtyorder.push(data2);
-        });
-        neworder.push(localdetails);
-        totalorder.push(localdetails1);
-        qtyorder.push(localdetails2);
-        localStorage.setItem('groceryorders', JSON.stringify(neworder));
-        localStorage.setItem('grocerytotalorder', JSON.stringify(totalorder));
-        localStorage.setItem('grocerytyorder', JSON.stringify(qtyorder));
-    
-   
+        qtyorder.push(data2);
+    });
+    neworder.push(localdetails);
+    totalorder.push(localdetails1);
+    qtyorder.push(localdetails2);
+    localStorage.setItem('groceryorders', JSON.stringify(neworder));
+    localStorage.setItem('grocerytotalorder', JSON.stringify(totalorder));
+    localStorage.setItem('grocerytyorder', JSON.stringify(qtyorder));
+
+
 
 
 
@@ -699,7 +700,7 @@ yes.addEventListener('click', () => {
         localStorage.removeItem('groceryorder');
         localStorage.removeItem('finaltotal');
         localStorage.removeItem('qty-value');
-        window.location.replace ("../myorder/myorder.html");
-    },5000)
+        window.location.replace("../myorder/myorder.html");
+    }, 5000)
 })
 

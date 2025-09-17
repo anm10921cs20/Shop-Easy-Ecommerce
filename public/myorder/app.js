@@ -93,7 +93,7 @@ if (!startDate || isNaN(startDate.getTime())) {
           // ✅ 2 நாள் முடிஞ்சாச்சு → எல்லா elements update பண்ணு
           for (let d = 0; d < delivery.length; d++) {
             delivery[d].style.color = "green";
-            delivery[d].innerText = "✔️ Delivered Success";
+            delivery[d].innerText = " Delivered Success";
           }
         } else {
           // ✅ இன்னும் time உள்ளது → எல்லாவற்றிலும் same text
@@ -101,7 +101,7 @@ if (!startDate || isNaN(startDate.getTime())) {
           const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
           const seconds = Math.floor((diff % (1000 * 60)) / 1000);
           for (let d = 0; d < delivery.length; d++) {
-            delivery[d].innerText = `⏳ ${hours} ${minutes}  ${seconds}Delivery`;
+            delivery[d].innerText = `⏳ ${hours} ${minutes}  ${seconds} Delivery`;
           }
         }
       }
@@ -122,7 +122,7 @@ if (!startDate || isNaN(startDate.getTime())) {
                 seconddiv.classList.add('seconddiv')
                 seconddiv.innerHTML = ` <p class="delivery">2days Delivery</p>
                 <p class="deliver-name">${datass[i].name}</p>
-                <p class="time"> Order on ${data[1].date}</p>
+                <p class="time"> Order on ${data[1].orderdate}</p>
 
 
             `;
@@ -186,7 +186,7 @@ if (!startDate || isNaN(startDate.getTime())) {
                 <p class="tit">Name</p><p class="ans">${datass[i].name}</p>
                 <p class="tit">Brand Varient</p><p class="ans">${datass[i].brand}</p>
                 <p class="tit">Price</p><p class="ans">${datass[i].price}</p>
-                <p class="tit">Order Time</p><p class="ans">${data[1].date}</p>
+                <p class="tit">Order Time</p><p class="ans">${data[1].orderdate}</p>
                 <p class="tit">Order Id</p><p class="ans">${data[0]}</p>
                 </div><br>
                 `;
@@ -194,6 +194,8 @@ if (!startDate || isNaN(startDate.getTime())) {
                 const colordiv1 = document.createElement('div');
                 colordiv1.classList.add('color-area');
                 maindetailscontainer.appendChild(colordiv1)
+
+                
 
 
 
