@@ -109,6 +109,11 @@ grocerys.addEventListener('click', () => {
     furniture.style.backgroundColor="#f0f2f5";
     vehicle.style.backgroundColor="#f0f2f5";
 
+    // scroll
+
+     //scroll top
+     groceryContainer.scrollTop = 0;
+
 
 })
 

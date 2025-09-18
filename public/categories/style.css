@@ -36,7 +36,7 @@
         grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
         overflow: scroll;
         width: 100%;
-        height: 100px;
+        height: 102px;
          position: relative;
          border:1px solid rgba(0, 0, 0, 0.1) ;
         
@@ -122,11 +122,56 @@
     {
         display: none;
     }
+    .grocerys
+    {
+        width: 100%;
+        height: 700px;
+        overflow-y: scroll;
+    }
+    .grocerys::-webkit-scrollbar
+    {
+        display: none;
+    }
+
+
+
+
     .box1:nth-child(1)
     {
         background-color: #fff;
     }
-    
+    .grocery-imgs
+    {
+        object-fit: cover;
+    }
+    .staples,.snack,.personal
+    {
+        width: 95%;
+        margin: 0 auto;
+    }
+    .tit
+    {
+        font-weight: 600;
+    }
+    .main-det
+    {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        column-gap:10px ;
+        row-gap: 10px;
+    }
+    .main-det-img
+    {
+        height: 80px;
+        width: 80px;
+    }
+    a
+    {
+        font-size: 11px;
+        text-align: center;
+        text-decoration: none;
+        color: #000;
+    }
 
 
 
