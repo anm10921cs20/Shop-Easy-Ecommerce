@@ -1,0 +1,141 @@
+@media only screen and (min-width:400px) and (max-width:767px) {
+
+
+
+    /* nav container nav-bar */
+    .nav-bar {
+        display: flex;
+        height: 40px;
+        padding: 34px 0;
+        align-items: center;
+    }
+
+    .app-bars {
+        padding: 20px;
+        font-size: 20px;
+        opacity: 0.9;
+    }
+
+    .app-title_head {
+        padding: 16px 5px;
+        font-size: 18px;
+    }
+
+    .containers1 {
+        position: sticky;
+        top: 0;
+        left: 0;
+    }
+    .nav-details::-webkit-scrollbar
+    {
+        display: none;
+    }
+    .nav-details
+    {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+        overflow: scroll;
+        width: 100%;
+        height: 100px;
+         position: relative;
+         border:1px solid rgba(0, 0, 0, 0.1) ;
+        
+    }
+    .box1
+    {
+        width: 95px;
+        height: 90px;
+        border-left: 1px solid rgba(0, 0, 0, 0.1);
+        background-color: #f0f2f5;
+       
+    }
+    .img
+    {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100px;
+    }
+    .imgs
+    {
+        width: 48px;
+        height: 48px;
+    }
+    .animatee
+    {
+        position: absolute;
+        background-color: var(--bs-primary);
+         height: 3px;
+        width: 95px;
+        bottom: 0;
+        left: 0px;
+        border-radius: 14px;
+        transition: all 1s;
+    }
+    .nav-details .first, .box1:nth-child(1):hover~.animatee
+    {
+        left: 0px;
+    }
+    .box1:nth-child(2):hover~.animatee
+    {
+        left: 95px;
+    }
+     .box1:nth-child(3):hover~.animatee
+    {
+        left: 190px;
+    }
+     .box1:nth-child(4):hover~.animatee
+    {
+        left: 285px;
+    }
+     .box1:nth-child(5):hover~.animatee
+    {
+        left: 380px;
+    }
+     .box1:nth-child(6):hover~.animatee
+    {
+        left: 475px;
+    }
+     .box1:nth-child(7):hover~.animatee
+    {
+        left: 570px;
+    }
+    .box1:nth-child(8):hover~.animatee
+    {
+        left: 665px;
+    }
+    .box1:nth-child(9):hover~.animatee
+    {
+        left: 762px;
+    }
+     .box1:nth-child(10):hover~.animatee
+    {
+        left: 855px;
+    }
+    .para-tit
+    {
+        color: #666;
+        font-size: 14px;
+    }
+    .fashion,.appliances,.mobiles,.smartgadgets,.beauty,.baby,.food,.furniture,.vehicle
+    {
+        display: none;
+    }
+    .box1:nth-child(1)
+    {
+        background-color: #fff;
+    }
+    
+
+
+
+
+
+
+
+
+
+
+
+}
