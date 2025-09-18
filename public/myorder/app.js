@@ -205,7 +205,7 @@ db.ref('maincart/' + localStorage.getItem('userid') + localStorage.getItem('name
                     <h4 class="app-title_head">Order Details</h4>
                 </div>
             </nav>
-        </div><hr>`
+        </div>`
                 maindetailscontainer.appendChild(navheader)
 
                 // main data
@@ -452,7 +452,7 @@ db.ref('grocerycart/' + localStorage.getItem('userid') + localStorage.getItem('n
                     <h4 class="app-title_head">Order Details</h4>
                 </div>
             </nav>
-        </div><hr>`
+        </div>`
                 maindetailscontainer.appendChild(navheader)
 
                 // main data
