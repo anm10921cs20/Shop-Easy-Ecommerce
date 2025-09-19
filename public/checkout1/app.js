@@ -659,6 +659,38 @@ yes.addEventListener('click', () => {
         orderdate: new Date().toLocaleString()
     })
 
+
+
+
+     // Initialize EmailJS
+    emailjs.init("RmuOylImRrbe0mtFa"); // Replace with your EmailJS User ID
+
+     var address = localStorage.getItem('currentaddress');
+    var data = document.createElement('div')
+    data.innerHTML = address;
+
+    var orderdet = JSON.parse(localStorage.getItem('groceryorder'));
+    for(var i = 0; i<orderdet.length; i++)
+    {
+         emailjs.send("service_qw2cgui", "template_fhhduw6", {
+        order: orderdet[i].name,
+        total: orderdet[i].price,
+        qty: JSON.parse(localStorage.getItem('qty-value')) ?? 1,
+        address: data.innerText,
+        orderdate: new Date().toLocaleString(),
+        mailid: localStorage.getItem('useremail'),
+        name: localStorage.getItem('nameid')
+    })
+        .then(response => {
+            console.log("SUCCESS:", response);
+        })
+        .catch(error => {
+            console.error("ERROR:", error);
+        });
+
+        
+    }
+
     const localdetails1 = localStorage.getItem('finaltotal');
     const localdetails2 = localStorage.getItem('qty-value');
 
