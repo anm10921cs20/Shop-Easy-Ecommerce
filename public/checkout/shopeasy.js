@@ -7,10 +7,10 @@ const firebaseConfig = {
     messagingSenderId: "255206950436",
     appId: "1:255206950436:web:2e972fbaf4ae6b8f1c7ab1",
     measurementId: "G-YDHQQF7XN8"
-  };
+};
 
-  firebase.initializeApp(firebaseConfig);
-  const db = firebase.database();
+firebase.initializeApp(firebaseConfig);
+const db = firebase.database();
 
 var openBtn = document.getElementById('app-arrows');
 
@@ -644,13 +644,13 @@ yes.addEventListener('click', () => {
     alertcontainer.style.display = "block";
     const localdetails = localStorage.getItem('mainorder');
 
-     db.ref('maincart/' +localStorage.getItem('userid')+ localStorage.getItem('nameid')).push({
-        order:localStorage.getItem('shoporder'),
-        total:localStorage.getItem('finaltotal'),
-        qty:JSON.parse(localStorage.getItem('qty-value')),
-        address:localStorage.getItem('currentaddress'),
-        date:new Date().getTime(),
-        orderdate:new Date().toLocaleString()
+    db.ref('maincart/' + localStorage.getItem('userid') + localStorage.getItem('nameid')).push({
+        order: localStorage.getItem('shoporder'),
+        total: localStorage.getItem('finaltotal'),
+        qty: JSON.parse(localStorage.getItem('qty-value')),
+        address: localStorage.getItem('currentaddress'),
+        date: new Date().getTime(),
+        orderdate: new Date().toLocaleString()
     })
     const localdetails1 = localStorage.getItem('finaltotal');
     const localdetails2 = localStorage.getItem('qty-value');
@@ -660,32 +660,63 @@ yes.addEventListener('click', () => {
     const qtyorder = [];
 
 
-        const orderdata = JSON.parse(localStorage.getItem('neworder')) || [];
-        const orderdata1 = JSON.parse(localStorage.getItem('totalorder')) || [];
-        const orderdata2 = JSON.parse(localStorage.getItem('qtyorder')) || [];
+    const orderdata = JSON.parse(localStorage.getItem('neworder')) || [];
+    const orderdata1 = JSON.parse(localStorage.getItem('totalorder')) || [];
+    const orderdata2 = JSON.parse(localStorage.getItem('qtyorder')) || [];
 
-        orderdata.map((data) => {
-            neworder.push(data);
+    orderdata.map((data) => {
+        neworder.push(data);
 
+    });
+    orderdata1.map((data1) => {
+
+        totalorder.push(data1);
+
+    }); orderdata2.map((data2) => {
+
+        qtyorder.push(data2);
+    });
+    neworder.push(localdetails);
+    totalorder.push(localdetails1);
+    qtyorder.push(localdetails2);
+    localStorage.setItem('neworder', JSON.stringify(neworder));
+    localStorage.setItem('totalorder', JSON.stringify(totalorder));
+    localStorage.setItem('qtyorder', JSON.stringify(qtyorder));
+
+
+
+
+    // Initialize EmailJS
+    emailjs.init("RmuOylImRrbe0mtFa"); // Replace with your EmailJS User ID
+
+     var address = localStorage.getItem('currentaddress');
+    var data = document.createElement('div')
+    data.innerHTML = address;
+
+    var orderdet = JSON.parse(localStorage.getItem('shoporder'));
+    for(var i = 0; i<orderdet.length; i++)
+    {
+         emailjs.send("service_qw2cgui", "template_fhhduw6", {
+        order: orderdet[i].name,
+        total: orderdet[i].price,
+        qty: JSON.parse(localStorage.getItem('qty-value')) ?? 1,
+        address: data.innerText,
+        orderdate: new Date().toLocaleString(),
+        mailid: localStorage.getItem('useremail'),
+        name: localStorage.getItem('nameid')
+    })
+        .then(response => {
+            console.log("SUCCESS:", response);
+        })
+        .catch(error => {
+            console.error("ERROR:", error);
         });
-        orderdata1.map((data1) => {
 
-            totalorder.push(data1);
+        
+    }
 
-        }); orderdata2.map((data2) => {
 
-            qtyorder.push(data2);
-        });
-        neworder.push(localdetails);
-        totalorder.push(localdetails1);
-        qtyorder.push(localdetails2);
-        localStorage.setItem('neworder', JSON.stringify(neworder));
-        localStorage.setItem('totalorder', JSON.stringify(totalorder));
-        localStorage.setItem('qtyorder', JSON.stringify(qtyorder));
-    
    
-
-
 
 
     setTimeout(() => {
@@ -696,6 +727,8 @@ yes.addEventListener('click', () => {
         localStorage.removeItem('qty-value');
         localStorage.removeItem('shoporder');
         window.location.replace("../myorder/myorder.html");
-    },3000)
+    }, 3000)
 })
+
+
 
