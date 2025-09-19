@@ -167,6 +167,11 @@ fashion.addEventListener('click', () => {
     food.style.backgroundColor="#f0f2f5";
     furniture.style.backgroundColor="#f0f2f5";
     vehicle.style.backgroundColor="#f0f2f5";
+
+    
+    // fashion
+
+    fashionContainer.scrollTop = 0;
 })
 
 
@@ -220,6 +225,10 @@ appliances.addEventListener('click', () => {
     food.style.backgroundColor="#f0f2f5";
     furniture.style.backgroundColor="#f0f2f5";
     vehicle.style.backgroundColor="#f0f2f5";
+
+    // appliances container
+
+    appliancesContainer.scrollTop = 0;
 });
 
 
