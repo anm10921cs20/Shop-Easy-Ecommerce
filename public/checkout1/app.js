@@ -735,6 +735,6 @@ yes.addEventListener('click', () => {
         localStorage.removeItem('finaltotal');
         localStorage.removeItem('qty-value');
         window.location.replace("../myorder/myorder.html");
-    }, 5000)
+    }, 3000)
 })
 

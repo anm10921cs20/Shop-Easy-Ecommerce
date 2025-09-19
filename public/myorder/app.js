@@ -512,7 +512,7 @@ db.ref('grocerycart/' + localStorage.getItem('userid') + localStorage.getItem('n
                 var totalprice = listingprice.slice(3,11);
                 var list = parseInt(totalprice) + 40;
                 var specialprice = parseInt(totalprice) -10;
-                var qty = parseInt(detail[1].qty[i]);
+                var qty = detail[1]?.qty?.[i] ?? 1;
                 var qtyvlaue  = parseInt(totalprice) * qty;
 
                 
@@ -527,7 +527,7 @@ db.ref('grocerycart/' + localStorage.getItem('userid') + localStorage.getItem('n
                 <p class="ordersummary-tit">Price Details</p>
                 <div class="ordersummary-data">
                 <p class="tit">Listing Price</p><p class="ans">Rs.${list}</p>
-                <p class="tit">Product Qty</p><p class="ans">${detail[1].qty[i] ?? 1}</p>
+                <p class="tit">Product Qty</p><p class="ans">${detail[1]?.qty?.[i] ?? 1}</p>
                 <p class="tit">Selling Price</p><p class="ans">${datas[i].price}</p>
                 <p class="tit">Discount</p><p class="ans">Rs.10</p>
                 <p class="tit">Special Price</p><p class="ans">Rs.${specialprice}</p>
