@@ -132,6 +132,16 @@
     {
         display: none;
     }
+    .fashion
+    {
+        width: 100%;
+        height: 740px;
+        overflow-y: scroll;
+    }
+    .fashion::-webkit-scrollbar
+    {
+        display: none;
+    }
 
 
 
