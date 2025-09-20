@@ -283,6 +283,12 @@ mobiles.addEventListener('click', () => {
     food.style.backgroundColor="#f0f2f5";
     furniture.style.backgroundColor="#f0f2f5";
     vehicle.style.backgroundColor="#f0f2f5";
+
+
+
+    // mobile
+
+        mobilesContainer.scrollTop = 0;
 });
 
 // smartgadgets
@@ -335,6 +341,10 @@ smargadgets.addEventListener('click', () => {
     food.style.backgroundColor="#f0f2f5";
     furniture.style.backgroundColor="#f0f2f5";
     vehicle.style.backgroundColor="#f0f2f5";
+
+    // gadets
+
+    SmartgadgetsContainer.scrollTop = 0;
 });
 
 

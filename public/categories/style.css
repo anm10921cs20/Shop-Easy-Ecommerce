@@ -26,190 +26,243 @@
         top: 0;
         left: 0;
     }
-    .nav-details::-webkit-scrollbar
-    {
+
+    .nav-details::-webkit-scrollbar {
         display: none;
     }
-    .nav-details
-    {
+
+    .nav-details {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
         overflow: scroll;
         width: 100%;
         height: 102px;
-         position: relative;
-         border:1px solid rgba(0, 0, 0, 0.1) ;
-        
+        position: relative;
+        border: 1px solid rgba(0, 0, 0, 0.1);
+
     }
-    .box1
-    {
+
+    .box1 {
         width: 95px;
         height: 90px;
         border-left: 1px solid rgba(0, 0, 0, 0.1);
         background-color: #f0f2f5;
-       
+
     }
-    .img
-    {
+
+    .img {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
         height: 100px;
     }
-    .imgs
-    {
+
+    .imgs {
         width: 48px;
         height: 48px;
     }
-    .animatee
-    {
+
+    .animatee {
         position: absolute;
         background-color: var(--bs-primary);
-         height: 3px;
+        height: 3px;
         width: 95px;
         bottom: 0;
         left: 0px;
         border-radius: 14px;
         transition: all 1s;
     }
-    .nav-details .first, .box1:nth-child(1):hover~.animatee
-    {
+
+    .nav-details .first,
+    .box1:nth-child(1):hover~.animatee {
         left: 0px;
     }
-    .box1:nth-child(2):hover~.animatee
-    {
+
+    .box1:nth-child(2):hover~.animatee {
         left: 95px;
     }
-     .box1:nth-child(3):hover~.animatee
-    {
+
+    .box1:nth-child(3):hover~.animatee {
         left: 190px;
     }
-     .box1:nth-child(4):hover~.animatee
-    {
+
+    .box1:nth-child(4):hover~.animatee {
         left: 285px;
     }
-     .box1:nth-child(5):hover~.animatee
-    {
+
+    .box1:nth-child(5):hover~.animatee {
         left: 380px;
     }
-     .box1:nth-child(6):hover~.animatee
-    {
+
+    .box1:nth-child(6):hover~.animatee {
         left: 475px;
     }
-     .box1:nth-child(7):hover~.animatee
-    {
+
+    .box1:nth-child(7):hover~.animatee {
         left: 570px;
     }
-    .box1:nth-child(8):hover~.animatee
-    {
+
+    .box1:nth-child(8):hover~.animatee {
         left: 665px;
     }
-    .box1:nth-child(9):hover~.animatee
-    {
+
+    .box1:nth-child(9):hover~.animatee {
         left: 762px;
     }
-     .box1:nth-child(10):hover~.animatee
-    {
+
+    .box1:nth-child(10):hover~.animatee {
         left: 855px;
     }
-    .para-tit
-    {
+
+    .para-tit {
         color: #666;
         font-size: 14px;
     }
-    .fashion,.appliances,.mobiles,.smartgadgets,.beauty,.baby,.food,.furniture,.vehicle
-    {
+
+    .fashion,
+    .appliances,
+    .mobiles,
+    .smartgadgets,
+    .beauty,
+    .baby,
+    .food,
+    .furniture,
+    .vehicle {
         display: none;
     }
-    .grocerys
-    {
+
+    .grocerys {
         width: 100%;
         height: 740px;
         overflow-y: scroll;
     }
-    .grocerys::-webkit-scrollbar
-    {
+
+    .grocerys::-webkit-scrollbar {
         display: none;
     }
-    .fashion
-    {
+
+    .fashion {
         width: 100%;
         height: 740px;
         overflow-y: scroll;
     }
-    .fashion::-webkit-scrollbar
-    {
+
+    .fashion::-webkit-scrollbar {
         display: none;
     }
-      .appliances
-    {
+
+    .appliances {
         width: 100%;
         height: 740px;
         overflow-y: scroll;
     }
-    .appliances::-webkit-scrollbar
-    {
+
+    .appliances::-webkit-scrollbar {
         display: none;
     }
-     .mobiles
-    {
+
+    .mobiles {
         width: 100%;
         height: 740px;
         overflow-y: scroll;
     }
-    .mobiles::-webkit-scrollbar
-    {
+
+    .mobiles::-webkit-scrollbar {
+        display: none;
+    }
+
+    .smartgadgets {
+        width: 100%;
+        height: 740px;
+        overflow-y: scroll;
+    }
+
+    .smartgadgets::-webkit-scrollbar {
+        display: none;
+    }
+
+    .beauty {
+        width: 100%;
+        height: 740px;
+        overflow-y: scroll;
+    }
+
+    .beauty::-webkit-scrollbar {
+        display: none;
+    }
+
+    .baby {
+        width: 100%;
+        height: 740px;
+        overflow-y: scroll;
+    }
+
+    .baby::-webkit-scrollbar {
+        display: none;
+    }
+    
+    .food {
+        width: 100%;
+        height: 740px;
+        overflow-y: scroll;
+    }
+
+    .food::-webkit-scrollbar {
         display: none;
     }
 
 
 
 
-    .box1:nth-child(1)
-    {
+
+
+    .box1:nth-child(1) {
         background-color: #fff;
     }
-    .grocery-imgs
-    {
+
+    .grocery-imgs {
         object-fit: cover;
     }
-    .staples,.snack,.personal,.pack
-    {
+
+    .staples,
+    .snack,
+    .personal,
+    .pack {
         width: 95%;
         margin: 0 auto;
     }
-    .tit
-    {
+
+    .tit {
         font-weight: 600;
     }
-    .main-det
-    {
+
+    .main-det {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr;
-        column-gap:10px ;
+        column-gap: 10px;
         row-gap: 10px;
     }
-    .main-det-img
-    {
+
+    .main-det-img {
         height: 80px;
         width: 80px;
     }
-    a
-    {
+
+    a {
         font-size: 11px;
         text-align: center;
         text-decoration: none;
         color: #000;
     }
-    .topic-container
-    {
+
+    .topic-container {
         display: flex;
         justify-content: space-between;
         align-items: center;
     }
-    .fa-chevron-circle-right
-    {
+
+    .fa-chevron-circle-right {
         color: var(--bs-primary);
         font-size: 22px;
     }
