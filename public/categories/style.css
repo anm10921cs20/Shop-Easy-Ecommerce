@@ -212,6 +212,25 @@
         display: none;
     }
 
+    .furniture {
+        width: 100%;
+        height: 740px;
+        overflow-y: scroll;
+    }
+
+    .furniture::-webkit-scrollbar {
+        display: none;
+    }
+    .vehicle {
+        width: 100%;
+        height: 740px;
+        overflow-y: scroll;
+    }
+
+    .vehicle::-webkit-scrollbar {
+        display: none;
+    }
+
 
 
 

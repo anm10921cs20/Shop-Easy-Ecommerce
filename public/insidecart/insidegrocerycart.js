@@ -279,13 +279,16 @@ removeContainer1.forEach((btns, idx) => {
     btns.addEventListener('click', function() {
         this.parentElement.remove()
         var alertvalue = document.getElementById('alertcontainer');
-        alertvalue.style.display = "flex"
+          var alertpara = document.getElementsByClassName('para-alert')[0];
+        alertvalue.style.display = "flex";
+        alertpara.innerText = "Successful Remove to cart";
         var counter = 8;
         var interval = setInterval(() => {
             counter--;
             if (counter > 0) {
                 clearInterval(interval);
                 alertvalue.style.display = "none";
+                  alertpara.innerText = "";
             }
         }, 1000)
         totalvaluegrocery()
