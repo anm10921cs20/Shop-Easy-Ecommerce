@@ -20,6 +20,11 @@
 
     <link rel="stylesheet" href="./cart.css">
 
+    <script>
+        window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+    </script>
+    <script defer src="/_vercel/insights/script.js"></script>
+
     <!--cart external style new sheet-->
 
 
@@ -81,7 +86,8 @@
             <div class="nav-bar-head">
                 <div class="nav-bar-head_sub">
 
-                    <h5 class="h6 text-light"><i class="fas fa-user nav-head_sub-icon"></i><span id="login-name">Login & Signup</span></h5>
+                    <h5 class="h6 text-light"><i class="fas fa-user nav-head_sub-icon"></i><span id="login-name">Login &
+                            Signup</span></h5>
 
 
                 </div>
@@ -93,9 +99,11 @@
             <div class="nav-bar-body">
                 <ul class="nav-bar-body_nav-menu">
                     <li class="nav-menu_items"><a href="#"><i class="fas fa-home nav-menu-icons"></i> Home</a></li>
-                    <li class="nav-menu_items"><a href="./categories/categories.html"><i class="fa-solid fa-table-cells-large"></i> All
+                    <li class="nav-menu_items"><a href="./categories/categories.html"><i
+                                class="fa-solid fa-table-cells-large"></i> All
                             Categories</a></li>
-                    <li class="nav-menu_items"><a href="./myorder/myorder.html"><i class="fa-solid fa-cart-flatbed"></i> My Orders</a></li>
+                    <li class="nav-menu_items"><a href="./myorder/myorder.html"><i class="fa-solid fa-cart-flatbed"></i>
+                            My Orders</a></li>
                     <li class="nav-menu_items"><a href="#"><i class="fa-regular fa-address-book"></i> Contact</a></li>
                     <li class="nav-menu_items"><a href="#"><i class="fa-solid fa-eject"></i> About</a></li>
                     <hr>
@@ -104,7 +112,7 @@
                                 class="fa-solid fa-shopping-bag"></i> My Cart</a></li>
                     <li class="nav-menu_items"><a href="./heart/heart.html"><i class="fa-solid fa-heart"
                                 id="fa-heart"></i> My Wishlist</a></li>
-                    
+
 
 
                     <hr>
@@ -141,11 +149,12 @@
             <div class="login-container">
                 <form>
                     <div class="form-floating mb-3">
-                        <input type="email" class="form-control" id="login-email"  placeholder="name@example.com">
+                        <input type="email" class="form-control" id="login-email" placeholder="name@example.com">
                         <label for="floatingInput" id="float-item">Email address</label>
                     </div>
                     <div class="form-floating">
-                        <input type="password" class="form-control login-password" id="loginpassword" placeholder="Password">
+                        <input type="password" class="form-control login-password" id="loginpassword"
+                            placeholder="Password">
                         <label for="floatingPassword" id="float-item">Password</label>
                     </div><br>
                     <div class="showpassword"><input type="checkbox" class="show"> Show Password</div>
@@ -156,37 +165,38 @@
             <div class="register-container">
                 <form>
                     <div class="form-floating mb-3">
-                        <input type="email" class="form-control" id="register-email"  placeholder="name@example.com">
+                        <input type="email" class="form-control" id="register-email" placeholder="name@example.com">
                         <label for="floatingInput" id="float-item">Email address</label>
                     </div>
                     <div class="form-floating mb-3">
-                        <input type="text" class="form-control" id="register-name"  placeholder="Password">
+                        <input type="text" class="form-control" id="register-name" placeholder="Password">
                         <label for="floatingPassword" id="float-item">Name</label>
                     </div>
-                    
+
                     <div class="form-floating">
-                        <input type="password" class="form-control register-password" id="register-password"  placeholder="Password">
+                        <input type="password" class="form-control register-password" id="register-password"
+                            placeholder="Password">
                         <label for="floatingPassword" id="float-item">Create Password</label>
                     </div><br>
-                    <div class="showpassword"><input type="checkbox"  class="show" > Show Password</div>
+                    <div class="showpassword"><input type="checkbox" class="show"> Show Password</div>
 
                 </form><br>
             </div>
             <div class="forget-container">
                 <form>
                     <div class="form-floating mb-3">
-                        <input type="email" class="form-control" id="forget-email"  placeholder="name@example.com">
+                        <input type="email" class="form-control" id="forget-email" placeholder="name@example.com">
                         <label for="floatingInput" id="float-item">Email address</label>
                     </div>
-                    
+
 
                 </form><br>
             </div>
         </div>
-       
-         <div class="  loginbtn" onclick="login()">Login</div><br>
-          <div class="  registerbtn" onclick="register()">Register</div><br>
-           <div class=" forgetbtn" onclick="reset()">Send</div><br>
+
+        <div class="  loginbtn" onclick="login()">Login</div><br>
+        <div class="  registerbtn" onclick="register()">Register</div><br>
+        <div class=" forgetbtn" onclick="reset()">Send</div><br>
         <div class="register-id1 login-container">New User? Register</div>
         <div class="register-id2 register-container">Already? Account</div>
         <div class="register-id3 forget-container">Already? Login</div>
@@ -237,7 +247,7 @@
 
 
     <div id="alertcontainer" class="alertcontainer">
-       
+
     </div>
 
 
@@ -2010,7 +2020,7 @@
 
 
 
-<button onclick="facebook()">facebook</button>
+        <button onclick="facebook()">facebook</button>
 
 
 
