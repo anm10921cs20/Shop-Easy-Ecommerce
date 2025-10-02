@@ -1067,6 +1067,15 @@
         display: grid;
         grid-template-columns: 1fr 1fr;
     }
+    .header
+    {
+        font-weight: 600;
+        padding: 20px 20px;
+    }
+    #Easter
+    {
+        height: 340px;
+    }
 
 
 
