@@ -1074,8 +1074,76 @@
     }
     #Easter
     {
-        height: 340px;
+        height: 320px;
     }
+    .body-container
+    {
+        display: flex;
+        flex-direction: column;
+        gap: 14px;
+    }
+    .content,.content1
+    {
+        width: 95%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        border: 1px solid rgba(0, 0, 0, 0.2);
+        align-items: center;
+        height: 90px;
+        border-radius: 3px;
+    }
+    .img-det
+    {
+        height: 64px;
+        width: 64px;
+        object-fit: contain;
+       
+    }
+    .details
+    {
+        line-height: 8px;
+        font-size: 13px;
+    }
+    .contentdet
+    {
+        display: flex;
+        gap: 10px;
+        height: 90px;
+        align-items: center;
+        position: relative;
+    }
+    .price
+    {
+        font-weight: 600;
+    }
+    .percent-container
+    {
+        position: absolute;
+        background-color: #108934;
+        top:10px;
+        left: 10px;
+        height: 30px;
+        width: 30px;
+        border-radius: 10px 0 0 0;
+    }
+    .per-rate
+    {
+        color: #818d8e;
+        padding: 0 10px;
+        font-size: 11px;
+    }
+    .percentag
+    {
+        padding: 10px 2px;
+        color: #fff;
+        font-size: 12px;
+    }
+    #Maggi
+    {
+        height: 700px;
+    }
+
 
 
 
