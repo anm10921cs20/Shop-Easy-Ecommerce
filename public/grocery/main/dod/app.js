@@ -59,7 +59,7 @@ function detailschange(event)
 }
 
 
-// easter
+// maggi
 
 const dataContainer1 = document.querySelectorAll(".content1");
 
@@ -97,6 +97,186 @@ function detailschange1(event)
       // bootstrap
 
       const bootcontent1 = document.getElementById('Maggi');
+    const instance = bootstrap.Offcanvas.getInstance(bootcontent1);
+    instance.hide();
+   
+}
+
+
+// air freshner
+
+const dataContainer2 = document.querySelectorAll(".content2");
+
+dataContainer2.forEach((datas1) => {
+   datas1.addEventListener('click', detailschange2);
+})
+
+
+function detailschange2(event)
+{
+   // inside data
+   var container2 = event.target;
+   const imgDet = container2.getElementsByClassName('img-det')[0].src;
+   const qtyDet = container2.getElementsByClassName('quantity')[0].innerText;
+   const priceDet = container2.getElementsByClassName('price')[0].innerText;
+   const DelpriceDet = container2.getElementsByClassName('del-rate')[0].innerText;
+   const perDet = container2.getElementsByClassName('perce')[0].innerText;
+
+
+   // print data
+
+
+      const img1 = document.getElementsByClassName('product-img')[3];
+      const qty1 = document.getElementsByClassName('qty3')[0];
+      const price1 = document.getElementsByClassName('rate')[3];
+      const delprice1 = document.getElementsByClassName('rate-del')[3];
+      const per1 = document.getElementsByClassName('perce2')[0];
+      img1.src = imgDet;
+      qty1.innerText = qtyDet;
+      price1.innerText = priceDet;
+      delprice1.innerText = DelpriceDet;
+      per1.innerText = perDet;
+
+
+      // bootstrap
+
+      const bootcontent1 = document.getElementById('Odonil');
+    const instance = bootstrap.Offcanvas.getInstance(bootcontent1);
+    instance.hide();
+   
+}
+
+
+
+
+// Closeup
+
+const dataContainer3 = document.querySelectorAll(".content3");
+
+dataContainer3.forEach((datas2) => {
+   datas2.addEventListener('click', detailschange3);
+})
+
+
+function detailschange3(event)
+{
+   // inside data
+   var container2 = event.target;
+   const imgDet = container2.getElementsByClassName('img-det')[0].src;
+   const qtyDet = container2.getElementsByClassName('quantity')[0].innerText;
+   const priceDet = container2.getElementsByClassName('price')[0].innerText;
+   const DelpriceDet = container2.getElementsByClassName('del-rate')[0].innerText;
+   const perDet = container2.getElementsByClassName('perce')[0].innerText;
+
+
+   // print data
+
+
+      const img1 = document.getElementsByClassName('product-img')[12];
+      const qty1 = document.getElementsByClassName('qty4')[0];
+      const price1 = document.getElementsByClassName('rate')[12];
+      const delprice1 = document.getElementsByClassName('rate-del')[12];
+      const per1 = document.getElementsByClassName('perce3')[0];
+      img1.src = imgDet;
+      qty1.innerText = qtyDet;
+      price1.innerText = priceDet;
+      delprice1.innerText = DelpriceDet;
+      per1.innerText = perDet;
+
+
+      // bootstrap
+
+      const bootcontent1 = document.getElementById('CloUp');
+    const instance = bootstrap.Offcanvas.getInstance(bootcontent1);
+    instance.hide();
+   
+}
+
+
+
+
+// harpic
+
+const dataContainer4 = document.querySelectorAll(".content4");
+
+dataContainer4.forEach((datas2) => {
+   datas2.addEventListener('click', detailschange4);
+})
+
+
+function detailschange4(event)
+{
+   // inside data
+   var container2 = event.target;
+   const imgDet = container2.getElementsByClassName('img-det')[0].src;
+   const qtyDet = container2.getElementsByClassName('quantity')[0].innerText;
+   const priceDet = container2.getElementsByClassName('price')[0].innerText;
+   const DelpriceDet = container2.getElementsByClassName('del-rate')[0].innerText;
+   const perDet = container2.getElementsByClassName('perce')[0].innerText;
+
+
+   // print data
+
+
+      const img1 = document.getElementsByClassName('product-img')[17];
+      const qty1 = document.getElementsByClassName('qty5')[0];
+      const price1 = document.getElementsByClassName('rate')[17];
+      const delprice1 = document.getElementsByClassName('rate-del')[17];
+      const per1 = document.getElementsByClassName('perce4')[0];
+      img1.src = imgDet;
+      qty1.innerText = qtyDet;
+      price1.innerText = priceDet;
+      delprice1.innerText = DelpriceDet;
+      per1.innerText = perDet;
+
+
+      // bootstrap
+
+      const bootcontent1 = document.getElementById('Harpic');
+    const instance = bootstrap.Offcanvas.getInstance(bootcontent1);
+    instance.hide();
+   
+}
+
+
+// harpic
+
+const dataContainer5 = document.querySelectorAll(".content5");
+
+dataContainer5.forEach((datas2) => {
+   datas2.addEventListener('click', detailschange5);
+})
+
+
+function detailschange5(event)
+{
+   // inside data
+   var container2 = event.target;
+   const imgDet = container2.getElementsByClassName('img-det')[0].src;
+   const qtyDet = container2.getElementsByClassName('quantity')[0].innerText;
+   const priceDet = container2.getElementsByClassName('price')[0].innerText;
+   const DelpriceDet = container2.getElementsByClassName('del-rate')[0].innerText;
+   const perDet = container2.getElementsByClassName('perce')[0].innerText;
+
+
+   // print data
+
+
+      const img1 = document.getElementsByClassName('product-img')[36];
+      const qty1 = document.getElementsByClassName('qty6')[0];
+      const price1 = document.getElementsByClassName('rate')[36];
+      const delprice1 = document.getElementsByClassName('rate-del')[36];
+      const per1 = document.getElementsByClassName('perce5')[0];
+      img1.src = imgDet;
+      qty1.innerText = qtyDet;
+      price1.innerText = priceDet;
+      delprice1.innerText = DelpriceDet;
+      per1.innerText = perDet;
+
+
+      // bootstrap
+
+      const bootcontent1 = document.getElementById('MerSha');
     const instance = bootstrap.Offcanvas.getInstance(bootcontent1);
     instance.hide();
    

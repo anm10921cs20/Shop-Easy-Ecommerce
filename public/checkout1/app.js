@@ -446,7 +446,6 @@ datastored1.forEach((datas, idx) => {
                         </div>
                        
                         <div class="product-brand">${datas.brand}</div> 
-                        <div class="cart-delivery">Delivery by 2Days</div>
                     </div>
                    
  `
