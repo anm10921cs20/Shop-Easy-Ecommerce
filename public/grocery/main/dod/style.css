@@ -1082,7 +1082,7 @@
         flex-direction: column;
         gap: 14px;
     }
-    .content,.content1,.content2,.content3,.content4,.content5
+    .content,.content1,.content2,.content3,.content4,.content5,.content6,.content7
     {
         width: 95%;
         margin: 0 auto;
@@ -1158,6 +1158,14 @@
     #MerSha
     {
         height: 420px;
+    }
+    #Dove
+    {
+        height: 300px;
+    }
+     #Kelogs
+    {
+        height: 300px;
     }
 
 
