@@ -231,9 +231,9 @@
     .cart-name
     {
         font-weight: 600;
-        color:#214eb691;
+        color:var(--bs-primary);
         text-transform: uppercase;
-        font-size: 0.9rem;
+        font-size: 0.6rem;
     }
     .price-box
     {
@@ -382,31 +382,7 @@
         top: 10px;
         right: 10px;
     }
-    table
-    {
-        width: 90%;
-        margin: auto;
-    }
-    
-    td
-    {
-        border: 1px solid #000;
-        padding: 4px 4px;
-        width: 90%;
-    }
-    .table-details
-    {
-        display: flex;
-        color: var(--bs-primary);
-        justify-content: end;
-        padding: 3px 20px;
-        gap: 4px;
-        font-size: 14px;
-    }
-    .short-detail-list
-    {
-        color: #777;
-    }
+  
      .carousel-indicators [data-bs-target] {
         background-color: #474545;
         width: 13px;

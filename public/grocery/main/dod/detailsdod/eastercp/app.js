@@ -60,44 +60,9 @@ function heartactive() {
 
 
 
-// know more container
-
-const knowmore = document.getElementById('know-more');
-const knowmoreContainer = document.querySelector('.know-more-container');
-const knowmoreClose = document.getElementById('know-more-close');
-
-knowmore.addEventListener('click', () => {
-    knowmoreContainer.style.display = "block";
-})
-knowmoreClose.addEventListener('click', () => {
-    knowmoreContainer.style.display = "none";
-})
 
 
 
-// products details container
-
-const productshigh = document.getElementById('proddetails');
-const productschev = document.getElementById('chevrons');
-const productsvalues = document.getElementById('full-details')
-
-productshigh.addEventListener('click', () => {
-    productschev.classList.toggle('down-hover');
-    productsvalues.classList.toggle('full-details-active');
-
-})
-
-
-// image change function
-
-const imageChange = document.querySelector('#imagechange');
-
-imageChange.addEventListener('click', () => {
-    imageChange.src = "https://rukminim1.flixcart.com/www/120/102/promos/04/09/2023/d8a65dd0-321c-4028-9496-660e67ad6696.png?q=60";
-    const a = document.createElement('a');
-    a.href = "../../../../../../../insidecart/insidecart.html"
-
-})
 
 
 
@@ -136,7 +101,7 @@ imageChange.addEventListener('click', () => {
 
 const alldetailsopen = document.getElementById('alldetails');
 const alldetaukscontaineropen = document.getElementById('alldetails-container');
- 
+
 alldetailsopen.addEventListener('click', () => {
     alldetaukscontaineropen.style.display = "block";
 })
@@ -147,7 +112,7 @@ alldetailsopen.addEventListener('click', () => {
 
 const closealldet = document.getElementById('app-arrow-div');
 const alldetaukscontainer = document.getElementById('alldetails-container');
- 
+
 closealldet.addEventListener('click', () => {
     alldetaukscontainer.style.display = "none";
 })
@@ -180,18 +145,17 @@ const moreinfocontainer = document.getElementsByClassName('moreinfo')[0];
 desc.addEventListener('click', () => {
     // animation change
 
-    animationCont.style.left ="0";
-    btnanimate.style.left ="0";
+    animationCont.style.left = "0";
+    btnanimate.style.left = "0";
     btnanimate.style.display = "block";
-     var counter = 1;
+    var counter = 1;
     var interval = setInterval(() => {
         counter--;
-        if(counter<0)
-        {
+        if (counter < 0) {
             clearInterval(interval);
             btnanimate.style.display = "none"
         }
-    },1000)
+    }, 1000)
 
     desc.style.color = "var(--bs-primary)"
     spec.style.color = "#000"
@@ -208,17 +172,16 @@ spec.addEventListener('click', () => {
     // animation change
 
     animationCont.style.left = "140px";
-    btnanimate.style.left ="140px";
+    btnanimate.style.left = "140px";
     btnanimate.style.display = "block";
     var counter = 1;
     var interval = setInterval(() => {
         counter--;
-        if(counter<0)
-        {
+        if (counter < 0) {
             clearInterval(interval);
             btnanimate.style.display = "none"
         }
-    },1000)
+    }, 1000)
 
     spec.style.color = "var(--bs-primary)";
     desc.style.color = "#000"
@@ -227,7 +190,7 @@ spec.addEventListener('click', () => {
 
     descriptioncontainer.style.display = "none";
     specscontainer.style.display = "block";
-        moreinfocontainer.style.display = "none";
+    moreinfocontainer.style.display = "none";
 
 
 })
@@ -236,17 +199,16 @@ more.addEventListener('click', () => {
     // animation change
 
     animationCont.style.left = "280px";
-    btnanimate.style.left ="280px";
+    btnanimate.style.left = "280px";
     btnanimate.style.display = "block";
-     var counter = 1;
+    var counter = 1;
     var interval = setInterval(() => {
         counter--;
-        if(counter<0)
-        {
+        if (counter < 0) {
             clearInterval(interval);
             btnanimate.style.display = "none"
         }
-    },1000)
+    }, 1000)
 
     more.style.color = "var(--bs-primary)"
     desc.style.color = "#000"
@@ -254,46 +216,164 @@ more.addEventListener('click', () => {
 
     descriptioncontainer.style.display = "none";
     specscontainer.style.display = "none";
-        moreinfocontainer.style.display = "Block";
-  
-
-})
+    moreinfocontainer.style.display = "Block";
 
 
-// all products details container
-
-
-const productsclose = document.getElementsByClassName('app-left-bar')[2];
-const productsopen = document.getElementById('alldetailed');
-
-const productscontainer = document.getElementsByClassName('products-details-container')[0];
-
-productsopen.addEventListener('click', () => {
-    productscontainer.style.display = "block";
-})
-
-productsclose.addEventListener('click', () => {
-    productscontainer.style.display = "none";
-})
-
-
-// similar products 
-
-const similaropen = document.getElementById('product-similarly');
-const similarclose = document.getElementsByClassName('app-left-bar1')[0]
-const similarcontainer = document.getElementsByClassName('similar-open-container')[0];
-
-
-similaropen.addEventListener('click', () => {
-    similarcontainer.style.display = "block";
-})
-similarclose.addEventListener('click', () => {
-    similarcontainer.style.display = "none";
 })
 
 
 
 
+// products details change container details stored marked
+
+
+const productContainer = document.querySelectorAll('.product-content');
+
+productContainer.forEach((content) => {
+    content.addEventListener('click', activate)
+})
+
+
+// function create activate
+
+function activate(event) {
+    var productdata = event.target;
+    // products
+    const productqty = productdata.getElementsByClassName('pg')[0].innerText;
+    const productdis = productdata.getElementsByClassName('percent')[0].innerText;
+    const productprice = productdata.getElementsByClassName('rate1')[0].innerText;
+    const productdelprice = productdata.getElementsByClassName('rate-del1')[0].innerText;
+
+
+    //data
+    const productel = document.getElementsByClassName('mobile-brand-name')[0];
+    const percentel = document.getElementsByClassName('percentage')[0];
+    const productrateel = document.getElementsByClassName('rate')[0];
+    const productdelrateel = document.getElementsByClassName('rate-del')[0];
+
+    productel.innerText = productqty;
+    percentel.innerText = productdis;
+    productrateel.innerText = productprice;
+    productdelrateel.innerText = productdelprice;
+
+    // radios
+    const radios = productdata.getElementsByClassName('quantity')[0];
+    radios.checked = true;
+
+
+
+
+
+
+
+
+
+}
+
+const radios = document.getElementsByClassName('quantity')[1];
+radios.checked = true;
+
+
+
+
+
+
+
+
+
+// content document
+
+
+const productscontainer1 = document.getElementsByClassName('product-content')[0];
+const productscontainer2 = document.getElementsByClassName('product-content')[1];
+
+// click event
+
+productscontainer1.addEventListener('click', () => {
+    productscontainer1.style.border = "1px solid #4d370d";
+    productscontainer2.style.border = "1px solid rgba(0, 0, 0, 0.1)";
+
+    // img container
+
+    const img1 = document.getElementsByClassName('start-img')[0];
+    const img2 = document.getElementsByClassName('start-img')[1];
+
+    img1.src = "https://rukminim2.flixcart.com/image/808/970/xif0q/spice-masala/m/t/8/-original-imahfffswrpybhv2.jpeg?q=60";
+    img2.src = "https://rukminim2.flixcart.com/image/808/970/xif0q/spice-masala/k/2/a/-original-imahfffscpve4ymp.jpeg?q=60";
+
+    // btn
+
+    buttonEl.innerHTML = "Add";
+
+
+    const groceryLocaldata = localStorage.getItem('groceryorder');
+
+    const grocerydata = JSON.parse(groceryLocaldata);
+
+    grocerydata.forEach((data) => {
+        if (document.getElementsByClassName('mobile-name')[0].innerText === data.name && document.getElementsByClassName('mobile-brand-name')[0].innerText === data.brand) {
+            buttonEl.innerHTML = `<a href="../../../../../insidecart/insidecart.html">Added <i class="fa-solid fa-check"></i></a>`;
+            return
+        }
+
+    })
+
+})
+
+productscontainer2.addEventListener('click', () => {
+    productscontainer2.style.border = "1px solid #4d370d";
+    productscontainer1.style.border = "1px solid rgba(0, 0, 0, 0.1)";
+
+    // img container
+
+    const img1 = document.getElementsByClassName('start-img')[0];
+    const img2 = document.getElementsByClassName('start-img')[1];
+
+    img1.src = "https://rukminim2.flixcart.com/image/824/1828/xif0q/spice-masala/f/j/k/-original-imahfffszwg3zfgy.jpeg?q=90";
+    img2.src = "https://rukminim2.flixcart.com/image/824/1828/xif0q/spice-masala/k/e/q/-original-imahfffsvuz6n7k3.jpeg?q=90";
+
+    // local storage cart verified
+
+    grocerydata1.forEach((data) => {
+        if (document.getElementsByClassName('mobile-name')[0].innerText == data.name && document.getElementsByClassName('mobile-brand-name')[0].innerText == data.brand) {
+            buttonEl.innerHTML = `<a href="../../../../../insidecart/insidecart.html">Added  <i class="fa-solid fa-check"></i></a>`;
+            
+        }
+       
+          
+
+    })
+
+   
+
+
+
+})
+
+// add buttons
+
+const buttonEl = document.getElementsByClassName('button')[0];
+
+buttonEl.addEventListener('click', () => {
+    buttonEl.innerHTML = `<a href="../../../../../insidecart/insidecart.html">Added <i class="fa-solid fa-check"></i></a>`;
+})
+
+
+
+
+
+
+const groceryLocaldata1 = localStorage.getItem('groceryorder');
+
+const grocerydata1 = JSON.parse(groceryLocaldata1);
+
+grocerydata1.forEach((data) => {
+    if (document.getElementsByClassName('mobile-name')[0].innerText == data.name && document.getElementsByClassName('mobile-brand-name')[0].innerText == data.brand) {
+        buttonEl.innerHTML = `<a href="../../../../../insidecart/insidecart.html">Added  <i class="fa-solid fa-check"></i></a>`;
+        return
+    }
+
+})
 
 
 

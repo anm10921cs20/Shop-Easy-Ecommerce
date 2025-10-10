@@ -663,6 +663,10 @@ body {
         text-decoration: none;
     }
 
+    .products {
+        height: 140px;
+    }
+
     .products-name {
         font-size: 12px;
         margin-right: 10px;
@@ -753,6 +757,10 @@ body {
         line-height: 16px;
         border: 1px solid rgba(0, 0, 0, 0.1);
 
+    }
+
+    .main-tit {
+        font-size: 10px;
     }
 
     .groceryitems-name {
@@ -855,18 +863,18 @@ body {
     }
 
     .mobile-details-container {
-        line-height: 10px;
         font-size: 11px;
+
     }
 
-    .mobile-brand-name {
-        color: #666;
-        font-size: 14px;
+    .main-tit {
+        font-size: 13px;
+        padding: 7px;
+
     }
 
     .mobile-name {
         color: #000;
-        font-size: 14px;
     }
 
     .rate {
@@ -874,18 +882,67 @@ body {
         font-size: 18px;
     }
 
-    .rate-del {
+    .rate-del,
+    .rate-del1 {
         color: #666;
+        font-size: 12px;
 
     }
 
     .review-container {
         display: flex;
         justify-content: space-between;
+
+    }
+
+    .review {
+        color: #008c00;
+        font-size: 11px;
+    }
+
+    .button {
+        border: none;
+        border: 1px solid #853c0e;
+        position: absolute;
+        top: 76%;
+        right: 20px;
+        padding: 8px 28px;
+        border-radius: 6px;
+        font-size: 12px;
+        background-color: #ffffff;
+        color: #853c0e;
     }
 
     .percentage {
         color: #008c00;
+        padding: 0 7px;
+        font-size: 14px;
+    }
+
+    .rate-container {
+        border: 1px solid #ffda33;
+        width: 24%;
+        border-radius: 20px;
+        padding: 1px 0;
+        margin-left: 9px;
+
+    }
+
+    .rate-container1 {
+        border: 1px solid #ffda33;
+        width: 100%;
+        border-radius: 20px;
+        padding: 1px 0;
+    }
+
+    .rate,
+    .rate1 {
+        color: #000;
+        font-size: 14px;
+        background: #ffda33;
+        padding: 2px 3px;
+        border-radius: 12px 0 0 4px;
+
     }
 
     .logo-img {
@@ -901,6 +958,8 @@ body {
     .star-review {
         display: flex;
         column-gap: 5px;
+        padding: 7px;
+
     }
 
     .logo-text {
@@ -1620,9 +1679,9 @@ body {
         transition: all 0.3s ease-in-out;
         border-radius: 30px;
     }
-    .start-img
-    {
-        object-fit: contain ;
+
+    .start-img {
+        object-fit: contain;
     }
 
 
@@ -1864,7 +1923,7 @@ body {
         display: flex;
         width: 90%;
         margin: 0 auto;
-        gap: 20px;  
+        gap: 20px;
         align-items: center;
 
     }
@@ -1877,23 +1936,23 @@ body {
         border-bottom: 1px solid rgba(0, 0, 0, 0.3);
         padding: 10px 0;
     }
-    .products-similar-container-details
-    {
+
+    .products-similar-container-details {
         display: grid;
-        grid-template-columns:1fr 1fr;
+        grid-template-columns: 1fr 1fr;
         width: 80%;
         margin: 0 auto;
         row-gap: 10px;
         padding: 10px 0;
         height: 1020px;
     }
-    .more-container
-    {
+
+    .more-container {
         width: 90%;
         margin: 0 auto;
     }
-    .kdy
-    {
+
+    .kdy {
         list-style-type: circle;
         list-style-position: inside;
         padding: 0px;
@@ -1901,42 +1960,161 @@ body {
         line-height: 29px;
         font-weight: 500;
     }
-    .kdy li
-    {
+
+    .kdy li {
         padding: 0;
         width: 100%;
         text-align: start;
     }
-    .kdy li:nth-child(2)
-    {
+
+    .kdy li:nth-child(2) {
         padding: 0;
         margin: 0;
     }
-    .kdy li:nth-child(3)
-    {
+
+    .kdy li:nth-child(3) {
         margin: 0;
     }
-    table
-    {
+
+    table {
         border-collapse: collapse;
         line-height: 40px;
-      
+
     }
-    .colors
-    {
+
+    .colors {
         font-size: 13px;
         color: #999;
         line-height: 20px;
         width: 35%;
     }
-    .details-colors
-    {
+
+    .details-colors {
         font-size: 13px;
-        padding:6px 20px;
+        padding: 6px 20px;
         line-height: 20px;
         width: 55%;
         font-weight: 500;
     }
+
+    .timg {
+        display: flex;
+        align-items: center;
+        margin-bottom: 10px;
+    }
+
+    .expd {
+        display: flex;
+        height: 60px;
+        font-size: 12px;
+        gap: 10px;
+        align-items: center;
+        border-top: 0.1px solid rgba(0, 0, 0, 0.1);
+        padding: 7px;
+    }
+
+    .expti {
+        font-size: 13px;
+    }
+
+    .mauf {
+        font-size: 10px;
+        color: #999;
+    }
+
+    .select-varient {
+        padding: 0 7px;
+    }
+
+    .svtit {
+        color: #000;
+        font-size: 14px;
+    }
+
+    .g250,
+    .g500 {
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        height: 80px;
+        border-radius: 4px;
+    }
+
+    .prodlin {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .g500,
+    .g250 {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 10px;
+    }
+
+    .datas {
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+        height: 80px;
+        align-items: center;
+    }
+
+    .quantity{
+        accent-color: #853c0f;
+    }
+    .datarate
+    {
+        display: flex;
+        flex-direction: column;
+        line-height: 20px;
+    }
+    .percent
+    {
+        color:#008c00;
+        font-size: 12px;
+    }
+    .ppr
+    {
+        line-height: 1px;
+    }
+    .pg
+    {
+        font-size: 10px;
+    }
+    .pgqt
+    {
+        color: #999;
+        font-size: 12px;
+    }
+    .borders
+    {
+        border: 1px solid #4d370d;
+    }
+    table
+    {
+        line-height: 30px;
+    }
+    td
+    {
+        width: 190px;
+        font-size: 12px;
+    }
+    .head
+    {
+        color: #999;
+    }
+    .bodys
+    {
+        line-height: 17px;
+    }
+    .locdt
+    {
+        height: 200px;
+    }
+
+
+
 
 
 

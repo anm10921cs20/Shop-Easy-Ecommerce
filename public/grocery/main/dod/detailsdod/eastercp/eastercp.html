@@ -15,7 +15,8 @@
 
     <!--external stylesheet insert-->
     <link rel="stylesheet" href="./style.css" type="text/css">
-    
+    <link rel="stylesheet" href="../../../../../cart.css">
+
 
 
     <!--fontawsesome cdn insert-->
@@ -34,7 +35,7 @@
 </head>
 
 <body>
-   
+
     <div class="nav-container" id="nav-container">
         <!--left bar-->
         <div class="app-left-bar">
@@ -70,7 +71,7 @@
 
     <div class="main-container">
 
-
+        <div class="mobile-details-container"></div>
         <!-- start imaging croousel -->
         <div class="crousel-container">
             <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
@@ -97,7 +98,7 @@
                 <div class="carousel-inner">
                     <div class="carousel-item active">
                         <img src="https://rukminim2.flixcart.com/image/824/1828/xif0q/spice-masala/f/j/k/-original-imahfffszwg3zfgy.jpeg?q=90"
-                            class="d-block w-100 start-img" alt="..."  height="459.34px">
+                            class="d-block w-100 start-img product-img" alt="..." height="459.34px">
                     </div>
                     <div class="carousel-item">
                         <img src="https://rukminim2.flixcart.com/image/824/1828/xif0q/spice-masala/k/e/q/-original-imahfffsvuz6n7k3.jpeg?q=90"
@@ -107,11 +108,11 @@
                         <img src="https://rukminim2.flixcart.com/image/824/1828/xif0q/spice-masala/f/q/0/-original-imahfffsgjmmey7g.jpeg?q=90"
                             class="d-block w-100 start-img" height="459.34px" alt="...">
                     </div>
-                     <div class="carousel-item">
+                    <div class="carousel-item">
                         <img src="https://rukminim2.flixcart.com/image/824/1828/xif0q/spice-masala/f/k/j/-original-imahfffsr8t8qp7u.jpeg?q=90"
                             height="459.34px" class="d-block w-100 start-img" alt="...">
                     </div>
-                   
+
                     <div class="carousel-item">
                         <img src="https://rukminim2.flixcart.com/image/824/1828/xif0q/spice-masala/8/t/n/-original-imahfffscgkhgtgz.jpeg?q=90"
                             height="459.34px" class="d-block w-100 start-img" alt="...">
@@ -132,1116 +133,433 @@
                         <img src="https://rukminim2.flixcart.com/image/824/1828/xif0q/spice-masala/y/z/d/-original-imahfjgthrrvhh8b.jpeg?q=90"
                             class="d-block w-100 start-img" height="459.34px" alt="...">
                     </div>
-                   
+
 
                 </div>
 
             </div>
         </div><br><br>
 
-      
+        <!--alert container-->
+
+        <div id="alertcontainer" class="alertcontainer">
+            <i class="fas fa-shopping-cart"></i>
+            <p class="para-alert" id="para-alert">Successful added to cart</p>
+        </div>
+
 
         <!-- products values and data -->
-        
-           
-        
-        <div class="blue">
 
-        </div><br>
-        <!-- apple brands promise waranty -->
 
-        <div class="apple-waranty-container">
-            <div class="apple-container">
-                <div class="apple-img"><img
-                        src="https://rukminim1.flixcart.com/image/144/64/prod-fk-cms-brand-images/9d5696196cfb3f4440ca99b1018c8ff91a53716d1948ba73ee3bb68f36571d7a.jpg?q=60"
-                        height="40px" width="40px" alt=""></div>
-                <div class="apple-data">1 year warranty for phone and 1 year warranty for in Box Accessories. <span
-                        class="know-more" id="know-more">Know More</span></div>
-            </div>
-        </div><br>
-        <!-- area of know more -->
-        <div class="know-more-container">
-            <div class="know-more-nav">
-                <div class="know-more-close"><i id="know-more-close" class="fas fa-close close-btn"></i></div>
-                <div class="know-more-apple">Warranty details</div>
-            </div><br><br>
-            <div class="apple-waranty-container">
-                <div class="apple-container">
-                    <div class="apple-img"><img
-                            src="https://rukminim1.flixcart.com/image/144/64/prod-fk-cms-brand-images/9d5696196cfb3f4440ca99b1018c8ff91a53716d1948ba73ee3bb68f36571d7a.jpg?q=60"
-                            height="40px" width="40px" alt=""></div>
-                    <div class="apple-data">1 year warranty for phone and 1 year warranty for in Box Accessories.</div>
-                </div>
-            </div>
-            <hr>
 
-            <div class="detals-apple">
-                <p class="detals-title">Manufacturer information</p>
-
-                <p class="detals-topic">Apple Inc. is an American multinational technology company headquartered in
-                    Cupertino, California, that designs, develops, and sells consumer electronics, computer software,
-                    and online services.</p>
-                <br>
-                APPLE
-                <p class="detals-topic"> https://www.apple.com/in/legal/warranty/</p>
-                <p class="detals-topic">
-                    For any warranty related issues, please call the Apple Customer Support - <br>918040455150
-                </p>
-                <p class="apple-address">bangalore_admin@apple.com</p>
-            </div>
-            <hr>
+        <p class="main-tit">
+            <span class="mobile-name">Eastern Coriander Powder | Perfect colour, Perfect Smell, Perfect Taste</span>
+            (<span class="mobile-brand-name">500 g</span>)
+        </p>
+        <p class="percentage">51%OFF</p>
+        <p class="rate-container"><span class="rate">Rs.83</span> <del class="rate-del">Rs.171</del>
+        </p>
+        </p>
+        <div class="star-review">
+            <ion-icon name="star-sharp" class="star-icon"></ion-icon><ion-icon name="star-sharp"
+                class="star-icon"></ion-icon><ion-icon name="star-sharp" class="star-icon"></ion-icon><ion-icon
+                name="star-sharp" class="star-icon"></ion-icon><ion-icon name="star-half-sharp"
+                class="star-icon"></ion-icon>
+            <p class="review">4.5</p>
         </div>
-
-        <div class="blue">
-
-        </div><br>
-        <!-- highlights -->
-
-        <div class="highlights-container">
-            <div class="high-title">
-                <h1 class="title-high">Highlights</h1>
-            </div><br>
-            <div class="details-high">
-                <div class="rom">
-                    <div class="img-rom">
-                        <img height="28px" width="28px"
-                            src="https://rukminim1.flixcart.com/www/56/56/promos/28/06/2025/ca3c722b-3b51-4553-b9f5-5f25f82b5b75.png?q=60"
-                            alt="">
-                    </div>
-                    <div class="rom-details">
-                        <p class="headram"> RAM | ROM</p>
-                        <p class="romdata"><span id="storage2">1 TB</span> ROM</p>
-                        <p class="store">Store upto 100000 photos</p>
-
-                    </div>
-                </div>
-                <div class="rom">
-                    <div class="img-rom">
-                        <img height="28px" width="28px"
-                            src="https://rukminim1.flixcart.com/www/56/56/promos/28/06/2025/d5149d46-d48f-448f-af46-174aeb1924f4.png?q=60"
-                            alt="">
-                    </div>
-                    <div class="rom-details">
-                        <p class="headram"> Processor</p>
-                        <p class="romdata">A18 Pro Chip, 6 Core Processor | Hexa Core</p>
-                        <p class="store">Superfast Multitasking. Extensive Gaming</p>
-
-                    </div>
-                </div>
-                <div class="rom">
-                    <div class="img-rom">
-                        <img height="28px" width="28px"
-                            src="https://rukminim1.flixcart.com/www/56/56/promos/28/06/2025/e25e9e36-1c3f-412d-b632-9524aabb873c.png?q=60"
-                            alt="">
-                    </div>
-                    <div class="rom-details">
-                        <p class="headram"> Rear Camera</p>
-                        <p class="romdata">48MP + 48MP + 12MP Rear Camera </p>
-                        <p class="store">DSLR Like Pictures & Great Zoom</p>
-
-                    </div>
-                </div>
-                <div class="rom">
-                    <div class="img-rom">
-                        <img height="28px" width="28px"
-                            src="https://rukminim1.flixcart.com/www/56/56/promos/28/06/2025/18e5791c-614f-49db-b1a9-1a23921cb33c.png?q=60"
-                            alt="">
-                    </div>
-                    <div class="rom-details">
-                        <p class="headram"> Front Camera</p>
-                        <p class="romdata">12 MP Front Camera</p>
-                        <p class="store">High-Res Selfies Even in Low Light</p>
-
-                    </div>
-                </div>
-                <div class="rom">
-                    <div class="img-rom">
-                        <img height="28px" width="28px"
-                            src="https://rukminim1.flixcart.com/www/56/56/promos/28/06/2025/b19e02c0-f7fe-4ff2-9727-07609eecf6e6.png?q=60"
-                            alt="">
-                    </div>
-                    <div class="rom-details">
-                        <p class="headram"> Display</p>
-                        <p class="romdata">6.3 inch All Screen OLED Display </p>
-                        <p class="store">Cinematic Display. Sharpest Colours</p>
-
-                    </div>
-                </div>
-            </div><br>
-
-            <div class="high-title">
-                <h1 class="title-high-others">Other Details</h1>
-            </div><br>
-
-            <div class="others-details">
-                <div class="others-details-content">
-                    <div class="otherscontent">
-                        <p class="firstother">Network Type</p>
-                    </div>
-                    <div class="otherscontent">
-                        <p class="secondother one">5G, 4G VOLTE, 4G, 3G, 2G</p>
-                    </div>
-                </div>
-                <div class="others-details-content">
-                    <div class="otherscontent">
-                        <p class="firstother">SIM Type</p>
-                    </div>
-                    <div class="otherscontent">
-                        <p class="secondother two">Dual Sim(Nano + eSIM)</p>
-                    </div>
-                </div>
-                <div class="others-details-content">
-                    <div class="otherscontent">
-                        <p class="firstother">Expandable Storage</p>
-                    </div>
-                    <div class="otherscontent">
-                        <p class="secondother three">No</p>
-                    </div>
-                </div>
-                <div class="others-details-content">
-                    <div class="otherscontent">
-                        <p class="firstother">Audio Jack</p>
-                    </div>
-                    <div class="otherscontent">
-                        <p class="secondother four">No</p>
-                    </div>
-                </div>
-                <div class="others-details-content">
-                    <div class="otherscontent">
-                        <p class="firstother">Quick Charging </p>
-                    </div>
-                    <div class="otherscontent">
-                        <p class="secondother five">No</p>
-                    </div>
-                </div>
-                <div class="others-details-content">
-                    <div class="otherscontent">
-                        <p class="firstother">In The Box</p>
-                    </div>
-                    <div class="otherscontent">
-                        <p class="secondother six">Handset, USB C Charge Cable <br> (1m), Documentation</p>
-                    </div>
-                </div>
-
-            </div>
-            <div class="high-title">
-                <h1 class="title-high-others">Warranty</h1>
-            </div><br>
-            <div class="others-details-content">
-                <div class="otherscontent">
-                    <p class="firstother details-warn">Warranty </p>
-                </div>
-                <div class="otherscontent">
-                    <p class="secondother seven">1 year warranty for phone and 1 year warranty for in Box Accessories.
-                    </p>
-                </div>
-            </div><br>
-
-            <div class="alldetails" id="alldetails">
-                <div class="topic-datas">All Details</div>
-                <div><i class="fas fa-chevron-right"></i></div>
-            </div>
+        <button class="button">Add</button>
+    </div>
+    <div class="expd">
+        <div class="timg">
+            <img class="eximg"
+                src="https://rukminim2.flixcart.com/www/50/50/promos/29/04/2019/cd6b5323-f958-4068-aeec-d54ce3b01b1b.png?q=60"
+                height="25px" width="25px" alt="">
         </div>
-        <div class="blue height">
-
+        <div class="expdat">
+            <p class="expti">
+                Expiry Date 25 Jun 2026 <br> <span class="mauf">
+                    Manufactured date 01 Jul 2025
+                </span>
+            </p>
         </div>
-        <div class="proddetails" id="proddetails">
-            <div class="topic-high" id="products-high">Products Highlights</div>
-            <div><i id="chevrons" class="fas fa-chevron-down "></i></div>
-        </div>
-        <div class="full-details" id="full-details">
-            <img height="213px" width="100%"
-                src="https://rukminim1.flixcart.com/image/760/426/cms-rpd-img/f6a29cb1dda64005a210069698a72836_195f61aa123_iPhone_16_Pro_Marketing_Page_Avail_Flipkart_Mobile_1280px__en-IN_01.jpg.jpeg?q=60"
-                alt="">
-            <img width="100%"
-                src="https://rukminim1.flixcart.com/image/760/426/cms-rpd-img/e92dcfe949b145b4a26b06c1e020a188_195f61aae12_iPhone_16_Pro_Marketing_Page_Avail_Flipkart_Mobile_1280px__en-IN_02.jpg.jpeg?q=60"
-                alt="">
-            <img width="100%"
-                src="https://rukminim1.flixcart.com/image/760/426/cms-rpd-img/484f44af5c39480e939c5ceb4aa44c72_195f61ac15c_iPhone_16_Pro_Marketing_Page_Avail_Flipkart_Mobile_1280px__en-IN_03.jpg.jpeg?q=60"
-                alt="">
-            <img width="100%"
-                src="https://rukminim1.flixcart.com/image/760/426/cms-rpd-img/3f6ff69bcd9f46bfa7109427896634b3_195f61ad362_iPhone_16_Pro_Marketing_Page_Avail_Flipkart_Mobile_1280px__en-IN_04.jpg.jpeg?q=60"
-                alt="">
-            <img height="213px" width="100%"
-                src="https://rukminim1.flixcart.com/image/760/426/cms-rpd-img/2f9333ec9e284f148d89ccfff1cd3443_195f61ae106_iPhone_16_Pro_Marketing_Page_Avail_Flipkart_Mobile_1280px__en-IN_05.jpg.jpeg?q=60"
-                alt="">
-            <img height="213px"
-                src="https://rukminim1.flixcart.com/image/760/426/cms-rpd-img/e5492b804bbc4087bdede194cc129ea9_195f622461e_iPhone_16_Pro_Marketing_Page_Avail_Flipkart_Mobile_1280px__en-IN_56.jpg.jpeg?q=60"
-                alt="">
-            <br>
-            <div class="alldetails" id="alldetailed">
-                <div class="topic-datas">All Details</div>
-                <div><i class="fas fa-chevron-right"></i></div>
-            </div>
-        </div>
+    </div>
+    <div class="blue height">
 
-        <div class="blue height">
-
-        </div><br>
-        <div class="proddetails" id="product-similarly">
-            <div class="topic-high" id="products-high">Similar Products</div>
-            <div><i class="fas fa-chevron-right text-primary"></i></div>
-        </div>
-
-
-
-        <!-- buy or cart -->
-        <div class="cart-button">
-            <div class="maini-cart">
-                <div class="img-cart">
-                    <img id="imagechange" width="55px" height="44px"
-                        src="https://rukminim1.flixcart.com/www/120/102/promos/04/09/2023/2deff926-6518-490d-a3d9-bff8f47bb113.png?q=60"
-                        alt="">
-                </div>
-                <button class="buttons fas fa-heart"></button>
-                <div class="buy-btn">
-                    <button class="btn btn-warning btn-buy">Buy Now</button>
-                </div>
-            </div>
-        </div>
-
-
-      
-
-
-
-        <div class="alldetails-container" id="alldetails-container">
-            <div class="all-details-nav">
-                <div class="app-left-bar" id="app-arrow-div">
-                    <i id="app-arrow" class="fas fa-arrow-left app-bars"></i>
-                </div>
-                <div class="">Product Details</div>
-            </div><br>
-
-            <div class="container-phonedetails">
-                <div class="img-alldetails">
-                    <img id="alldetailsimg"
-                        src="https://rukminim1.flixcart.com/image/808/970/xif0q/mobile/e/x/e/-original-imah4jyw4fpqe7ru.jpeg?q=60&crop=false"
-                        height="80px" alt="">
-                </div>
-                <div class="mobile-alldetails">
-                    <h1 class="brand-name-all">Apple iPhone 16 Pro (<span class="brand-name-all" id="color5">Black
-                            Titanium</span>,
-                        <span id="storage5">1 TB</span> )
-                    </h1>
-                    <p class="rate-container" id="rate"><span class="rate" id="rate3">Rs.162900</span><del
-                            class="rate-del" id="rate-del3">Rs.1,69,900</del>
-                        <span class="percentage">10%OFF</span>
-                    <div class="star-review">
-                        <ion-icon name="star-sharp" class="star-icon"></ion-icon><ion-icon name="star-sharp"
-                            class="star-icon"></ion-icon><ion-icon name="star-sharp"
-                            class="star-icon"></ion-icon><ion-icon name="star-sharp"
-                            class="star-icon"></ion-icon><ion-icon name="star-half-sharp" class="star-icon"></ion-icon>
-                        <p class="text-count">4.4</p>
-                        <li class="text-result">Excellent</li>
+    </div><br>
+    <div class="select-varient">
+        <p class="svtit">
+            Select Varient
+        </p>
+        <div class="prodlin">
+            <div class="g250 product-content">
+                <div class="datas">
+                    <div class="rad">
+                        <input type="radio" class="quantity" name="quantity">
                     </div>
-                    </p>
-                </div>
 
-            </div>
-            <div class="nav-bar-alldetails">
-                <nav>
-                    <li class="clr" id="desc">DESCRIPTION</li>
-                    <li id="spec">SPECIFICATION</li>
-                    <li id="more">MORE INFO</li>
-                    <div class="animation first">
-
-
-                    </div>
-                    <div class="btn-effect actives"></div>
-                </nav>
-            </div>
-            <div class="detailsallbox">
-                <div class="description">
-                    <p class="description-para">iPhone 16 Pro. Built for Apple Intelligence. Featuring a stunning
-                        titanium design. Camera Control. 4K 120 fps Dolby Vision. And A18 Pro chip.</p>
-                </div>
-                <div class="specs">
-                    <div class="more-info-container">
-                        <p class="Warranty">Key Features</p>
-                        <ol class="kdy">
-                            <li id="storage6">1 TB<span> ROM</span></li>
-                            <li>16.0 cm (6.3 inch) Super Retina XDR Display</li>
-                            <li>48MP + 48MP + 12MP | 12MP Front Camera</li>
-                            <li>A18 Pro Chip, 6 Core Processor Processor</li>
-                        </ol>
-                    </div>
-                    <hr>
-                    <div class="more-info-container">
-                        <p class="Warranty">Others Details</p>
-                        <table>
-                            <tr>
-                                <td class="colors"> Smartphone</td>
-                                <td class="details-colors">Yes</td>
-                            </tr>
-                            <tr>
-                                <td class="colors"> Sim Size</td>
-                                <td class="details-colors">Nano Sim + eSIM</td>
-                            </tr>
-                            <tr>
-                                <td class="colors">Graphics PPI</td>
-                                <td class="details-colors">460 PPI</td>
-                            </tr>
-                            <tr>
-                                <td class="colors">Sensors</td>
-                                <td class="details-colors">Face ID, LiDAR Scanner, Barometer, High Dynamic Range Gyro,
-                                    High G Accelerometer, Proximity Sensor, Dual Ambient Light Sensors</td>
-                            </tr><br>
-                            <tr>
-                                <td class="colors">Supported Languages</td>
-                                <td class="details-colors">English (Australia, UK, US), Chinese (Simplified,
-                                    Traditional, Traditional - Hong Kong), French (Canada, France), German, Italian,
-                                    Japanese, Korean, Spanish (Latin America, Spain), Arabic, Bulgarian, Catalan,
-                                    Croatian, Czech, Danish, Dutch, Finnish, Greek, Hebrew, Hindi, Hungarian,
-                                    Indonesian, Kazakh, Malay, Norwegian, Polish, Portuguese (Brazil, Portugal),
-                                    Romanian, Russian, Slovak, Swedish, Thai, Turkish, Ukrainian, Vietnamese</td>
-                            </tr>
-                            <tr>
-                                <td class="colors">Browser</td>
-                                <td class="details-colors">Safari</td>
-                            </tr>
-                            <tr>
-                                <td class="colors">Other Features</td>
-                                <td class="details-colors">Titanium Design, Latest Generation Ceramic Shield Front,
-                                    Textured Matte Glass Back, Rated IP68 (Maximum Depth of 6 Metres Upto 30 Minutes)
-                                    Under IEC</td>
-                            </tr>
-                            <tr>
-                                <td class="colors">Important Apps</td>
-                                <td class="details-colors">�Store, App Store, Books, Calculator, Calendar, Camera,
-                                    Clips, Clock, Compass, Contacts, FaceTime, Files, Find My, Fitness, Freeform,
-                                    GarageBand, Health, Home, iMovie, iTunes Store, Keynote, Magnifier, Mail, Maps,
-                                    Measure, Messages, Music, News, Notes, Numbers, Pages, Passwords, Phone, Photos,
-                                    Podcasts, Reminders, Safari, Settings, Shortcuts, Stocks, Tips, Translate, TV, Voice
-                                    Memos, Wallet, Watch, Weather</td>
-                            </tr>
-                            <tr>
-                                <td class="colors">GPS Type</td>
-                                <td class="details-colors">Precision Dual Frequency GPS (GPS, GLONASS, GALILEO, QZSS,
-                                    BEIDOU, NAVIC), Digital Compass, Wi-Fi, Cellular, iBeacon Micro Location</td>
-                            </tr>
-
-                        </table>
-
-
-                    </div>
-                    <hr>
-                    <div class="more-info-container">
-                        <p class="Warranty">Warranty</p>
-                        <table>
-                            <tr>
-                                <td class="colors">Warranty Summary</td>
-                                <td class="details-colors">1 year warranty for phone and 1 year warranty for in Box
-                                    Accessories.</td>
-                            </tr>
-                            <tr>
-                                <td class="colors">Domestic Warranty</td>
-                                <td class="details-colors">1 Year</td>
-                            </tr>
-
-                        </table>
-
-
-                    </div>
-                    <hr>
-                    <div class="more-info-container">
-                        <p class="Warranty">Multimedia Features</p>
-                        <table>
-                            <tr>
-                                <td class="colors">Audio Formats</td>
-                                <td class="details-colors">AAC, APAC, MP3, Lossless, FLAC, Dolby Digital, Dolby Digital
-                                    Plus, Dolby Atmos</td>
-                            </tr>
-                            <tr>
-                                <td class="colors">Video Formats</td>
-                                <td class="details-colors">HEVC, H.264, and ProRes</td>
-                            </tr>
-
-
-                        </table>
-
-
-                    </div>
-                    <hr>
-                    <div class="more-info-container">
-                        <p class="Warranty">General</p>
-                        <table>
-                            <tr>
-                                <td class="colors">In The Box</td>
-                                <td class="details-colors">Handset, USB C Charge Cable (1m), Documentation</td>
-                            </tr>
-                            <tr>
-                                <td class="colors">Model Number</td>
-                                <td class="details-colors">MYNN3HN/A</td>
-                            </tr>
-                            <tr>
-                                <td class="colors">Model Name</td>
-                                <td class="details-colors">iPhone 16 Pro</td>
-                            </tr>
-                            <tr>
-                                <td class="colors">Color</td>
-                                <td class="details-colors" id="color6">Black Titanium</td>
-                            </tr>
-                            <tr>
-                                <td class="colors">Browse Type</td>
-                                <td class="details-colors">Smartphones</td>
-                            </tr>
-                            <tr>
-                                <td class="colors">SIM Type</td>
-                                <td class="details-colors">Dual Sim(Nano + eSIM)</td>
-                            </tr>
-                            <tr>
-                                <td class="colors">Hybrid Sim Slot</td>
-                                <td class="details-colors">No</td>
-                            </tr>
-                            <tr>
-                                <td class="colors">Touchscreen</td>
-                                <td class="details-colors">Yes</td>
-                            </tr>
-                            <tr>
-                                <td class="colors">OTG Compatible</td>
-                                <td class="details-colors">No</td>
-                            </tr>
-                            <tr>
-                                <td class="colors">Sound Enhancements</td>
-                                <td class="details-colors">Built-in Stereo Speaker</td>
-                            </tr>
-
-
-                        </table>
-
-                    </div>
-                    <hr>
-                    <div class="more-info-container">
-                        <p class="Warranty">Call Features</p>
-                        <table>
-                            <tr>
-                                <td class="colors">Video Call Support</td>
-                                <td class="details-colors">Yes</td>
-                            </tr>
-                            <tr>
-                                <td class="colors">Speaker Phone</td>
-                                <td class="details-colors">Yes</td>
-                            </tr>
-
-                        </table>
-                    </div>
-                    <hr>
-                    <div class="more-info-container">
-                        <p class="Warranty">Dimensions</p>
-                        <table>
-                            <tr>
-                                <td class="colors">Width</td>
-                                <td class="details-colors">71.5 mm</td>
-                            </tr>
-                            <tr>
-                                <td class="colors">Height</td>
-                                <td class="details-colors">149.6 mm</td>
-                            </tr>
-                            <tr>
-                                <td class="colors">Depth</td>
-                                <td class="details-colors">8.25 mm</td>
-                            </tr>
-                            <tr>
-                                <td class="colors">Weight</td>
-                                <td class="details-colors">199 g</td>
-                            </tr>
-
-
-
-                        </table>
-
-                    </div>
-                    <hr>
-                    <div class="more-info-container">
-                        <p class="Warranty">Display Features</p>
-                        <table>
-                            <tr>
-                                <td class="colors">Display Size</td>
-                                <td class="details-colors">16.0 cm (6.3 inch)</td>
-                            </tr>
-                            <tr>
-                                <td class="colors">Resolution</td>
-                                <td class="details-colors">2622 x 1206 Pixels</td>
-                            </tr>
-                            <tr>
-                                <td class="colors">Resolution Type</td>
-                                <td class="details-colors">Super Retina XDR Display</td>
-                            </tr>
-                            <tr>
-                                <td class="colors">GPU</td>
-                                <td class="details-colors">New 6 Core</td>
-                            </tr>
-                            <tr>
-                                <td class="colors">Display Type</td>
-                                <td class="details-colors">All Screen OLED Display</td>
-                            </tr>
-                            <tr>
-                                <td class="colors">Other Display Features</td>
-                                <td class="details-colors">Dynamic Island, Always On Display, ProMotion Technology with
-                                    Adaptive Refresh Rates Upto 120Hz, HDR Display, True Tone, Wide Colour (P3), Haptic
-                                    Touch, Contrast Ratio: 2,000,000:1 (Typical), 1,000 nits Max Brightness (Typical),
-                                    1,600 nits Peak Brightness (HDR), 2,000 nits Peak Brightness (Outdoor), Fingerprint
-                                    Resistant Oleophobic Coating, Support for Display of Multiple Languages and
-                                    Characters Simultaneously</td>
-                            </tr>
-
-
-
-                        </table>
-
-                    </div>
-                    <hr>
-                    <div class="more-info-container">
-                        <p class="Warranty">Os & Processor Features</p>
-                        <table>
-                            <tr>
-                                <td class="colors">Operating System</td>
-                                <td class="details-colors">iOS 18</td>
-                            </tr>
-                            <tr>
-                                <td class="colors">Processor Brand</td>
-                                <td class="details-colors">Apple</td>
-                            </tr>
-                            <tr>
-                                <td class="colors">Processor Type</td>
-                                <td class="details-colors">A18 Pro Chip, 6 Core Processor</td>
-                            </tr>
-                            <tr>
-                                <td class="colors">Processor Core</td>
-                                <td class="details-colors">Hexa Core</td>
-                            </tr>
-                            <tr>
-                                <td class="colors">Operating Frequency</td>
-                                <td class="details-colors">5G FDD NR (Bands n1, n2, n3, n5, n7, n8, n12, n14, n20, n25,
-                                    n26, n28, n29, n30, n66, n70, n71, n75, n76), 5G TDD NR (Bands n38, n40, n41, n48,
-                                    n53, n77, n78, n79), 5G NR mmWave (Bands n258, n260, n261), 4G LTE FDD (B1, B2, B3,
-                                    B4, B5, B7, B8, B12, B13, B14, B17, B18, B19, B20, B25, B26,B28, B29, B30, B32, B66,
-                                    B71),
-                                    4G LTE TDD (B34, B38, B39, B40, B41, B42, B48, B53), 3G UMTS/HSPA+/DC-HSDPA (850
-                                    MHz, 900 MHz, 1700 MHz/2100 MHz, 1900 MHz, 2100 MHz), 2G GSM/EDGE (850 MHz, 900 MHz,
-                                    1800 MHz, 1900 MHz)</td>
-                            </tr>
-
-
-
-
-                        </table><br><br>
-
-                    </div>
-                    <hr>
-                </div>
-
-
-
-
-
-
-
-
-
-
-
-                <div class="moreinfo">
-                    <div class="more-container">
-                        <p class="Warranty">Warranty</p>
-                        <p class="moreinfo-para">1 year warranty for phone and 1 year warranty for in Box
-                            Accessories.
+                    <div class="datarate">
+                        <p class="percent">41% off
                         </p>
-                        <div class="generic">
-                            <div class="mobiles">Generic Name</div>
-                            <div class="india">Mobiles</div>
-                        </div>
-                        <div class="generic">
-                            <div class="mobiles">Country of Orgin</div>
-                            <div class="india1">India</div>
+                        <p class="rate-container1"><span class="rate1">Rs.50</span> <del class="rate-del1">Rs.86</del>
+                        </p>
+                    </div>
 
-                        </div><br>
-                        <p class="Warranty">Manufacturer'S Details</p>
-                        <p class="waranty-details">Apple Inc. or Apple India Private Limited</p>
-
-                        <p class="Warranty">Importer'S Details</p>
-                        <p class="waranty-details">Apple Inc. or Apple India Private Limited</p>
-
-                        <p class="Warranty">Packers'S Details</p>
-                        <p class="waranty-details">Apple Inc. or Apple India Private Limited</p>
+                </div>
+                <div class="ppr">
+                    <p class="pg">
+                        250g
+                    </p>
+                    <p class="pgqt">
+                        Rs.50/250g
+                    </p>
+                </div>
 
 
+            </div>
+            <div class="g500 product-content borders">
+                <div class="datas">
+                    <div class="rad">
+                        <input type="radio" class="quantity" name="quantity">
+                    </div>
 
+                    <div class="datarate">
+                        <p class="percent">51% off
 
+                        </p>
+                        <p class="rate-container1"><span class="rate1">Rs.83</span> <del class="rate-del1">Rs.171</del>
+                        </p>
 
                     </div>
 
                 </div>
+                <div class="ppr">
+                    <p class="pg">
+                        500g
+                    </p>
+                    <p class="pgqt">
+                        Rs.41.5/250g
+                    </p>
+                </div>
             </div>
-
-
-
-
         </div>
 
 
-        <div class="products-details-container">
-            <div class="products-details-nav">
-                <div class="app-left-bar" id="app-arrow-div">
-                    <i id="app-arrow1" class="fas fa-arrow-left app-bars"></i>
-                </div>
-                <div class="">Product Details</div>
-            </div><br>
+    </div><br>
+    <div class="blue height">
 
-
-            <div class="products-details-app">
-                <img src="https://rukminim2.flixcart.com/image/760/426/cms-rpd-img/f6a29cb1dda64005a210069698a72836_195f61aa123_iPhone_16_Pro_Marketing_Page_Avail_Flipkart_Mobile_1280px__en-IN_01.jpg.jpeg?q=60"
-                    width="100%" alt="">
-                <img src="https://rukminim2.flixcart.com/image/760/426/cms-rpd-img/e92dcfe949b145b4a26b06c1e020a188_195f61aae12_iPhone_16_Pro_Marketing_Page_Avail_Flipkart_Mobile_1280px__en-IN_02.jpg.jpeg?q=60"
-                    width="100%" alt="">
-                <img src="https://rukminim2.flixcart.com/image/760/426/cms-rpd-img/484f44af5c39480e939c5ceb4aa44c72_195f61ac15c_iPhone_16_Pro_Marketing_Page_Avail_Flipkart_Mobile_1280px__en-IN_03.jpg.jpeg?q=60"
-                    width="100%" alt="">
-                <img src="https://rukminim2.flixcart.com/image/760/426/cms-rpd-img/3f6ff69bcd9f46bfa7109427896634b3_195f61ad362_iPhone_16_Pro_Marketing_Page_Avail_Flipkart_Mobile_1280px__en-IN_04.jpg.jpeg?q=60"
-                    width="100%" alt="">
-                <img src="https://rukminim2.flixcart.com/image/760/426/cms-rpd-img/2f9333ec9e284f148d89ccfff1cd3443_195f61ae106_iPhone_16_Pro_Marketing_Page_Avail_Flipkart_Mobile_1280px__en-IN_05.jpg.jpeg?q=60"
-                    width="100%" alt="">
-                <img src="https://rukminim2.flixcart.com/image/760/426/cms-rpd-img/cae3f65ae23942a88c244c37a8303628_195f61af046_iPhone_16_Pro_Marketing_Page_Avail_Flipkart_Mobile_1280px__en-IN_06.jpg.jpeg?q=60"
-                    width="100%" alt="">
-                <img src="https://rukminim2.flixcart.com/image/760/426/cms-rpd-img/4a907a296f3742cabc055750d07e1eca_195f61b01a8_iPhone_16_Pro_Marketing_Page_Avail_Flipkart_Mobile_1280px__en-IN_07.jpg.jpeg?q=60"
-                    width="100%" alt="">
-                <img src="https://rukminim2.flixcart.com/image/760/426/cms-rpd-img/e1137620c02f4475b7cc8b6096f02320_195f61b1490_iPhone_16_Pro_Marketing_Page_Avail_Flipkart_Mobile_1280px__en-IN_08.jpg.jpeg?q=60"
-                    width="100%" alt="">
-                <img src="https://rukminim2.flixcart.com/image/760/426/cms-rpd-img/b2c2d684715e4acea88f0dedde01c5ec_195f61b3c23_iPhone_16_Pro_Marketing_Page_Avail_Flipkart_Mobile_1280px__en-IN_09.jpg.jpeg?q=60"
-                    width="100%" alt="">
-                <img src="https://rukminim2.flixcart.com/image/760/426/cms-rpd-img/e5071a8d22e94c12b3f04253660c66c0_195f61b4ff2_iPhone_16_Pro_Marketing_Page_Avail_Flipkart_Mobile_1280px__en-IN_10.jpg.jpeg?q=60"
-                    width="100%" alt="">
-                <img src="https://rukminim2.flixcart.com/image/760/426/cms-rpd-img/d5aa942fa81241239d27f99e3d2996e6_195f61b6764_iPhone_16_Pro_Marketing_Page_Avail_Flipkart_Mobile_1280px__en-IN_11.jpg.jpeg?q=60"
-                    width="100%" alt="">
-                <img src="https://rukminim2.flixcart.com/image/760/426/cms-rpd-img/8cb27d5e3def42aea7b320a329917122_195f61b7eff_iPhone_16_Pro_Marketing_Page_Avail_Flipkart_Mobile_1280px__en-IN_12.jpg.jpeg?q=60"
-                    width="100%" alt="">
-                <img src="https://rukminim2.flixcart.com/image/760/426/cms-rpd-img/edd5ab03a92747d8be4ec070c00b7220_195f61bf746_iPhone_16_Pro_Marketing_Page_Avail_Flipkart_Mobile_1280px__en-IN_13.jpg.jpeg?q=60"
-                    width="100%" alt="">
-                <img src="https://rukminim2.flixcart.com/image/760/426/cms-rpd-img/da746054a2e140978c101e7274658f3e_195f61c05a2_iPhone_16_Pro_Marketing_Page_Avail_Flipkart_Mobile_1280px__en-IN_14.jpg.jpeg?q=60"
-                    width="100%" alt="">
-                <img src="https://rukminim2.flixcart.com/image/760/426/cms-rpd-img/f132e9368dfb4dd193f7a69c37908f7a_195f61c13bd_iPhone_16_Pro_Marketing_Page_Avail_Flipkart_Mobile_1280px__en-IN_15.jpg.jpeg?q=60"
-                    width="100%" alt="">
-                <img src="https://rukminim2.flixcart.com/image/760/426/cms-rpd-img/32d8d6c497674121854cb785d39b7e6b_195f61c200f_iPhone_16_Pro_Marketing_Page_Avail_Flipkart_Mobile_1280px__en-IN_16.jpg.jpeg?q=60"
-                    width="100%" alt="">
-                <img src="https://rukminim2.flixcart.com/image/760/426/cms-rpd-img/20ff17b9a8a549c8af7089c72c16665f_195f61c2e2d_iPhone_16_Pro_Marketing_Page_Avail_Flipkart_Mobile_1280px__en-IN_17.jpg.jpeg?q=60"
-                    width="100%" alt="">
-                <img src="https://rukminim2.flixcart.com/image/760/426/cms-rpd-img/2c291a9d32264c4496fc89a68d8ab3fa_195f61c40b5_iPhone_16_Pro_Marketing_Page_Avail_Flipkart_Mobile_1280px__en-IN_18.jpg.jpeg?q=60"
-                    width="100%" alt="">
-                <img src="https://rukminim2.flixcart.com/image/760/426/cms-rpd-img/54432d88e1fa421f85aa74aa7bc259e6_195f61c5101_iPhone_16_Pro_Marketing_Page_Avail_Flipkart_Mobile_1280px__en-IN_19.jpg.jpeg?q=60"
-                    width="100%" alt="">
-                <img src="https://rukminim2.flixcart.com/image/760/426/cms-rpd-img/5e4597fd7a6a4ea498e0d7933ad6341c_195f61c6344_iPhone_16_Pro_Marketing_Page_Avail_Flipkart_Mobile_1280px__en-IN_20.jpg.jpeg?q=60"
-                    width="100%" alt="">
-                <img src="https://rukminim2.flixcart.com/image/760/426/cms-rpd-img/f311c2cb63e4470c882b86fd35e6f790_195f61c78e4_iPhone_16_Pro_Marketing_Page_Avail_Flipkart_Mobile_1280px__en-IN_21.jpg.jpeg?q=60"
-                    width="100%" alt="">
-                <img src="https://rukminim2.flixcart.com/image/760/426/cms-rpd-img/47fa0bb3e726481ca1ed5cccc4e637bd_195f61c92b4_iPhone_16_Pro_Marketing_Page_Avail_Flipkart_Mobile_1280px__en-IN_22.jpg.jpeg?q=60"
-                    width="100%" alt="">
-                <img src="https://rukminim2.flixcart.com/image/760/426/cms-rpd-img/a5f3b3281e6942ddbaae673d26f4c087_195f61da37d_iPhone_16_Pro_Marketing_Page_Avail_Flipkart_Mobile_1280px__en-IN_24.jpg.jpeg?q=60"
-                    width="100%" alt="">
-                <img src="https://rukminim2.flixcart.com/image/760/426/cms-rpd-img/ab61f305b6544d5697a917c1ed0ca4d3_195f61db2a0_iPhone_16_Pro_Marketing_Page_Avail_Flipkart_Mobile_1280px__en-IN_25.jpg.jpeg?q=60"
-                    width="100%" alt="">
-                <img src="https://rukminim2.flixcart.com/image/760/426/cms-rpd-img/a76a7730092b41b7b73ede581a0e6af1_195f61dbfc5_iPhone_16_Pro_Marketing_Page_Avail_Flipkart_Mobile_1280px__en-IN_26.jpg.jpeg?q=60"
-                    width="100%" alt="">
-                <img src="https://rukminim2.flixcart.com/image/760/426/cms-rpd-img/849581c33346433a8cb2a26502e856b9_195f61dcfb9_iPhone_16_Pro_Marketing_Page_Avail_Flipkart_Mobile_1280px__en-IN_27.jpg.jpeg?q=60"
-                    width="100%" alt="">
-                <img src="https://rukminim2.flixcart.com/image/760/426/cms-rpd-img/3fd6024460c94b0f9d3284b31b520518_195f61de03e_iPhone_16_Pro_Marketing_Page_Avail_Flipkart_Mobile_1280px__en-IN_28.jpg.jpeg?q=60"
-                    width="100%" alt="">
-
-                <img src="https://rukminim2.flixcart.com/image/760/426/cms-rpd-img/44ecb8b420a2438aa6e05d7ce27ed7df_195f61df724_iPhone_16_Pro_Marketing_Page_Avail_Flipkart_Mobile_1280px__en-IN_29.jpg.jpeg?q=60"
-                    width="100%" alt="">
-                <img src="https://rukminim2.flixcart.com/image/760/426/cms-rpd-img/0383d01869db44b9a772083d523377e9_195f61e0d47_iPhone_16_Pro_Marketing_Page_Avail_Flipkart_Mobile_1280px__en-IN_30.jpg.jpeg?q=60"
-                    width="100%" alt="">
-                <img src="https://rukminim2.flixcart.com/image/760/426/cms-rpd-img/18f2d8367bbe4df184f9e405e05eb53a_195f61e20b5_iPhone_16_Pro_Marketing_Page_Avail_Flipkart_Mobile_1280px__en-IN_31.jpg.jpeg?q=60"
-                    width="100%" alt="">
-                <img src="https://rukminim2.flixcart.com/image/760/426/cms-rpd-img/28f4ec3b333b47a19bd67a9a1bb5868d_195f61e33e6_iPhone_16_Pro_Marketing_Page_Avail_Flipkart_Mobile_1280px__en-IN_32.jpg.jpeg?q=60"
-                    width="100%" alt="">
-                <img src="https://rukminim2.flixcart.com/image/760/426/cms-rpd-img/538111087278496a8df097bc3617c318_195f61e9df2_iPhone_16_Pro_Marketing_Page_Avail_Flipkart_Mobile_1280px__en-IN_33.jpg.jpeg?q=60"
-                    width="100%" alt="">
-                <img src="https://rukminim2.flixcart.com/image/760/426/cms-rpd-img/5c63162b9ee645649f894b5d2c35f08e_195f61eaa0c_iPhone_16_Pro_Marketing_Page_Avail_Flipkart_Mobile_1280px__en-IN_34.jpg.jpeg?q=60"
-                    width="100%" alt="">
-                <img src="https://rukminim2.flixcart.com/image/760/426/cms-rpd-img/412dbc263ab44dd6babbb68b2a9942f7_195f61ebadf_iPhone_16_Pro_Marketing_Page_Avail_Flipkart_Mobile_1280px__en-IN_35.jpg.jpeg?q=60"
-                    width="100%" alt="">
-                <img src="https://rukminim2.flixcart.com/image/760/426/cms-rpd-img/8365fa2fcb3f400abbf51f0a6ac5f3bd_195f61ec9a6_iPhone_16_Pro_Marketing_Page_Avail_Flipkart_Mobile_1280px__en-IN_36.jpg.jpeg?q=60"
-                    width="100%" alt="">
-                <img src="https://rukminim2.flixcart.com/image/760/426/cms-rpd-img/03ce6cfe63624209bd213c89698f33ef_195f61edcf3_iPhone_16_Pro_Marketing_Page_Avail_Flipkart_Mobile_1280px__en-IN_37.jpg.jpeg?q=60"
-                    width="100%" alt="">
-                <img src="https://rukminim2.flixcart.com/image/760/426/cms-rpd-img/0874a97fb9074599b68a94f22eba8c58_195f61ef21f_iPhone_16_Pro_Marketing_Page_Avail_Flipkart_Mobile_1280px__en-IN_38.jpg.jpeg?q=60"
-                    width="100%" alt="">
-                <img src="https://rukminim2.flixcart.com/image/760/426/cms-rpd-img/c00a1d1b314745db9261a7820a0a68a1_195f61f047d_iPhone_16_Pro_Marketing_Page_Avail_Flipkart_Mobile_1280px__en-IN_39.jpg.jpeg?q=60"
-                    width="100%" alt="">
-                <img src="https://rukminim2.flixcart.com/image/760/426/cms-rpd-img/ea741f72ca914b4ea99ee9451df1339c_195f61f18fe_iPhone_16_Pro_Marketing_Page_Avail_Flipkart_Mobile_1280px__en-IN_40.jpg.jpeg?q=60"
-                    width="100%" alt="">
-                <img src="https://rukminim2.flixcart.com/image/760/426/cms-rpd-img/e285f0a5a662492aa53de6e02dbe8412_195f61f2faf_iPhone_16_Pro_Marketing_Page_Avail_Flipkart_Mobile_1280px__en-IN_41.jpg.jpeg?q=60"
-                    width="100%" alt="">
-                <img src="https://rukminim2.flixcart.com/image/760/426/cms-rpd-img/c95c10c1a67945e19b49a4e1b2373862_195f62005de_iPhone_16_Pro_Marketing_Page_Avail_Flipkart_Mobile_1280px__en-IN_42.jpg.jpeg?q=60"
-                    width="100%" alt="">
-                <img src="https://rukminim2.flixcart.com/image/760/426/cms-rpd-img/cf51e05d01354ec1a0f94889dbcf4fa0_195f6201359_iPhone_16_Pro_Marketing_Page_Avail_Flipkart_Mobile_1280px__en-IN_43.jpg.jpeg?q=60"
-                    width="100%" alt="">
-                <img src="https://rukminim2.flixcart.com/image/760/426/cms-rpd-img/e5248f3061ad43f9a173c57fe455b8e9_195f620221c_iPhone_16_Pro_Marketing_Page_Avail_Flipkart_Mobile_1280px__en-IN_44.jpg.jpeg?q=60"
-                    width="100%" alt="">
-                <img src="https://rukminim2.flixcart.com/image/760/426/cms-rpd-img/fe8f94cc64c34675ab8f36f0308f8c51_195f620409a_iPhone_16_Pro_Marketing_Page_Avail_Flipkart_Mobile_1280px__en-IN_46.jpg.jpeg?q=60"
-                    width="100%" alt="">
-                <img src="https://rukminim2.flixcart.com/image/760/426/cms-rpd-img/4b57d5db469947aab63b58d87b47c51f_195f62057a0_iPhone_16_Pro_Marketing_Page_Avail_Flipkart_Mobile_1280px__en-IN_47.jpg.jpeg?q=60"
-                    width="100%" alt="">
-                <img src="https://rukminim2.flixcart.com/image/760/426/cms-rpd-img/5e80c9e0b45c4993a1514a478bbb4c28_195f62128ac_iPhone_16_Pro_Marketing_Page_Avail_Flipkart_Mobile_1280px__en-IN_48.jpg.jpeg?q=60"
-                    width="100%" alt="">
-                <img src="https://rukminim2.flixcart.com/image/760/426/cms-rpd-img/8d1c02072f82445b86cac450f68d8d0c_195f6213ef0_iPhone_16_Pro_Marketing_Page_Avail_Flipkart_Mobile_1280px__en-IN_49.jpg.jpeg?q=60"
-                    width="100%" alt="">
-                <img src="https://rukminim2.flixcart.com/image/760/426/cms-rpd-img/d83e6c4dd8ce4d78820eed81e8e11fe7_195f621530c_iPhone_16_Pro_Marketing_Page_Avail_Flipkart_Mobile_1280px__en-IN_50.jpg.jpeg?q=60"
-                    width="100%" alt="">
-                <img src="https://rukminim2.flixcart.com/image/760/426/cms-rpd-img/c1a93a76cabc4bf99064687c1d4f2b0f_195f62164f5_iPhone_16_Pro_Marketing_Page_Avail_Flipkart_Mobile_1280px__en-IN_51.jpg.jpeg?q=60"
-                    width="100%" alt="">
-                <img src="https://rukminim2.flixcart.com/image/760/426/cms-rpd-img/365b063fab8148879d4dd5f5fefcb9f7_195f62177a5_iPhone_16_Pro_Marketing_Page_Avail_Flipkart_Mobile_1280px__en-IN_52.jpg.jpeg?q=60"
-                    width="100%" alt="">
-                <img src="https://rukminim2.flixcart.com/image/760/426/cms-rpd-img/9a03960ee0464437a70ea0082fed8abc_195f6220598_iPhone_16_Pro_Marketing_Page_Avail_Flipkart_Mobile_1280px__en-IN_53.jpg.jpeg?q=60"
-                    width="100%" alt="">
-
-                <img src="https://rukminim2.flixcart.com/image/760/426/cms-rpd-img/83b9e58d545c4e54a413a4f2dbe6c605_195f6221b4a_iPhone_16_Pro_Marketing_Page_Avail_Flipkart_Mobile_1280px__en-IN_54.jpg.jpeg?q=60"
-                    width="100%" alt="">
-                <img src="https://rukminim2.flixcart.com/image/760/426/cms-rpd-img/0fc8c1b861974506ad2eb35a3782d7fe_195f6222dc5_iPhone_16_Pro_Marketing_Page_Avail_Flipkart_Mobile_1280px__en-IN_55.jpg.jpeg?q=60"
-                    width="100%" alt="">
-                <img src="https://rukminim2.flixcart.com/image/760/426/cms-rpd-img/e5492b804bbc4087bdede194cc129ea9_195f622461e_iPhone_16_Pro_Marketing_Page_Avail_Flipkart_Mobile_1280px__en-IN_56.jpg.jpeg?q=60"
-                    width="100%" alt="">
+    </div><br>
 
 
 
 
-            </div>
-        </div>
-    </div>
 
 
 
-    <div class="similar-products">
-        <div class="similar-products mobile ">
 
-            <div class="products-similar">
-                <div class="img-container">
-                    <img src="https://rukminim2.flixcart.com/image/292/360/xif0q/mobile/h/9/g/-original-imahf42uxwjmgxu7.jpeg?q=60&crop=false"
-                        height="180px" width="146px" alt="">
-                </div>
-                <div class="details-img-container">
-                    <p class="brands-text">Samsung</p>
-                    <p class="brands-file-text">Galaxy S24 Ultra 5G (Titanium Gray, 256 GB)</p>
-                    <p class="rate-container"><span>83,999 </span><span class="deel-rate"><del>1,34,999
-                            </del></span>
-                    </p>
-                    <p class="percent-brands">37% off</p>
-                    <div class="star-review">
-                        <ion-icon name="star-sharp" class="star-icon"></ion-icon><ion-icon name="star-sharp"
-                            class="star-icon"></ion-icon><ion-icon name="star-sharp"
-                            class="star-icon"></ion-icon><ion-icon name="star-sharp"
-                            class="star-icon"></ion-icon><ion-icon name="star-half-sharp" class="star-icon"></ion-icon>
-                        <p class="text-count">4.4</p>
-                    </div>
+    <!-- highlights -->
 
-                </div>
-            </div>
-            <div class="products-similar">
-                <div class="img-container">
-                    <img src="https://rukminim2.flixcart.com/image/292/360/xif0q/mobile/q/3/m/-original-imahf42udbhvs7hc.jpeg?q=60&crop=false"
-                        height="180px" width="146px" alt="">
-                </div>
-                <div class="details-img-container">
-                    <p class="brands-text">Samsung</p>
-                    <p class="brands-file-text">Galaxy S25 Ultra 5G (Titanium Whitesilver, 512 GB)</p>
-                    <p class="rate-container"><span>1,29,999 </span><span class="deel-rate"><del>1,41,999
-                            </del></span>
-                    </p>
-                    <p class="percent-brands">8% off</p>
-                    <div class="star-review">
-                        <ion-icon name="star-sharp" class="star-icon"></ion-icon><ion-icon name="star-sharp"
-                            class="star-icon"></ion-icon><ion-icon name="star-sharp"
-                            class="star-icon"></ion-icon><ion-icon name="star-sharp"
-                            class="star-icon"></ion-icon><ion-icon name="star-half-sharp" class="star-icon"></ion-icon>
-                        <p class="text-count">4.4</p>
-                    </div>
-                </div>
-            </div>
-            <div class="products-similar">
-                <div class="img-container">
-                    <img src="https://rukminim2.flixcart.com/image/292/360/xif0q/mobile/e/x/e/-original-imah4jyw4fpqe7ru.jpeg?q=60&crop=false"
-                        height="180px" width="146px" alt="">
-                </div>
-                <div class="details-img-container">
-                    <p class="brands-text">Apple</p>
-                    <p class="brands-file-text">iPhone 16 Pro (Black Titanium, 1 TB)</p>
-                    <p class="rate-container"><span>1,62,999 </span><span class="deel-rate"><del>1,69,999
-                            </del></span>
-                    </p>
-                    <p class="percent-brands">4% off</p>
-                    <div class="star-review">
-                        <ion-icon name="star-sharp" class="star-icon"></ion-icon><ion-icon name="star-sharp"
-                            class="star-icon"></ion-icon><ion-icon name="star-sharp"
-                            class="star-icon"></ion-icon><ion-icon name="star-sharp"
-                            class="star-icon"></ion-icon><ion-icon name="star-half-sharp" class="star-icon"></ion-icon>
-                        <p class="text-count">4.4</p>
-                    </div>
-                </div>
-            </div>
-            <div class="products-similar">
-                <div class="img-container">
-                    <img src="https://rukminim2.flixcart.com/image/292/360/xif0q/mobile/3/5/l/-original-imaghx9qmgqsk9s4.jpeg?q=60&crop=false"
-                        height="180px" width="146px" alt="">
-                </div>
-                <div class="details-img-container">
-                    <p class="brands-text">Apple</p>
-                    <p class="brands-file-text">iPhone 14 (Blue, 128 GB)</p>
-                    <p class="rate-container"><span>52,999 </span><span class="deel-rate"><del>1,59,999
-                            </del></span>
-                    </p>
-                    <p class="percent-brands">11% off</p>
-                    <div class="star-review">
-                        <ion-icon name="star-sharp" class="star-icon"></ion-icon><ion-icon name="star-sharp"
-                            class="star-icon"></ion-icon><ion-icon name="star-sharp"
-                            class="star-icon"></ion-icon><ion-icon name="star-sharp"
-                            class="star-icon"></ion-icon><ion-icon name="star-half-sharp" class="star-icon"></ion-icon>
-                        <p class="text-count">4.4</p>
-                    </div>
-                </div>
-            </div>
-            <div class="products-similar">
-                <div class="img-container">
-                    <img src="https://rukminim2.flixcart.com/image/292/360/xif0q/mobile/m/k/6/-original-imahegqhngaq8gzh.jpeg?q=60&crop=false"
-                        height="180px" width="146px" alt="">
-                </div>
-                <div class="details-img-container">
-                    <p class="brands-text">Google</p>
-                    <p class="brands-file-text">Pixel 9 Pro Fold (Obsidian, 256 GB)</p>
-                    <p class="rate-container"><span>1,29,999 </span><span class="deel-rate"><del>1,72,999
-                            </del></span>
-                    </p>
-                    <p class="percent-brands">24% off</p>
-                    <div class="star-review">
-                        <ion-icon name="star-sharp" class="star-icon"></ion-icon><ion-icon name="star-sharp"
-                            class="star-icon"></ion-icon><ion-icon name="star-sharp"
-                            class="star-icon"></ion-icon><ion-icon name="star-sharp"
-                            class="star-icon"></ion-icon><ion-icon name="star-half-sharp" class="star-icon"></ion-icon>
-                        <p class="text-count">4.4</p>
-                    </div>
-                </div>
-            </div>
-            <div class="products-similar">
-                <div class="img-container">
-                    <img src="https://rukminim2.flixcart.com/image/292/360/xif0q/mobile/a/c/k/-original-imagtc5fuzkvczr7.jpeg?q=60&crop=false"
-                        height="180px" width="146px" alt="">
-                </div>
-                <div class="details-img-container">
-                    <p class="brands-text">Apple</p>
-                    <p class="brands-file-text">iPhone 15 Plus (Pink, 128 GB)</p>
-                    <p class="rate-container"><span>69,999 </span><span class="deel-rate"><del>79,999 </del></span>
-                    </p>
-                    <p class="percent-brands">12% off</p>
-                    <div class="star-review">
-                        <ion-icon name="star-sharp" class="star-icon"></ion-icon><ion-icon name="star-sharp"
-                            class="star-icon"></ion-icon><ion-icon name="star-sharp"
-                            class="star-icon"></ion-icon><ion-icon name="star-sharp"
-                            class="star-icon"></ion-icon><ion-icon name="star-half-sharp" class="star-icon"></ion-icon>
-                        <p class="text-count">4.4</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <br>
+    <div class="highlights-container">
 
 
-    <!-- similar open container -->
-
-    <div class="similar-open-container">
-        <div class="products-details-nav">
-            <div class="app-left-bar1" id="app-arrow-div">
-                <i id="app-arrow1" class="fas fa-arrow-left app-bars"></i>
-            </div>
-            <div class="">Similar Products</div>
+        <div class="high-title">
+            <h1 class="title-high-others">Products Details</h1>
         </div><br>
 
+        <table>
+            <tr>
+                <td class="head">Pack of</td>
+                <td class="bodys">1</td>
+            </tr>
+            <tr>
+                <td class="head">Brand</td>
+                <td class="bodys">Eastern</td>
+            </tr>
+            <tr>
+                <td class="head">Model Name</td>
+                <td class="bodys">Coriander Powder | Perfect colour, Perfect Smell, Perfect Taste</td>
+            </tr>
+            <tr>
+                <td class="head">Type</td>
+                <td class="bodys">Coriander</td>
+            </tr>
+            <tr>
+                <td class="head">Form Factor</td>
+                <td class="bodys">Powder</td>
+            </tr>
+            <tr>
+                <td class="head">Quantity</td>
+                <td class="bodys">500 g</td>
+            </tr>
+            <tr>
+                <td class="head">Container Type</td>
+                <td class="bodys">Pouch</td>
+            </tr>
+            <tr>
+                <td class="head">FSSAI Number</td>
+                <td class="bodys">NA</td>
+            </tr>
+            <tr>
+                <td class="head">Maximum Shelf Life</td>
+                <td class="bodys">12 Months</td>
+            </tr>
+            <tr>
+                <td class="head">Net Quantity</td>
+                <td class="bodys">500 g</td>
+            </tr>
+            <tr>
+                <td class="head">Usage Instruction</td>
+                <td class="bodys">Flipkart endeavours to ensure that the sellers provide accurate information on the
+                    platform. It is pertinent to note that, actual product packaging and materials may contain more and
+                    different information, which may include nutritional information/allergen declaration/special
+                    instruction for intended use/warning/directions, health & nutritional claims, etc. We recommend that
+                    consumers always read the label carefully before using or consuming any products. Please do not
+                    solely rely on the information provided on this website. For additional information, please get in
+                    touch with the manufacturer.</td>
+            </tr>
+        </table>
 
-        <div class="details-image-open">
-            <div class="img-close-similar">
-                <img src="https://rukminim2.flixcart.com/image/96/96/xif0q/mobile/x/5/2/-original-imah4jywyma4j8vy.jpeg?q=60"
-                    height="50px" width="48px" alt="">
-            </div>
-            <div class="similar-details">
-                <p class="similar-text">Similar Products </p>
-            </div>
+
+
+        <div class="alldetails" id="alldetails">
+            <div class="topic-datas">All Details</div>
+            <div><i class="fas fa-chevron-right"></i></div>
         </div>
-        <div class="border-bottom"></div>
-
-        <div class="products-similar-container-details">
-            <div class="products-similar">
-                <div class="img-container">
-                    <img src="https://rukminim2.flixcart.com/image/292/360/xif0q/mobile/h/9/g/-original-imahf42uxwjmgxu7.jpeg?q=60&crop=false"
-                        height="180px" width="146px" alt="">
-                </div>
-                <div class="details-img-container">
-                    <p class="brands-text">Samsung</p>
-                    <p class="brands-file-text">Galaxy S24 Ultra 5G (Titanium Gray, 256 GB)</p>
-                    <p class="rate-container"><span>83,999 </span><span class="deel-rate"><del>1,34,999
-                            </del></span>
-                    </p>
-                    <p class="percent-brands">37% off</p>
-                    <div class="star-review">
-                        <ion-icon name="star-sharp" class="star-icon"></ion-icon><ion-icon name="star-sharp"
-                            class="star-icon"></ion-icon><ion-icon name="star-sharp"
-                            class="star-icon"></ion-icon><ion-icon name="star-sharp"
-                            class="star-icon"></ion-icon><ion-icon name="star-half-sharp" class="star-icon"></ion-icon>
-                        <p class="text-count">4.4</p>
-                    </div>
-
-                </div>
-            </div>
-            <div class="products-similar">
-                <div class="img-container">
-                    <img src="https://rukminim2.flixcart.com/image/292/360/xif0q/mobile/q/3/m/-original-imahf42udbhvs7hc.jpeg?q=60&crop=false"
-                        height="180px" width="146px" alt="">
-                </div>
-                <div class="details-img-container">
-                    <p class="brands-text">Samsung</p>
-                    <p class="brands-file-text">Galaxy S25 Ultra 5G (Titanium Whitesilver, 512 GB)</p>
-                    <p class="rate-container"><span>1,29,999 </span><span class="deel-rate"><del>1,41,999
-                            </del></span>
-                    </p>
-                    <p class="percent-brands">8% off</p>
-                    <div class="star-review">
-                        <ion-icon name="star-sharp" class="star-icon"></ion-icon><ion-icon name="star-sharp"
-                            class="star-icon"></ion-icon><ion-icon name="star-sharp"
-                            class="star-icon"></ion-icon><ion-icon name="star-sharp"
-                            class="star-icon"></ion-icon><ion-icon name="star-half-sharp" class="star-icon"></ion-icon>
-                        <p class="text-count">4.4</p>
-                    </div>
-                </div>
-            </div>
-            <div class="products-similar">
-                <div class="img-container">
-                    <img src="https://rukminim2.flixcart.com/image/292/360/xif0q/mobile/e/x/e/-original-imah4jyw4fpqe7ru.jpeg?q=60&crop=false"
-                        height="180px" width="146px" alt="">
-                </div>
-                <div class="details-img-container">
-                    <p class="brands-text">Apple</p>
-                    <p class="brands-file-text">iPhone 16 Pro (Black Titanium, 1 TB)</p>
-                    <p class="rate-container"><span>1,62,999 </span><span class="deel-rate"><del>1,69,999
-                            </del></span>
-                    </p>
-                    <p class="percent-brands">4% off</p>
-                    <div class="star-review">
-                        <ion-icon name="star-sharp" class="star-icon"></ion-icon><ion-icon name="star-sharp"
-                            class="star-icon"></ion-icon><ion-icon name="star-sharp"
-                            class="star-icon"></ion-icon><ion-icon name="star-sharp"
-                            class="star-icon"></ion-icon><ion-icon name="star-half-sharp" class="star-icon"></ion-icon>
-                        <p class="text-count">4.4</p>
-                    </div>
-                </div>
-            </div>
-            <div class="products-similar">
-                <div class="img-container">
-                    <img src="https://rukminim2.flixcart.com/image/292/360/xif0q/mobile/3/5/l/-original-imaghx9qmgqsk9s4.jpeg?q=60&crop=false"
-                        height="180px" width="146px" alt="">
-                </div>
-                <div class="details-img-container">
-                    <p class="brands-text">Apple</p>
-                    <p class="brands-file-text">iPhone 14 (Blue, 128 GB)</p>
-                    <p class="rate-container"><span>52,999 </span><span class="deel-rate"><del>1,59,999
-                            </del></span>
-                    </p>
-                    <p class="percent-brands">11% off</p>
-                    <div class="star-review">
-                        <ion-icon name="star-sharp" class="star-icon"></ion-icon><ion-icon name="star-sharp"
-                            class="star-icon"></ion-icon><ion-icon name="star-sharp"
-                            class="star-icon"></ion-icon><ion-icon name="star-sharp"
-                            class="star-icon"></ion-icon><ion-icon name="star-half-sharp" class="star-icon"></ion-icon>
-                        <p class="text-count">4.4</p>
-                    </div>
-                </div>
-            </div>
-            <div class="products-similar">
-                <div class="img-container">
-                    <img src="https://rukminim2.flixcart.com/image/292/360/xif0q/mobile/m/k/6/-original-imahegqhngaq8gzh.jpeg?q=60&crop=false"
-                        height="180px" width="146px" alt="">
-                </div>
-                <div class="details-img-container">
-                    <p class="brands-text">Google</p>
-                    <p class="brands-file-text">Pixel 9 Pro Fold (Obsidian, 256 GB)</p>
-                    <p class="rate-container"><span>1,29,999 </span><span class="deel-rate"><del>1,72,999
-                            </del></span>
-                    </p>
-                    <p class="percent-brands">24% off</p>
-                    <div class="star-review">
-                        <ion-icon name="star-sharp" class="star-icon"></ion-icon><ion-icon name="star-sharp"
-                            class="star-icon"></ion-icon><ion-icon name="star-sharp"
-                            class="star-icon"></ion-icon><ion-icon name="star-sharp"
-                            class="star-icon"></ion-icon><ion-icon name="star-half-sharp" class="star-icon"></ion-icon>
-                        <p class="text-count">4.4</p>
-                    </div>
-                </div>
-            </div>
-            <div class="products-similar">
-                <div class="img-container">
-                    <img src="https://rukminim2.flixcart.com/image/292/360/xif0q/mobile/a/c/k/-original-imagtc5fuzkvczr7.jpeg?q=60&crop=false"
-                        height="180px" width="146px" alt="">
-                </div>
-                <div class="details-img-container">
-                    <p class="brands-text">Apple</p>
-                    <p class="brands-file-text">iPhone 15 Plus (Pink, 128 GB)</p>
-                    <p class="rate-container"><span>69,999 </span><span class="deel-rate"><del>79,999 </del></span>
-                    </p>
-                    <p class="percent-brands">12% off</p>
-                    <div class="star-review">
-                        <ion-icon name="star-sharp" class="star-icon"></ion-icon><ion-icon name="star-sharp"
-                            class="star-icon"></ion-icon><ion-icon name="star-sharp"
-                            class="star-icon"></ion-icon><ion-icon name="star-sharp"
-                            class="star-icon"></ion-icon><ion-icon name="star-half-sharp" class="star-icon"></ion-icon>
-                        <p class="text-count">4.4</p>
-                    </div>
-                </div>
-            </div>
-            <div class="products-similar">
-                <div class="img-container">
-                    <img src="https://rukminim2.flixcart.com/image/240/296/xif0q/mobile/o/h/m/-original-imah4jywmcz5ysz3.jpeg?q=60"
-                        height="180px" width="146px" alt="">
-                </div>
-                <div class="details-img-container">
-                    <p class="brands-text">Apple</p>
-                    <p class="brands-file-text">iPhone 16 Pro (Natural Titanium, 1 TB)</p>
-                    <p class="rate-container"><span>1,62,999 </span><span class="deel-rate"><del>1,69,999
-                            </del></span>
-                    </p>
-                    <p class="percent-brands">12% off</p>
-                    <div class="star-review">
-                        <ion-icon name="star-sharp" class="star-icon"></ion-icon><ion-icon name="star-sharp"
-                            class="star-icon"></ion-icon><ion-icon name="star-sharp"
-                            class="star-icon"></ion-icon><ion-icon name="star-sharp"
-                            class="star-icon"></ion-icon><ion-icon name="star-half-sharp" class="star-icon"></ion-icon>
-                        <p class="text-count">4.4</p>
-                    </div>
-                </div>
-            </div>
-            <div class="products-similar">
-                <div class="img-container">
-                    <img src="https://rukminim2.flixcart.com/image/240/296/xif0q/mobile/7/d/z/-original-imah4jywfm9uuvzw.jpeg?q=60"
-                        height="180px" width="146px" alt="">
-                </div>
-                <div class="details-img-container">
-                    <p class="brands-text">Apple</p>
-                    <p class="brands-file-text">iPhone 16 Pro (Desert Titanium, 1 TB)</p>
-                    <p class="rate-container"><span>1,62,999 </span><span class="deel-rate"><del>1,69,999
-                            </del></span>
-                    </p>
-                    <p class="percent-brands">12% off</p>
-                    <div class="star-review">
-                        <ion-icon name="star-sharp" class="star-icon"></ion-icon><ion-icon name="star-sharp"
-                            class="star-icon"></ion-icon><ion-icon name="star-sharp"
-                            class="star-icon"></ion-icon><ion-icon name="star-sharp"
-                            class="star-icon"></ion-icon><ion-icon name="star-half-sharp" class="star-icon"></ion-icon>
-                        <p class="text-count">4.4</p>
-                    </div>
-                </div>
-            </div>
-            <br>
-
-
-        </div>
+    </div>
+    <div class="blue height">
 
     </div>
+
+    <!-- location pincode details -->
+
+    <div class="locdt">
+
+    </div>
+
+    <!-- color label -->
+
+    <div class="blue height">
+
+    </div>
+
+
+
+
+
+
+
+    
+
+    <div class="proddetails" id="product-similarly">
+        <div class="topic-high" id="products-high">Similar Products</div>
+        <div><i class="fas fa-chevron-right text-primary"></i></div>
+    </div>
+
+
+
+
+
+
+
+
+
+    <div class="alldetails-container" id="alldetails-container">
+        <div class="all-details-nav">
+            <div class="app-left-bar" id="app-arrow-div">
+                <i id="app-arrow" class="fas fa-arrow-left app-bars"></i>
+            </div>
+            <div class="">Product Details</div>
+        </div><br>
+
+        <div class="container-phonedetails">
+            <div class="img-alldetails">
+                <img id="alldetailsimg"
+                    src="https://rukminim2.flixcart.com/image/824/1828/xif0q/spice-masala/f/j/k/-original-imahfffszwg3zfgy.jpeg?q=90"
+                    height="80px" alt="">
+            </div>
+            <div class="mobile-alldetails">
+                <h1 class="brand-name-all">Eastern Coriander Powder (<span class="brand-name-all">500 g</span> )
+                </h1>
+                <p class="rate-containers" id="rate"><span class="rates" id="rate3">Rs.81</span> <del
+                        class="rate-del" id="rate-del3">Rs.171</del>
+                    <span class="percentage">51%OFF</span>
+                <div class="star-review">
+                    <ion-icon name="star-sharp" class="star-icon"></ion-icon><ion-icon name="star-sharp"
+                        class="star-icon"></ion-icon><ion-icon name="star-sharp" class="star-icon"></ion-icon><ion-icon
+                        name="star-sharp" class="star-icon"></ion-icon><ion-icon name="star-half-sharp"
+                        class="star-icon"></ion-icon>
+                    <p class="text-count">4.4</p>
+                    <li class="text-result">Excellent</li>
+                </div>
+                </p>
+            </div>
+
+        </div>
+        <div class="nav-bar-alldetails">
+            <nav>
+                <li class="clr" id="desc">DESCRIPTION</li>
+                <li id="spec">SPECIFICATION</li>
+                <li id="more">MORE INFO</li>
+                <div class="animation first">
+
+
+                </div>
+                <div class="btn-effect actives"></div>
+            </nav>
+        </div>
+        <div class="detailsallbox">
+            <div class="description">
+                <p class="description-para">Eastern Coriander Powder | Perfect colour, Perfect Smell, Perfect Taste.</p>
+            </div>
+            <div class="specs">
+                <div class="more-info-container">
+                    <p class="Warranty">Key Features</p>
+                    <ol class="kdy">
+                        <li id="storage6">Form FactorPowder</li>
+                        <li>Pack of: 1</li>
+                        <li>Quantity: <span class="qtys">500 g</span></li>
+                        <li>Ready MasalaNo</li>
+                    </ol>
+                </div>
+                <hr>
+                <div class="more-info-container">
+                    <p class="Warranty">In The Box</p>
+                    <table>
+                        <tr>
+                            <td class="colors">Pack Of</td>
+                            <td class="details-colors">1</td>
+                        </tr>
+                      
+
+                    </table>
+
+
+                </div>
+                <hr>
+                <div class="more-info-container">
+                    <p class="Warranty">General</p>
+                    <table>
+                       <tr>
+                <td class="head">Pack of</td>
+                <td class="bodys">1</td>
+            </tr>
+            <tr>
+                <td class="head">Brand</td>
+                <td class="bodys">Eastern</td>
+            </tr>
+            <tr>
+                <td class="head">Model Name</td>
+                <td class="bodys">Coriander Powder | Perfect colour, Perfect Smell, Perfect Taste</td>
+            </tr>
+            <tr>
+                <td class="head">Type</td>
+                <td class="bodys">Coriander</td>
+            </tr>
+            <tr>
+                <td class="head">Form Factor</td>
+                <td class="bodys">Powder</td>
+            </tr>
+            <tr>
+                <td class="head">Quantity</td>
+                <td class="bodys">500 g</td>
+            </tr>
+            <tr>
+                <td class="head">Container Type</td>
+                <td class="bodys">Pouch</td>
+            </tr>
+            <tr>
+                <td class="head">FSSAI Number</td>
+                <td class="bodys">NA</td>
+            </tr>
+            <tr>
+                <td class="head">Maximum Shelf Life</td>
+                <td class="bodys">12 Months</td>
+            </tr>
+            <tr>
+                <td class="head">Net Quantity</td>
+                <td class="bodys">500 g</td>
+            </tr>
+            <tr>
+                <td class="head">Usage Instruction</td>
+                <td class="bodys">Flipkart endeavours to ensure that the sellers provide accurate information on the
+                    platform. It is pertinent to note that, actual product packaging and materials may contain more and
+                    different information, which may include nutritional information/allergen declaration/special
+                    instruction for intended use/warning/directions, health & nutritional claims, etc. We recommend that
+                    consumers always read the label carefully before using or consuming any products. Please do not
+                    solely rely on the information provided on this website. For additional information, please get in
+                    touch with the manufacturer.</td>
+            </tr>
+
+                    </table>
+
+
+                </div>
+                <hr>
+                <div class="more-info-container">
+                    <p class="Warranty">Legal Disclaimer</p>
+                    <table>
+                        <tr>
+                            <td class="colors">Legal Formats</td>
+                            <td class="details-colors">Flipkart endeavours to ensure that the sellers provide accurate information on the platform. It is pertinent to note that, actual product packaging and materials may contain more and different information, which may include nutritional information/allergen declaration/special instruction for intended use/warning/directions, health & nutritional claims, etc. We recommend that consumers always read the label carefully before using or consuming any products. Please do not solely rely on the information provided on this website. For additional information, please get in touch with the manufacturer.</td>
+                        </tr>
+                      
+
+                    </table>
+
+
+                </div>
+               <hr><br>
+            </div>
+
+
+
+
+
+
+
+
+
+
+
+            <div class="moreinfo">
+                <div class="more-container">
+                   
+                    <div class="generic">
+                        <div class="mobiles">Generic Name</div>
+                        <div class="india">Species And Masala</div>
+                    </div>
+                    <div class="generic">
+                        <div class="mobiles">Expiry Date</div>
+                        <div class="india">6 April, 2026</div>
+                    </div>
+                    <div class="generic">
+                        <div class="mobiles">Country of Orgin</div>
+                        <div class="india1">India</div>
+
+                    </div><br>
+                    <p class="Warranty">Manufacturer'S Details</p>
+                    <p class="waranty-details">Orkla India Private Limited, Eastern valley, Adimaly, Idukki, Kerala685561</p>
+
+
+                    <p class="Warranty">Packers'S Details</p>
+                    <p class="waranty-details">Orkla India Private Limited, Eastern valley, Adimaly, Idukki, Kerala685561</p>
+
+
+
+
+
+                </div><hr>
+
+            </div>
+        </div>
+
+
+
+
+    </div>
+
+
+
+
 
 
 
