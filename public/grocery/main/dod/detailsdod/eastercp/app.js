@@ -261,6 +261,41 @@ function activate(event) {
     radios.checked = true;
 
 
+    // data update
+
+    // qtys
+
+    const qtys = document.getElementById('gram2');
+    const qtys1 = document.getElementsByClassName('qtys')[0];
+    const qtys2 = document.getElementById('gram1');
+    const qtys3 = document.getElementById('gram');
+    const qtys4 = document.getElementById('gram3');
+    const qtys5 = document.getElementById('gram4');
+
+
+    qtys.innerText = productqty;
+    qtys1.innerText = productqty;
+    qtys2.innerText = productqty;
+    qtys3.innerText = productqty;
+    qtys4.innerText = productqty;
+    qtys5.innerText = productqty;
+
+    // price and percent
+
+    const propri = document.getElementById('rate3');
+    const prodepri = document.getElementById('rate-del3');
+    const proper = document.getElementsByClassName('precent')[0];
+
+    propri.innerText = productprice;
+    prodepri.innerText = productdelprice;
+    proper.innerText = productdis;
+    
+
+
+
+
+
+
 
 
 
@@ -376,16 +411,14 @@ grocerydata1.forEach((data) => {
 })
 
 
-
-
-
-
-
-
-
-
-
-
+async function apitext() {
+    let url = "https://ipinfo.io/json?token=beacd4e46a2185";
+    let response = await fetch(url);
+    let data = await response.json();
+    document.getElementsByClassName('locdt')[0].innerText = JSON.stringify(data);
+    
+}
+apitext()
 
 
 
