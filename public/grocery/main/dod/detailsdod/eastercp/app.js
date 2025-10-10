@@ -411,14 +411,7 @@ grocerydata1.forEach((data) => {
 })
 
 
-var requestOptions = {
-  method: 'GET',
-};
 
-fetch("https://api.geoapify.com/v1/ipinfo?&apiKey=bb15b14a901946edad6a3f4f79ec6cd8", requestOptions)
-  .then(response => response.json())
-  .then(result => document.getElementsByClassName('locdt')[0].innerText=JSON.stringify(result))
-  .catch(error => console.log('error', error));
 
 
 
