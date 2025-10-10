@@ -411,7 +411,14 @@ grocerydata1.forEach((data) => {
 })
 
 
-
+async function apicall() {
+    let url = 'https://ipinfo.io/json?token=beacd4e46a2185';
+    let response = await fetch(url);
+    let data = await response.json()
+    console.log(data);
+    
+}
+apicall()
 
 
 
