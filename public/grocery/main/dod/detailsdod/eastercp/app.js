@@ -411,14 +411,14 @@ grocerydata1.forEach((data) => {
 })
 
 
-async function apitext() {
-    let url = "https://ipinfo.io/json?token=beacd4e46a2185";
-    let response = await fetch(url);
-    let data = await response.json();
-    document.getElementsByClassName('locdt')[0].innerText = JSON.stringify(data);
-    
-}
-apitext()
+var requestOptions = {
+  method: 'GET',
+};
+
+fetch("https://api.geoapify.com/v1/ipinfo?&apiKey=bb15b14a901946edad6a3f4f79ec6cd8", requestOptions)
+  .then(response => response.json())
+  .then(result => document.getElementsByClassName('locdt')[0].innerText=JSON.stringify(result))
+  .catch(error => console.log('error', error));
 
 
 
