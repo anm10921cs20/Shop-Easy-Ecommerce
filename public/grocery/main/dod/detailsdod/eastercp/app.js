@@ -426,15 +426,45 @@ pincodepara.innerText = stores[0].city + " " + stores[0].pincode;
 
 
 async function apicall() {
-    let url = 'https://ipinfo.io/json?token=beacd4e46a2185';
-    let response = await fetch(url);
-    let data = await response.json()
-    pincodepara.innerText = data.city + " " + data.postal;
-    // bootstrap
+   
 
-    const bootcontent = document.getElementById('location');
-    const instance = bootstrap.Offcanvas.getInstance(bootcontent);
-    instance.hide();
+function getAddressFromCoords(lat, lon) {
+  const accessKey = "e724c0e22ff43bb57537a0e080c15bed";
+  const url = `https://api.positionstack.com/v1/reverse?access_key=${accessKey}&query=${lat},${lon}`;
+
+  fetch(url)
+    .then(res => res.json())
+    .then(result => {
+      if (result && result.data && result.data.length > 0) {
+        const place = result.data[0];
+        console.log(place);
+         var datastores = document.getElementsByClassName('detpin')[0];
+            datastores.innerText = place.county + " " + place.postal_code;
+        
+      } else {
+        console.log("No location data found");
+      }
+    })
+   
+}
+
+  const bootcontent = document.getElementById('location');
+        const instance = bootstrap.Offcanvas.getInstance(bootcontent);
+        instance.hide();
+if(!navigator.geolocation)
+{
+    console.log('not support');
+    
+}
+navigator.geolocation.getCurrentPosition(
+    position=>{
+   const lat =  position.coords.latitude;
+   const lon =  position.coords.longitude;
+
+   getAddressFromCoords(lat, lon);
+        
+    }
+)
 
 }
 
@@ -503,43 +533,6 @@ document.getElementsByClassName('ipb')[0].addEventListener('click', locationpinc
 
 
 
-
-function getAddressFromCoords(lat, lon) {
-  const accessKey = "e724c0e22ff43bb57537a0e080c15bed";
-  const url = `https://api.positionstack.com/v1/reverse?access_key=${accessKey}&query=${lat},${lon}`;
-
-  fetch(url)
-    .then(res => res.json())
-    .then(result => {
-      if (result && result.data && result.data.length > 0) {
-        const place = result.data[0];
-        console.log(place);
-        document.getElementsByClassName('locate')[0].innerText = Object.entries(place);
-        
-      } else {
-        console.log("No location data found");
-      }
-    })
-    .catch(err => {
-      console.error("Error calling PositionStack:", err);
-    });
-}
-
-
-if(!navigator.geolocation)
-{
-    console.log('not support');
-    
-}
-navigator.geolocation.getCurrentPosition(
-    position=>{
-   const lat =  position.coords.latitude;
-   const lon =  position.coords.longitude;
-
-   getAddressFromCoords(lat, lon);
-        
-    }
-)
 
 // Example
 
