@@ -5,7 +5,7 @@ openBtn.addEventListener('click', () => {
     window.location.replace("../index.html")
 })
 
-const firebaseConfig = {
+ const firebaseConfig = {
     apiKey: "AIzaSyA2OdKypmjrY-X7XKId64MndF4HtIRe-bs",
     authDomain: "shopeasy-login.firebaseapp.com",
     databaseURL: "https://shopeasy-login-default-rtdb.firebaseio.com",
@@ -14,7 +14,7 @@ const firebaseConfig = {
     messagingSenderId: "255206950436",
     appId: "1:255206950436:web:2e972fbaf4ae6b8f1c7ab1",
     measurementId: "G-YDHQQF7XN8"
-};
+  };
 
 firebase.initializeApp(firebaseConfig);
 const db = firebase.database();
@@ -24,7 +24,8 @@ const db = firebase.database();
 db.ref('maincart/' + localStorage.getItem('userid') + localStorage.getItem('nameid'))
     .get('value')
     .then((snapshot) => {
-        const order = snapshot.val();
+        const order = snapshot.val();   
+        
 
 
         const maindata = Object.entries(order);
@@ -644,3 +645,11 @@ db.ref('grocerycart/' + localStorage.getItem('userid') + localStorage.getItem('n
 
 // first time call → block back
 history.pushState(null, null, location.href);
+
+
+
+
+
+
+
+
