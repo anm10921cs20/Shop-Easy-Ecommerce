@@ -325,14 +325,43 @@
             <div><i class="fas fa-chevron-right"></i></div>
         </div>
     </div>
-    <div class="blue height">
+    <div class="blue">
 
     </div>
 
     <!-- location pincode details -->
 
     <div class="locdt">
-       <p class="addpin"></p> 
+        <div class="locdt-data">
+             <p class="addpin">Deliver to:  <span class="detpin"></span></p> 
+             <div class="change-btn" data-bs-target="#location" data-bs-toggle="offcanvas">Change</div>
+        </div>
+      
+    </div>
+
+
+    <div class="offcanvas offcanvas-bottom" tabindex="-1" id="location">
+        <div class="offcanvas-header">
+            <div class="head-first">
+                <div class="close-btns">
+                    <i class="fas fa-close" data-bs-dismiss="offcanvas"></i>
+                    <p class="close-text">Select Delivery Address</p>
+                </div>
+            </div>
+        </div>
+        <div class="bodycontent">
+            <p class="pincodeinputtext">Use Pincode to Check Delivery Info</p>
+        </div>
+        <div>
+            <div class="inputs">
+                <input type="text" maxlength="6" placeholder=" Enter Pincode"  class="pincodeinp" id="pincodeinp">
+                <div class="ipb">Submit</div>
+            </div>
+        </div>
+        <div class="liveloc">
+            <i class="fa-solid fa-map-location-dot"></i>
+            <p class="liveloc-p">Use My Current Location</p>
+        </div>
     </div>
 
     <!-- color label -->

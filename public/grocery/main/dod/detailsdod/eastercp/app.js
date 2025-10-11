@@ -289,7 +289,7 @@ function activate(event) {
     propri.innerText = productprice;
     prodepri.innerText = productdelprice;
     proper.innerText = productdis;
-    
+
 
 
 
@@ -372,14 +372,14 @@ productscontainer2.addEventListener('click', () => {
     grocerydata1.forEach((data) => {
         if (document.getElementsByClassName('mobile-name')[0].innerText == data.name && document.getElementsByClassName('mobile-brand-name')[0].innerText == data.brand) {
             buttonEl.innerHTML = `<a href="../../../../../insidecart/insidecart.html">Added  <i class="fa-solid fa-check"></i></a>`;
-            
+
         }
-       
-          
+
+
 
     })
 
-   
+
 
 
 
@@ -411,14 +411,90 @@ grocerydata1.forEach((data) => {
 })
 
 
+
+
+
+
+
+const dats = localStorage.getItem('address-details');
+const stores = JSON.parse(dats);
+const pincodepara = document.getElementsByClassName('detpin')[0];
+pincodepara.innerText = stores[0].city + " " + stores[0].pincode;
+
+
+
+
+
 async function apicall() {
     let url = 'https://ipinfo.io/json?token=beacd4e46a2185';
     let response = await fetch(url);
     let data = await response.json()
-    console.log(data);
-    
+    pincodepara.innerText = data.city + " " + data.postal;
+    // bootstrap
+
+    const bootcontent = document.getElementById('location');
+    const instance = bootstrap.Offcanvas.getInstance(bootcontent);
+    instance.hide();
+
 }
-apicall()
+
+document.getElementsByClassName('liveloc')[0].addEventListener('click', apicall)
+
+
+
+
+
+
+
+// input pincode
+function locationpincode() {
+
+
+
+
+
+    const pincode = document.getElementById('pincodeinp').value;
+    console.log(pincode);
+
+
+
+
+    const url = `https://indian-pincode-2024.p.rapidapi.com/pincode?pincode=${pincode}`;
+
+    const options = {
+        method: 'GET',
+        headers: {
+            'x-rapidapi-host': 'indian-pincode-2024.p.rapidapi.com',
+            'x-rapidapi-key': '4db5888fe2msh21205350a42f8e3p108832jsne7e1c2f15eda' // Replace with your actual key
+        }
+    };
+
+    fetch(url, options)
+        .then(response => response.json())
+        .then(data => {
+            const names = Object.entries(data);
+            console.log(names[0][1].district_name);
+            var datastores = document.getElementsByClassName('detpin')[0];
+            datastores.innerText = names[0][1].district_name + " " + pincode;
+
+        })
+        .catch(error => {
+            console.error("API error:", error);
+        });
+
+    const pincode1 = document.getElementById('pincodeinp').value;
+    console.log(pincode1);
+
+
+        const bootcontent = document.getElementById('location');
+        const instance = bootstrap.Offcanvas.getInstance(bootcontent);
+        instance.hide();
+
+    
+
+}
+document.getElementsByClassName('ipb')[0].addEventListener('click', locationpincode)
+
 
 
 

@@ -2110,9 +2110,86 @@ body {
     }
     .locdt
     {
-        height: 200px;
+        height: 50px;
         width: 100%;
+        padding:13px 7px;
+        font-size: 13px;
     }
+    .locdt-data
+    {
+        display: flex;
+        justify-content: space-between;
+        padding: 0 13px;
+    }
+    .change-btn
+    {
+        border: 1px solid rgba(0, 0, 0, 0.2);
+        height: 25px;
+        padding: 3px 4px;
+        color: var(--bs-primary);
+        font-size: 12px;
+        border-radius: 3px;
+    }
+    .close-btns
+    {
+        display: flex;
+        gap: 10px;
+        height: 20px;
+        align-items: center;
+        
+    }
+    .close-text
+    {
+       margin-top: 18px;
+       font-size: 16px;
+    }
+    .pincodeinputtext
+    {
+        padding: 10px;
+        font-size: 14px;
+        font-style: italic;
+    }
+    .inputs
+    {
+        padding: 0 13px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 14px;
+    }
+    .pincodeinp
+    {
+        border: none;
+        border-bottom: 1px solid #999;
+        padding: 10px;
+        width: 300px;
+    }
+    .ipb
+    {
+        padding: 4px 6px;
+        border-radius: 4px;
+        background-color: var(--bs-primary);
+        color:#fff;
+        font-size: 13px;
+        margin-top: 6px;
+    }
+    .pincodeinp::placeholder
+    {
+        font-size: 13px;
+        color:#999;
+    }
+    .pincodeinp:focus
+    {
+        outline: none;
+    }
+    .liveloc
+    {
+        padding: 43px 12px;
+        display: flex;
+        gap: 10px;
+        color: var(--bs-primary);
+    }
+
 
 
 
