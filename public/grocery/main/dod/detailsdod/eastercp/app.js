@@ -403,9 +403,9 @@ buttonEl.addEventListener('click', () => {
 
 
 
-
+const details = "empty"
 const dats = localStorage.getItem('address-details');
-const stores = JSON.parse(dats) ??"empty";
+const stores = JSON.parse(dats) ?? details;
 const pincodepara = document.getElementsByClassName('detpin')[0];
 pincodepara.innerText = stores[0].city + " " + stores[0].pincode;
 
