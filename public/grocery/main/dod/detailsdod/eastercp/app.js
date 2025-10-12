@@ -405,9 +405,9 @@ buttonEl.addEventListener('click', () => {
 
 const details = "empty"
 const dats = localStorage.getItem('address-details');
-const stores = JSON.parse(dats) ;
+const stores = JSON.parse(dats) ?? details;
 const pincodepara = document.getElementsByClassName('detpin')[0];
-pincodepara.innerText = stores[0].city ?? details + " " + stores[0].pincode ?? details;
+pincodepara.innerText = stores[0].city + " " + stores[0].pincode;
 
 
 
@@ -539,7 +539,17 @@ document.getElementsByClassName('ipb')[0].addEventListener('click', locationpinc
 
 
 
+const groceryLocaldata2 = localStorage.getItem('groceryorder');
 
+const grocerydata2 = JSON.parse(groceryLocaldata2);
+
+grocerydata2.forEach((data) => {
+    if (document.getElementsByClassName('mobile-name')[0].innerText == data.name && document.getElementsByClassName('mobile-brand-name')[0].innerText == data.brand) {
+        buttonEl.innerHTML = `<a href="../../../../../insidecart/insidecart.html">Added  <i class="fa-solid fa-check"></i></a>`;
+        return
+    }
+
+})
 
 
 

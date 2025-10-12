@@ -386,9 +386,9 @@ grocerydata1.forEach((data) => {
 
 
 const dats = localStorage.getItem('address-details');
-const stores = JSON.parse(dats) ;
+const stores = JSON.parse(dats) ?? "empty";
 const pincodepara = document.getElementsByClassName('detpin')[0];
-pincodepara.innerText = stores[0].city ?? "empty" + " " + stores[0].pincode ?? "empty";
+pincodepara.innerText = stores[0].city + " " + stores[0].pincode;
 
 
 
