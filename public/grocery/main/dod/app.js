@@ -363,3 +363,5 @@ function detailschange7(event) {
    instance.hide();
 
 }
+
+

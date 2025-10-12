@@ -233,7 +233,7 @@ productContainer.forEach((content) => {
     content.addEventListener('click', activate)
 })
 
-
+ 
 // function create activate
 
 function activate(event) {
@@ -256,9 +256,7 @@ function activate(event) {
     productrateel.innerText = productprice;
     productdelrateel.innerText = productdelprice;
 
-    // radios
-    const radios = productdata.getElementsByClassName('quantity')[0];
-    radios.checked = true;
+   
 
 
     // data update
@@ -305,7 +303,7 @@ function activate(event) {
 
 }
 
-const radios = document.getElementsByClassName('quantity')[1];
+const radios = document.getElementsByClassName('quantity')[0];
 radios.checked = true;
 
 
@@ -355,35 +353,6 @@ productscontainer1.addEventListener('click', () => {
 
 })
 
-productscontainer2.addEventListener('click', () => {
-    productscontainer2.style.border = "1px solid #4d370d";
-    productscontainer1.style.border = "1px solid rgba(0, 0, 0, 0.1)";
-
-    // img container
-
-    const img1 = document.getElementsByClassName('start-img')[0];
-    const img2 = document.getElementsByClassName('start-img')[1];
-
-    img1.src = "https://rukminim2.flixcart.com/image/824/1828/xif0q/spice-masala/f/j/k/-original-imahfffszwg3zfgy.jpeg?q=90";
-    img2.src = "https://rukminim2.flixcart.com/image/824/1828/xif0q/spice-masala/k/e/q/-original-imahfffsvuz6n7k3.jpeg?q=90";
-
-    // local storage cart verified
-
-    grocerydata1.forEach((data) => {
-        if (document.getElementsByClassName('mobile-name')[0].innerText == data.name && document.getElementsByClassName('mobile-brand-name')[0].innerText == data.brand) {
-            buttonEl.innerHTML = `<a href="../../../../../insidecart/insidecart.html">Added  <i class="fa-solid fa-check"></i></a>`;
-
-        }
-
-
-
-    })
-
-
-
-
-
-})
 
 // add buttons
 
