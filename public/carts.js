@@ -22,7 +22,7 @@ function additemsclicked(event) {
     
 
     var datas1 = {
-        name: shopitemsvalue.getElementsByClassName('mobile-name')[0].innerText,
+        name: shopitemsvalue.getElementsByClassName('mobile-name')[0].innerText.slice(0,28),
         img: shopitemsvalue.getElementsByClassName('product-img')[0].src,
         brand: shopitemsvalue.getElementsByClassName('mobile-brand-name')[0].innerText,
         price: shopitemsvalue.getElementsByClassName('rate')[0].innerText,

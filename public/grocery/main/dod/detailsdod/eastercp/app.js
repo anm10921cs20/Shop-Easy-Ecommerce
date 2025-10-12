@@ -346,7 +346,7 @@ productscontainer1.addEventListener('click', () => {
     const grocerydata = JSON.parse(groceryLocaldata);
 
     grocerydata.forEach((data) => {
-        if (document.getElementsByClassName('mobile-name')[0].innerText === data.name && document.getElementsByClassName('mobile-brand-name')[0].innerText === data.brand) {
+        if (document.getElementsByClassName('mobile-name')[0].innerText.slice(0,28) === data.name && document.getElementsByClassName('mobile-brand-name')[0].innerText === data.brand) {
             buttonEl.innerHTML = `<a href="../../../../../insidecart/insidecart.html">Added <i class="fa-solid fa-check"></i></a>`;
             return
         }
@@ -370,7 +370,7 @@ productscontainer2.addEventListener('click', () => {
     // local storage cart verified
 
     grocerydata1.forEach((data) => {
-        if (document.getElementsByClassName('mobile-name')[0].innerText == data.name && document.getElementsByClassName('mobile-brand-name')[0].innerText == data.brand) {
+        if (document.getElementsByClassName('mobile-name')[0].innerText.slice(0,28) == data.name && document.getElementsByClassName('mobile-brand-name')[0].innerText == data.brand) {
             buttonEl.innerHTML = `<a href="../../../../../insidecart/insidecart.html">Added  <i class="fa-solid fa-check"></i></a>`;
 
         }
@@ -544,7 +544,7 @@ const groceryLocaldata2 = localStorage.getItem('groceryorder');
 const grocerydata2 = JSON.parse(groceryLocaldata2);
 
 grocerydata2.forEach((data) => {
-    if (document.getElementsByClassName('mobile-name')[0].innerText == data.name && document.getElementsByClassName('mobile-brand-name')[0].innerText == data.brand) {
+    if (document.getElementsByClassName('mobile-name')[0].innerText.slice(0,28) == data.name && document.getElementsByClassName('mobile-brand-name')[0].innerText == data.brand) {
         buttonEl.innerHTML = `<a href="../../../../../insidecart/insidecart.html">Added  <i class="fa-solid fa-check"></i></a>`;
         return
     }
