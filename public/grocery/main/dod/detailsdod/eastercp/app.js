@@ -398,18 +398,6 @@ buttonEl.addEventListener('click', () => {
 
 
 
-const groceryLocaldata1 = localStorage.getItem('groceryorder');
-
-const grocerydata1 = JSON.parse(groceryLocaldata1);
-
-grocerydata1.forEach((data) => {
-    if (document.getElementsByClassName('mobile-name')[0].innerText == data.name && document.getElementsByClassName('mobile-brand-name')[0].innerText == data.brand) {
-        buttonEl.innerHTML = `<a href="../../../../../insidecart/insidecart.html">Added  <i class="fa-solid fa-check"></i></a>`;
-        return
-    }
-
-})
-
 
 
 
