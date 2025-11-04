@@ -401,8 +401,35 @@ db.ref('grocerycart/' + localStorage.getItem('userid') + localStorage.getItem('n
    
     grocery.forEach((detail) => {
         var grocers = detail[1];
+        
         const adds = Object.values(grocers);
-        const datas = JSON.parse(adds[2]);
+        let datas = [];
+        try {
+            const raw = adds[2];
+            if (!raw) {
+                datas = [];
+            } else if (Array.isArray(raw)) {
+                datas = raw;
+            } else if (typeof raw === 'string') {
+                const parsed = JSON.parse(raw);
+                datas = Array.isArray(parsed) ? parsed : (parsed ? [parsed] : []);
+            } else if (typeof raw === 'object') {
+                const keys = Object.keys(raw);
+                // numeric-indexed object -> convert to array, otherwise wrap single object
+                if (keys.length && keys.every(k => /^\d+$/.test(k))) {
+                    datas = keys.map(k => raw[k]);
+                } else {
+                    datas = [raw];
+                }
+            } else {
+                datas = [];
+            }
+        } catch (err) {
+            console.error('Error parsing adds[2]:', err);
+            datas = [];
+        }
+   
+        
         
 
         
